@@ -66,7 +66,6 @@ static void event_handler(void *arg, esp_event_base_t event_base,
         if (event->status == FTM_STATUS_SUCCESS) {
             xEventGroupSetBits(s_ftm_event_group, FTM_REPORT_BIT);
         } else if (event->status == FTM_STATUS_USER_TERM) {
-            /* Do Nothing */
             ESP_LOGI(TAG_STA, "User terminated FTM procedure");
         } else {
             ESP_LOGI(TAG_STA, "FTM procedure with Peer("MACSTR") failed! (Status - %d)",
@@ -157,22 +156,16 @@ static bool wifi_cmd_sta_join(const char *ssid, const char *pass)
     return true;
 }
 
-/**
- * 打印 FTM 数据到串行监视器
- */
 void print_ftm_data(int rtt, int distance)
 {
     ESP_LOGI(TAG_STA, "FTM Data: RTT = %d nSec, Distance = %d.%02d meters",
              rtt, distance / 100, distance % 100);
 }
 
-/**
- * FTM发起者配置并启动会话
- */
 static int wifi_cmd_ftm_initiator(int argc, char **argv)
 {
     int nerrors = 0;
-    uint32_t wait_time_ms = MIN_WAIT_TIME_MS;  // 设置为最小间隔
+    uint32_t wait_time_ms = MIN_WAIT_TIME_MS;
     EventBits_t bits;
 
     wifi_ftm_initiator_cfg_t ftmi_cfg = {
@@ -203,12 +196,10 @@ static int wifi_cmd_ftm_initiator(int argc, char **argv)
         return 0;
     }
 
-    // 根据 burst_period 计算等待时间
     if (ftmi_cfg.burst_period) {
-        wait_time_ms = (ftmi_cfg.burst_period * 100) * MAX_FTM_BURSTS * 2;  // Adjust the calculation as needed
+        wait_time_ms = (ftmi_cfg.burst_period * 100) * MAX_FTM_BURSTS * 2;
     }
 
-    // 等待 FTM 事件
     bits = xEventGroupWaitBits(s_ftm_event_group, FTM_REPORT_BIT | FTM_FAILURE_BIT,
                                pdTRUE, pdFALSE, wait_time_ms / portTICK_PERIOD_MS);
 
@@ -216,7 +207,6 @@ static int wifi_cmd_ftm_initiator(int argc, char **argv)
         ESP_LOGI(TAG_STA, "FTM session complete. Estimated RTT - %" PRId32 " nSec, Estimated Distance - %" PRId32 ".%02" PRId32 " meters",
                 s_rtt_est, s_dist_est / 100, s_dist_est % 100);
 
-        // 打印 FTM 数据到串行监视器
         print_ftm_data(s_rtt_est, s_dist_est);
     } else if (bits & FTM_FAILURE_BIT) {
         ESP_LOGE(TAG_STA, "FTM session failed!");
@@ -228,20 +218,16 @@ static int wifi_cmd_ftm_initiator(int argc, char **argv)
     return 0;
 }
 
-/**
- * FTM测量任务
- */
 static void ftm_measurement_task(void *pvParameter)
 {
     while (true) {
-        wifi_cmd_ftm_initiator(0, NULL);  // 执行 FTM 测量
-        vTaskDelay(pdMS_TO_TICKS(MIN_WAIT_TIME_MS));   // 每隔 MIN_WAIT_TIME_MS 进行一次测量
+        wifi_cmd_ftm_initiator(0, NULL);
+        vTaskDelay(pdMS_TO_TICKS(MIN_WAIT_TIME_MS));
     }
 }
 
 void app_main(void)
 {
-    // Initialize NVS (Non-Volatile Storage)
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
         ESP_ERROR_CHECK(nvs_flash_erase());
@@ -249,7 +235,6 @@ void app_main(void)
     }
     ESP_ERROR_CHECK(ret);
 
-    // Initialize Wi-Fi and start STA
     initialise_wifi();
 
     if (!wifi_cmd_sta_join(DEFAULT_AP_SSID, DEFAULT_AP_PASSWORD)) {
@@ -257,7 +242,6 @@ void app_main(void)
         return;
     }
 
-    // 创建 FreeRTOS 任务进行 FTM 测量
     xTaskCreate(ftm_measurement_task, "ftm_measurement_task", 4096, NULL, 5, NULL);
 }
 

@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\14731\Desktop\CapstoneA\rtt\initiator -B C:\Users\14731\Desktop\CapstoneA\rtt\initiator\cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\14731\Desktop\CapstoneA\Wifi-indoor-localization-with-rtt-and-csi\initiator -B C:\Users\14731\Desktop\CapstoneA\Wifi-indoor-localization-with-rtt-and-csi\initiator\cmake-build-debug
 CMake Deprecation Warning:
   Support for "Extra Generators" like
 

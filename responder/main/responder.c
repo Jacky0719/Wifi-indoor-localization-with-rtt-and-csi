@@ -78,7 +78,6 @@ esp_err_t wifi_add_mode(wifi_mode_t mode)
 
     if (mode == WIFI_MODE_AP) {
         if (cur_mode == WIFI_MODE_AP || cur_mode == WIFI_MODE_APSTA) {
-            /* Do nothing */
             return ESP_OK;
         } else if (cur_mode == WIFI_MODE_STA) {
             new_mode = WIFI_MODE_APSTA;
