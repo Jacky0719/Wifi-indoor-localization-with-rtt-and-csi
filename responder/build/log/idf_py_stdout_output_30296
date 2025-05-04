@@ -1,0 +1,66 @@
+[0;32mI (104) esp_image: segment 1: paddr=00024cd4 vaddr=3fc99900 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037abf2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 10 2025 22:39:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=14cach ( 85164) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00024cd4 vaddr=3fc99900 size=04938h ( 18744) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=00029614 vaddr=40374000 size=06a04h ( 27140) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=6bcc0h (441536) map[0m
+[0;32mI (193) esp_image: segment 4: paddr=0009bce8 vaddr=4037aa04 size=0ee14h ( 60948) load[0m
+[0;32mI (207) esp_image: segment 5: paddr=000aab04 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (215) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (215) boot: Disabling RNG early entropy source...[0m
+[0;32mI (225) cpu_start: Multicore app[0m
+[0;32mI (235) cpu_start: Pro cpu start user code[0m
+[0;32mI (235) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (235) app_init: Application information:[0m
+[0;32mI (235) app_init: Project name:     responder[0m
+[0;32mI (239) app_init: App version:      1[0m
+[0;32mI (242) app_init: Compile time:     Apr 10 2025 22:40:01[0m
+[0;32mI (247) app_init: ELF file SHA256:  a2fca0617...[0m
+[0;32mI (251) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (256) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (259) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (263) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (267) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (274) heap_init: At 3FCA1520 len 000481F0 (288 KiB): RAM[0m
+[0;32mI (279) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (284) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (289) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (295) spi_flash: detected chip: gd[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (301) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (313) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (319) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (326) main_task: Started on CPU0[0m
+[0;32mI (336) main_task: Calling app_main()[0m
+[0;32mI (346) ftm_responder: Initializing WiFi...[0m
+config is NULL
+[0;33mW (346) wifi_init: Failed to unregister Rx callbacks[0m
+[1;31mE (346) wifi_init: Failed to deinit Wi-Fi driver (0x3001)[0m
+[1;31mE (346) wifi_init: Failed to deinit Wi-Fi (0x3001)[0m
+[1;31mE (356) ftm_responder: Wi-Fi initialization failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (356) ftm_responder: FTM Responder is ready, waiting for FTM requests...[0m
+[0;32mI (366) main_task: Returned from app_main()[0m

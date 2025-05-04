@@ -1,0 +1,2038 @@
+[0;32mI (106) esp_image: segment 1: paddr=00028ad4 vaddr=3fc99a00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4207941f
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 10 2025 22:39:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=18aach (101036) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=00028ad4 vaddr=3fc99a00 size=04a08h ( 18952) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0002d4e4 vaddr=40374000 size=02b34h ( 11060) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7f408h (521224) map[0m
+[0;32mI (210) esp_image: segment 4: paddr=000af430 vaddr=40376b34 size=12e10h ( 77328) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000c2248 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (236) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (236) boot: Disabling RNG early entropy source...[0m
+[0;32mI (246) cpu_start: Multicore app[0m
+[0;32mI (255) cpu_start: Pro cpu start user code[0m
+[0;32mI (255) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (255) app_init: Application information:[0m
+[0;32mI (255) app_init: Project name:     responder[0m
+[0;32mI (259) app_init: App version:      1[0m
+[0;32mI (263) app_init: Compile time:     Apr 10 2025 22:40:01[0m
+[0;32mI (268) app_init: ELF file SHA256:  d6f94fc7c...[0m
+[0;32mI (272) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (276) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (280) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (284) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (288) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (294) heap_init: At 3FCA2010 len 00047700 (285 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (310) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (316) spi_flash: detected chip: gd[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (321) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (334) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (340) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (347) main_task: Started on CPU0[0m
+[0;32mI (357) main_task: Calling app_main()[0m
+[0;32mI (377) pp: pp rom version: e7ae62f[0m
+[0;32mI (377) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (387) wifi_init: rx ba win: 6[0m
+[0;32mI (387) wifi_init: accept mbox: 6[0m
+[0;32mI (387) wifi_init: tcpip mbox: 32[0m
+[0;32mI (387) wifi_init: udp mbox: 6[0m
+[0;32mI (387) wifi_init: tcp mbox: 6[0m
+[0;32mI (397) wifi_init: tcp tx win: 5760[0m
+[0;32mI (397) wifi_init: tcp rx win: 5760[0m
+[0;32mI (397) wifi_init: tcp mss: 1440[0m
+[0;32mI (407) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (407) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (407) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (917) ftm_responder: Starting SoftAP with FTM Responder support, SSID - FTM, Password - ftmftmftm, Primary Channel - 1, Bandwidth - 20MHz[0m
+[0;32mI (927) ftm_responder: FTM Responder is ready, waiting for FTM requests...[0m
+[0;32mI (927) responder: Counter = 1[0m
+[0;32mI (927) main_task: Returned from app_main()[0m
+[0;32mI (1927) responder: Counter = 2[0m
+[0;32mI (2927) responder: Counter = 3[0m
+[0;32mI (3927) responder: Counter = 4[0m
+[0;32mI (4927) responder: Counter = 5[0m
+[0;32mI (5927) responder: Counter = 6[0m
+[0;32mI (6927) responder: Counter = 7[0m
+[0;32mI (7927) responder: Counter = 8[0m
+[0;32mI (8927) responder: Counter = 9[0m
+[0;32mI (9927) responder: Counter = 10[0m
+[0;32mI (10927) responder: Counter = 11[0m
+[0;32mI (11927) responder: Counter = 12[0m
+[0;32mI (12927) responder: Counter = 13[0m
+[0;32mI (13927) responder: Counter = 14[0m
+[0;32mI (14927) responder: Counter = 15[0m
+[0;32mI (15927) responder: Counter = 16[0m
+[0;32mI (16927) responder: Counter = 17[0m
+[0;32mI (17927) responder: Counter = 18[0m
+[0;32mI (18927) responder: Counter = 19[0m
+[0;32mI (19927) responder: Counter = 20[0m
+[0;32mI (20927) responder: Counter = 21[0m
+[0;32mI (21927) responder: Counter = 22[0m
+[0;32mI (22927) responder: Counter = 23[0m
+[0;32mI (23927) responder: Counter = 24[0m
+[0;32mI (24927) responder: Counter = 25[0m
+[0;32mI (25927) responder: Counter = 26[0m
+[0;32mI (26927) responder: Counter = 27[0m
+[0;32mI (27927) responder: Counter = 28[0m
+[0;32mI (28927) responder: Counter = 29[0m
+[0;32mI (29927) responder: Counter = 30[0m
+[0;32mI (30927) responder: Counter = 31[0m
+[0;32mI (31927) responder: Counter = 32[0m
+[0;32mI (32927) responder: Counter = 33[0m
+[0;32mI (33927) responder: Counter = 34[0m
+[0;32mI (34927) responder: Counter = 35[0m
+[0;32mI (35927) responder: Counter = 36[0m
+[0;32mI (36927) responder: Counter = 37[0m
+[0;32mI (37927) responder: Counter = 38[0m
+[0;32mI (38927) responder: Counter = 39[0m
+[0;32mI (39927) responder: Counter = 40[0m
+[0;32mI (40927) responder: Counter = 41[0m
+[0;32mI (41927) responder: Counter = 42[0m
+[0;32mI (42927) responder: Counter = 43[0m
+[0;32mI (43927) responder: Counter = 44[0m
+[0;32mI (44927) responder: Counter = 45[0m
+[0;32mI (45927) responder: Counter = 46[0m
+[0;32mI (46927) responder: Counter = 47[0m
+[0;32mI (47927) responder: Counter = 48[0m
+[0;32mI (48927) responder: Counter = 49[0m
+[0;32mI (49927) responder: Counter = 50[0m
+[0;32mI (50927) responder: Counter = 51[0m
+[0;32mI (51927) responder: Counter = 52[0m
+[0;32mI (52927) responder: Counter = 53[0m
+[0;32mI (53927) responder: Counter = 54[0m
+[0;32mI (54927) responder: Counter = 55[0m
+[0;32mI (55927) responder: Counter = 56[0m
+[0;32mI (56927) responder: Counter = 57[0m
+[0;32mI (57927) responder: Counter = 58[0m
+[0;32mI (58927) responder: Counter = 59[0m
+[0;32mI (59927) responder: Counter = 60[0m
+[0;32mI (60927) responder: Counter = 61[0m
+[0;32mI (61927) responder: Counter = 62[0m
+[0;32mI (62927) responder: Counter = 63[0m
+[0;32mI (63927) responder: Counter = 64[0m
+[0;32mI (64927) responder: Counter = 65[0m
+[0;32mI (65927) responder: Counter = 66[0m
+[0;32mI (66927) responder: Counter = 67[0m
+[0;32mI (67927) responder: Counter = 68[0m
+[0;32mI (68927) responder: Counter = 69[0m
+[0;32mI (69927) responder: Counter = 70[0m
+[0;32mI (70927) responder: Counter = 71[0m
+[0;32mI (71927) responder: Counter = 72[0m
+[0;32mI (72927) responder: Counter = 73[0m
+[0;32mI (73927) responder: Counter = 74[0m
+[0;32mI (74927) responder: Counter = 75[0m
+[0;32mI (75927) responder: Counter = 76[0m
+[0;32mI (76927) responder: Counter = 77[0m
+[0;32mI (77927) responder: Counter = 78[0m
+[0;32mI (78927) responder: Counter = 79[0m
+[0;32mI (79927) responder: Counter = 80[0m
+[0;32mI (80927) responder: Counter = 81[0m
+[0;32mI (81927) responder: Counter = 82[0m
+[0;32mI (82927) responder: Counter = 83[0m
+[0;32mI (83927) responder: Counter = 84[0m
+[0;32mI (84927) responder: Counter = 85[0m
+[0;32mI (85927) responder: Counter = 86[0m
+[0;32mI (86927) responder: Counter = 87[0m
+[0;32mI (87927) responder: Counter = 88[0m
+[0;32mI (88927) responder: Counter = 89[0m
+[0;32mI (89927) responder: Counter = 90[0m
+[0;32mI (90927) responder: Counter = 91[0m
+[0;32mI (91927) responder: Counter = 92[0m
+[0;32mI (92927) responder: Counter = 93[0m
+[0;32mI (93927) responder: Counter = 94[0m
+[0;32mI (94927) responder: Counter = 95[0m
+[0;32mI (95927) responder: Counter = 96[0m
+[0;32mI (96927) responder: Counter = 97[0m
+[0;32mI (97927) responder: Counter = 98[0m
+[0;32mI (98927) responder: Counter = 99[0m
+[0;32mI (99927) responder: Counter = 100[0m
+[0;32mI (100927) responder: Counter = 101[0m
+[0;32mI (101927) responder: Counter = 102[0m
+[0;32mI (102927) responder: Counter = 103[0m
+[0;32mI (103927) responder: Counter = 104[0m
+[0;32mI (104927) responder: Counter = 105[0m
+[0;32mI (105927) responder: Counter = 106[0m
+[0;32mI (106927) responder: Counter = 107[0m
+[0;32mI (107927) responder: Counter = 108[0m
+[0;32mI (108927) responder: Counter = 109[0m
+[0;32mI (109927) responder: Counter = 110[0m
+[0;32mI (110927) responder: Counter = 111[0m
+[0;32mI (111927) responder: Counter = 112[0m
+[0;32mI (112927) responder: Counter = 113[0m
+[0;32mI (113927) responder: Counter = 114[0m
+[0;32mI (114927) responder: Counter = 115[0m
+[0;32mI (115927) responder: Counter = 116[0m
+[0;32mI (116927) responder: Counter = 117[0m
+[0;32mI (117927) responder: Counter = 118[0m
+[0;32mI (118927) responder: Counter = 119[0m
+[0;32mI (119927) responder: Counter = 120[0m
+[0;32mI (120927) responder: Counter = 121[0m
+[0;32mI (121927) responder: Counter = 122[0m
+[0;32mI (122927) responder: Counter = 123[0m
+[0;32mI (123927) responder: Counter = 124[0m
+[0;32mI (124927) responder: Counter = 125[0m
+[0;32mI (125927) responder: Counter = 126[0m
+[0;32mI (126927) responder: Counter = 127[0m
+[0;32mI (127927) responder: Counter = 128[0m
+[0;32mI (128927) responder: Counter = 129[0m
+[0;32mI (129927) responder: Counter = 130[0m
+[0;32mI (130927) responder: Counter = 131[0m
+[0;32mI (131927) responder: Counter = 132[0m
+[0;32mI (132927) responder: Counter = 133[0m
+[0;32mI (133927) responder: Counter = 134[0m
+[0;32mI (134927) responder: Counter = 135[0m
+[0;32mI (135927) responder: Counter = 136[0m
+[0;32mI (136927) responder: Counter = 137[0m
+[0;32mI (137927) responder: Counter = 138[0m
+[0;32mI (138927) responder: Counter = 139[0m
+[0;32mI (139927) responder: Counter = 140[0m
+[0;32mI (140927) responder: Counter = 141[0m
+[0;32mI (141927) responder: Counter = 142[0m
+[0;32mI (142927) responder: Counter = 143[0m
+[0;32mI (143927) responder: Counter = 144[0m
+[0;32mI (144927) responder: Counter = 145[0m
+[0;32mI (145927) responder: Counter = 146[0m
+[0;32mI (146927) responder: Counter = 147[0m
+[0;32mI (147927) responder: Counter = 148[0m
+[0;32mI (148927) responder: Counter = 149[0m
+[0;32mI (149927) responder: Counter = 150[0m
+[0;32mI (150927) responder: Counter = 151[0m
+[0;32mI (151927) responder: Counter = 152[0m
+[0;32mI (152927) responder: Counter = 153[0m
+[0;32mI (153927) responder: Counter = 154[0m
+[0;32mI (154927) responder: Counter = 155[0m
+[0;32mI (155927) responder: Counter = 156[0m
+[0;32mI (156927) responder: Counter = 157[0m
+[0;32mI (157927) responder: Counter = 158[0m
+[0;32mI (158927) responder: Counter = 159[0m
+[0;32mI (159927) responder: Counter = 160[0m
+[0;32mI (160927) responder: Counter = 161[0m
+[0;32mI (161927) responder: Counter = 162[0m
+[0;32mI (162927) responder: Counter = 163[0m
+[0;32mI (163927) responder: Counter = 164[0m
+[0;32mI (164927) responder: Counter = 165[0m
+[0;32mI (165927) responder: Counter = 166[0m
+[0;32mI (166927) responder: Counter = 167[0m
+[0;32mI (167927) responder: Counter = 168[0m
+[0;32mI (168927) responder: Counter = 169[0m
+[0;32mI (169927) responder: Counter = 170[0m
+[0;32mI (170927) responder: Counter = 171[0m
+[0;32mI (171927) responder: Counter = 172[0m
+[0;32mI (172927) responder: Counter = 173[0m
+[0;32mI (173927) responder: Counter = 174[0m
+[0;32mI (174927) responder: Counter = 175[0m
+[0;32mI (175927) responder: Counter = 176[0m
+[0;32mI (176927) responder: Counter = 177[0m
+[0;32mI (177927) responder: Counter = 178[0m
+[0;32mI (178927) responder: Counter = 179[0m
+[0;32mI (179927) responder: Counter = 180[0m
+[0;32mI (180927) responder: Counter = 181[0m
+[0;32mI (181927) responder: Counter = 182[0m
+[0;32mI (182927) responder: Counter = 183[0m
+[0;32mI (183927) responder: Counter = 184[0m
+[0;32mI (184927) responder: Counter = 185[0m
+[0;32mI (185927) responder: Counter = 186[0m
+[0;32mI (186927) responder: Counter = 187[0m
+[0;32mI (187927) responder: Counter = 188[0m
+[0;32mI (188927) responder: Counter = 189[0m
+[0;32mI (189927) responder: Counter = 190[0m
+[0;32mI (190927) responder: Counter = 191[0m
+[0;32mI (191927) responder: Counter = 192[0m
+[0;32mI (192927) responder: Counter = 193[0m
+[0;32mI (193927) responder: Counter = 194[0m
+[0;32mI (194927) responder: Counter = 195[0m
+[0;32mI (195927) responder: Counter = 196[0m
+[0;32mI (196927) responder: Counter = 197[0m
+[0;32mI (197927) responder: Counter = 198[0m
+[0;32mI (198927) responder: Counter = 199[0m
+[0;32mI (199927) responder: Counter = 200[0m
+[0;32mI (200927) responder: Counter = 201[0m
+[0;32mI (201927) responder: Counter = 202[0m
+[0;32mI (202927) responder: Counter = 203[0m
+[0;32mI (203927) responder: Counter = 204[0m
+[0;32mI (204927) responder: Counter = 205[0m
+[0;32mI (205927) responder: Counter = 206[0m
+[0;32mI (206927) responder: Counter = 207[0m
+[0;32mI (207927) responder: Counter = 208[0m
+[0;32mI (208927) responder: Counter = 209[0m
+[0;32mI (209927) responder: Counter = 210[0m
+[0;32mI (210927) responder: Counter = 211[0m
+[0;32mI (211927) responder: Counter = 212[0m
+[0;32mI (212927) responder: Counter = 213[0m
+[0;32mI (213927) responder: Counter = 214[0m
+[0;32mI (214927) responder: Counter = 215[0m
+[0;32mI (215927) responder: Counter = 216[0m
+[0;32mI (216927) responder: Counter = 217[0m
+[0;32mI (217927) responder: Counter = 218[0m
+[0;32mI (218927) responder: Counter = 219[0m
+[0;32mI (219927) responder: Counter = 220[0m
+[0;32mI (220927) responder: Counter = 221[0m
+[0;32mI (221927) responder: Counter = 222[0m
+[0;32mI (222927) responder: Counter = 223[0m
+[0;32mI (223927) responder: Counter = 224[0m
+[0;32mI (224927) responder: Counter = 225[0m
+[0;32mI (225927) responder: Counter = 226[0m
+[0;32mI (226927) responder: Counter = 227[0m
+[0;32mI (227927) responder: Counter = 228[0m
+[0;32mI (228927) responder: Counter = 229[0m
+[0;32mI (229927) responder: Counter = 230[0m
+[0;32mI (230927) responder: Counter = 231[0m
+[0;32mI (231927) responder: Counter = 232[0m
+[0;32mI (232927) responder: Counter = 233[0m
+[0;32mI (233927) responder: Counter = 234[0m
+[0;32mI (234927) responder: Counter = 235[0m
+[0;32mI (235927) responder: Counter = 236[0m
+[0;32mI (236927) responder: Counter = 237[0m
+[0;32mI (237927) responder: Counter = 238[0m
+[0;32mI (238927) responder: Counter = 239[0m
+[0;32mI (239927) responder: Counter = 240[0m
+[0;32mI (240927) responder: Counter = 241[0m
+[0;32mI (241927) responder: Counter = 242[0m
+[0;32mI (242927) responder: Counter = 243[0m
+[0;32mI (243927) responder: Counter = 244[0m
+[0;32mI (244927) responder: Counter = 245[0m
+[0;32mI (245927) responder: Counter = 246[0m
+[0;32mI (246927) responder: Counter = 247[0m
+[0;32mI (247927) responder: Counter = 248[0m
+[0;32mI (248927) responder: Counter = 249[0m
+[0;32mI (249927) responder: Counter = 250[0m
+[0;32mI (250927) responder: Counter = 251[0m
+[0;32mI (251927) responder: Counter = 252[0m
+[0;32mI (252927) responder: Counter = 253[0m
+[0;32mI (253927) responder: Counter = 254[0m
+[0;32mI (254927) responder: Counter = 255[0m
+[0;32mI (255927) responder: Counter = 256[0m
+[0;32mI (256927) responder: Counter = 257[0m
+[0;32mI (257927) responder: Counter = 258[0m
+[0;32mI (258927) responder: Counter = 259[0m
+[0;32mI (259927) responder: Counter = 260[0m
+[0;32mI (260927) responder: Counter = 261[0m
+[0;32mI (261927) responder: Counter = 262[0m
+[0;32mI (262927) responder: Counter = 263[0m
+[0;32mI (263927) responder: Counter = 264[0m
+[0;32mI (264927) responder: Counter = 265[0m
+[0;32mI (265927) responder: Counter = 266[0m
+[0;32mI (266927) responder: Counter = 267[0m
+[0;32mI (267927) responder: Counter = 268[0m
+[0;32mI (268927) responder: Counter = 269[0m
+[0;32mI (269927) responder: Counter = 270[0m
+[0;32mI (270927) responder: Counter = 271[0m
+[0;32mI (271927) responder: Counter = 272[0m
+[0;32mI (272927) responder: Counter = 273[0m
+[0;32mI (273927) responder: Counter = 274[0m
+[0;32mI (274927) responder: Counter = 275[0m
+[0;32mI (275927) responder: Counter = 276[0m
+[0;32mI (276927) responder: Counter = 277[0m
+[0;32mI (277927) responder: Counter = 278[0m
+[0;32mI (278927) responder: Counter = 279[0m
+[0;32mI (279927) responder: Counter = 280[0m
+[0;32mI (280927) responder: Counter = 281[0m
+[0;32mI (281927) responder: Counter = 282[0m
+[0;32mI (282927) responder: Counter = 283[0m
+[0;32mI (283927) responder: Counter = 284[0m
+[0;32mI (284927) responder: Counter = 285[0m
+[0;32mI (285927) responder: Counter = 286[0m
+[0;32mI (286927) responder: Counter = 287[0m
+[0;32mI (287927) responder: Counter = 288[0m
+[0;32mI (288927) responder: Counter = 289[0m
+[0;32mI (289927) responder: Counter = 290[0m
+[0;32mI (290927) responder: Counter = 291[0m
+[0;32mI (291927) responder: Counter = 292[0m
+[0;32mI (292927) responder: Counter = 293[0m
+[0;32mI (293927) responder: Counter = 294[0m
+[0;32mI (294927) responder: Counter = 295[0m
+[0;32mI (295927) responder: Counter = 296[0m
+[0;32mI (296927) responder: Counter = 297[0m
+[0;32mI (297927) responder: Counter = 298[0m
+[0;32mI (298927) responder: Counter = 299[0m
+[0;32mI (299927) responder: Counter = 300[0m
+[0;32mI (300927) responder: Counter = 301[0m
+[0;32mI (301927) responder: Counter = 302[0m
+[0;32mI (302927) responder: Counter = 303[0m
+[0;32mI (303927) responder: Counter = 304[0m
+[0;32mI (304927) responder: Counter = 305[0m
+[0;32mI (305927) responder: Counter = 306[0m
+[0;32mI (306927) responder: Counter = 307[0m
+[0;32mI (307927) responder: Counter = 308[0m
+[0;32mI (308927) responder: Counter = 309[0m
+[0;32mI (309927) responder: Counter = 310[0m
+[0;32mI (310927) responder: Counter = 311[0m
+[0;32mI (311927) responder: Counter = 312[0m
+[0;32mI (312927) responder: Counter = 313[0m
+[0;32mI (313927) responder: Counter = 314[0m
+[0;32mI (314927) responder: Counter = 315[0m
+[0;32mI (315927) responder: Counter = 316[0m
+[0;32mI (316927) responder: Counter = 317[0m
+[0;32mI (317927) responder: Counter = 318[0m
+[0;32mI (318927) responder: Counter = 319[0m
+[0;32mI (319927) responder: Counter = 320[0m
+[0;32mI (320927) responder: Counter = 321[0m
+[0;32mI (321927) responder: Counter = 322[0m
+[0;32mI (322927) responder: Counter = 323[0m
+[0;32mI (323927) responder: Counter = 324[0m
+[0;32mI (324927) responder: Counter = 325[0m
+[0;32mI (325927) responder: Counter = 326[0m
+[0;32mI (326927) responder: Counter = 327[0m
+[0;32mI (327927) responder: Counter = 328[0m
+[0;32mI (328927) responder: Counter = 329[0m
+[0;32mI (329927) responder: Counter = 330[0m
+[0;32mI (330927) responder: Counter = 331[0m
+[0;32mI (331927) responder: Counter = 332[0m
+[0;32mI (332927) responder: Counter = 333[0m
+[0;32mI (333927) responder: Counter = 334[0m
+[0;32mI (334927) responder: Counter = 335[0m
+[0;32mI (335927) responder: Counter = 336[0m
+[0;32mI (336927) responder: Counter = 337[0m
+[0;32mI (337927) responder: Counter = 338[0m
+[0;32mI (338927) responder: Counter = 339[0m
+[0;32mI (339927) responder: Counter = 340[0m
+[0;32mI (340927) responder: Counter = 341[0m
+[0;32mI (341927) responder: Counter = 342[0m
+[0;32mI (342927) responder: Counter = 343[0m
+[0;32mI (343927) responder: Counter = 344[0m
+[0;32mI (344927) responder: Counter = 345[0m
+[0;32mI (345927) responder: Counter = 346[0m
+[0;32mI (346927) responder: Counter = 347[0m
+[0;32mI (347927) responder: Counter = 348[0m
+[0;32mI (348927) responder: Counter = 349[0m
+[0;32mI (349927) responder: Counter = 350[0m
+[0;32mI (350927) responder: Counter = 351[0m
+[0;32mI (351927) responder: Counter = 352[0m
+[0;32mI (352927) responder: Counter = 353[0m
+[0;32mI (353927) responder: Counter = 354[0m
+[0;32mI (354927) responder: Counter = 355[0m
+[0;32mI (355927) responder: Counter = 356[0m
+[0;32mI (356927) responder: Counter = 357[0m
+[0;32mI (357927) responder: Counter = 358[0m
+[0;32mI (358927) responder: Counter = 359[0m
+[0;32mI (359927) responder: Counter = 360[0m
+[0;32mI (360927) responder: Counter = 361[0m
+[0;32mI (361927) responder: Counter = 362[0m
+[0;32mI (362927) responder: Counter = 363[0m
+[0;32mI (363927) responder: Counter = 364[0m
+[0;32mI (364927) responder: Counter = 365[0m
+[0;32mI (365927) responder: Counter = 366[0m
+[0;32mI (366927) responder: Counter = 367[0m
+[0;32mI (367927) responder: Counter = 368[0m
+[0;32mI (368927) responder: Counter = 369[0m
+[0;32mI (369927) responder: Counter = 370[0m
+[0;32mI (370927) responder: Counter = 371[0m
+[0;32mI (371927) responder: Counter = 372[0m
+[0;32mI (372927) responder: Counter = 373[0m
+[0;32mI (373927) responder: Counter = 374[0m
+[0;32mI (374927) responder: Counter = 375[0m
+[0;32mI (375927) responder: Counter = 376[0m
+[0;32mI (376927) responder: Counter = 377[0m
+[0;32mI (377927) responder: Counter = 378[0m
+[0;32mI (378927) responder: Counter = 379[0m
+[0;32mI (379927) responder: Counter = 380[0m
+[0;32mI (380927) responder: Counter = 381[0m
+[0;32mI (381927) responder: Counter = 382[0m
+[0;32mI (382927) responder: Counter = 383[0m
+[0;32mI (383927) responder: Counter = 384[0m
+[0;32mI (384927) responder: Counter = 385[0m
+[0;32mI (385927) responder: Counter = 386[0m
+[0;32mI (386927) responder: Counter = 387[0m
+[0;32mI (387927) responder: Counter = 388[0m
+[0;32mI (388927) responder: Counter = 389[0m
+[0;32mI (389927) responder: Counter = 390[0m
+[0;32mI (390927) responder: Counter = 391[0m
+[0;32mI (391927) responder: Counter = 392[0m
+[0;32mI (392927) responder: Counter = 393[0m
+[0;32mI (393927) responder: Counter = 394[0m
+[0;32mI (394927) responder: Counter = 395[0m
+[0;32mI (395927) responder: Counter = 396[0m
+[0;32mI (396927) responder: Counter = 397[0m
+[0;32mI (397927) responder: Counter = 398[0m
+[0;32mI (398927) responder: Counter = 399[0m
+[0;32mI (399927) responder: Counter = 400[0m
+[0;32mI (400927) responder: Counter = 401[0m
+[0;32mI (401927) responder: Counter = 402[0m
+[0;32mI (402927) responder: Counter = 403[0m
+[0;32mI (403927) responder: Counter = 404[0m
+[0;32mI (404927) responder: Counter = 405[0m
+[0;32mI (405927) responder: Counter = 406[0m
+[0;32mI (406927) responder: Counter = 407[0m
+[0;32mI (407927) responder: Counter = 408[0m
+[0;32mI (408927) responder: Counter = 409[0m
+[0;32mI (409927) responder: Counter = 410[0m
+[0;32mI (410927) responder: Counter = 411[0m
+[0;32mI (411927) responder: Counter = 412[0m
+[0;32mI (412927) responder: Counter = 413[0m
+[0;32mI (413927) responder: Counter = 414[0m
+[0;32mI (414927) responder: Counter = 415[0m
+[0;32mI (415927) responder: Counter = 416[0m
+[0;32mI (416927) responder: Counter = 417[0m
+[0;32mI (417927) responder: Counter = 418[0m
+[0;32mI (418927) responder: Counter = 419[0m
+[0;32mI (419927) responder: Counter = 420[0m
+[0;32mI (420927) responder: Counter = 421[0m
+[0;32mI (421927) responder: Counter = 422[0m
+[0;32mI (422927) responder: Counter = 423[0m
+[0;32mI (423927) responder: Counter = 424[0m
+[0;32mI (424927) responder: Counter = 425[0m
+[0;32mI (425927) responder: Counter = 426[0m
+[0;32mI (426927) responder: Counter = 427[0m
+[0;32mI (427927) responder: Counter = 428[0m
+[0;32mI (428927) responder: Counter = 429[0m
+[0;32mI (429927) responder: Counter = 430[0m
+[0;32mI (430927) responder: Counter = 431[0m
+[0;32mI (431927) responder: Counter = 432[0m
+[0;32mI (432927) responder: Counter = 433[0m
+[0;32mI (433927) responder: Counter = 434[0m
+[0;32mI (434927) responder: Counter = 435[0m
+[0;32mI (435927) responder: Counter = 436[0m
+[0;32mI (436927) responder: Counter = 437[0m
+[0;32mI (437927) responder: Counter = 438[0m
+[0;32mI (438927) responder: Counter = 439[0m
+[0;32mI (439927) responder: Counter = 440[0m
+[0;32mI (440927) responder: Counter = 441[0m
+[0;32mI (441927) responder: Counter = 442[0m
+[0;32mI (442927) responder: Counter = 443[0m
+[0;32mI (443927) responder: Counter = 444[0m
+[0;32mI (444927) responder: Counter = 445[0m
+[0;32mI (445927) responder: Counter = 446[0m
+[0;32mI (446927) responder: Counter = 447[0m
+[0;32mI (447927) responder: Counter = 448[0m
+[0;32mI (448927) responder: Counter = 449[0m
+[0;32mI (449927) responder: Counter = 450[0m
+[0;32mI (450927) responder: Counter = 451[0m
+[0;32mI (451927) responder: Counter = 452[0m
+[0;32mI (452927) responder: Counter = 453[0m
+[0;32mI (453927) responder: Counter = 454[0m
+[0;32mI (454927) responder: Counter = 455[0m
+[0;32mI (455927) responder: Counter = 456[0m
+[0;32mI (456927) responder: Counter = 457[0m
+[0;32mI (457927) responder: Counter = 458[0m
+[0;32mI (458927) responder: Counter = 459[0m
+[0;32mI (459927) responder: Counter = 460[0m
+[0;32mI (460927) responder: Counter = 461[0m
+[0;32mI (461927) responder: Counter = 462[0m
+[0;32mI (462927) responder: Counter = 463[0m
+[0;32mI (463927) responder: Counter = 464[0m
+[0;32mI (464927) responder: Counter = 465[0m
+[0;32mI (465927) responder: Counter = 466[0m
+[0;32mI (466927) responder: Counter = 467[0m
+[0;32mI (467927) responder: Counter = 468[0m
+[0;32mI (468927) responder: Counter = 469[0m
+[0;32mI (469927) responder: Counter = 470[0m
+[0;32mI (470927) responder: Counter = 471[0m
+[0;32mI (471927) responder: Counter = 472[0m
+[0;32mI (472927) responder: Counter = 473[0m
+[0;32mI (473927) responder: Counter = 474[0m
+[0;32mI (474927) responder: Counter = 475[0m
+[0;32mI (475927) responder: Counter = 476[0m
+[0;32mI (476927) responder: Counter = 477[0m
+[0;32mI (477927) responder: Counter = 478[0m
+[0;32mI (478927) responder: Counter = 479[0m
+[0;32mI (479927) responder: Counter = 480[0m
+[0;32mI (480927) responder: Counter = 481[0m
+[0;32mI (481927) responder: Counter = 482[0m
+[0;32mI (482927) responder: Counter = 483[0m
+[0;32mI (483927) responder: Counter = 484[0m
+[0;32mI (484927) responder: Counter = 485[0m
+[0;32mI (485927) responder: Counter = 486[0m
+[0;32mI (486927) responder: Counter = 487[0m
+[0;32mI (487927) responder: Counter = 488[0m
+[0;32mI (488927) responder: Counter = 489[0m
+[0;32mI (489927) responder: Counter = 490[0m
+[0;32mI (490927) responder: Counter = 491[0m
+[0;32mI (491927) responder: Counter = 492[0m
+[0;32mI (492927) responder: Counter = 493[0m
+[0;32mI (493927) responder: Counter = 494[0m
+[0;32mI (494927) responder: Counter = 495[0m
+[0;32mI (495927) responder: Counter = 496[0m
+[0;32mI (496927) responder: Counter = 497[0m
+[0;32mI (497927) responder: Counter = 498[0m
+[0;32mI (498927) responder: Counter = 499[0m
+[0;32mI (499927) responder: Counter = 500[0m
+[0;32mI (500927) responder: Counter = 501[0m
+[0;32mI (501927) responder: Counter = 502[0m
+[0;32mI (502927) responder: Counter = 503[0m
+[0;32mI (503927) responder: Counter = 504[0m
+[0;32mI (504927) responder: Counter = 505[0m
+[0;32mI (505927) responder: Counter = 506[0m
+[0;32mI (506927) responder: Counter = 507[0m
+[0;32mI (507927) responder: Counter = 508[0m
+[0;32mI (508927) responder: Counter = 509[0m
+[0;32mI (509927) responder: Counter = 510[0m
+[0;32mI (510927) responder: Counter = 511[0m
+[0;32mI (511927) responder: Counter = 512[0m
+[0;32mI (512927) responder: Counter = 513[0m
+[0;32mI (513927) responder: Counter = 514[0m
+[0;32mI (514927) responder: Counter = 515[0m
+[0;32mI (515927) responder: Counter = 516[0m
+[0;32mI (516927) responder: Counter = 517[0m
+[0;32mI (517927) responder: Counter = 518[0m
+[0;32mI (518927) responder: Counter = 519[0m
+[0;32mI (519927) responder: Counter = 520[0m
+[0;32mI (520927) responder: Counter = 521[0m
+[0;32mI (521927) responder: Counter = 522[0m
+[0;32mI (522927) responder: Counter = 523[0m
+[0;32mI (523927) responder: Counter = 524[0m
+[0;32mI (524927) responder: Counter = 525[0m
+[0;32mI (525927) responder: Counter = 526[0m
+[0;32mI (526927) responder: Counter = 527[0m
+[0;32mI (527927) responder: Counter = 528[0m
+[0;32mI (528927) responder: Counter = 529[0m
+[0;32mI (529927) responder: Counter = 530[0m
+[0;32mI (530927) responder: Counter = 531[0m
+[0;32mI (531927) responder: Counter = 532[0m
+[0;32mI (532927) responder: Counter = 533[0m
+[0;32mI (533927) responder: Counter = 534[0m
+[0;32mI (534927) responder: Counter = 535[0m
+[0;32mI (535927) responder: Counter = 536[0m
+[0;32mI (536927) responder: Counter = 537[0m
+[0;32mI (537927) responder: Counter = 538[0m
+[0;32mI (538927) responder: Counter = 539[0m
+[0;32mI (539927) responder: Counter = 540[0m
+[0;32mI (540927) responder: Counter = 541[0m
+[0;32mI (541927) responder: Counter = 542[0m
+[0;32mI (542927) responder: Counter = 543[0m
+[0;32mI (543927) responder: Counter = 544[0m
+[0;32mI (544927) responder: Counter = 545[0m
+[0;32mI (545927) responder: Counter = 546[0m
+[0;32mI (546927) responder: Counter = 547[0m
+[0;32mI (547927) responder: Counter = 548[0m
+[0;32mI (548927) responder: Counter = 549[0m
+[0;32mI (549927) responder: Counter = 550[0m
+[0;32mI (550927) responder: Counter = 551[0m
+[0;32mI (551927) responder: Counter = 552[0m
+[0;32mI (552927) responder: Counter = 553[0m
+[0;32mI (553927) responder: Counter = 554[0m
+[0;32mI (554927) responder: Counter = 555[0m
+[0;32mI (555927) responder: Counter = 556[0m
+[0;32mI (556927) responder: Counter = 557[0m
+[0;32mI (557927) responder: Counter = 558[0m
+[0;32mI (558927) responder: Counter = 559[0m
+[0;32mI (559927) responder: Counter = 560[0m
+[0;32mI (560927) responder: Counter = 561[0m
+[0;32mI (561927) responder: Counter = 562[0m
+[0;32mI (562927) responder: Counter = 563[0m
+[0;32mI (563927) responder: Counter = 564[0m
+[0;32mI (564927) responder: Counter = 565[0m
+[0;32mI (565927) responder: Counter = 566[0m
+[0;32mI (566927) responder: Counter = 567[0m
+[0;32mI (567927) responder: Counter = 568[0m
+[0;32mI (568927) responder: Counter = 569[0m
+[0;32mI (569927) responder: Counter = 570[0m
+[0;32mI (570927) responder: Counter = 571[0m
+[0;32mI (571927) responder: Counter = 572[0m
+[0;32mI (572927) responder: Counter = 573[0m
+[0;32mI (573927) responder: Counter = 574[0m
+[0;32mI (574927) responder: Counter = 575[0m
+[0;32mI (575927) responder: Counter = 576[0m
+[0;32mI (576927) responder: Counter = 577[0m
+[0;32mI (577927) responder: Counter = 578[0m
+[0;32mI (578927) responder: Counter = 579[0m
+[0;32mI (579927) responder: Counter = 580[0m
+[0;32mI (580927) responder: Counter = 581[0m
+[0;32mI (581927) responder: Counter = 582[0m
+[0;32mI (582927) responder: Counter = 583[0m
+[0;32mI (583927) responder: Counter = 584[0m
+[0;32mI (584927) responder: Counter = 585[0m
+[0;32mI (585927) responder: Counter = 586[0m
+[0;32mI (586927) responder: Counter = 587[0m
+[0;32mI (587927) responder: Counter = 588[0m
+[0;32mI (588927) responder: Counter = 589[0m
+[0;32mI (589927) responder: Counter = 590[0m
+[0;32mI (590927) responder: Counter = 591[0m
+[0;32mI (591927) responder: Counter = 592[0m
+[0;32mI (592927) responder: Counter = 593[0m
+[0;32mI (593927) responder: Counter = 594[0m
+[0;32mI (594927) responder: Counter = 595[0m
+[0;32mI (595927) responder: Counter = 596[0m
+[0;32mI (596927) responder: Counter = 597[0m
+[0;32mI (597927) responder: Counter = 598[0m
+[0;32mI (598927) responder: Counter = 599[0m
+[0;32mI (599927) responder: Counter = 600[0m
+[0;32mI (600927) responder: Counter = 601[0m
+[0;32mI (601927) responder: Counter = 602[0m
+[0;32mI (602927) responder: Counter = 603[0m
+[0;32mI (603927) responder: Counter = 604[0m
+[0;32mI (604927) responder: Counter = 605[0m
+[0;32mI (605927) responder: Counter = 606[0m
+[0;32mI (606927) responder: Counter = 607[0m
+[0;32mI (607927) responder: Counter = 608[0m
+[0;32mI (608927) responder: Counter = 609[0m
+[0;32mI (609927) responder: Counter = 610[0m
+[0;32mI (610927) responder: Counter = 611[0m
+[0;32mI (611927) responder: Counter = 612[0m
+[0;32mI (612927) responder: Counter = 613[0m
+[0;32mI (613927) responder: Counter = 614[0m
+[0;32mI (614927) responder: Counter = 615[0m
+[0;32mI (615927) responder: Counter = 616[0m
+[0;32mI (616927) responder: Counter = 617[0m
+[0;32mI (617927) responder: Counter = 618[0m
+[0;32mI (618927) responder: Counter = 619[0m
+[0;32mI (619927) responder: Counter = 620[0m
+[0;32mI (620927) responder: Counter = 621[0m
+[0;32mI (621927) responder: Counter = 622[0m
+[0;32mI (622927) responder: Counter = 623[0m
+[0;32mI (623927) responder: Counter = 624[0m
+[0;32mI (624927) responder: Counter = 625[0m
+[0;32mI (625927) responder: Counter = 626[0m
+[0;32mI (626927) responder: Counter = 627[0m
+[0;32mI (627927) responder: Counter = 628[0m
+[0;32mI (628927) responder: Counter = 629[0m
+[0;32mI (629927) responder: Counter = 630[0m
+[0;32mI (630927) responder: Counter = 631[0m
+[0;32mI (631927) responder: Counter = 632[0m
+[0;32mI (632927) responder: Counter = 633[0m
+[0;32mI (633927) responder: Counter = 634[0m
+[0;32mI (634927) responder: Counter = 635[0m
+[0;32mI (635927) responder: Counter = 636[0m
+[0;32mI (636927) responder: Counter = 637[0m
+[0;32mI (637927) responder: Counter = 638[0m
+[0;32mI (638927) responder: Counter = 639[0m
+[0;32mI (639927) responder: Counter = 640[0m
+[0;32mI (640927) responder: Counter = 641[0m
+[0;32mI (641927) responder: Counter = 642[0m
+[0;32mI (642927) responder: Counter = 643[0m
+[0;32mI (643927) responder: Counter = 644[0m
+[0;32mI (644927) responder: Counter = 645[0m
+[0;32mI (645927) responder: Counter = 646[0m
+[0;32mI (646927) responder: Counter = 647[0m
+[0;32mI (647927) responder: Counter = 648[0m
+[0;32mI (648927) responder: Counter = 649[0m
+[0;32mI (649927) responder: Counter = 650[0m
+[0;32mI (650927) responder: Counter = 651[0m
+[0;32mI (651927) responder: Counter = 652[0m
+[0;32mI (652927) responder: Counter = 653[0m
+[0;32mI (653927) responder: Counter = 654[0m
+[0;32mI (654927) responder: Counter = 655[0m
+[0;32mI (655927) responder: Counter = 656[0m
+[0;32mI (656927) responder: Counter = 657[0m
+[0;32mI (657927) responder: Counter = 658[0m
+[0;32mI (658927) responder: Counter = 659[0m
+[0;32mI (659927) responder: Counter = 660[0m
+[0;32mI (660927) responder: Counter = 661[0m
+[0;32mI (661927) responder: Counter = 662[0m
+[0;32mI (662927) responder: Counter = 663[0m
+[0;32mI (663927) responder: Counter = 664[0m
+[0;32mI (664927) responder: Counter = 665[0m
+[0;32mI (665927) responder: Counter = 666[0m
+[0;32mI (666927) responder: Counter = 667[0m
+[0;32mI (667927) responder: Counter = 668[0m
+[0;32mI (668927) responder: Counter = 669[0m
+[0;32mI (669927) responder: Counter = 670[0m
+[0;32mI (670927) responder: Counter = 671[0m
+[0;32mI (671927) responder: Counter = 672[0m
+[0;32mI (672927) responder: Counter = 673[0m
+[0;32mI (673927) responder: Counter = 674[0m
+[0;32mI (674927) responder: Counter = 675[0m
+[0;32mI (675927) responder: Counter = 676[0m
+[0;32mI (676927) responder: Counter = 677[0m
+[0;32mI (677927) responder: Counter = 678[0m
+[0;32mI (678927) responder: Counter = 679[0m
+[0;32mI (679927) responder: Counter = 680[0m
+[0;32mI (680927) responder: Counter = 681[0m
+[0;32mI (681927) responder: Counter = 682[0m
+[0;32mI (682927) responder: Counter = 683[0m
+[0;32mI (683927) responder: Counter = 684[0m
+[0;32mI (684927) responder: Counter = 685[0m
+[0;32mI (685927) responder: Counter = 686[0m
+[0;32mI (686927) responder: Counter = 687[0m
+[0;32mI (687927) responder: Counter = 688[0m
+[0;32mI (688927) responder: Counter = 689[0m
+[0;32mI (689927) responder: Counter = 690[0m
+[0;32mI (690927) responder: Counter = 691[0m
+[0;32mI (691927) responder: Counter = 692[0m
+[0;32mI (692927) responder: Counter = 693[0m
+[0;32mI (693927) responder: Counter = 694[0m
+[0;32mI (694927) responder: Counter = 695[0m
+[0;32mI (695927) responder: Counter = 696[0m
+[0;32mI (696927) responder: Counter = 697[0m
+[0;32mI (697927) responder: Counter = 698[0m
+[0;32mI (698927) responder: Counter = 699[0m
+[0;32mI (699927) responder: Counter = 700[0m
+[0;32mI (700927) responder: Counter = 701[0m
+[0;32mI (701927) responder: Counter = 702[0m
+[0;32mI (702927) responder: Counter = 703[0m
+[0;32mI (703927) responder: Counter = 704[0m
+[0;32mI (704927) responder: Counter = 705[0m
+[0;32mI (705927) responder: Counter = 706[0m
+[0;32mI (706927) responder: Counter = 707[0m
+[0;32mI (707927) responder: Counter = 708[0m
+[0;32mI (708927) responder: Counter = 709[0m
+[0;32mI (709927) responder: Counter = 710[0m
+[0;32mI (710927) responder: Counter = 711[0m
+[0;32mI (711927) responder: Counter = 712[0m
+[0;32mI (712927) responder: Counter = 713[0m
+[0;32mI (713927) responder: Counter = 714[0m
+[0;32mI (714927) responder: Counter = 715[0m
+[0;32mI (715927) responder: Counter = 716[0m
+[0;32mI (716927) responder: Counter = 717[0m
+[0;32mI (717927) responder: Counter = 718[0m
+[0;32mI (718927) responder: Counter = 719[0m
+[0;32mI (719927) responder: Counter = 720[0m
+[0;32mI (720927) responder: Counter = 721[0m
+[0;32mI (721927) responder: Counter = 722[0m
+[0;32mI (722927) responder: Counter = 723[0m
+[0;32mI (723927) responder: Counter = 724[0m
+[0;32mI (724927) responder: Counter = 725[0m
+[0;32mI (725927) responder: Counter = 726[0m
+[0;32mI (726927) responder: Counter = 727[0m
+[0;32mI (727927) responder: Counter = 728[0m
+[0;32mI (728927) responder: Counter = 729[0m
+[0;32mI (729927) responder: Counter = 730[0m
+[0;32mI (730927) responder: Counter = 731[0m
+[0;32mI (731927) responder: Counter = 732[0m
+[0;32mI (732927) responder: Counter = 733[0m
+[0;32mI (733927) responder: Counter = 734[0m
+[0;32mI (734927) responder: Counter = 735[0m
+[0;32mI (735927) responder: Counter = 736[0m
+[0;32mI (736927) responder: Counter = 737[0m
+[0;32mI (737927) responder: Counter = 738[0m
+[0;32mI (738927) responder: Counter = 739[0m
+[0;32mI (739927) responder: Counter = 740[0m
+[0;32mI (740927) responder: Counter = 741[0m
+[0;32mI (741927) responder: Counter = 742[0m
+[0;32mI (742927) responder: Counter = 743[0m
+[0;32mI (743927) responder: Counter = 744[0m
+[0;32mI (744927) responder: Counter = 745[0m
+[0;32mI (745927) responder: Counter = 746[0m
+[0;32mI (746927) responder: Counter = 747[0m
+[0;32mI (747927) responder: Counter = 748[0m
+[0;32mI (748927) responder: Counter = 749[0m
+[0;32mI (749927) responder: Counter = 750[0m
+[0;32mI (750927) responder: Counter = 751[0m
+[0;32mI (751927) responder: Counter = 752[0m
+[0;32mI (752927) responder: Counter = 753[0m
+[0;32mI (753927) responder: Counter = 754[0m
+[0;32mI (754927) responder: Counter = 755[0m
+[0;32mI (755927) responder: Counter = 756[0m
+[0;32mI (756927) responder: Counter = 757[0m
+[0;32mI (757927) responder: Counter = 758[0m
+[0;32mI (758927) responder: Counter = 759[0m
+[0;32mI (759927) responder: Counter = 760[0m
+[0;32mI (760927) responder: Counter = 761[0m
+[0;32mI (761927) responder: Counter = 762[0m
+[0;32mI (762927) responder: Counter = 763[0m
+[0;32mI (763927) responder: Counter = 764[0m
+[0;32mI (764927) responder: Counter = 765[0m
+[0;32mI (765927) responder: Counter = 766[0m
+[0;32mI (766927) responder: Counter = 767[0m
+[0;32mI (767927) responder: Counter = 768[0m
+[0;32mI (768927) responder: Counter = 769[0m
+[0;32mI (769927) responder: Counter = 770[0m
+[0;32mI (770927) responder: Counter = 771[0m
+[0;32mI (771927) responder: Counter = 772[0m
+[0;32mI (772927) responder: Counter = 773[0m
+[0;32mI (773927) responder: Counter = 774[0m
+[0;32mI (774927) responder: Counter = 775[0m
+[0;32mI (775927) responder: Counter = 776[0m
+[0;32mI (776927) responder: Counter = 777[0m
+[0;32mI (777927) responder: Counter = 778[0m
+[0;32mI (778927) responder: Counter = 779[0m
+[0;32mI (779927) responder: Counter = 780[0m
+[0;32mI (780927) responder: Counter = 781[0m
+[0;32mI (781927) responder: Counter = 782[0m
+[0;32mI (782927) responder: Counter = 783[0m
+[0;32mI (783927) responder: Counter = 784[0m
+[0;32mI (784927) responder: Counter = 785[0m
+[0;32mI (785927) responder: Counter = 786[0m
+[0;32mI (786927) responder: Counter = 787[0m
+[0;32mI (787927) responder: Counter = 788[0m
+[0;32mI (788927) responder: Counter = 789[0m
+[0;32mI (789927) responder: Counter = 790[0m
+[0;32mI (790927) responder: Counter = 791[0m
+[0;32mI (791927) responder: Counter = 792[0m
+[0;32mI (792927) responder: Counter = 793[0m
+[0;32mI (793927) responder: Counter = 794[0m
+[0;32mI (794927) responder: Counter = 795[0m
+[0;32mI (795927) responder: Counter = 796[0m
+[0;32mI (796927) responder: Counter = 797[0m
+[0;32mI (797927) responder: Counter = 798[0m
+[0;32mI (798927) responder: Counter = 799[0m
+[0;32mI (799927) responder: Counter = 800[0m
+[0;32mI (800927) responder: Counter = 801[0m
+[0;32mI (801927) responder: Counter = 802[0m
+[0;32mI (802927) responder: Counter = 803[0m
+[0;32mI (803927) responder: Counter = 804[0m
+[0;32mI (804927) responder: Counter = 805[0m
+[0;32mI (805927) responder: Counter = 806[0m
+[0;32mI (806927) responder: Counter = 807[0m
+[0;32mI (807927) responder: Counter = 808[0m
+[0;32mI (808927) responder: Counter = 809[0m
+[0;32mI (809927) responder: Counter = 810[0m
+[0;32mI (810927) responder: Counter = 811[0m
+[0;32mI (811927) responder: Counter = 812[0m
+[0;32mI (812927) responder: Counter = 813[0m
+[0;32mI (813927) responder: Counter = 814[0m
+[0;32mI (814927) responder: Counter = 815[0m
+[0;32mI (815927) responder: Counter = 816[0m
+[0;32mI (816927) responder: Counter = 817[0m
+[0;32mI (817927) responder: Counter = 818[0m
+[0;32mI (818927) responder: Counter = 819[0m
+[0;32mI (819927) responder: Counter = 820[0m
+[0;32mI (820927) responder: Counter = 821[0m
+[0;32mI (821927) responder: Counter = 822[0m
+[0;32mI (822927) responder: Counter = 823[0m
+[0;32mI (823927) responder: Counter = 824[0m
+[0;32mI (824927) responder: Counter = 825[0m
+[0;32mI (825927) responder: Counter = 826[0m
+[0;32mI (826927) responder: Counter = 827[0m
+[0;32mI (827927) responder: Counter = 828[0m
+[0;32mI (828927) responder: Counter = 829[0m
+[0;32mI (829927) responder: Counter = 830[0m
+[0;32mI (830927) responder: Counter = 831[0m
+[0;32mI (831927) responder: Counter = 832[0m
+[0;32mI (832927) responder: Counter = 833[0m
+[0;32mI (833927) responder: Counter = 834[0m
+[0;32mI (834927) responder: Counter = 835[0m
+[0;32mI (835927) responder: Counter = 836[0m
+[0;32mI (836927) responder: Counter = 837[0m
+[0;32mI (837927) responder: Counter = 838[0m
+[0;32mI (838927) responder: Counter = 839[0m
+[0;32mI (839927) responder: Counter = 840[0m
+[0;32mI (840927) responder: Counter = 841[0m
+[0;32mI (841927) responder: Counter = 842[0m
+[0;32mI (842927) responder: Counter = 843[0m
+[0;32mI (843927) responder: Counter = 844[0m
+[0;32mI (844927) responder: Counter = 845[0m
+[0;32mI (845927) responder: Counter = 846[0m
+[0;32mI (846927) responder: Counter = 847[0m
+[0;32mI (847927) responder: Counter = 848[0m
+[0;32mI (848927) responder: Counter = 849[0m
+[0;32mI (849927) responder: Counter = 850[0m
+[0;32mI (850927) responder: Counter = 851[0m
+[0;32mI (851927) responder: Counter = 852[0m
+[0;32mI (852927) responder: Counter = 853[0m
+[0;32mI (853927) responder: Counter = 854[0m
+[0;32mI (854927) responder: Counter = 855[0m
+[0;32mI (855927) responder: Counter = 856[0m
+[0;32mI (856927) responder: Counter = 857[0m
+[0;32mI (857927) responder: Counter = 858[0m
+[0;32mI (858927) responder: Counter = 859[0m
+[0;32mI (859927) responder: Counter = 860[0m
+[0;32mI (860927) responder: Counter = 861[0m
+[0;32mI (861927) responder: Counter = 862[0m
+[0;32mI (862927) responder: Counter = 863[0m
+[0;32mI (863927) responder: Counter = 864[0m
+[0;32mI (864927) responder: Counter = 865[0m
+[0;32mI (865927) responder: Counter = 866[0m
+[0;32mI (866927) responder: Counter = 867[0m
+[0;32mI (867927) responder: Counter = 868[0m
+[0;32mI (868927) responder: Counter = 869[0m
+[0;32mI (869927) responder: Counter = 870[0m
+[0;32mI (870927) responder: Counter = 871[0m
+[0;32mI (871927) responder: Counter = 872[0m
+[0;32mI (872927) responder: Counter = 873[0m
+[0;32mI (873927) responder: Counter = 874[0m
+[0;32mI (874927) responder: Counter = 875[0m
+[0;32mI (875927) responder: Counter = 876[0m
+[0;32mI (876927) responder: Counter = 877[0m
+[0;32mI (877927) responder: Counter = 878[0m
+[0;32mI (878927) responder: Counter = 879[0m
+[0;32mI (879927) responder: Counter = 880[0m
+[0;32mI (880927) responder: Counter = 881[0m
+[0;32mI (881927) responder: Counter = 882[0m
+[0;32mI (882927) responder: Counter = 883[0m
+[0;32mI (883927) responder: Counter = 884[0m
+[0;32mI (884927) responder: Counter = 885[0m
+[0;32mI (885927) responder: Counter = 886[0m
+[0;32mI (886927) responder: Counter = 887[0m
+[0;32mI (887927) responder: Counter = 888[0m
+[0;32mI (888927) responder: Counter = 889[0m
+[0;32mI (889927) responder: Counter = 890[0m
+[0;32mI (890927) responder: Counter = 891[0m
+[0;32mI (891927) responder: Counter = 892[0m
+[0;32mI (892927) responder: Counter = 893[0m
+[0;32mI (893927) responder: Counter = 894[0m
+[0;32mI (894927) responder: Counter = 895[0m
+[0;32mI (895927) responder: Counter = 896[0m
+[0;32mI (896927) responder: Counter = 897[0m
+[0;32mI (897927) responder: Counter = 898[0m
+[0;32mI (898927) responder: Counter = 899[0m
+[0;32mI (899927) responder: Counter = 900[0m
+[0;32mI (900927) responder: Counter = 901[0m
+[0;32mI (901927) responder: Counter = 902[0m
+[0;32mI (902927) responder: Counter = 903[0m
+[0;32mI (903927) responder: Counter = 904[0m
+[0;32mI (904927) responder: Counter = 905[0m
+[0;32mI (905927) responder: Counter = 906[0m
+[0;32mI (906927) responder: Counter = 907[0m
+[0;32mI (907927) responder: Counter = 908[0m
+[0;32mI (908927) responder: Counter = 909[0m
+[0;32mI (909927) responder: Counter = 910[0m
+[0;32mI (910927) responder: Counter = 911[0m
+[0;32mI (911927) responder: Counter = 912[0m
+[0;32mI (912927) responder: Counter = 913[0m
+[0;32mI (913927) responder: Counter = 914[0m
+[0;32mI (914927) responder: Counter = 915[0m
+[0;32mI (915927) responder: Counter = 916[0m
+[0;32mI (916927) responder: Counter = 917[0m
+[0;32mI (917927) responder: Counter = 918[0m
+[0;32mI (918927) responder: Counter = 919[0m
+[0;32mI (919927) responder: Counter = 920[0m
+[0;32mI (920927) responder: Counter = 921[0m
+[0;32mI (921927) responder: Counter = 922[0m
+[0;32mI (922927) responder: Counter = 923[0m
+[0;32mI (923927) responder: Counter = 924[0m
+[0;32mI (924927) responder: Counter = 925[0m
+[0;32mI (925927) responder: Counter = 926[0m
+[0;32mI (926927) responder: Counter = 927[0m
+[0;32mI (927927) responder: Counter = 928[0m
+[0;32mI (928927) responder: Counter = 929[0m
+[0;32mI (929927) responder: Counter = 930[0m
+[0;32mI (930927) responder: Counter = 931[0m
+[0;32mI (931927) responder: Counter = 932[0m
+[0;32mI (932927) responder: Counter = 933[0m
+[0;32mI (933927) responder: Counter = 934[0m
+[0;32mI (934927) responder: Counter = 935[0m
+[0;32mI (935927) responder: Counter = 936[0m
+[0;32mI (936927) responder: Counter = 937[0m
+[0;32mI (937927) responder: Counter = 938[0m
+[0;32mI (938927) responder: Counter = 939[0m
+[0;32mI (939927) responder: Counter = 940[0m
+[0;32mI (940927) responder: Counter = 941[0m
+[0;32mI (941927) responder: Counter = 942[0m
+[0;32mI (942927) responder: Counter = 943[0m
+[0;32mI (943927) responder: Counter = 944[0m
+
+***ERROR*** A stack overflow in task loop_task has been detected.
+
+
+Backtrace: 0x40375be9:0x3fcb5550 0x4037c65d:0x3fcb5570 0x4037d4aa:0x3fcb5590 0x4037e953:0x3fcb5610 0x4037d570:0x3fcb5630 0x4037d566:0x3fcb510c |<-CORRUPTED
+
+
+
+
+ELF file SHA256: d6f94fc7c
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375b28
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Apr 10 2025 22:39:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=18aach (101036) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=00028ad4 vaddr=3fc99a00 size=04a08h ( 18952) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0002d4e4 vaddr=40374000 size=02b34h ( 11060) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7f408h (521224) map[0m
+[0;32mI (209) esp_image: segment 4: paddr=000af430 vaddr=40376b34 size=12e10h ( 77328) load[0m
+[0;32mI (226) esp_image: segment 5: paddr=000c2248 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (235) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (235) boot: Disabling RNG early entropy source...[0m
+[0;32mI (245) cpu_start: Multicore app[0m
+[0;32mI (254) cpu_start: Pro cpu start user code[0m
+[0;32mI (254) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (255) app_init: Application information:[0m
+[0;32mI (255) app_init: Project name:     responder[0m
+[0;32mI (259) app_init: App version:      1[0m
+[0;32mI (262) app_init: Compile time:     Apr 10 2025 22:40:01[0m
+[0;32mI (267) app_init: ELF file SHA256:  d6f94fc7c...[0m
+[0;32mI (271) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (276) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (279) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (294) heap_init: At 3FCA2010 len 00047700 (285 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (309) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (315) spi_flash: detected chip: gd[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (321) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (333) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (339) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (346) main_task: Started on CPU0[0m
+[0;32mI (356) main_task: Calling app_main()[0m
+[0;32mI (376) pp: pp rom version: e7ae62f[0m
+[0;32mI (376) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (386) wifi_init: rx ba win: 6[0m
+[0;32mI (386) wifi_init: accept mbox: 6[0m
+[0;32mI (386) wifi_init: tcpip mbox: 32[0m
+[0;32mI (386) wifi_init: udp mbox: 6[0m
+[0;32mI (386) wifi_init: tcp mbox: 6[0m
+[0;32mI (396) wifi_init: tcp tx win: 5760[0m
+[0;32mI (396) wifi_init: tcp rx win: 5760[0m
+[0;32mI (396) wifi_init: tcp mss: 1440[0m
+[0;32mI (406) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (406) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (406) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (926) ftm_responder: Starting SoftAP with FTM Responder support, SSID - FTM, Password - ftmftmftm, Primary Channel - 1, Bandwidth - 20MHz[0m
+[0;32mI (926) ftm_responder: FTM Responder is ready, waiting for FTM requests...[0m
+[0;32mI (926) responder: Counter = 1[0m
+[0;32mI (936) main_task: Returned from app_main()[0m
+[0;32mI (1936) responder: Counter = 2[0m
+[0;32mI (2936) responder: Counter = 3[0m
+[0;32mI (3936) responder: Counter = 4[0m
+[0;32mI (4936) responder: Counter = 5[0m
+[0;32mI (5936) responder: Counter = 6[0m
+[0;32mI (6936) responder: Counter = 7[0m
+[0;32mI (7936) responder: Counter = 8[0m
+[0;32mI (8936) responder: Counter = 9[0m
+[0;32mI (9936) responder: Counter = 10[0m
+[0;32mI (10936) responder: Counter = 11[0m
+[0;32mI (11936) responder: Counter = 12[0m
+[0;32mI (12936) responder: Counter = 13[0m
+[0;32mI (13936) responder: Counter = 14[0m
+[0;32mI (14936) responder: Counter = 15[0m
+[0;32mI (15936) responder: Counter = 16[0m
+[0;32mI (16936) responder: Counter = 17[0m
+[0;32mI (17936) responder: Counter = 18[0m
+[0;32mI (18936) responder: Counter = 19[0m
+[0;32mI (19936) responder: Counter = 20[0m
+[0;32mI (20936) responder: Counter = 21[0m
+[0;32mI (21936) responder: Counter = 22[0m
+[0;32mI (22936) responder: Counter = 23[0m
+[0;32mI (23936) responder: Counter = 24[0m
+[0;32mI (24936) responder: Counter = 25[0m
+[0;32mI (25936) responder: Counter = 26[0m
+[0;32mI (26936) responder: Counter = 27[0m
+[0;32mI (27936) responder: Counter = 28[0m
+[0;32mI (28936) responder: Counter = 29[0m
+[0;32mI (29936) responder: Counter = 30[0m
+[0;32mI (30936) responder: Counter = 31[0m
+[0;32mI (31936) responder: Counter = 32[0m
+[0;32mI (32936) responder: Counter = 33[0m
+[0;32mI (33936) responder: Counter = 34[0m
+[0;32mI (34936) responder: Counter = 35[0m
+[0;32mI (35936) responder: Counter = 36[0m
+[0;32mI (36936) responder: Counter = 37[0m
+[0;32mI (37936) responder: Counter = 38[0m
+[0;32mI (38936) responder: Counter = 39[0m
+[0;32mI (39936) responder: Counter = 40[0m
+[0;32mI (40936) responder: Counter = 41[0m
+[0;32mI (41936) responder: Counter = 42[0m
+[0;32mI (42936) responder: Counter = 43[0m
+[0;32mI (43936) responder: Counter = 44[0m
+[0;32mI (44936) responder: Counter = 45[0m
+[0;32mI (45936) responder: Counter = 46[0m
+[0;32mI (46936) responder: Counter = 47[0m
+[0;32mI (47936) responder: Counter = 48[0m
+[0;32mI (48936) responder: Counter = 49[0m
+[0;32mI (49936) responder: Counter = 50[0m
+[0;32mI (50936) responder: Counter = 51[0m
+[0;32mI (51936) responder: Counter = 52[0m
+[0;32mI (52936) responder: Counter = 53[0m
+[0;32mI (53936) responder: Counter = 54[0m
+[0;32mI (54936) responder: Counter = 55[0m
+[0;32mI (55936) responder: Counter = 56[0m
+[0;32mI (56936) responder: Counter = 57[0m
+[0;32mI (57936) responder: Counter = 58[0m
+[0;32mI (58936) responder: Counter = 59[0m
+[0;32mI (59936) responder: Counter = 60[0m
+[0;32mI (60936) responder: Counter = 61[0m
+[0;32mI (61936) responder: Counter = 62[0m
+[0;32mI (62936) responder: Counter = 63[0m
+[0;32mI (63936) responder: Counter = 64[0m
+[0;32mI (64936) responder: Counter = 65[0m
+[0;32mI (65936) responder: Counter = 66[0m
+[0;32mI (66936) responder: Counter = 67[0m
+[0;32mI (67936) responder: Counter = 68[0m
+[0;32mI (68936) responder: Counter = 69[0m
+[0;32mI (69936) responder: Counter = 70[0m
+[0;32mI (70936) responder: Counter = 71[0m
+[0;32mI (71936) responder: Counter = 72[0m
+[0;32mI (72936) responder: Counter = 73[0m
+[0;32mI (73936) responder: Counter = 74[0m
+[0;32mI (74936) responder: Counter = 75[0m
+[0;32mI (75936) responder: Counter = 76[0m
+[0;32mI (76936) responder: Counter = 77[0m
+[0;32mI (77936) responder: Counter = 78[0m
+[0;32mI (78936) responder: Counter = 79[0m
+[0;32mI (79936) responder: Counter = 80[0m
+[0;32mI (80936) responder: Counter = 81[0m
+[0;32mI (81936) responder: Counter = 82[0m
+[0;32mI (82936) responder: Counter = 83[0m
+[0;32mI (83936) responder: Counter = 84[0m
+[0;32mI (84936) responder: Counter = 85[0m
+[0;32mI (85936) responder: Counter = 86[0m
+[0;32mI (86936) responder: Counter = 87[0m
+[0;32mI (87936) responder: Counter = 88[0m
+[0;32mI (88936) responder: Counter = 89[0m
+[0;32mI (89936) responder: Counter = 90[0m
+[0;32mI (90936) responder: Counter = 91[0m
+[0;32mI (91936) responder: Counter = 92[0m
+[0;32mI (92936) responder: Counter = 93[0m
+[0;32mI (93936) responder: Counter = 94[0m
+[0;32mI (94936) responder: Counter = 95[0m
+[0;32mI (95936) responder: Counter = 96[0m
+[0;32mI (96936) responder: Counter = 97[0m
+[0;32mI (97936) responder: Counter = 98[0m
+[0;32mI (98936) responder: Counter = 99[0m
+[0;32mI (99936) responder: Counter = 100[0m
+[0;32mI (100936) responder: Counter = 101[0m
+[0;32mI (101936) responder: Counter = 102[0m
+[0;32mI (102936) responder: Counter = 103[0m
+[0;32mI (103936) responder: Counter = 104[0m
+[0;32mI (104936) responder: Counter = 105[0m
+[0;32mI (105936) responder: Counter = 106[0m
+[0;32mI (106936) responder: Counter = 107[0m
+[0;32mI (107936) responder: Counter = 108[0m
+[0;32mI (108936) responder: Counter = 109[0m
+[0;32mI (109936) responder: Counter = 110[0m
+[0;32mI (110936) responder: Counter = 111[0m
+[0;32mI (111936) responder: Counter = 112[0m
+[0;32mI (112936) responder: Counter = 113[0m
+[0;32mI (113936) responder: Counter = 114[0m
+[0;32mI (114936) responder: Counter = 115[0m
+[0;32mI (115936) responder: Counter = 116[0m
+[0;32mI (116936) responder: Counter = 117[0m
+[0;32mI (117936) responder: Counter = 118[0m
+[0;32mI (118936) responder: Counter = 119[0m
+[0;32mI (119936) responder: Counter = 120[0m
+[0;32mI (120936) responder: Counter = 121[0m
+[0;32mI (121936) responder: Counter = 122[0m
+[0;32mI (122936) responder: Counter = 123[0m
+[0;32mI (123936) responder: Counter = 124[0m
+[0;32mI (124936) responder: Counter = 125[0m
+[0;32mI (125936) responder: Counter = 126[0m
+[0;32mI (126936) responder: Counter = 127[0m
+[0;32mI (127936) responder: Counter = 128[0m
+[0;32mI (128936) responder: Counter = 129[0m
+[0;32mI (129936) responder: Counter = 130[0m
+[0;32mI (130936) responder: Counter = 131[0m
+[0;32mI (131936) responder: Counter = 132[0m
+[0;32mI (132936) responder: Counter = 133[0m
+[0;32mI (133936) responder: Counter = 134[0m
+[0;32mI (134936) responder: Counter = 135[0m
+[0;32mI (135936) responder: Counter = 136[0m
+[0;32mI (136936) responder: Counter = 137[0m
+[0;32mI (137936) responder: Counter = 138[0m
+[0;32mI (138936) responder: Counter = 139[0m
+[0;32mI (139936) responder: Counter = 140[0m
+[0;32mI (140936) responder: Counter = 141[0m
+[0;32mI (141936) responder: Counter = 142[0m
+[0;32mI (142936) responder: Counter = 143[0m
+[0;32mI (143936) responder: Counter = 144[0m
+[0;32mI (144936) responder: Counter = 145[0m
+[0;32mI (145936) responder: Counter = 146[0m
+[0;32mI (146936) responder: Counter = 147[0m
+[0;32mI (147936) responder: Counter = 148[0m
+[0;32mI (148936) responder: Counter = 149[0m
+[0;32mI (149936) responder: Counter = 150[0m
+[0;32mI (150936) responder: Counter = 151[0m
+[0;32mI (151936) responder: Counter = 152[0m
+[0;32mI (152936) responder: Counter = 153[0m
+[0;32mI (153936) responder: Counter = 154[0m
+[0;32mI (154936) responder: Counter = 155[0m
+[0;32mI (155936) responder: Counter = 156[0m
+[0;32mI (156936) responder: Counter = 157[0m
+[0;32mI (157936) responder: Counter = 158[0m
+[0;32mI (158936) responder: Counter = 159[0m
+[0;32mI (159936) responder: Counter = 160[0m
+[0;32mI (160936) responder: Counter = 161[0m
+[0;32mI (161936) responder: Counter = 162[0m
+[0;32mI (162936) responder: Counter = 163[0m
+[0;32mI (163936) responder: Counter = 164[0m
+[0;32mI (164936) responder: Counter = 165[0m
+[0;32mI (165936) responder: Counter = 166[0m
+[0;32mI (166936) responder: Counter = 167[0m
+[0;32mI (167936) responder: Counter = 168[0m
+[0;32mI (168936) responder: Counter = 169[0m
+[0;32mI (169936) responder: Counter = 170[0m
+[0;32mI (170936) responder: Counter = 171[0m
+[0;32mI (171936) responder: Counter = 172[0m
+[0;32mI (172936) responder: Counter = 173[0m
+[0;32mI (173936) responder: Counter = 174[0m
+[0;32mI (174936) responder: Counter = 175[0m
+[0;32mI (175936) responder: Counter = 176[0m
+[0;32mI (176936) responder: Counter = 177[0m
+[0;32mI (177936) responder: Counter = 178[0m
+[0;32mI (178936) responder: Counter = 179[0m
+[0;32mI (179936) responder: Counter = 180[0m
+[0;32mI (180936) responder: Counter = 181[0m
+[0;32mI (181936) responder: Counter = 182[0m
+[0;32mI (182936) responder: Counter = 183[0m
+[0;32mI (183936) responder: Counter = 184[0m
+[0;32mI (184936) responder: Counter = 185[0m
+[0;32mI (185936) responder: Counter = 186[0m
+[0;32mI (186936) responder: Counter = 187[0m
+[0;32mI (187936) responder: Counter = 188[0m
+[0;32mI (188936) responder: Counter = 189[0m
+[0;32mI (189936) responder: Counter = 190[0m
+[0;32mI (190936) responder: Counter = 191[0m
+[0;32mI (191936) responder: Counter = 192[0m
+[0;32mI (192936) responder: Counter = 193[0m
+[0;32mI (193936) responder: Counter = 194[0m
+[0;32mI (194936) responder: Counter = 195[0m
+[0;32mI (195936) responder: Counter = 196[0m
+[0;32mI (196936) responder: Counter = 197[0m
+[0;32mI (197936) responder: Counter = 198[0m
+[0;32mI (198936) responder: Counter = 199[0m
+[0;32mI (199936) responder: Counter = 200[0m
+[0;32mI (200936) responder: Counter = 201[0m
+[0;32mI (201936) responder: Counter = 202[0m
+[0;32mI (202936) responder: Counter = 203[0m
+[0;32mI (203936) responder: Counter = 204[0m
+[0;32mI (204936) responder: Counter = 205[0m
+[0;32mI (205936) responder: Counter = 206[0m
+[0;32mI (206936) responder: Counter = 207[0m
+[0;32mI (207936) responder: Counter = 208[0m
+[0;32mI (208936) responder: Counter = 209[0m
+[0;32mI (209936) responder: Counter = 210[0m
+[0;32mI (210936) responder: Counter = 211[0m
+[0;32mI (211936) responder: Counter = 212[0m
+[0;32mI (212936) responder: Counter = 213[0m
+[0;32mI (213936) responder: Counter = 214[0m
+[0;32mI (214936) responder: Counter = 215[0m
+[0;32mI (215936) responder: Counter = 216[0m
+[0;32mI (216936) responder: Counter = 217[0m
+[0;32mI (217936) responder: Counter = 218[0m
+[0;32mI (218936) responder: Counter = 219[0m
+[0;32mI (219936) responder: Counter = 220[0m
+[0;32mI (220936) responder: Counter = 221[0m
+[0;32mI (221936) responder: Counter = 222[0m
+[0;32mI (222936) responder: Counter = 223[0m
+[0;32mI (223936) responder: Counter = 224[0m
+[0;32mI (224936) responder: Counter = 225[0m
+[0;32mI (225936) responder: Counter = 226[0m
+[0;32mI (226936) responder: Counter = 227[0m
+[0;32mI (227936) responder: Counter = 228[0m
+[0;32mI (228936) responder: Counter = 229[0m
+[0;32mI (229936) responder: Counter = 230[0m
+[0;32mI (230936) responder: Counter = 231[0m
+[0;32mI (231936) responder: Counter = 232[0m
+[0;32mI (232936) responder: Counter = 233[0m
+[0;32mI (233936) responder: Counter = 234[0m
+[0;32mI (234936) responder: Counter = 235[0m
+[0;32mI (235936) responder: Counter = 236[0m
+[0;32mI (236936) responder: Counter = 237[0m
+[0;32mI (237936) responder: Counter = 238[0m
+[0;32mI (238936) responder: Counter = 239[0m
+[0;32mI (239936) responder: Counter = 240[0m
+[0;32mI (240936) responder: Counter = 241[0m
+[0;32mI (241936) responder: Counter = 242[0m
+[0;32mI (242936) responder: Counter = 243[0m
+[0;32mI (243936) responder: Counter = 244[0m
+[0;32mI (244936) responder: Counter = 245[0m
+[0;32mI (245936) responder: Counter = 246[0m
+[0;32mI (246936) responder: Counter = 247[0m
+[0;32mI (247936) responder: Counter = 248[0m
+[0;32mI (248936) responder: Counter = 249[0m
+[0;32mI (249936) responder: Counter = 250[0m
+[0;32mI (250936) responder: Counter = 251[0m
+[0;32mI (251936) responder: Counter = 252[0m
+[0;32mI (252936) responder: Counter = 253[0m
+[0;32mI (253936) responder: Counter = 254[0m
+[0;32mI (254936) responder: Counter = 255[0m
+[0;32mI (255936) responder: Counter = 256[0m
+[0;32mI (256936) responder: Counter = 257[0m
+[0;32mI (257936) responder: Counter = 258[0m
+[0;32mI (258936) responder: Counter = 259[0m
+[0;32mI (259936) responder: Counter = 260[0m
+[0;32mI (260936) responder: Counter = 261[0m
+[0;32mI (261936) responder: Counter = 262[0m
+[0;32mI (262936) responder: Counter = 263[0m
+[0;32mI (263936) responder: Counter = 264[0m
+[0;32mI (264936) responder: Counter = 265[0m
+[0;32mI (265936) responder: Counter = 266[0m
+[0;32mI (266936) responder: Counter = 267[0m
+[0;32mI (267936) responder: Counter = 268[0m
+[0;32mI (268936) responder: Counter = 269[0m
+[0;32mI (269936) responder: Counter = 270[0m
+[0;32mI (270936) responder: Counter = 271[0m
+[0;32mI (271936) responder: Counter = 272[0m
+[0;32mI (272936) responder: Counter = 273[0m
+[0;32mI (273936) responder: Counter = 274[0m
+[0;32mI (274936) responder: Counter = 275[0m
+[0;32mI (275936) responder: Counter = 276[0m
+[0;32mI (276936) responder: Counter = 277[0m
+[0;32mI (277936) responder: Counter = 278[0m
+[0;32mI (278936) responder: Counter = 279[0m
+[0;32mI (279936) responder: Counter = 280[0m
+[0;32mI (280936) responder: Counter = 281[0m
+[0;32mI (281936) responder: Counter = 282[0m
+[0;32mI (282936) responder: Counter = 283[0m
+[0;32mI (283936) responder: Counter = 284[0m
+[0;32mI (284936) responder: Counter = 285[0m
+[0;32mI (285936) responder: Counter = 286[0m
+[0;32mI (286936) responder: Counter = 287[0m
+[0;32mI (287936) responder: Counter = 288[0m
+[0;32mI (288936) responder: Counter = 289[0m
+[0;32mI (289936) responder: Counter = 290[0m
+[0;32mI (290936) responder: Counter = 291[0m
+[0;32mI (291936) responder: Counter = 292[0m
+[0;32mI (292936) responder: Counter = 293[0m
+[0;32mI (293936) responder: Counter = 294[0m
+[0;32mI (294936) responder: Counter = 295[0m
+[0;32mI (295936) responder: Counter = 296[0m
+[0;32mI (296936) responder: Counter = 297[0m
+[0;32mI (297936) responder: Counter = 298[0m
+[0;32mI (298936) responder: Counter = 299[0m
+[0;32mI (299936) responder: Counter = 300[0m
+[0;32mI (300936) responder: Counter = 301[0m
+[0;32mI (301936) responder: Counter = 302[0m
+[0;32mI (302936) responder: Counter = 303[0m
+[0;32mI (303936) responder: Counter = 304[0m
+[0;32mI (304936) responder: Counter = 305[0m
+[0;32mI (305936) responder: Counter = 306[0m
+[0;32mI (306936) responder: Counter = 307[0m
+[0;32mI (307936) responder: Counter = 308[0m
+[0;32mI (308936) responder: Counter = 309[0m
+[0;32mI (309936) responder: Counter = 310[0m
+[0;32mI (310936) responder: Counter = 311[0m
+[0;32mI (311936) responder: Counter = 312[0m
+[0;32mI (312936) responder: Counter = 313[0m
+[0;32mI (313936) responder: Counter = 314[0m
+[0;32mI (314936) responder: Counter = 315[0m
+[0;32mI (315936) responder: Counter = 316[0m
+[0;32mI (316936) responder: Counter = 317[0m
+[0;32mI (317936) responder: Counter = 318[0m
+[0;32mI (318936) responder: Counter = 319[0m
+[0;32mI (319936) responder: Counter = 320[0m
+[0;32mI (320936) responder: Counter = 321[0m
+[0;32mI (321936) responder: Counter = 322[0m
+[0;32mI (322936) responder: Counter = 323[0m
+[0;32mI (323936) responder: Counter = 324[0m
+[0;32mI (324936) responder: Counter = 325[0m
+[0;32mI (325936) responder: Counter = 326[0m
+[0;32mI (326936) responder: Counter = 327[0m
+[0;32mI (327936) responder: Counter = 328[0m
+[0;32mI (328936) responder: Counter = 329[0m
+[0;32mI (329936) responder: Counter = 330[0m
+[0;32mI (330936) responder: Counter = 331[0m
+[0;32mI (331936) responder: Counter = 332[0m
+[0;32mI (332936) responder: Counter = 333[0m
+[0;32mI (333936) responder: Counter = 334[0m
+[0;32mI (334936) responder: Counter = 335[0m
+[0;32mI (335936) responder: Counter = 336[0m
+[0;32mI (336936) responder: Counter = 337[0m
+[0;32mI (337936) responder: Counter = 338[0m
+[0;32mI (338936) responder: Counter = 339[0m
+[0;32mI (339936) responder: Counter = 340[0m
+[0;32mI (340936) responder: Counter = 341[0m
+[0;32mI (341936) responder: Counter = 342[0m
+[0;32mI (342936) responder: Counter = 343[0m
+[0;32mI (343936) responder: Counter = 344[0m
+[0;32mI (344936) responder: Counter = 345[0m
+[0;32mI (345936) responder: Counter = 346[0m
+
+***ERROR*** A stack overflow in task loop_task has been detected.
+
+
+Backtrace: 0x40375be9:0x3fcb5550 0x4037c65d:0x3fcb5570 0x4037d4aa:0x3fcb5590 0x4037e953:0x3fcb5610 0x4037d570:0x3fcb5630 0x4037d566:0x3fcb510c |<-CORRUPTED
+
+
+
+
+ELF file SHA256: d6f94fc7c
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375b28
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Apr 10 2025 22:39:53[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (29) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=18aach (101036) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=00028ad4 vaddr=3fc99a00 size=04a08h ( 18952) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0002d4e4 vaddr=40374000 size=02b34h ( 11060) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7f408h (521224) map[0m
+[0;32mI (209) esp_image: segment 4: paddr=000af430 vaddr=40376b34 size=12e10h ( 77328) load[0m
+[0;32mI (226) esp_image: segment 5: paddr=000c2248 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (235) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (235) boot: Disabling RNG early entropy source...[0m
+[0;32mI (245) cpu_start: Multicore app[0m
+[0;32mI (254) cpu_start: Pro cpu start user code[0m
+[0;32mI (254) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (255) app_init: Application information:[0m
+[0;32mI (255) app_init: Project name:     responder[0m
+[0;32mI (259) app_init: App version:      1[0m
+[0;32mI (262) app_init: Compile time:     Apr 10 2025 22:40:01[0m
+[0;32mI (267) app_init: ELF file SHA256:  d6f94fc7c...[0m
+[0;32mI (271) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (276) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (279) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (294) heap_init: At 3FCA2010 len 00047700 (285 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (309) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (315) spi_flash: detected chip: gd[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (321) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (333) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (339) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (346) main_task: Started on CPU0[0m
+[0;32mI (356) main_task: Calling app_main()[0m
+[0;32mI (376) pp: pp rom version: e7ae62f[0m
+[0;32mI (376) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (386) wifi_init: rx ba win: 6[0m
+[0;32mI (386) wifi_init: accept mbox: 6[0m
+[0;32mI (386) wifi_init: tcpip mbox: 32[0m
+[0;32mI (386) wifi_init: udp mbox: 6[0m
+[0;32mI (386) wifi_init: tcp mbox: 6[0m
+[0;32mI (396) wifi_init: tcp tx win: 5760[0m
+[0;32mI (396) wifi_init: tcp rx win: 5760[0m
+[0;32mI (396) wifi_init: tcp mss: 1440[0m
+[0;32mI (406) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (406) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (406) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (926) ftm_responder: Starting SoftAP with FTM Responder support, SSID - FTM, Password - ftmftmftm, Primary Channel - 1, Bandwidth - 20MHz[0m
+[0;32mI (926) ftm_responder: FTM Responder is ready, waiting for FTM requests...[0m
+[0;32mI (936) responder: Counter = 1[0m
+[0;32mI (936) main_task: Returned from app_main()[0m
+[0;32mI (1936) responder: Counter = 2[0m
+[0;32mI (2936) responder: Counter = 3[0m
+[0;32mI (3936) responder: Counter = 4[0m
+[0;32mI (4936) responder: Counter = 5[0m
+[0;32mI (5936) responder: Counter = 6[0m
+[0;32mI (6936) responder: Counter = 7[0m
+[0;32mI (7936) responder: Counter = 8[0m
+[0;32mI (8936) responder: Counter = 9[0m
+[0;32mI (9936) responder: Counter = 10[0m
+[0;32mI (10936) responder: Counter = 11[0m
+[0;32mI (11936) responder: Counter = 12[0m
+[0;32mI (12936) responder: Counter = 13[0m
+[0;32mI (13936) responder: Counter = 14[0m
+[0;32mI (14936) responder: Counter = 15[0m
+[0;32mI (15936) responder: Counter = 16[0m
+[0;32mI (16936) responder: Counter = 17[0m
+[0;32mI (17936) responder: Counter = 18[0m
+[0;32mI (18936) responder: Counter = 19[0m
+[0;32mI (19936) responder: Counter = 20[0m
+[0;32mI (20936) responder: Counter = 21[0m
+[0;32mI (21936) responder: Counter = 22[0m
+[0;32mI (22936) responder: Counter = 23[0m
+[0;32mI (23936) responder: Counter = 24[0m
+[0;32mI (24936) responder: Counter = 25[0m
+[0;32mI (25936) responder: Counter = 26[0m
+[0;32mI (26936) responder: Counter = 27[0m
+[0;32mI (27936) responder: Counter = 28[0m
+[0;32mI (28936) responder: Counter = 29[0m
+[0;32mI (29936) responder: Counter = 30[0m
+[0;32mI (30936) responder: Counter = 31[0m
+[0;32mI (31936) responder: Counter = 32[0m
+[0;32mI (32936) responder: Counter = 33[0m
+[0;32mI (33936) responder: Counter = 34[0m
+[0;32mI (34936) responder: Counter = 35[0m
+[0;32mI (35936) responder: Counter = 36[0m
+[0;32mI (36936) responder: Counter = 37[0m
+[0;32mI (37936) responder: Counter = 38[0m
+[0;32mI (38936) responder: Counter = 39[0m
+[0;32mI (39936) responder: Counter = 40[0m
+[0;32mI (40936) responder: Counter = 41[0m
+[0;32mI (41936) responder: Counter = 42[0m
+[0;32mI (42936) responder: Counter = 43[0m
+[0;32mI (43936) responder: Counter = 44[0m
+[0;32mI (44936) responder: Counter = 45[0m
+[0;32mI (45936) responder: Counter = 46[0m
+[0;32mI (46936) responder: Counter = 47[0m
+[0;32mI (47936) responder: Counter = 48[0m
+[0;32mI (48936) responder: Counter = 49[0m
+[0;32mI (49936) responder: Counter = 50[0m
+[0;32mI (50936) responder: Counter = 51[0m
+[0;32mI (51936) responder: Counter = 52[0m
+[0;32mI (52936) responder: Counter = 53[0m
+[0;32mI (53936) responder: Counter = 54[0m
+[0;32mI (54936) responder: Counter = 55[0m
+[0;32mI (55936) responder: Counter = 56[0m
+[0;32mI (56936) responder: Counter = 57[0m
+[0;32mI (57936) responder: Counter = 58[0m
+[0;32mI (58936) responder: Counter = 59[0m
+[0;32mI (59936) responder: Counter = 60[0m
+[0;32mI (60936) responder: Counter = 61[0m
+[0;32mI (61936) responder: Counter = 62[0m
+[0;32mI (62936) responder: Counter = 63[0m
+[0;32mI (63936) responder: Counter = 64[0m
+[0;32mI (64936) responder: Counter = 65[0m
+[0;32mI (65936) responder: Counter = 66[0m
+[0;32mI (66936) responder: Counter = 67[0m
+[0;32mI (67936) responder: Counter = 68[0m
+[0;32mI (68936) responder: Counter = 69[0m
+[0;32mI (69936) responder: Counter = 70[0m
+[0;32mI (70936) responder: Counter = 71[0m
+[0;32mI (71936) responder: Counter = 72[0m
+[0;32mI (72936) responder: Counter = 73[0m
+[0;32mI (73936) responder: Counter = 74[0m
+[0;32mI (74936) responder: Counter = 75[0m
+[0;32mI (75936) responder: Counter = 76[0m
+[0;32mI (76936) responder: Counter = 77[0m
+[0;32mI (77936) responder: Counter = 78[0m
+[0;32mI (78936) responder: Counter = 79[0m
+[0;32mI (79936) responder: Counter = 80[0m
+[0;32mI (80936) responder: Counter = 81[0m
+[0;32mI (81936) responder: Counter = 82[0m
+[0;32mI (82936) responder: Counter = 83[0m
+[0;32mI (83936) responder: Counter = 84[0m
+[0;32mI (84936) responder: Counter = 85[0m
+[0;32mI (85936) responder: Counter = 86[0m
+[0;32mI (86936) responder: Counter = 87[0m
+[0;32mI (87936) responder: Counter = 88[0m
+[0;32mI (88936) responder: Counter = 89[0m
+[0;32mI (89936) responder: Counter = 90[0m
+[0;32mI (90936) responder: Counter = 91[0m
+[0;32mI (91936) responder: Counter = 92[0m
+[0;32mI (92936) responder: Counter = 93[0m
+[0;32mI (93936) responder: Counter = 94[0m
+[0;32mI (94936) responder: Counter = 95[0m
+[0;32mI (95936) responder: Counter = 96[0m
+[0;32mI (96936) responder: Counter = 97[0m
+[0;32mI (97936) responder: Counter = 98[0m
+[0;32mI (98936) responder: Counter = 99[0m
+[0;32mI (99936) responder: Counter = 100[0m
+[0;32mI (100936) responder: Counter = 101[0m
+[0;32mI (101936) responder: Counter = 102[0m
+[0;32mI (102936) responder: Counter = 103[0m
+[0;32mI (103936) responder: Counter = 104[0m
+[0;32mI (104936) responder: Counter = 105[0m
+[0;32mI (105936) responder: Counter = 106[0m
+[0;32mI (106936) responder: Counter = 107[0m
+[0;32mI (107936) responder: Counter = 108[0m
+[0;32mI (108936) responder: Counter = 109[0m
+[0;32mI (109936) responder: Counter = 110[0m
+[0;32mI (110936) responder: Counter = 111[0m
+[0;32mI (111936) responder: Counter = 112[0m
+[0;32mI (112936) responder: Counter = 113[0m
+[0;32mI (113936) responder: Counter = 114[0m
+[0;32mI (114936) responder: Counter = 115[0m
+[0;32mI (115936) responder: Counter = 116[0m
+[0;32mI (116936) responder: Counter = 117[0m
+[0;32mI (117936) responder: Counter = 118[0m
+[0;32mI (118936) responder: Counter = 119[0m
+[0;32mI (119936) responder: Counter = 120[0m
+[0;32mI (120936) responder: Counter = 121[0m
+[0;32mI (121936) responder: Counter = 122[0m
+[0;32mI (122936) responder: Counter = 123[0m
+[0;32mI (123936) responder: Counter = 124[0m
+[0;32mI (124936) responder: Counter = 125[0m
+[0;32mI (125936) responder: Counter = 126[0m
+[0;32mI (126936) responder: Counter = 127[0m
+[0;32mI (127936) responder: Counter = 128[0m
+[0;32mI (128936) responder: Counter = 129[0m
+[0;32mI (129936) responder: Counter = 130[0m
+[0;32mI (130936) responder: Counter = 131[0m
+[0;32mI (131936) responder: Counter = 132[0m
+[0;32mI (132936) responder: Counter = 133[0m
+[0;32mI (133936) responder: Counter = 134[0m
+[0;32mI (134936) responder: Counter = 135[0m
+[0;32mI (135936) responder: Counter = 136[0m
+[0;32mI (136936) responder: Counter = 137[0m
+[0;32mI (137936) responder: Counter = 138[0m
+[0;32mI (138936) responder: Counter = 139[0m
+[0;32mI (139936) responder: Counter = 140[0m
+[0;32mI (140936) responder: Counter = 141[0m
+[0;32mI (141936) responder: Counter = 142[0m
+[0;32mI (142936) responder: Counter = 143[0m
+[0;32mI (143936) responder: Counter = 144[0m
+[0;32mI (144936) responder: Counter = 145[0m
+[0;32mI (145936) responder: Counter = 146[0m
+[0;32mI (146936) responder: Counter = 147[0m
+[0;32mI (147936) responder: Counter = 148[0m
+[0;32mI (148936) responder: Counter = 149[0m
+[0;32mI (149936) responder: Counter = 150[0m
+[0;32mI (150936) responder: Counter = 151[0m
+[0;32mI (151936) responder: Counter = 152[0m
+[0;32mI (152936) responder: Counter = 153[0m
+[0;32mI (153936) responder: Counter = 154[0m
+[0;32mI (154936) responder: Counter = 155[0m
+[0;32mI (155936) responder: Counter = 156[0m
+[0;32mI (156936) responder: Counter = 157[0m
+[0;32mI (157936) responder: Counter = 158[0m
+[0;32mI (158936) responder: Counter = 159[0m
+[0;32mI (159936) responder: Counter = 160[0m
+[0;32mI (160936) responder: Counter = 161[0m
+[0;32mI (161936) responder: Counter = 162[0m
+[0;32mI (162936) responder: Counter = 163[0m
+[0;32mI (163936) responder: Counter = 164[0m
+[0;32mI (164936) responder: Counter = 165[0m
+[0;32mI (165936) responder: Counter = 166[0m
+[0;32mI (166936) responder: Counter = 167[0m
+[0;32mI (167936) responder: Counter = 168[0m
+[0;32mI (168936) responder: Counter = 169[0m
+[0;32mI (169936) responder: Counter = 170[0m
+[0;32mI (170936) responder: Counter = 171[0m
+[0;32mI (171936) responder: Counter = 172[0m
+[0;32mI (172936) responder: Counter = 173[0m
+[0;32mI (173936) responder: Counter = 174[0m
+[0;32mI (174936) responder: Counter = 175[0m
+[0;32mI (175936) responder: Counter = 176[0m
+[0;32mI (176936) responder: Counter = 177[0m
+[0;32mI (177936) responder: Counter = 178[0m
+[0;32mI (178936) responder: Counter = 179[0m
+[0;32mI (179936) responder: Counter = 180[0m
+[0;32mI (180936) responder: Counter = 181[0m
+[0;32mI (181936) responder: Counter = 182[0m
+[0;32mI (182936) responder: Counter = 183[0m
+[0;32mI (183936) responder: Counter = 184[0m
+[0;32mI (184936) responder: Counter = 185[0m
+[0;32mI (185936) responder: Counter = 186[0m
+[0;32mI (186936) responder: Counter = 187[0m
+[0;32mI (187936) responder: Counter = 188[0m
+[0;32mI (188936) responder: Counter = 189[0m
+[0;32mI (189936) responder: Counter = 190[0m
+[0;32mI (190936) responder: Counter = 191[0m
+[0;32mI (191936) responder: Counter = 192[0m
+[0;32mI (192936) responder: Counter = 193[0m
+[0;32mI (193936) responder: Counter = 194[0m
+[0;32mI (194936) responder: Counter = 195[0m
+[0;32mI (195936) responder: Counter = 196[0m
+[0;32mI (196936) responder: Counter = 197[0m
+[0;32mI (197936) responder: Counter = 198[0m
+[0;32mI (198936) responder: Counter = 199[0m
+[0;32mI (199936) responder: Counter = 200[0m
+[0;32mI (200936) responder: Counter = 201[0m
+[0;32mI (201936) responder: Counter = 202[0m
+[0;32mI (202936) responder: Counter = 203[0m
+[0;32mI (203936) responder: Counter = 204[0m
+[0;32mI (204936) responder: Counter = 205[0m
+[0;32mI (205936) responder: Counter = 206[0m
+[0;32mI (206936) responder: Counter = 207[0m
+[0;32mI (207936) responder: Counter = 208[0m
+[0;32mI (208936) responder: Counter = 209[0m
+[0;32mI (209936) responder: Counter = 210[0m
+[0;32mI (210936) responder: Counter = 211[0m
+[0;32mI (211936) responder: Counter = 212[0m
+[0;32mI (212936) responder: Counter = 213[0m
+[0;32mI (213936) responder: Counter = 214[0m
+[0;32mI (214936) responder: Counter = 215[0m
+[0;32mI (215936) responder: Counter = 216[0m
+[0;32mI (216936) responder: Counter = 217[0m
+[0;32mI (217936) responder: Counter = 218[0m
+[0;32mI (218936) responder: Counter = 219[0m
+[0;32mI (219936) responder: Counter = 220[0m
+[0;32mI (220936) responder: Counter = 221[0m
+[0;32mI (221936) responder: Counter = 222[0m
+[0;32mI (222936) responder: Counter = 223[0m
+[0;32mI (223936) responder: Counter = 224[0m
+[0;32mI (224936) responder: Counter = 225[0m
+[0;32mI (225936) responder: Counter = 226[0m
+[0;32mI (226936) responder: Counter = 227[0m
+[0;32mI (227936) responder: Counter = 228[0m
+[0;32mI (228936) responder: Counter = 229[0m
+[0;32mI (229936) responder: Counter = 230[0m
+[0;32mI (230936) responder: Counter = 231[0m
+[0;32mI (231936) responder: Counter = 232[0m
+[0;32mI (232936) responder: Counter = 233[0m
+[0;32mI (233936) responder: Counter = 234[0m
+[0;32mI (234936) responder: Counter = 235[0m
+[0;32mI (235936) responder: Counter = 236[0m
+[0;32mI (236936) responder: Counter = 237[0m
+[0;32mI (237936) responder: Counter = 238[0m
+[0;32mI (238936) responder: Counter = 239[0m
+[0;32mI (239936) responder: Counter = 240[0m
+[0;32mI (240936) responder: Counter = 241[0m
+[0;32mI (241936) responder: Counter = 242[0m
+[0;32mI (242936) responder: Counter = 243[0m
+[0;32mI (243936) responder: Counter = 244[0m
+[0;32mI (244936) responder: Counter = 245[0m
+[0;32mI (245936) responder: Counter = 246[0m
+[0;32mI (246936) responder: Counter = 247[0m
+[0;32mI (247936) responder: Counter = 248[0m
+[0;32mI (248936) responder: Counter = 249[0m
+[0;32mI (249936) responder: Counter = 250[0m
+[0;32mI (250936) responder: Counter = 251[0m
+[0;32mI (251936) responder: Counter = 252[0m
+[0;32mI (252936) responder: Counter = 253[0m
+[0;32mI (253936) responder: Counter = 254[0m
+[0;32mI (254936) responder: Counter = 255[0m
+[0;32mI (255936) responder: Counter = 256[0m
+[0;32mI (256936) responder: Counter = 257[0m
+[0;32mI (257936) responder: Counter = 258[0m
+[0;32mI (258936) responder: Counter = 259[0m
+[0;32mI (259936) responder: Counter = 260[0m
+[0;32mI (260936) responder: Counter = 261[0m
+[0;32mI (261936) responder: Counter = 262[0m
+[0;32mI (262936) responder: Counter = 263[0m
+[0;32mI (263936) responder: Counter = 264[0m
+[0;32mI (264936) responder: Counter = 265[0m
+[0;32mI (265936) responder: Counter = 266[0m
+[0;32mI (266936) responder: Counter = 267[0m
+[0;32mI (267936) responder: Counter = 268[0m
+[0;32mI (268936) responder: Counter = 269[0m
+[0;32mI (269936) responder: Counter = 270[0m
+[0;32mI (270936) responder: Counter = 271[0m
+[0;32mI (271936) responder: Counter = 272[0m
+[0;32mI (272936) responder: Counter = 273[0m
+[0;32mI (273936) responder: Counter = 274[0m
+[0;32mI (274936) responder: Counter = 275[0m
+[0;32mI (275936) responder: Counter = 276[0m
+[0;32mI (276936) responder: Counter = 277[0m
+[0;32mI (277936) responder: Counter = 278[0m
+[0;32mI (278936) responder: Counter = 279[0m
+[0;32mI (279936) responder: Counter = 280[0m
+[0;32mI (280936) responder: Counter = 281[0m
+[0;32mI (281936) responder: Counter = 282[0m
+[0;32mI (282936) responder: Counter = 283[0m
+[0;32mI (283936) responder: Counter = 284[0m
+[0;32mI (284936) responder: Counter = 285[0m
+[0;32mI (285936) responder: Counter = 286[0m
+[0;32mI (286936) responder: Counter = 287[0m
+[0;32mI (287936) responder: Counter = 288[0m
+[0;32mI (288936) responder: Counter = 289[0m
+[0;32mI (289936) responder: Counter = 290[0m
+[0;32mI (290936) responder: Counter = 291[0m
+[0;32mI (291936) responder: Counter = 292[0m
+[0;32mI (292936) responder: Counter = 293[0m
+[0;32mI (293936) responder: Counter = 294[0m
+[0;32mI (294936) responder: Counter = 295[0m
+[0;32mI (295936) responder: Counter = 296[0m
+[0;32mI (296936) responder: Counter = 297[0m
+[0;32mI (297936) responder: Counter = 298[0m
+[0;32mI (298936) responder: Counter = 299[0m
+[0;32mI (299936) responder: Counter = 300[0m
+[0;32mI (300936) responder: Counter = 301[0m
+[0;32mI (301936) responder: Counter = 302[0m
+[0;32mI (302936) responder: Counter = 303[0m
+[0;32mI (303936) responder: Counter = 304[0m
+[0;32mI (304936) responder: Counter = 305[0m
+[0;32mI (305936) responder: Counter = 306[0m
+[0;32mI (306936) responder: Counter = 307[0m
+[0;32mI (307936) responder: Counter = 308[0m
+[0;32mI (308936) responder: Counter = 309[0m
+[0;32mI (309936) responder: Counter = 310[0m
+[0;32mI (310936) responder: Counter = 311[0m
+[0;32mI (311936) responder: Counter = 312[0m
+[0;32mI (312936) responder: Counter = 313[0m
+[0;32mI (313936) responder: Counter = 314[0m
+[0;32mI (314936) responder: Counter = 315[0m
+[0;32mI (315936) responder: Counter = 316[0m
+[0;32mI (316936) responder: Counter = 317[0m
+[0;32mI (317936) responder: Counter = 318[0m
+[0;32mI (318936) responder: Counter = 319[0m
+[0;32mI (319936) responder: Counter = 320[0m
+[0;32mI (320936) responder: Counter = 321[0m
+[0;32mI (321936) responder: Counter = 322[0m
+[0;32mI (322936) responder: Counter = 323[0m
+[0;32mI (323936) responder: Counter = 324[0m
+[0;32mI (324936) responder: Counter = 325[0m
+[0;32mI (325936) responder: Counter = 326[0m
+[0;32mI (326936) responder: Counter = 327[0m
+[0;32mI (327936) responder: Counter = 328[0m
+[0;32mI (328936) responder: Counter = 329[0m
+[0;32mI (329936) responder: Counter = 330[0m
+[0;32mI (330936) responder: Counter = 331[0m
+[0;32mI (331936) responder: Counter = 332[0m
+[0;32mI (332936) responder: Counter = 333[0m
+[0;32mI (333936) responder: Counter = 334[0m
+[0;32mI (334936) responder: Counter = 335[0m
+[0;32mI (335936) responder: Counter = 336[0m
+[0;32mI (336936) responder: Counter = 337[0m
+[0;32mI (337936) responder: Counter = 338[0m
+[0;32mI (338936) responder: Counter = 339[0m
+[0;32mI (339936) responder: Counter = 340[0m
+[0;32mI (340936) responder: Counter = 341[0m
+[0;32mI (341936) responder: Counter = 342[0m
+[0;32mI (342936) responder: Counter = 343[0m
+[0;32mI (343936) responder: Counter = 344[0m
+[0;32mI (344936) responder: Counter = 345[0m
+[0;32mI (345936) responder: Counter = 346[0m
+[0;32mI (346936) responder: Counter = 347[0m
+[0;32mI (347936) responder: Counter = 348[0m
+[0;32mI (348936) responder: Counter = 349[0m
+[0;32mI (349936) responder: Counter = 350[0m
+[0;32mI (350936) responder: Counter = 351[0m
+[0;32mI (351936) responder: Counter = 352[0m
+[0;32mI (352936) responder: Counter = 353[0m
+[0;32mI (353936) responder: Counter = 354[0m
+[0;32mI (354936) responder: Counter = 355[0m
+[0;32mI (355936) responder: Counter = 356[0m
+[0;32mI (356936) responder: Counter = 357[0m
+[0;32mI (357936) responder: Counter = 358[0m
+[0;32mI (358936) responder: Counter = 359[0m
+[0;32mI (359936) responder: Counter = 360[0m
+[0;32mI (360936) responder: Counter = 361[0m
+[0;32mI (361936) responder: Counter = 362[0m
+[0;32mI (362936) responder: Counter = 363[0m
+[0;32mI (363936) responder: Counter = 364[0m
+[0;32mI (364936) responder: Counter = 365[0m
+[0;32mI (365936) responder: Counter = 366[0m
+[0;32mI (366936) responder: Counter = 367[0m
+[0;32mI (367936) responder: Counter = 368[0m
+[0;32mI (368936) responder: Counter = 369[0m
+[0;32mI (369936) responder: Counter = 370[0m
+[0;32mI (370936) responder: Counter = 371[0m
+[0;32mI (371936) responder: Counter = 372[0m
+[0;32mI (372936) responder: Counter = 373[0m
+[0;32mI (373936) responder: Counter = 374[0m
+[0;32mI (374936) responder: Counter = 375[0m
+[0;32mI (375936) responder: Counter = 376[0m
+[0;32mI (376936) responder: Counter = 377[0m
+[0;32mI (377936) responder: Counter = 378[0m
+[0;32mI (378936) responder: Counter = 379[0m
+[0;32mI (379936) responder: Counter = 380[0m
+[0;32mI (380936) responder: Counter = 381[0m
+[0;32mI (381936) responder: Counter = 382[0m
+[0;32mI (382936) responder: Counter = 383[0m
+[0;32mI (383936) responder: Counter = 384[0m
+[0;32mI (384936) responder: Counter = 385[0m
+[0;32mI (385936) responder: Counter = 386[0m
+[0;32mI (386936) responder: Counter = 387[0m
+[0;32mI (387936) responder: Counter = 388[0m
+[0;32mI (388936) responder: Counter = 389[0m
+[0;32mI (389936) responder: Counter = 390[0m
+[0;32mI (390936) responder: Counter = 391[0m
+[0;32mI (391936) responder: Counter = 392[0m
+[0;32mI (392936) responder: Counter = 393[0m
+[0;32mI (393936) responder: Counter = 394[0m
+[0;32mI (394936) responder: Counter = 395[0m
+[0;32mI (395936) responder: Counter = 396[0m
+[0;32mI (396936) responder: Counter = 397[0m
+[0;32mI (397936) responder: Counter = 398[0m
+[0;32mI (398936) responder: Counter = 399[0m
+[0;32mI (399936) responder: Counter = 400[0m
+[0;32mI (400936) responder: Counter = 401[0m
+[0;32mI (401936) responder: Counter = 402[0m
+[0;32mI (402936) responder: Counter = 403[0m
+[0;32mI (403936) responder: Counter = 404[0m
+[0;32mI (404936) responder: Counter = 405[0m
+[0;32mI (405936) responder: Counter = 406[0m
+[0;32mI (406936) responder: Counter = 407[0m
+[0;32mI (407936) responder: Counter = 408[0m
+[0;32mI (408936) responder: Counter = 409[0m
+[0;32mI (409936) responder: Counter = 410[0m
+[0;32mI (410936) responder: Counter = 411[0m
+[0;32mI (411936) responder: Counter = 412[0m
+[0;32mI (412936) responder: Counter = 413[0m
+[0;32mI (413936) responder: Counter = 414[0m
+[0;32mI (414936) responder: Counter = 415[0m
+[0;32mI (415936) responder: Counter = 416[0m
+[0;32mI (416936) responder: Counter = 417[0m
+[0;32mI (417936) responder: Counter = 418[0m
+[0;32mI (418936) responder: Counter = 419[0m
+[0;32mI (419936) responder: Counter = 420[0m
+[0;32mI (420936) responder: Counter = 421[0m
+[0;32mI (421936) responder: Counter = 422[0m
+[0;32mI (422936) responder: Counter = 423[0m
+[0;32mI (423936) responder: Counter = 424[0m
+[0;32mI (424936) responder: Counter = 425[0m
+[0;32mI (425936) responder: Counter = 426[0m
+[0;32mI (426936) responder: Counter = 427[0m
+[0;32mI (427936) responder: Counter = 428[0m
+[0;32mI (428936) responder: Counter = 429[0m
+[0;32mI (429936) responder: Counter = 430[0m
+[0;32mI (430936) responder: Counter = 431[0m
+[0;32mI (431936) responder: Counter = 432[0m
+[0;32mI (432936) responder: Counter = 433[0m
+[0;32mI (433936) responder: Counter = 434[0m
+[0;32mI (434936) responder: Counter = 435[0m
+[0;32mI (435936) responder: Counter = 436[0m
+[0;32mI (436936) responder: Counter = 437[0m
+[0;32mI (437936) responder: Counter = 438[0m
+[0;32mI (438936) responder: Counter = 439[0m
+[0;32mI (439936) responder: Counter = 440[0m
+[0;32mI (440936) responder: Counter = 441[0m
+[0;32mI (441936) responder: Counter = 442[0m
+[0;32mI (442936) responder: Counter = 443[0m
+[0;32mI (443936) responder: Counter = 444[0m
+[0;32mI (444936) responder: Counter = 445[0m
+[0;32mI (445936) responder: Counter = 446[0m
+[0;32mI (446936) responder: Counter = 447[0m
+[0;32mI (447936) responder: Counter = 448[0m
+[0;32mI (448936) responder: Counter = 449[0m
+[0;32mI (449936) responder: Counter = 450[0m
+[0;32mI (450936) responder: Counter = 451[0m
+[0;32mI (451936) responder: Counter = 452[0m
+[0;32mI (452936) responder: Counter = 453[0m
+[0;32mI (453936) responder: Counter = 454[0m
+[0;32mI (454936) responder: Counter = 455[0m
+[0;32mI (455936) responder: Counter = 456[0m
+[0;32mI (456936) responder: Counter = 457[0m
+[0;32mI (457936) responder: Counter = 458[0m
+[0;32mI (458936) responder: Counter = 459[0m
+[0;32mI (459936) responder: Counter = 460[0m
+[0;32mI (460936) responder: Counter = 461[0m
+[0;32mI (461936) responder: Counter = 462[0m
+[0;32mI (462936) responder: Counter = 463[0m
+[0;32mI (463936) responder: Counter = 464[0m
+[0;32mI (464936) responder: Counter = 465[0m
+[0;32mI (465936) responder: Counter = 466[0m
+[0;32mI (466936) responder: Counter = 467[0m
+[0;32mI (467936) responder: Counter = 468[0m
+[0;32mI (468936) responder: Counter = 469[0m
+[0;32mI (469936) responder: Counter = 470[0m
+[0;32mI (470936) responder: Counter = 471[0m
+[0;32mI (471936) responder: Counter = 472[0m
+[0;32mI (472936) responder: Counter = 473[0m
+[0;32mI (473936) responder: Counter = 474[0m
+[0;32mI (474936) responder: Counter = 475[0m
+[0;32mI (475936) responder: Counter = 476[0m
+[0;32mI (476936) responder: Counter = 477[0m
+[0;32mI (477936) responder: Counter = 478[0m
+[0;32mI (478936) responder: Counter = 479[0m
+[0;32mI (479936) responder: Counter = 480[0m
+[0;32mI (480936) responder: Counter = 481[0m
+[0;32mI (481936) responder: Counter = 482[0m
+[0;32mI (482936) responder: Counter = 483[0m
+[0;32mI (483936) responder: Counter = 484[0m
+[0;32mI (484936) responder: Counter = 485[0m
+[0;32mI (485936) responder: Counter = 486[0m
+[0;32mI (486936) responder: Counter = 487[0m
+[0;32mI (487936) responder: Counter = 488[0m
+[0;32mI (488936) responder: Counter = 489[0m
+[0;32mI (489936) responder: Counter = 490[0m
+[0;32mI (490936) responder: Counter = 491[0m
+[0;32mI (491936) responder: Counter = 492[0m
+[0;32mI (492936) responder: Counter = 493[0m
+[0;32mI (493936) responder: Counter = 494[0m
+[0;32mI (494936) responder: Counter = 495[0m
+[0;32mI (495936) responder: Counter = 496[0m
+[0;32mI (496936) responder: Counter = 497[0m
+[0;32mI (497936) responder: Counter = 498[0m
+[0;32mI (498936) responder: Counter = 499[0m
+[0;32mI (499936) responder: Counter = 500[0m
+[0;32mI (500936) responder: Counter = 501[0m
+[0;32mI (501936) responder: Counter = 502[0m

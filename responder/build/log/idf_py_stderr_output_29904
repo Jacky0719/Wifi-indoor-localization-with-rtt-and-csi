@@ -1,0 +1,16 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM6 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4201136f: sha1_cpy at C:/Users/14731/esp/v5.4/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpbkdf2.c:267
+ (inlined by) pbkdf2_f_sha1 at C:/Users/14731/esp/v5.4/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpbkdf2.c:366
+[0m
+[1;31m--- Error: ClearCommError failed (PermissionError(13, '设备不识别此命令。', None, 22))[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m[0m
+[1;31m--- Error: ClearCommError failed (PermissionError(13, '设备不识别此命令。', None, 22))[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m[0m
+[1;31m--- Error: ClearCommError failed (PermissionError(13, '设备不识别此命令。', None, 22))[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m[0m
+[1;31m--- Error: ClearCommError failed (PermissionError(13, '设备不识别此命令。', None, 22))[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m[0m
+[0m
