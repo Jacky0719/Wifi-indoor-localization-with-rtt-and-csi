@@ -310,7 +310,7 @@
     "HAL_ECDSA_GEN_SIG_CM": false,
     "HAL_WDT_USE_ROM_IMPL": true,
     "IDF_CMAKE": true,
-    "IDF_EXPERIMENTAL_FEATURES": true,
+    "IDF_EXPERIMENTAL_FEATURES": false,
     "IDF_FIRMWARE_CHIP_ID": 9,
     "IDF_INIT_VERSION": "5.4.0",
     "IDF_TARGET": "esp32s3",

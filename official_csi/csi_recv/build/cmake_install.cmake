@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv
+# Install script for directory: C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/esp-idf/cmake_install.cmake")
+  include("C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/esp-idf/cmake_install.cmake")
 
 endif()
 
@@ -58,6 +58,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

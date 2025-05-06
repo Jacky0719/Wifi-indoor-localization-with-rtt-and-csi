@@ -1,0 +1,150 @@
+[0;32mI (107) esp_image: segment 1: paddr=00029664 vaddr=3fc99a00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400559da
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May  6 2025 13:26:17[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1963ch (103996) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=00029664 vaddr=3fc99a00 size=04978h ( 18808) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0002dfe4 vaddr=40374000 size=02034h (  8244) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=813d8h (529368) map[0m
+[0;32mI (212) esp_image: segment 4: paddr=000b1400 vaddr=40376034 size=13910h ( 80144) load[0m
+[0;32mI (229) esp_image: segment 5: paddr=000c4d18 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (238) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (238) boot: Disabling RNG early entropy source...[0m
+[0;32mI (248) cpu_start: Multicore app[0m
+[0;32mI (258) cpu_start: Pro cpu start user code[0m
+[0;32mI (258) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (258) app_init: Application information:[0m
+[0;32mI (258) app_init: Project name:     initiator[0m
+[0;32mI (262) app_init: App version:      cef0ce2-dirty[0m
+[0;32mI (266) app_init: Compile time:     May  6 2025 13:28:20[0m
+[0;32mI (271) app_init: ELF file SHA256:  06c94a855...[0m
+[0;32mI (276) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (280) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (284) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (288) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (292) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (298) heap_init: At 3FCA1FE0 len 00047730 (285 KiB): RAM[0m
+[0;32mI (303) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (308) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (313) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (320) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (337) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (344) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (350) main_task: Started on CPU0[0m
+[0;32mI (360) main_task: Calling app_main()[0m
+[0;32mI (370) pp: pp rom version: e7ae62f[0m
+[0;32mI (370) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (380) wifi_init: rx ba win: 6[0m
+[0;32mI (380) wifi_init: accept mbox: 6[0m
+[0;32mI (380) wifi_init: tcpip mbox: 32[0m
+[0;32mI (380) wifi_init: udp mbox: 6[0m
+[0;32mI (380) wifi_init: tcp mbox: 6[0m
+[0;32mI (380) wifi_init: tcp tx win: 5760[0m
+[0;32mI (390) wifi_init: tcp rx win: 5760[0m
+[0;32mI (390) wifi_init: tcp mss: 1440[0m
+[0;32mI (390) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (400) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (400) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (450) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (450) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (920) ftm_initiator: Connected to FTM (BSSID: 24:ec:4a:03:58:5d, Channel: 1)[0m
+[0;32mI (920) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;32mI (920) main_task: Returned from app_main()[0m
+[0;33mW (920) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 53 mSec[0m
+[0;33mW (930) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (2410) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 30.696 nSec, Avg RSSI: -29[0m
+[0;32mI (2410) ftm_initiator: FTM session complete. Estimated RTT - 30 nSec, Estimated Distance - 4.50 meters[0m
+[0;32mI (2420) ftm_initiator: FTM Data: RTT = 30 nSec, Distance = 4.50 meters[0m
+[1;31mE (2530) ESPNOW: Invalid argument![0m
+[0;33mW (2530) CSI sender: <ESP_ERR_ESPNOW_ARG> ESP-NOW send error[0m
+[0;32mI (2630) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (2630) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 91 mSec[0m
+[0;33mW (2630) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (4150) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 30.796 nSec, Avg RSSI: -30[0m
+[0;32mI (4150) ftm_initiator: FTM session complete. Estimated RTT - 30 nSec, Estimated Distance - 4.50 meters[0m
+[0;32mI (4160) ftm_initiator: FTM Data: RTT = 30 nSec, Distance = 4.50 meters[0m
+[1;31mE (4260) ESPNOW: Invalid argument![0m
+[0;33mW (4260) CSI sender: <ESP_ERR_ESPNOW_ARG> ESP-NOW send error[0m
+[0;32mI (4360) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (4360) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 101 mSec[0m
+[0;33mW (4360) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (5890) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 29.83 nSec, Avg RSSI: -30[0m
+[0;32mI (5890) ftm_initiator: FTM session complete. Estimated RTT - 29 nSec, Estimated Distance - 4.35 meters[0m
+[0;32mI (5900) ftm_initiator: FTM Data: RTT = 29 nSec, Distance = 4.35 meters[0m
+[1;31mE (6000) ESPNOW: Invalid argument![0m
+[0;33mW (6000) CSI sender: <ESP_ERR_ESPNOW_ARG> ESP-NOW send error[0m
+[0;32mI (6100) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (6100) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 102 mSec[0m
+[0;33mW (6100) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (7630) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 22.833 nSec, Avg RSSI: -26[0m
+[0;32mI (7630) ftm_initiator: FTM session complete. Estimated RTT - 22 nSec, Estimated Distance - 3.30 meters[0m
+[0;32mI (7640) ftm_initiator: FTM Data: RTT = 22 nSec, Distance = 3.30 meters[0m
+[1;31mE (7750) ESPNOW: Invalid argument![0m
+[0;33mW (7750) CSI sender: <ESP_ERR_ESPNOW_ARG> ESP-NOW send error[0m
+[0;32mI (7850) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (7850) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 93 mSec[0m
+[0;33mW (7850) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (9380) wifi:FTM session ends with 28 valid readings out of 28 readings received, Avg raw RTT: 22.321 nSec, Avg RSSI: -26[0m
+[0;32mI (9380) ftm_initiator: FTM session complete. Estimated RTT - 22 nSec, Estimated Distance - 3.30 meters[0m
+[0;32mI (9390) ftm_initiator: FTM Data: RTT = 22 nSec, Distance = 3.30 meters[0m
+[1;31mE (9500) ESPNOW: Invalid argument![0m
+[0;33mW (9500) CSI sender: <ESP_ERR_ESPNOW_ARG> ESP-NOW send error[0m
+[0;32mI (9600) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (9600) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 81 mSec[0m
+[0;33mW (9600) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (11110) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 20.312 nSec, Avg RSSI: -27[0m
+[0;32mI (11110) ftm_initiator: FTM session complete. Estimated RTT - 20 nSec, Estimated Distance - 3.00 meters[0m
+[0;32mI (11120) ftm_initiator: FTM Data: RTT = 20 nSec, Distance = 3.00 meters[0m
+[1;31mE (11230) ESPNOW: Invalid argument![0m
+[0;33mW (11230) CSI sender: <ESP_ERR_ESPNOW_ARG> ESP-NOW send error[0m
+[0;32mI (11330) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (11330) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 95 mSec[0m
+[0;33mW (11330) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (12850) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 22.329 nSec, Avg RSSI: -27[0m
+[0;32mI (12850) ftm_initiator: FTM session complete. Estimated RTT - 22 nSec, Estimated Distance - 3.30 meters[0m
+[0;32mI (12860) ftm_initiator: FTM Data: RTT = 22 nSec, Distance = 3.30 meters[0m
+[1;31mE (12970) ESPNOW: Invalid argument![0m
+[0;33mW (12970) CSI sender: <ESP_ERR_ESPNOW_ARG> ESP-NOW send error[0m
+[0;32mI (13070) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (13070) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 95 mSec[0m
+[0;33mW (13070) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (14590) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 19.809 nSec, Avg RSSI: -27[0m
+[0;32mI (14590) ftm_initiator: FTM session complete. Estimated RTT - 19 nSec, Estimated Distance - 2.85 meters[0m
+[0;32mI (14600) ftm_initiator: FTM Data: RTT = 19 nSec, Distance = 2.85 meters[0m
+[1;31mE (14710) ESPNOW: Invalid argument![0m
+[0;33mW (14710) CSI sender: <ESP_ERR_ESPNOW_ARG> ESP-NOW send error[0m
+[0;32mI (14810) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (14810) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 96 mSec[0m
+[0;33mW (14810) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (16330) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 23.589 nSec, Avg RSSI: -26[0m
+[0;32mI (16340) ftm_initiator: FTM session complete. Estimated RTT - 23 nSec, Estimated Distance - 3.45 meters[0m
+[0;32mI (16340) ftm_initiator: FTM Data: RTT = 23 nSec, Distance = 3.45 meters[0m
+[1;31mE (16450) ESPNOW: Invalid argument![0m
+[0;33mW (16450) CSI sender: <ESP_ERR_ESPNOW_ARG> ESP-NOW send error[0m
+[0;32mI (16550) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (16550) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 97 mSec[0m
+[0;33mW (16550) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m

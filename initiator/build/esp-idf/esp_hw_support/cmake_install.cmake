@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/14731/Desktop/CapstoneA/rtt/initiator/build/esp-idf/esp_hw_support/port/esp32s3/cmake_install.cmake")
+  include("C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/esp-idf/esp_hw_support/port/esp32s3/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/14731/Desktop/CapstoneA/rtt/initiator/build/esp-idf/esp_hw_support/lowpower/cmake_install.cmake")
+  include("C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/esp-idf/esp_hw_support/lowpower/cmake_install.cmake")
 endif()
 

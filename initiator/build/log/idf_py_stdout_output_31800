@@ -1,0 +1,87 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\14731\Desktop\CapstoneA\Wifi-indoor-localization-with-rtt-and-csi\initiator\build\bootloader\esp-idf\esptool_py && C:\Users\14731\.espressif\python_env\idf5.4_py3.12_env\Scripts\python.exe C:/Users/14731/esp/v5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5210 bytes. 0x2df0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/initiator.c.obj
+C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c: In function 'wifi_add_mode':
+C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:147:5: warning: 'esp_wifi_config_espnow_rate' is deprecated: This API can be only used when rate is non-HE rate,                                 please use esp_now_set_peer_rate_config if you want full support of the rate. [-Wdeprecated-declarations]
+  147 |     ESP_ERROR_CHECK(esp_wifi_config_espnow_rate(ESP_IF_WIFI_STA, WIFI_PHY_RATE_MCS0_SGI));
+      |     ^~~~~~~~~~~~~~~
+In file included from C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:11:
+C:/Users/14731/esp/v5.4/esp-idf/components/esp_wifi/include/esp_now.h:278:11: note: declared here
+  278 | esp_err_t esp_wifi_config_espnow_rate(wifi_interface_t ifx, wifi_phy_rate_t rate)
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable initiator.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/initiator.bin
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\14731\Desktop\CapstoneA\Wifi-indoor-localization-with-rtt-and-csi\initiator\build\esp-idf\esptool_py && C:\Users\14731\.espressif\python_env\idf5.4_py3.12_env\Scripts\python.exe C:/Users/14731/esp/v5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/partition_table/partition-table.bin C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/initiator.bin"
+initiator.bin binary size 0xb5020 bytes. Smallest app partition is 0x100000 bytes. 0x4afe0 bytes (29%) free.
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\14731\esp\v5.4\esp-idf\components\esptool_py && C:\Users\14731\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/14731/esp/v5.4/esp-idf -D SERIAL_TOOL=C:/Users/14731/.espressif/python_env/idf5.4_py3.12_env/Scripts/python.exe;;C:/Users/14731/esp/v5.4/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build -P C:/Users/14731/esp/v5.4/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM7 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 initiator.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM7
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 24:ec:4a:04:74:58
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000c5fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21008 bytes to 13377...
+Writing at 0x00000000... (100 %)
+Wrote 21008 bytes (13377 compressed) at 0x00000000 in 0.3 seconds (effective 486.9 kbit/s)...
+Hash of data verified.
+Compressed 741408 bytes to 465020...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c50c... (6 %)
+Writing at 0x0002549e... (10 %)
+Writing at 0x0003034a... (13 %)
+Writing at 0x00036765... (17 %)
+Writing at 0x0003cb49... (20 %)
+Writing at 0x00042ac6... (24 %)
+Writing at 0x0004899b... (27 %)
+Writing at 0x0004ea7c... (31 %)
+Writing at 0x00053e5b... (34 %)
+Writing at 0x00059358... (37 %)
+Writing at 0x0005e4a6... (41 %)
+Writing at 0x000633db... (44 %)
+Writing at 0x00068309... (48 %)
+Writing at 0x0006d43e... (51 %)
+Writing at 0x00072ad4... (55 %)
+Writing at 0x0007880a... (58 %)
+Writing at 0x0007e1d3... (62 %)
+Writing at 0x00083e02... (65 %)
+Writing at 0x00089964... (68 %)
+Writing at 0x0008f4c0... (72 %)
+Writing at 0x00095185... (75 %)
+Writing at 0x0009a817... (79 %)
+Writing at 0x000a11b8... (82 %)
+Writing at 0x000ab1d3... (86 %)
+Writing at 0x000b114e... (89 %)
+Writing at 0x000b70f2... (93 %)
+Writing at 0x000bd8b0... (96 %)
+Writing at 0x000c28a2... (100 %)
+Wrote 741408 bytes (465020 compressed) at 0x00010000 in 5.4 seconds (effective 1107.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 525.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

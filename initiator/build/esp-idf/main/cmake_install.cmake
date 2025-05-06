@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/14731/Desktop/CapstoneA/rtt/initiator/main
+# Install script for directory: C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

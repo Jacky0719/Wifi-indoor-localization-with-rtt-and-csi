@@ -1,0 +1,93 @@
+[0;32mI (106) esp_image: segment 1: paddr=0002876c vaddr=3fc99a00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037d324
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May  6 2025 13:26:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=18744h (100164) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0002876c vaddr=3fc99a00 size=04a08h ( 18952) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0002d17c vaddr=40374000 size=02e9ch ( 11932) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7d6ach (513708) map[0m
+[0;32mI (208) esp_image: segment 4: paddr=000ad6d4 vaddr=40376e9c size=12aa8h ( 76456) load[0m
+[0;32mI (225) esp_image: segment 5: paddr=000c0184 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (234) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (234) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Multicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (254) app_init: Application information:[0m
+[0;32mI (254) app_init: Project name:     responder[0m
+[0;32mI (257) app_init: App version:      cef0ce2-dirty[0m
+[0;32mI (262) app_init: Compile time:     May  6 2025 13:25:10[0m
+[0;32mI (267) app_init: ELF file SHA256:  7f462f986...[0m
+[0;32mI (271) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (279) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FCA2008 len 00047708 (285 KiB): RAM[0m
+[0;32mI (299) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (309) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (315) spi_flash: detected chip: gd[0m
+[0;32mI (317) spi_flash: flash io: dio[0m
+[0;33mW (320) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (333) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (339) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (346) main_task: Started on CPU0[0m
+[0;32mI (356) main_task: Calling app_main()[0m
+[0;32mI (366) pp: pp rom version: e7ae62f[0m
+[0;32mI (366) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (386) wifi_init: rx ba win: 6[0m
+[0;32mI (386) wifi_init: accept mbox: 6[0m
+[0;32mI (386) wifi_init: tcpip mbox: 32[0m
+[0;32mI (386) wifi_init: udp mbox: 6[0m
+[0;32mI (386) wifi_init: tcp mbox: 6[0m
+[0;32mI (396) wifi_init: tcp tx win: 5760[0m
+[0;32mI (396) wifi_init: tcp rx win: 5760[0m
+[0;32mI (396) wifi_init: tcp mss: 1440[0m
+[0;32mI (406) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (406) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (406) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (896) ftm_responder: Starting SoftAP with FTM Responder support, SSID - FTM, Password - ftmftmftm, Primary Channel - 1, Bandwidth - 20MHz[0m
+[0;32mI (906) ftm_responder: FTM Responder is ready, waiting for FTM requests...[0m
+[0;32mI (906) responder: Counter = 1[0m
+[0;32mI (906) main_task: Returned from app_main()[0m
+[0;32mI (1906) responder: Counter = 2[0m
+[0;32mI (2906) responder: Counter = 3[0m
+[0;32mI (3906) responder: Counter = 4[0m
+[0;32mI (4906) responder: Counter = 5[0m
+[0;32mI (5906) responder: Counter = 6[0m
+[0;32mI (6906) responder: Counter = 7[0m
+[0;32mI (7906) responder: Counter = 8[0m
+[0;32mI (8906) responder: Counter = 9[0m
+[0;32mI (9906) responder: Counter = 10[0m
+[0;32mI (10906) responder: Counter = 11[0m
+[0;32mI (11906) responder: Counter = 12[0m
+[0;32mI (12906) responder: Counter = 13[0m
+[0;32mI (13906) responder: Counter = 14[0m
+[0;32mI (14906) responder: Counter = 15[0m
+[0;32mI (15906) responder: Counter = 16[0m
+[0;32mI (16906) responder: Counter = 17[0m
+[0;32mI (17906) responder: Counter = 18[0m
+[0;32mI (18906) responder: Counter = 19[0m

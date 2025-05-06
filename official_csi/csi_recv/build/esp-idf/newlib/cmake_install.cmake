@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/esp-idf/newlib/port/cmake_install.cmake")
+  include("C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/esp-idf/newlib/port/cmake_install.cmake")
 endif()
 

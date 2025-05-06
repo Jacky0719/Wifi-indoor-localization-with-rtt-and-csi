@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: C:\Users\14731\Desktop\CapstoneA\esp-csi\examples\get-started\csi_recv\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: C:\Users\14731\Desktop\CapstoneA\Wifi-indoor-localization-with-rtt-and-csi\official_csi\csi_recv\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
 

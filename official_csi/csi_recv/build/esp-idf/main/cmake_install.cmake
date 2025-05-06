@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/main
+# Install script for directory: C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

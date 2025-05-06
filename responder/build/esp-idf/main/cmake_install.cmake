@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/14731/Desktop/CapstoneA/modifyFtm/responder/main
+# Install script for directory: C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/responder/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,0 +1,1 @@
+could not open port '\\\\.\\COM7': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)

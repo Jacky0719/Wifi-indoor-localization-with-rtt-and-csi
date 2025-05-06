@@ -1,0 +1,33 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM7 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM7 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x400559cc: _xtos_set_intlevel in ROM
+[0m
+[0;33m--- 0x4200aab2: ftm_measurement_task at C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:244 (discriminator 1)
+[0m
+[0;33m--- 0x4037c653: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375be9: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c65d: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384651: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c653: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200aab2: ftm_measurement_task at C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:244 (discriminator 1)
+0x4037d0c5: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b28: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200aab2: ftm_measurement_task at C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:244 (discriminator 1)
+[0m
+[0;33m--- 0x4037c653: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375be9: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c65d: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384651: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c653: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200aab2: ftm_measurement_task at C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:244 (discriminator 1)
+0x4037d0c5: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b28: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0m

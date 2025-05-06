@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Users/14731/esp/v5.4/esp-idf/components/bootloader/subproject"
   file(MAKE_DIRECTORY "C:/Users/14731/esp/v5.4/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/bootloader"
-  "C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/bootloader-prefix"
-  "C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/bootloader-prefix/tmp"
-  "C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/bootloader-prefix/src"
-  "C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/bootloader"
+  "C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/bootloader-prefix"
+  "C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/bootloader-prefix/tmp"
+  "C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/bootloader-prefix/src"
+  "C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/14731/Desktop/CapstoneA/esp-csi/examples/get-started/csi_recv/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/official_csi/csi_recv/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

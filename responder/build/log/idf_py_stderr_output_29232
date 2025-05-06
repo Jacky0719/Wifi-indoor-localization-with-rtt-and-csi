@@ -1,8 +1,0 @@
-[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
-[0;33m--- Using \\.\COM6 instead...[0m
-[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM6 115200[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
-[0;33m--- 0x4037d293: spinlock_acquire at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/include/spinlock.h:86
- (inlined by) xPortEnterCriticalTimeout at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
-[0m
-[0m

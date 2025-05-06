@@ -8,6 +8,7 @@
 #include "freertos/task.h"
 #include <inttypes.h>
 #include "esp_mac.h"
+#include "esp_now.h"
 
 #define TAG_STA "ftm_initiator"
 #define MAX_SSID_LEN 32
@@ -34,6 +35,15 @@ static uint32_t s_rtt_est, s_dist_est;
 static bool s_reconnect = true;
 static int s_retry_num = 0;
 static uint8_t s_ftm_report_num_entries;
+
+static const uint8_t CONFIG_CSI_SEND_MAC[] = {0x1a, 0x00, 0x00, 0x00, 0x00, 0x00};
+
+static esp_now_peer_info_t csi_peer = {
+        .channel   = 1,
+        .ifidx     = WIFI_IF_STA,
+        .encrypt   = false,
+        .peer_addr = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff},
+};
 
 static void event_handler(void *arg, esp_event_base_t event_base,
                           int32_t event_id, void *event_data)
@@ -131,6 +141,13 @@ esp_err_t wifi_add_mode(wifi_mode_t mode)
     }
 
     ESP_ERROR_CHECK( esp_wifi_set_mode(new_mode) );
+
+    ESP_ERROR_CHECK(esp_wifi_set_mac(WIFI_IF_STA, CONFIG_CSI_SEND_MAC));
+    ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));
+    ESP_ERROR_CHECK(esp_wifi_config_espnow_rate(ESP_IF_WIFI_STA, WIFI_PHY_RATE_MCS0_SGI));
+
+    ESP_ERROR_CHECK(esp_now_init());
+
     return ESP_OK;
 }
 
@@ -222,6 +239,16 @@ static void ftm_measurement_task(void *pvParameter)
 {
     while (true) {
         wifi_cmd_ftm_initiator(0, NULL);
+        vTaskDelay(pdMS_TO_TICKS(MIN_WAIT_TIME_MS));
+
+        ESP_ERROR_CHECK(esp_now_add_peer(&csi_peer));
+        uint8_t payload[] = {0x01};
+        esp_err_t ret = esp_now_send(csi_peer.peer_addr, payload, sizeof(payload));
+        if(ret != ESP_OK) {
+            ESP_LOGW("CSI sender", "<%s> ESP-NOW send error", esp_err_to_name(ret));
+        }
+        ESP_ERROR_CHECK(esp_now_del_peer(csi_peer.peer_addr));
+
         vTaskDelay(pdMS_TO_TICKS(MIN_WAIT_TIME_MS));
     }
 }
