@@ -31,7 +31,7 @@ static EventGroupHandle_t s_ftm_event_group;
 static const int FTM_REPORT_BIT = BIT0;
 static const int FTM_FAILURE_BIT = BIT1;
 
-static uint32_t s_rtt_est, s_dist_est;
+static uint32_t s_rtt_est, s_dist_est, s_rtt_raw;
 static bool s_reconnect = true;
 static int s_retry_num = 0;
 static uint8_t s_ftm_report_num_entries;
@@ -72,7 +72,10 @@ static void event_handler(void *arg, esp_event_base_t event_base,
 
         s_rtt_est = event->rtt_est;
         s_dist_est = event->dist_est;
+        s_rtt_raw = event->rtt_raw;
         s_ftm_report_num_entries = event->ftm_report_num_entries;
+
+
         if (event->status == FTM_STATUS_SUCCESS) {
             xEventGroupSetBits(s_ftm_event_group, FTM_REPORT_BIT);
         } else if (event->status == FTM_STATUS_USER_TERM) {
@@ -173,10 +176,10 @@ static bool wifi_cmd_sta_join(const char *ssid, const char *pass)
     return true;
 }
 
-void print_ftm_data(int rtt, int distance)
+void print_ftm_data(int rtt_raw, int rtt_est, int distance)
 {
-    ESP_LOGI(TAG_STA, "FTM Data: RTT = %d nSec, Distance = %d.%02d meters",
-             rtt, distance / 100, distance % 100);
+    ESP_LOGI(TAG_STA, "FTM Data: Raw RTT = %d nSec, Est RTT = %d nSec, Distance = %d.%02d meters",
+             rtt_raw, rtt_est, distance / 100, distance % 100);
 }
 
 static int wifi_cmd_ftm_initiator(int argc, char **argv)
@@ -187,7 +190,7 @@ static int wifi_cmd_ftm_initiator(int argc, char **argv)
 
     wifi_ftm_initiator_cfg_t ftmi_cfg = {
             .frm_count = 32,
-            .burst_period = 2,   // 默认间隔
+            .burst_period = 2,
             .use_get_report_api = true,
     };
 
@@ -221,10 +224,10 @@ static int wifi_cmd_ftm_initiator(int argc, char **argv)
                                pdTRUE, pdFALSE, wait_time_ms / portTICK_PERIOD_MS);
 
     if (bits & FTM_REPORT_BIT) {
-        ESP_LOGI(TAG_STA, "FTM session complete. Estimated RTT - %" PRId32 " nSec, Estimated Distance - %" PRId32 ".%02" PRId32 " meters",
-                s_rtt_est, s_dist_est / 100, s_dist_est % 100);
+        ESP_LOGI(TAG_STA, "FTM session complete. Raw RTT - %" PRId32 " nSec, Estimated RTT - %" PRId32 " nSec , Estimated Distance - %" PRId32 ".%02" PRId32 " meters",
+                s_rtt_raw, s_rtt_est, s_dist_est / 100, s_dist_est % 100);
 
-        print_ftm_data(s_rtt_est, s_dist_est);
+        print_ftm_data(s_rtt_raw, s_rtt_est, s_dist_est);
     } else if (bits & FTM_FAILURE_BIT) {
         ESP_LOGE(TAG_STA, "FTM session failed!");
     } else {

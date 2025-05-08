@@ -1,0 +1,210 @@
+[0;32mI (107) esp_image: segment 1: paddr=00029694 vaddr=3fc99a00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400559cc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May  6 2025 13:26:17[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1966ch (104044) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=00029694 vaddr=3fc99a00 size=04978h ( 18808) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0002e014 vaddr=40374000 size=02004h (  8196) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=813f4h (529396) map[0m
+[0;32mI (212) esp_image: segment 4: paddr=000b141c vaddr=40376004 size=13940h ( 80192) load[0m
+[0;32mI (229) esp_image: segment 5: paddr=000c4d64 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (238) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (238) boot: Disabling RNG early entropy source...[0m
+[0;32mI (248) cpu_start: Multicore app[0m
+[0;32mI (258) cpu_start: Pro cpu start user code[0m
+[0;32mI (258) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (258) app_init: Application information:[0m
+[0;32mI (258) app_init: Project name:     initiator[0m
+[0;32mI (262) app_init: App version:      3fa5155-dirty[0m
+[0;32mI (267) app_init: Compile time:     May  7 2025 11:12:46[0m
+[0;32mI (272) app_init: ELF file SHA256:  d4b222cd8...[0m
+[0;32mI (276) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (280) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (284) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (288) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (292) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (298) heap_init: At 3FCA1FE8 len 00047728 (285 KiB): RAM[0m
+[0;32mI (303) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (308) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (320) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (338) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (344) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (351) main_task: Started on CPU0[0m
+[0;32mI (361) main_task: Calling app_main()[0m
+[0;32mI (371) pp: pp rom version: e7ae62f[0m
+[0;32mI (371) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (381) wifi_init: rx ba win: 6[0m
+[0;32mI (381) wifi_init: accept mbox: 6[0m
+[0;32mI (381) wifi_init: tcpip mbox: 32[0m
+[0;32mI (381) wifi_init: udp mbox: 6[0m
+[0;32mI (381) wifi_init: tcp mbox: 6[0m
+[0;32mI (381) wifi_init: tcp tx win: 5760[0m
+[0;32mI (391) wifi_init: tcp rx win: 5760[0m
+[0;32mI (391) wifi_init: tcp mss: 1440[0m
+[0;32mI (391) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (401) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (401) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (451) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (451) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (931) ftm_initiator: Connected to FTM (BSSID: 24:ec:4a:03:58:5d, Channel: 1)[0m
+[0;32mI (931) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;32mI (931) main_task: Returned from app_main()[0m
+[0;33mW (941) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 102 mSec[0m
+[0;33mW (941) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (2471) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 37.853 nSec, Avg RSSI: -30[0m
+[0;32mI (2481) ftm_initiator: FTM session complete. Raw RTT - 37 nSec, Estimated RTT - 37 nSec , Estimated Distance - 5.55 meters[0m
+[0;32mI (2491) ftm_initiator: FTM Data: Raw RTT = 37 nSec, Est RTT = 37 nSec, Distance = 5.55 meters[0m
+[0;32mI (2691) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (2691) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 92 mSec[0m
+[0;33mW (2691) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (4221) wifi:FTM session ends with 28 valid readings out of 28 readings received, Avg raw RTT: 36.105 nSec, Avg RSSI: -30[0m
+[0;32mI (4221) ftm_initiator: FTM session complete. Raw RTT - 36 nSec, Estimated RTT - 36 nSec , Estimated Distance - 5.40 meters[0m
+[0;32mI (4231) ftm_initiator: FTM Data: Raw RTT = 36 nSec, Est RTT = 36 nSec, Distance = 5.40 meters[0m
+[0;32mI (4441) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (4441) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 82 mSec[0m
+[0;33mW (4441) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (5961) wifi:FTM session ends with 30 valid readings out of 30 readings received, Avg raw RTT: 37.865 nSec, Avg RSSI: -29[0m
+[0;32mI (5961) ftm_initiator: FTM session complete. Raw RTT - 37 nSec, Estimated RTT - 37 nSec , Estimated Distance - 5.55 meters[0m
+[0;32mI (5971) ftm_initiator: FTM Data: Raw RTT = 37 nSec, Est RTT = 37 nSec, Distance = 5.55 meters[0m
+[0;32mI (6181) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (6181) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 83 mSec[0m
+[0;33mW (6181) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (7701) wifi:FTM session ends with 27 valid readings out of 27 readings received, Avg raw RTT: 36.805 nSec, Avg RSSI: -27[0m
+[0;32mI (7701) ftm_initiator: FTM session complete. Raw RTT - 36 nSec, Estimated RTT - 36 nSec , Estimated Distance - 5.40 meters[0m
+[0;32mI (7711) ftm_initiator: FTM Data: Raw RTT = 36 nSec, Est RTT = 36 nSec, Distance = 5.40 meters[0m
+[0;32mI (7921) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (7921) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 84 mSec[0m
+[0;33mW (7921) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (9441) wifi:FTM session ends with 29 valid readings out of 29 readings received, Avg raw RTT: 38.578 nSec, Avg RSSI: -26[0m
+[0;32mI (9451) ftm_initiator: FTM session complete. Raw RTT - 38 nSec, Estimated RTT - 38 nSec , Estimated Distance - 5.70 meters[0m
+[0;32mI (9461) ftm_initiator: FTM Data: Raw RTT = 38 nSec, Est RTT = 38 nSec, Distance = 5.70 meters[0m
+[0;32mI (9661) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (9661) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 84 mSec[0m
+[0;33mW (9661) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (11181) wifi:FTM session ends with 30 valid readings out of 30 readings received, Avg raw RTT: 39.167 nSec, Avg RSSI: -26[0m
+[0;32mI (11191) ftm_initiator: FTM session complete. Raw RTT - 39 nSec, Estimated RTT - 39 nSec , Estimated Distance - 5.85 meters[0m
+[0;32mI (11201) ftm_initiator: FTM Data: Raw RTT = 39 nSec, Est RTT = 39 nSec, Distance = 5.85 meters[0m
+[0;32mI (11401) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (11401) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 86 mSec[0m
+[0;33mW (11401) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (12931) wifi:FTM session ends with 30 valid readings out of 30 readings received, Avg raw RTT: 37.188 nSec, Avg RSSI: -26[0m
+[0;32mI (12931) ftm_initiator: FTM session complete. Raw RTT - 37 nSec, Estimated RTT - 37 nSec , Estimated Distance - 5.55 meters[0m
+[0;32mI (12941) ftm_initiator: FTM Data: Raw RTT = 37 nSec, Est RTT = 37 nSec, Distance = 5.55 meters[0m
+[0;32mI (13151) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (13151) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 76 mSec[0m
+[0;33mW (13151) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (14671) wifi:FTM session ends with 28 valid readings out of 28 readings received, Avg raw RTT: 40.67 nSec, Avg RSSI: -26[0m
+[0;32mI (14671) ftm_initiator: FTM session complete. Raw RTT - 40 nSec, Estimated RTT - 40 nSec , Estimated Distance - 6.00 meters[0m
+[0;32mI (14681) ftm_initiator: FTM Data: Raw RTT = 40 nSec, Est RTT = 40 nSec, Distance = 6.00 meters[0m
+[0;32mI (14891) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (14891) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 77 mSec[0m
+[0;33mW (14891) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (16411) wifi:FTM session ends with 30 valid readings out of 30 readings received, Avg raw RTT: 38.906 nSec, Avg RSSI: -26[0m
+[0;32mI (16411) ftm_initiator: FTM session complete. Raw RTT - 38 nSec, Estimated RTT - 38 nSec , Estimated Distance - 5.70 meters[0m
+[0;32mI (16421) ftm_initiator: FTM Data: Raw RTT = 38 nSec, Est RTT = 38 nSec, Distance = 5.70 meters[0m
+[0;32mI (16631) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (16631) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 78 mSec[0m
+[0;33mW (16631) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (18151) wifi:FTM session ends with 27 valid readings out of 27 readings received, Avg raw RTT: 36.169 nSec, Avg RSSI: -26[0m
+[0;32mI (18151) ftm_initiator: FTM session complete. Raw RTT - 36 nSec, Estimated RTT - 36 nSec , Estimated Distance - 5.40 meters[0m
+[0;32mI (18161) ftm_initiator: FTM Data: Raw RTT = 36 nSec, Est RTT = 36 nSec, Distance = 5.40 meters[0m
+[0;32mI (18371) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (18371) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 78 mSec[0m
+[0;33mW (18371) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (19891) wifi:FTM session ends with 29 valid readings out of 29 readings received, Avg raw RTT: 38.39 nSec, Avg RSSI: -27[0m
+[0;32mI (19891) ftm_initiator: FTM session complete. Raw RTT - 38 nSec, Estimated RTT - 38 nSec , Estimated Distance - 5.70 meters[0m
+[0;32mI (19901) ftm_initiator: FTM Data: Raw RTT = 38 nSec, Est RTT = 38 nSec, Distance = 5.70 meters[0m
+[0;32mI (20111) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (20111) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 79 mSec[0m
+[0;33mW (20111) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (21631) wifi:FTM session ends with 30 valid readings out of 30 readings received, Avg raw RTT: 35.729 nSec, Avg RSSI: -30[0m
+[0;32mI (21631) ftm_initiator: FTM session complete. Raw RTT - 35 nSec, Estimated RTT - 35 nSec , Estimated Distance - 5.25 meters[0m
+[0;32mI (21641) ftm_initiator: FTM Data: Raw RTT = 35 nSec, Est RTT = 35 nSec, Distance = 5.25 meters[0m
+[0;32mI (21851) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (21851) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 80 mSec[0m
+[0;33mW (21851) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (23371) wifi:FTM session ends with 30 valid readings out of 30 readings received, Avg raw RTT: 36.250 nSec, Avg RSSI: -37[0m
+[0;32mI (23371) ftm_initiator: FTM session complete. Raw RTT - 36 nSec, Estimated RTT - 36 nSec , Estimated Distance - 5.40 meters[0m
+[0;32mI (23381) ftm_initiator: FTM Data: Raw RTT = 36 nSec, Est RTT = 36 nSec, Distance = 5.40 meters[0m
+[0;32mI (23591) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (23591) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 81 mSec[0m
+[0;33mW (23591) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (25111) wifi:FTM session ends with 28 valid readings out of 28 readings received, Avg raw RTT: 34.487 nSec, Avg RSSI: -37[0m
+[0;32mI (25111) ftm_initiator: FTM session complete. Raw RTT - 34 nSec, Estimated RTT - 34 nSec , Estimated Distance - 5.10 meters[0m
+[0;32mI (25121) ftm_initiator: FTM Data: Raw RTT = 34 nSec, Est RTT = 34 nSec, Distance = 5.10 meters[0m
+[0;32mI (25331) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (25331) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 82 mSec[0m
+[0;33mW (25331) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (26841) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 33.921 nSec, Avg RSSI: -39[0m
+[0;32mI (26841) ftm_initiator: FTM session complete. Raw RTT - 33 nSec, Estimated RTT - 33 nSec , Estimated Distance - 4.95 meters[0m
+[0;32mI (26851) ftm_initiator: FTM Data: Raw RTT = 33 nSec, Est RTT = 33 nSec, Distance = 4.95 meters[0m
+[0;32mI (27061) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (27061) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 92 mSec[0m
+[0;33mW (27061) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (28591) wifi:FTM session ends with 24 valid readings out of 24 readings received, Avg raw RTT: 33.138 nSec, Avg RSSI: -39[0m
+[0;32mI (28591) ftm_initiator: FTM session complete. Raw RTT - 33 nSec, Estimated RTT - 33 nSec , Estimated Distance - 4.95 meters[0m
+[0;32mI (28601) ftm_initiator: FTM Data: Raw RTT = 33 nSec, Est RTT = 33 nSec, Distance = 4.95 meters[0m
+[0;32mI (28811) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (28811) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 83 mSec[0m
+[0;33mW (28811) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (30331) wifi:FTM session ends with 27 valid readings out of 27 readings received, Avg raw RTT: 34.201 nSec, Avg RSSI: -39[0m
+[0;32mI (30331) ftm_initiator: FTM session complete. Raw RTT - 34 nSec, Estimated RTT - 34 nSec , Estimated Distance - 5.10 meters[0m
+[0;32mI (30341) ftm_initiator: FTM Data: Raw RTT = 34 nSec, Est RTT = 34 nSec, Distance = 5.10 meters[0m
+[0;32mI (30551) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (30551) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 83 mSec[0m
+[0;33mW (30551) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (32071) wifi:FTM session ends with 30 valid readings out of 30 readings received, Avg raw RTT: 36.979 nSec, Avg RSSI: -40[0m
+[0;32mI (32081) ftm_initiator: FTM session complete. Raw RTT - 36 nSec, Estimated RTT - 36 nSec , Estimated Distance - 5.40 meters[0m
+[0;32mI (32091) ftm_initiator: FTM Data: Raw RTT = 36 nSec, Est RTT = 36 nSec, Distance = 5.40 meters[0m
+[0;32mI (32291) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (32291) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 84 mSec[0m
+[0;33mW (32291) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (33811) wifi:FTM session ends with 31 valid readings out of 31 readings received, Avg raw RTT: 34.627 nSec, Avg RSSI: -36[0m
+[0;32mI (33811) ftm_initiator: FTM session complete. Raw RTT - 34 nSec, Estimated RTT - 34 nSec , Estimated Distance - 5.10 meters[0m
+[0;32mI (33821) ftm_initiator: FTM Data: Raw RTT = 34 nSec, Est RTT = 34 nSec, Distance = 5.10 meters[0m
+[0;32mI (34031) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (34031) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 87 mSec[0m
+[0;33mW (34031) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (35561) wifi:FTM session ends with 28 valid readings out of 28 readings received, Avg raw RTT: 35.268 nSec, Avg RSSI: -31[0m
+[0;32mI (35561) ftm_initiator: FTM session complete. Raw RTT - 35 nSec, Estimated RTT - 35 nSec , Estimated Distance - 5.25 meters[0m
+[0;32mI (35571) ftm_initiator: FTM Data: Raw RTT = 35 nSec, Est RTT = 35 nSec, Distance = 5.25 meters[0m
+[0;32mI (35781) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (35781) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 77 mSec[0m
+[0;33mW (35781) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (37301) wifi:FTM session ends with 28 valid readings out of 28 readings received, Avg raw RTT: 37.891 nSec, Avg RSSI: -26[0m
+[0;32mI (37301) ftm_initiator: FTM session complete. Raw RTT - 37 nSec, Estimated RTT - 37 nSec , Estimated Distance - 5.55 meters[0m
+[0;32mI (37311) ftm_initiator: FTM Data: Raw RTT = 37 nSec, Est RTT = 37 nSec, Distance = 5.55 meters[0m
+[0;32mI (37521) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (37521) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 76 mSec[0m
+[0;33mW (37521) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (39041) wifi:FTM session ends with 30 valid readings out of 30 readings received, Avg raw RTT: 37.969 nSec, Avg RSSI: -26[0m
+[0;32mI (39041) ftm_initiator: FTM session complete. Raw RTT - 37 nSec, Estimated RTT - 37 nSec , Estimated Distance - 5.55 meters[0m
+[0;32mI (39051) ftm_initiator: FTM Data: Raw RTT = 37 nSec, Est RTT = 37 nSec, Distance = 5.55 meters[0m
+[0;32mI (39261) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 2mSec[0m
+[0;33mW (39261) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 78 mSec[0m
+[0;33mW (39261) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 200mSec, Burst Duration: 32000uSec[0m

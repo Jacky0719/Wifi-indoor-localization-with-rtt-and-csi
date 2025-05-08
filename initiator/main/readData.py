@@ -8,7 +8,7 @@ BAUD_RATE = 115200
 CSV_FILE = 'ftm_data.csv'
 
 pattern = re.compile(
-    r'FTM session complete\. Estimated RTT - (\d+) nSec, Estimated Distance - (\d+)\.(\d{2}) meters'
+    r'FTM Data: Raw RTT = (\d+) nSec, Est RTT = (\d+) nSec, Distance = (\d+)\.(\d{2}) meters'
 )
 
 def main():
@@ -16,7 +16,7 @@ def main():
             open(CSV_FILE, 'w', newline='') as csvfile:
 
         writer = csv.writer(csvfile)
-        writer.writerow(['Timestamp', 'RTT (nSec)', 'Distance (meters)'])
+        writer.writerow(['Timestamp', 'RTT_raw (nSec)', 'RTT_est', 'Distance (meters)'])
 
         print("Listening...")
 
@@ -31,12 +31,13 @@ def main():
                 match = pattern.search(line)
                 if match:
                     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                    rtt = int(match.group(1))
-                    distance = float(f"{match.group(2)}.{match.group(3)}")
+                    rtt_raw = int(match.group(1))
+                    rtt_est = int(match.group(2))
+                    distance = float(f"{match.group(3)}.{match.group(4)}")
 
-                    writer.writerow([timestamp, rtt, distance])
+                    writer.writerow([timestamp, rtt_raw, rtt_est, distance])
                     csvfile.flush()
-                    print(f"Write: {timestamp}, RTT: {rtt}, Distance: {distance:.2f} m")
+                    print(f"Write: {timestamp}, RTT_raw: {rtt_raw}, RTT_est: {rtt_est}, Distance: {distance:.2f} m")
 
             except KeyboardInterrupt:
                 print("Exit with Keyboard Interrupt")

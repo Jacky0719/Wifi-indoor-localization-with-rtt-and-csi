@@ -1,0 +1,240 @@
+[0;32mI (107) esp_image: segment 1: paddr=00029664 vaddr=3fc99a00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4207f0ca
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May  6 2025 13:26:17[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1963ch (103996) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=00029664 vaddr=3fc99a00 size=04978h ( 18808) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0002dfe4 vaddr=40374000 size=02034h (  8244) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=813d8h (529368) map[0m
+[0;32mI (212) esp_image: segment 4: paddr=000b1400 vaddr=40376034 size=13910h ( 80144) load[0m
+[0;32mI (229) esp_image: segment 5: paddr=000c4d18 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (238) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (238) boot: Disabling RNG early entropy source...[0m
+[0;32mI (248) cpu_start: Multicore app[0m
+[0;32mI (258) cpu_start: Pro cpu start user code[0m
+[0;32mI (258) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (258) app_init: Application information:[0m
+[0;32mI (258) app_init: Project name:     initiator[0m
+[0;32mI (262) app_init: App version:      3fa5155-dirty[0m
+[0;32mI (266) app_init: Compile time:     May  7 2025 11:12:46[0m
+[0;32mI (271) app_init: ELF file SHA256:  cb1e3c769...[0m
+[0;32mI (276) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (280) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (284) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (288) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (292) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (298) heap_init: At 3FCA1FE0 len 00047730 (285 KiB): RAM[0m
+[0;32mI (303) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (308) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (313) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (320) spi_flash: detected chip: gd[0m
+[0;32mI (322) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (337) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (344) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (350) main_task: Started on CPU0[0m
+[0;32mI (360) main_task: Calling app_main()[0m
+[0;32mI (370) pp: pp rom version: e7ae62f[0m
+[0;32mI (370) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (380) wifi_init: rx ba win: 6[0m
+[0;32mI (380) wifi_init: accept mbox: 6[0m
+[0;32mI (380) wifi_init: tcpip mbox: 32[0m
+[0;32mI (380) wifi_init: udp mbox: 6[0m
+[0;32mI (380) wifi_init: tcp mbox: 6[0m
+[0;32mI (380) wifi_init: tcp tx win: 5760[0m
+[0;32mI (390) wifi_init: tcp rx win: 5760[0m
+[0;32mI (390) wifi_init: tcp mss: 1440[0m
+[0;32mI (390) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (400) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (400) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (450) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (450) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (2570) ftm_initiator: Connected to FTM (BSSID: 24:ec:4a:03:58:5d, Channel: 1)[0m
+[0;32mI (2570) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;32mI (2570) main_task: Returned from app_main()[0m
+[0;33mW (2580) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 14 mSec[0m
+[0;33mW (2580) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (2670) ftm_initiator: FTM session timed out![0m
+[0;32mI (2670) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (2870) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (2870) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 30 mSec[0m
+[0;33mW (2870) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (2970) ftm_initiator: FTM session timed out![0m
+[0;32mI (2970) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (3170) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (3170) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 36 mSec[0m
+[0;33mW (3170) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (3270) ftm_initiator: FTM session timed out![0m
+[0;32mI (3270) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (3470) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (3470) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 45 mSec[0m
+[0;33mW (3470) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (3570) ftm_initiator: FTM session timed out![0m
+[0;32mI (3570) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (3770) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (3820) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 39 mSec[0m
+[0;33mW (3820) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (3870) ftm_initiator: FTM session timed out![0m
+[0;32mI (3870) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (4070) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (4070) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 58 mSec[0m
+[0;33mW (4070) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (4170) ftm_initiator: FTM session timed out![0m
+[0;32mI (4170) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (4370) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (4370) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 64 mSec[0m
+[0;33mW (4370) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (4470) ftm_initiator: FTM session timed out![0m
+[0;32mI (4470) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (4670) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (4670) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 73 mSec[0m
+[0;33mW (4670) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (4770) ftm_initiator: FTM session timed out![0m
+[0;32mI (4770) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (4970) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (4970) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 80 mSec[0m
+[0;33mW (4970) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (5070) ftm_initiator: FTM session timed out![0m
+[0;32mI (5070) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (5270) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (5270) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 88 mSec[0m
+[0;33mW (5270) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (5370) ftm_initiator: FTM session timed out![0m
+[0;32mI (5370) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (5570) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (5570) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 95 mSec[0m
+[0;33mW (5570) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (5670) ftm_initiator: FTM session timed out![0m
+[0;32mI (5670) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (5870) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (5870) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 102 mSec[0m
+[0;33mW (5870) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (5970) ftm_initiator: FTM session timed out![0m
+[0;32mI (5970) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (6170) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (6170) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 6 mSec[0m
+[0;33mW (6170) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (6270) ftm_initiator: FTM session timed out![0m
+[0;32mI (6270) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (6470) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (6470) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 14 mSec[0m
+[0;33mW (6470) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (6570) ftm_initiator: FTM session timed out![0m
+[0;32mI (6570) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (6770) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (6770) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 21 mSec[0m
+[0;33mW (6770) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (6870) ftm_initiator: FTM session timed out![0m
+[0;32mI (6870) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (7070) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (7070) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 27 mSec[0m
+[0;33mW (7070) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (7170) ftm_initiator: FTM session timed out![0m
+[0;32mI (7170) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (7370) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (7370) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 35 mSec[0m
+[0;33mW (7370) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (7470) ftm_initiator: FTM session timed out![0m
+[0;32mI (7470) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (7670) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (7670) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 43 mSec[0m
+[0;33mW (7670) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (7770) ftm_initiator: FTM session timed out![0m
+[0;32mI (7770) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (7970) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (7970) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 50 mSec[0m
+[0;33mW (7970) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (8070) ftm_initiator: FTM session timed out![0m
+[0;32mI (8070) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (8270) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (8270) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 57 mSec[0m
+[0;33mW (8270) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (8370) ftm_initiator: FTM session timed out![0m
+[0;32mI (8370) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (8570) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (8570) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 64 mSec[0m
+[0;33mW (8570) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (8670) ftm_initiator: FTM session timed out![0m
+[0;32mI (8670) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (8870) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (8870) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 71 mSec[0m
+[0;33mW (8870) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (8970) ftm_initiator: FTM session timed out![0m
+[0;32mI (8970) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (9170) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (9170) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 77 mSec[0m
+[0;33mW (9170) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (9270) ftm_initiator: FTM session timed out![0m
+[0;32mI (9270) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (9470) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (9470) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 86 mSec[0m
+[0;33mW (9470) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (9570) ftm_initiator: FTM session timed out![0m
+[0;32mI (9570) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (9770) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (9770) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 93 mSec[0m
+[0;33mW (9770) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (9870) ftm_initiator: FTM session timed out![0m
+[0;32mI (9870) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (10070) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (10070) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 99 mSec[0m
+[0;33mW (10070) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (10170) ftm_initiator: FTM session timed out![0m
+[0;32mI (10170) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (10370) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (10370) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 103 mSec[0m
+[0;33mW (10380) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (10470) ftm_initiator: FTM session timed out![0m
+[0;32mI (10470) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (10670) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (10670) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 12 mSec[0m
+[0;33mW (10670) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (10770) ftm_initiator: FTM session timed out![0m
+[0;32mI (10770) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (10970) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (10970) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 19 mSec[0m
+[0;33mW (10970) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (11070) ftm_initiator: FTM session timed out![0m
+[0;32mI (11070) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (11270) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (11270) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 24 mSec[0m
+[0;33mW (11270) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (11370) ftm_initiator: FTM session timed out![0m
+[0;32mI (11370) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (11570) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (11570) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 33 mSec[0m
+[0;33mW (11570) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (11670) ftm_initiator: FTM session timed out![0m
+[0;32mI (11670) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (11870) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (11870) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 40 mSec[0m
+[0;33mW (11870) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (11970) ftm_initiator: FTM session timed out![0m
+[0;32mI (11970) ftm_initiator: User terminated FTM procedure[0m
+[0;32mI (12170) ftm_initiator: Requesting FTM session with Frame Count - 32, Burst Period - 0mSec[0m
+[0;33mW (12170) wifi:Starting FTM session with 24:ec:4a:03:58:5d in 49 mSec[0m
+[0;33mW (12170) wifi:Mode: non-ASAP, Bursts: 8, FTM's per burst: 4, Burst Period: 100mSec, Burst Duration: 32000uSec[0m
+[1;31mE (12270) ftm_initiator: FTM session timed out![0m
+[0;32mI (12270) ftm_initiator: User terminated FTM procedure[0m

@@ -1,0 +1,110 @@
+[0/1] Re-running CMake...
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32s3
+-- Project sdkconfig file C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "initiator" version: 3fa5155-dirty
+-- Adding linker script C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.bt_funcs.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.wdt.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_system esp_timer esp_vfs_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread rt sdmmc soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: C:/Users/14731/esp/v5.4/esp-idf/components/app_trace C:/Users/14731/esp/v5.4/esp-idf/components/app_update C:/Users/14731/esp/v5.4/esp-idf/components/bootloader C:/Users/14731/esp/v5.4/esp-idf/components/bootloader_support C:/Users/14731/esp/v5.4/esp-idf/components/bt C:/Users/14731/esp/v5.4/esp-idf/components/cmock C:/Users/14731/esp/v5.4/esp-idf/components/console C:/Users/14731/esp/v5.4/esp-idf/components/cxx C:/Users/14731/esp/v5.4/esp-idf/components/driver C:/Users/14731/esp/v5.4/esp-idf/components/efuse C:/Users/14731/esp/v5.4/esp-idf/components/esp-tls C:/Users/14731/esp/v5.4/esp-idf/components/esp_adc C:/Users/14731/esp/v5.4/esp-idf/components/esp_app_format C:/Users/14731/esp/v5.4/esp-idf/components/esp_bootloader_format C:/Users/14731/esp/v5.4/esp-idf/components/esp_coex C:/Users/14731/esp/v5.4/esp-idf/components/esp_common C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_ana_cmpr C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_cam C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_dac C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_gpio C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_gptimer C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_i2c C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_i2s C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_isp C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_jpeg C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_ledc C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_mcpwm C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_parlio C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_pcnt C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_ppa C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_rmt C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_sdio C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_sdm C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_sdmmc C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_sdspi C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_spi C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_touch_sens C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_tsens C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_uart C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_usb_serial_jtag C:/Users/14731/esp/v5.4/esp-idf/components/esp_eth C:/Users/14731/esp/v5.4/esp-idf/components/esp_event C:/Users/14731/esp/v5.4/esp-idf/components/esp_gdbstub C:/Users/14731/esp/v5.4/esp-idf/components/esp_hid C:/Users/14731/esp/v5.4/esp-idf/components/esp_http_client C:/Users/14731/esp/v5.4/esp-idf/components/esp_http_server C:/Users/14731/esp/v5.4/esp-idf/components/esp_https_ota C:/Users/14731/esp/v5.4/esp-idf/components/esp_https_server C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support C:/Users/14731/esp/v5.4/esp-idf/components/esp_lcd C:/Users/14731/esp/v5.4/esp-idf/components/esp_local_ctrl C:/Users/14731/esp/v5.4/esp-idf/components/esp_mm C:/Users/14731/esp/v5.4/esp-idf/components/esp_netif C:/Users/14731/esp/v5.4/esp-idf/components/esp_netif_stack C:/Users/14731/esp/v5.4/esp-idf/components/esp_partition C:/Users/14731/esp/v5.4/esp-idf/components/esp_phy C:/Users/14731/esp/v5.4/esp-idf/components/esp_pm C:/Users/14731/esp/v5.4/esp-idf/components/esp_psram C:/Users/14731/esp/v5.4/esp-idf/components/esp_ringbuf C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom C:/Users/14731/esp/v5.4/esp-idf/components/esp_security C:/Users/14731/esp/v5.4/esp-idf/components/esp_system C:/Users/14731/esp/v5.4/esp-idf/components/esp_timer C:/Users/14731/esp/v5.4/esp-idf/components/esp_vfs_console C:/Users/14731/esp/v5.4/esp-idf/components/esp_wifi C:/Users/14731/esp/v5.4/esp-idf/components/espcoredump C:/Users/14731/esp/v5.4/esp-idf/components/esptool_py C:/Users/14731/esp/v5.4/esp-idf/components/fatfs C:/Users/14731/esp/v5.4/esp-idf/components/freertos C:/Users/14731/esp/v5.4/esp-idf/components/hal C:/Users/14731/esp/v5.4/esp-idf/components/heap C:/Users/14731/esp/v5.4/esp-idf/components/http_parser C:/Users/14731/esp/v5.4/esp-idf/components/idf_test C:/Users/14731/esp/v5.4/esp-idf/components/ieee802154 C:/Users/14731/esp/v5.4/esp-idf/components/json C:/Users/14731/esp/v5.4/esp-idf/components/log C:/Users/14731/esp/v5.4/esp-idf/components/lwip C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main C:/Users/14731/esp/v5.4/esp-idf/components/mbedtls C:/Users/14731/esp/v5.4/esp-idf/components/mqtt C:/Users/14731/esp/v5.4/esp-idf/components/newlib C:/Users/14731/esp/v5.4/esp-idf/components/nvs_flash C:/Users/14731/esp/v5.4/esp-idf/components/nvs_sec_provider C:/Users/14731/esp/v5.4/esp-idf/components/openthread C:/Users/14731/esp/v5.4/esp-idf/components/partition_table C:/Users/14731/esp/v5.4/esp-idf/components/perfmon C:/Users/14731/esp/v5.4/esp-idf/components/protobuf-c C:/Users/14731/esp/v5.4/esp-idf/components/protocomm C:/Users/14731/esp/v5.4/esp-idf/components/pthread C:/Users/14731/esp/v5.4/esp-idf/components/rt C:/Users/14731/esp/v5.4/esp-idf/components/sdmmc C:/Users/14731/esp/v5.4/esp-idf/components/soc C:/Users/14731/esp/v5.4/esp-idf/components/spi_flash C:/Users/14731/esp/v5.4/esp-idf/components/spiffs C:/Users/14731/esp/v5.4/esp-idf/components/tcp_transport C:/Users/14731/esp/v5.4/esp-idf/components/touch_element C:/Users/14731/esp/v5.4/esp-idf/components/ulp C:/Users/14731/esp/v5.4/esp-idf/components/unity C:/Users/14731/esp/v5.4/esp-idf/components/usb C:/Users/14731/esp/v5.4/esp-idf/components/vfs C:/Users/14731/esp/v5.4/esp-idf/components/wear_levelling C:/Users/14731/esp/v5.4/esp-idf/components/wifi_provisioning C:/Users/14731/esp/v5.4/esp-idf/components/wpa_supplicant C:/Users/14731/esp/v5.4/esp-idf/components/xtensa
+-- Configuring done (16.5s)
+-- Generating done (3.2s)
+-- Build files have been written to: C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build
+[1/13] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\14731\Desktop\CapstoneA\Wifi-indoor-localization-with-rtt-and-csi\initiator\build\bootloader\esp-idf\esptool_py && C:\Users\14731\.espressif\python_env\idf5.4_py3.12_env\Scripts\python.exe C:/Users/14731/esp/v5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5210 bytes. 0x2df0 bytes (36%) free.
+[2/13] No install step for 'bootloader'
+[3/13] Completed 'bootloader'
+[4/13] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[5/13] Linking C static library esp-idf\esp_app_format\libesp_app_format.a
+[6/13] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/initiator.c.obj
+C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c: In function 'wifi_add_mode':
+C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:147:5: warning: 'esp_wifi_config_espnow_rate' is deprecated: This API can be only used when rate is non-HE rate,                                 please use esp_now_set_peer_rate_config if you want full support of the rate. [-Wdeprecated-declarations]
+  147 |     ESP_ERROR_CHECK(esp_wifi_config_espnow_rate(ESP_IF_WIFI_STA, WIFI_PHY_RATE_MCS0_SGI));
+      |     ^~~~~~~~~~~~~~~
+In file included from C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:11:
+C:/Users/14731/esp/v5.4/esp-idf/components/esp_wifi/include/esp_now.h:278:11: note: declared here
+  278 | esp_err_t esp_wifi_config_espnow_rate(wifi_interface_t ifx, wifi_phy_rate_t rate)
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+[7/13] Linking C static library esp-idf\main\libmain.a
+[8/13] Generating ld/sections.ld
+[9/13] Linking CXX executable initiator.elf
+[10/13] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/initiator.bin
+[11/13] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\14731\Desktop\CapstoneA\Wifi-indoor-localization-with-rtt-and-csi\initiator\build\esp-idf\esptool_py && C:\Users\14731\.espressif\python_env\idf5.4_py3.12_env\Scripts\python.exe C:/Users/14731/esp/v5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/partition_table/partition-table.bin C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/initiator.bin"
+initiator.bin binary size 0xb4d60 bytes. Smallest app partition is 0x100000 bytes. 0x4b2a0 bytes (29%) free.
+[11/13] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\14731\esp\v5.4\esp-idf\components\esptool_py && C:\Users\14731\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/14731/esp/v5.4/esp-idf -D SERIAL_TOOL=C:/Users/14731/.espressif/python_env/idf5.4_py3.12_env/Scripts/python.exe;;C:/Users/14731/esp/v5.4/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/14731/Desktop/CapstoneA/Wifi-indoor-localization-with-rtt-and-csi/initiator/build -P C:/Users/14731/esp/v5.4/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM7 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 initiator.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM7
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 24:ec:4a:04:74:58
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000c4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21008 bytes to 13377...
+Writing at 0x00000000... (100 %)
+Wrote 21008 bytes (13377 compressed) at 0x00000000 in 0.3 seconds (effective 481.0 kbit/s)...
+Hash of data verified.
+Compressed 740704 bytes to 464477...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c534... (6 %)
+Writing at 0x00025475... (10 %)
+Writing at 0x000302ed... (13 %)
+Writing at 0x00036725... (17 %)
+Writing at 0x0003cb22... (20 %)
+Writing at 0x00042aa1... (24 %)
+Writing at 0x00048986... (27 %)
+Writing at 0x0004ea66... (31 %)
+Writing at 0x00053e4e... (34 %)
+Writing at 0x00059336... (37 %)
+Writing at 0x0005e493... (41 %)
+Writing at 0x000633e8... (44 %)
+Writing at 0x000682f6... (48 %)
+Writing at 0x0006d533... (51 %)
+Writing at 0x00072b3a... (55 %)
+Writing at 0x00078802... (58 %)
+Writing at 0x0007e1e1... (62 %)
+Writing at 0x00083f16... (65 %)
+Writing at 0x000899ad... (68 %)
+Writing at 0x0008f509... (72 %)
+Writing at 0x000951c9... (75 %)
+Writing at 0x0009a834... (79 %)
+Writing at 0x000a1a6a... (82 %)
+Writing at 0x000ab230... (86 %)
+Writing at 0x000b111d... (89 %)
+Writing at 0x000b71e4... (93 %)
+Writing at 0x000bd84d... (96 %)
+Writing at 0x000c287f... (100 %)
+Wrote 740704 bytes (464477 compressed) at 0x00010000 in 5.4 seconds (effective 1094.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 558.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

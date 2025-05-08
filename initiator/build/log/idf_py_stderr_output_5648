@@ -1,0 +1,8 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM7 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM7 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4201dee0: gdma_ll_rx_reset_channel at C:/Users/14731/esp/v5.4/esp-idf/components/hal/esp32s3/include/hal/gdma_ll.h:179
+ (inlined by) esp_crypto_shared_gdma_start_axi_ahb at C:/Users/14731/esp/v5.4/esp-idf/components/mbedtls/port/crypto_shared_gdma/esp_crypto_shared_gdma.c:207
+[0m
+[0m
