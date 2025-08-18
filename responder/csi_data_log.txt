@@ -1,0 +1,384 @@
+element number is not equal
+CSI_DATA,153,1a:00:00:00:00:00,-40,11,0,0,0,0,0,0,0,0,0,-96,0,1,CSI_DATA,360,1a:00:00:00:00:00,-41,11,0,0,0,0,0,0,0,0,0,-96,0,1,0,61548624,0,31,0,128,0,"[0,0,3,-16,2,-15,2,-15,2,-14,2,-15,2,-14,1,-14,1,-13,0,-13,-1,-13,-1,-13,-2,-13,-2,-13,-2,-13,-2,-13,-2,-13,-2,-13,-2,-13,-2,-14,-1,-14,0,-13,0,-13,0,-13,1,-13,1,-12,2,-11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,-11,2,-12,3,-12,3,-12,4,-12,5,-12,6,-12,6,-12,6,-12,5,-12,5,-12,5,-12,5,-12,5,-12,5,-12,4,-12,4,-12,3,-13,3,-13,3,-14,3,-14,3,-15,2,-14,2,-15,2,-15,2,-16]"
+I (62043) ftm_responder: Counter = 62
+I (63043) ftm_responder: Counter = 63
+I (64043) ftm_responder: Counter = 64
+I (65043) ftm_responder: Counter = 65
+I (66043) ftm_responder: Counter = 66
+I (67043) ftm_responder: Counter = 67
+I (68043) ftm_responder: Counter = 68
+I (69043) ftm_responder: Counter = 69
+I (70043) ftm_responder: Counter = 70
+I (71053) ftm_responder: Counter = 71
+I (72053) ftm_responder: Counter = 72
+I (73053) ftm_responder: Counter = 73
+I (74053) ftm_responder: Counter = 74
+I (75053) ftm_responder: Counter = 75
+I (76053) ftm_responder: Counter = 76
+I (77053) ftm_responder: Counter = 77
+I (78053) ftm_responder: Counter = 78
+I (79063) ftm_responder: Counter = 79
+I (80063) ftm_responder: Counter = 80
+I (81063) ftm_responder: Counter = 81
+I (82073) ftm_responder: Counter = 82
+I (83073) ftm_responder: Counter = 83
+I (84073) ftm_responder: Counter = 84
+I (85073) ftm_responder: Counter = 85
+I (86073) ftm_responder: Counter = 86
+I (87073) ftm_responder: Counter = 87
+I (88073) ftm_responder: Counter = 88
+I (89093) ftm_responder: Counter = 89
+I (90093) ftm_responder: Counter = 90
+I (91093) ftm_responder: Counter = 91
+I (92093) ftm_responder: Counter = 92
+I (93093) ftm_responder: Counter = 93
+I (94093) ftm_responder: Counter = 94
+I (95093) ftm_responder: Counter = 95
+I (96093) ftm_responder: Counter = 96
+I (97093) ftm_responder: Counter = 97
+I (98103) ftm_responder: Counter = 98
+I (99103) ftm_responder: Counter = 99
+I (100103) ftm_responder: Counter = 100
+I (101103) ftm_responder: Counter = 101
+I (102103) ftm_responder: Counter = 102
+I (103103) ftm_responder: Counter = 103
+I (104103) ftm_responder: Counter = 104
+I (105103) ftm_responder: Counter = 105
+I (106103) ftm_responder: Counter = 106
+I (107123) ftm_responder: Counter = 107
+I (108133) ftm_responder: Counter = 108
+I (109133) ftm_responder: Counter = 109
+I (110133) ftm_responder: Counter = 110
+I (111133) ftm_responder: Counter = 111
+I (112133) ftm_responder: Counter = 112
+I (113133) ftm_responder: Counter = 113
+I (114133) ftm_responder: Counter = 114
+I (115133) ftm_responder: Counter = 115
+I (116133) ftm_responder: Counter = 116
+I (117133) ftm_responder: Counter = 117
+I (118133) ftm_responder: Counter = 118
+I (119133) ftm_responder: Counter = 119
+I (120133) ftm_responder: Counter = 120
+I (121143) ftm_responder: Counter = 121
+I (122143) ftm_responder: Counter = 122
+I (123143) ftm_responder: Counter = 123
+I (124143) ftm_responder: Counter = 124
+I (125143) ftm_responder: Counter = 125
+I (126143) ftm_responder: Counter = 126
+I (127143) ftm_responder: Counter = 127
+I (128143) ftm_responder: Counter = 128
+I (129143) ftm_responder: Counter = 129
+I (130153) ftm_responder: Counter = 130
+I (131163) ftm_responder: Counter = 131
+I (132163) ftm_responder: Counter = 132
+I (133163) ftm_responder: Counter = 133
+I (134163) ftm_responder: Counter = 134
+I (135163) ftm_responder: Counter = 135
+I (136163) ftm_responder: Counter = 136
+I (137163) ftm_responder: Counter = 137
+I (138163) ftm_responder: Counter = 138
+I (139183) ftm_responder: Counter = 139
+I (140183) ftm_responder: Counter = 140
+I (141183) ftm_responder: Counter = 141
+I (142183) ftm_responder: Counter = 142
+I (143183) ftm_responder: Counter = 143
+I (144183) ftm_responder: Counter = 144
+I (145183) ftm_responder: Counter = 145
+I (146183) ftm_responder: Counter = 146
+I (147183) ftm_responder: Counter = 147
+I (148183) ftm_responder: Counter = 148
+I (149183) ftm_responder: Counter = 149
+I (150183) ftm_responder: Counter = 150
+I (151183) ftm_responder: Counter = 151
+I (152183) ftm_responder: Counter = 152
+I (153203) ftm_responder: Counter = 153
+I (154213) ftm_responder: Counter = 154
+I (155213) ftm_responder: Counter = 155
+I (156213) ftm_responder: Counter = 156
+I (157213) ftm_responder: Counter = 157
+I (158213) ftm_responder: Counter = 158
+I (159213) ftm_responder: Counter = 159
+I (160213) ftm_responder: Counter = 160
+I (161213) ftm_responder: Counter = 161
+I (162213) ftm_responder: Counter = 162
+I (163213) ftm_responder: Counter = 163
+I (164213) ftm_responder: Counter = 164
+I (165213) ftm_responder: Counter = 165
+I (166213) ftm_responder: Counter = 166
+I (167213) ftm_responder: Counter = 167
+I (168213) ftm_responder: Counter = 168
+I (169213) ftm_responder: Counter = 169
+I (170213) ftm_responder: Counter = 170
+I (171223) ftm_responder: Counter = 171
+I (172233) ftm_responder: Counter = 172
+I (173233) ftm_responder: Counter = 173
+I (174233) ftm_responder: Counter = 174
+I (175233) ftm_responder: Counter = 175
+I (176233) ftm_responder: Counter = 176
+I (177233) ftm_responder: Counter = 177
+I (178233) ftm_responder: Counter = 178
+I (179233) ftm_responder: Counter = 179
+I (180233) ftm_responder: Counter = 180
+I (181253) ftm_responder: Counter = 181
+I (182263) ftm_responder: Counter = 182
+I (183263) ftm_responder: Counter = 183
+I (184263) ftm_responder: Counter = 184
+I (185263) ftm_responder: Counter = 185
+I (186263) ftm_responder: Counter = 186
+I (187263) ftm_responder: Counter = 187
+I (188263) ftm_responder: Counter = 188
+I (189263) ftm_responder: Counter = 189
+I (190273) ftm_responder: Counter = 190
+I (191273) ftm_responder: Counter = 191
+I (192273) ftm_responder: Counter = 192
+I (193273) ftm_responder: Counter = 193
+I (194273) ftm_responder: Counter = 194
+I (195283) ftm_responder: Counter = 195
+I (196293) ftm_responder: Counter = 196
+I (197293) ftm_responder: Counter = 197
+I (198293) ftm_responder: Counter = 198
+I (199293) ftm_responder: Counter = 199
+I (200293) ftm_responder: Counter = 200
+I (201293) ftm_responder: Counter = 201
+I (202293) ftm_responder: Counter = 202
+I (203293) ftm_responder: Counter = 203
+I (204293) ftm_responder: Counter = 204
+I (205293) ftm_responder: Counter = 205
+I (206293) ftm_responder: Counter = 206
+I (207293) ftm_responder: Counter = 207
+I (208293) ftm_responder: Counter = 208
+I (209293) ftm_responder: Counter = 209
+I (210293) ftm_responder: Counter = 210
+I (211293) ftm_responder: Counter = 211
+I (212293) ftm_responder: Counter = 212
+I (213293) ftm_responder: Counter = 213
+I (214293) ftm_responder: Counter = 214
+I (215293) ftm_responder: Counter = 215
+I (216293) ftm_responder: Counter = 216
+I (217293) ftm_responder: Counter = 217
+I (218293) ftm_responder: Counter = 218
+I (219293) ftm_responder: Counter = 219
+I (220293) ftm_responder: Counter = 220
+I (221293) ftm_responder: Counter = 221
+I (222293) ftm_responder: Counter = 222
+I (223293) ftm_responder: Counter = 223
+I (224293) ftm_responder: Counter = 224
+I (225293) ftm_responder: Counter = 225
+I (226293) ftm_responder: Counter = 226
+I (227293) ftm_responder: Counter = 227
+I (228293) ftm_responder: Counter = 228
+I (229293) ftm_responder: Counter = 229
+I (230293) ftm_responder: Counter = 230
+I (231293) ftm_responder: Counter = 231
+I (232293) ftm_responder: Counter = 232
+I (233293) ftm_responder: Counter = 233
+I (234293) ftm_responder: Counter = 234
+I (235293) ftm_responder: Counter = 235
+I (236293) ftm_responder: Counter = 236
+I (237293) ftm_responder: Counter = 237
+I (238293) ftm_responder: Counter = 238
+I (239303) ftm_responder: Counter = 239
+I (240303) ftm_responder: Counter = 240
+I (241303) ftm_responder: Counter = 241
+I (242303) ftm_responder: Counter = 242
+I (243303) ftm_responder: Counter = 243
+I (244313) ftm_responder: Counter = 244
+I (245313) ftm_responder: Counter = 245
+I (246313) ftm_responder: Counter = 246
+I (247313) ftm_responder: Counter = 247
+I (248313) ftm_responder: Counter = 248
+I (249313) ftm_responder: Counter = 249
+I (250313) ftm_responder: Counter = 250
+I (251313) ftm_responder: Counter = 251
+I (252323) ftm_responder: Counter = 252
+I (253333) ftm_responder: Counter = 253
+I (254333) ftm_responder: Counter = 254
+I (255333) ftm_responder: Counter = 255
+I (256333) ftm_responder: Counter = 256
+I (257343) ftm_responder: Counter = 257
+I (258343) ftm_responder: Counter = 258
+I (259343) ftm_responder: Counter = 259
+I (260343) ftm_responder: Counter = 260
+I (261343) ftm_responder: Counter = 261
+I (262343) ftm_responder: Counter = 262
+I (263343) ftm_responder: Counter = 263
+I (264343) ftm_responder: Counter = 264
+I (265343) ftm_responder: Counter = 265
+I (266343) ftm_responder: Counter = 266
+I (267353) ftm_responder: Counter = 267
+I (268353) ftm_responder: Counter = 268
+I (269353) ftm_responder: Counter = 269
+I (270353) ftm_responder: Counter = 270
+I (271363) ftm_responder: Counter = 271
+I (272363) ftm_responder: Counter = 272
+I (273363) ftm_responder: Counter = 273
+I (274363) ftm_responder: Counter = 274
+I (275363) ftm_responder: Counter = 275
+I (276363) ftm_responder: Counter = 276
+I (277363) ftm_responder: Counter = 277
+I (278363) ftm_responder: Counter = 278
+I (279363) ftm_responder: Counter = 279
+I (280373) ftm_responder: Counter = 280
+I (281373) ftm_responder: Counter = 281
+I (282373) ftm_responder: Counter = 282
+I (283373) ftm_responder: Counter = 283
+I (284373) ftm_responder: Counter = 284
+I (285383) ftm_responder: Counter = 285
+I (286383) ftm_responder: Counter = 286
+I (287383) ftm_responder: Counter = 287
+I (288383) ftm_responder: Counter = 288
+I (289393) ftm_responder: Counter = 289
+I (290393) ftm_responder: Counter = 290
+I (291393) ftm_responder: Counter = 291
+I (292393) ftm_responder: Counter = 292
+I (293393) ftm_responder: Counter = 293
+I (294403) ftm_responder: Counter = 294
+I (295403) ftm_responder: Counter = 295
+I (296403) ftm_responder: Counter = 296
+I (297403) ftm_responder: Counter = 297
+I (298403) ftm_responder: Counter = 298
+I (299453) ftm_responder: Counter = 299
+I (300453) ftm_responder: Counter = 300
+I (301473) ftm_responder: Counter = 301
+I (302483) ftm_responder: Counter = 302
+
+***ERROR*** A stack overflow in task loop_task has been detected.
+
+
+Backtrace: 0x40375be9:0x3fcb5eb0 0x4037c65d:0x3fcb5ed0 0x4037d4aa:0x3fcb5ef0 0x4037e953:0x3fcb5f70 0x4037d570:0x3fcb5f90 0x4037d566:0x3fcb5f6c |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 2b702322b
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375b28
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+I (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloade
+I (26) boot: compile time May  6 2025 13:26:06
+I (26) boot: Multicore bootloade
+I (27) boot: chip revision: v0.2
+I (29) boot: efuse block revision: v1.3
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DIO
+I (41) boot.esp32s3: SPI Flash Size : 2MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (52) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=18f0ch (102156) map
+I (106) esp_image: segment 1: paddr=00028f34 vaddr=3fc99a00 size=04a08h ( 18952) load
+I (110) esp_image: segment 2: paddr=0002d944 vaddr=40374000 size=026d4h (  9940) load
+I (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7ff4ch (524108) map
+I (210) esp_image: segment 4: paddr=000aff74 vaddr=403766d4 size=13270h ( 78448) load
+I (227) esp_image: segment 5: paddr=000c31ec vaddr=600fe100 size=0001ch (    28) load
+I (236) boot: Loaded app from partition at offset 0x10000
+I (236) boot: Disabling RNG early entropy source...
+I (246) cpu_start: Multicore app
+I (255) cpu_start: Pro cpu start user code
+I (256) cpu_start: cpu freq: 160000000 Hz
+I (256) app_init: Application information:
+I (256) app_init: Project name:     responde
+I (260) app_init: App version:      89f9f88-dirty
+I (264) app_init: Compile time:     Jul 21 2025 20:52:32
+I (269) app_init: ELF file SHA256:  2b702322b...
+I (273) app_init: ESP-IDF:          v5.4-dirty
+I (278) efuse_init: Min chip rev:     v0.0
+I (281) efuse_init: Max chip rev:     v0.99 
+I (285) efuse_init: Chip rev:         v0.2
+I (289) heap_init: Initializing. RAM available for dynamic allocation:
+I (296) heap_init: At 3FCA2020 len 000476F0 (285 KiB): RAM
+I (301) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (306) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (311) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM
+I (317) spi_flash: detected chip: gd
+I (320) spi_flash: flash io: dio
+W (323) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (335) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (341) sleep_gpio: Enable automatic switching of GPIO sleep configuratio
+I (348) main_task: Started on CPU0
+I (358) main_task: Calling app_main()
+I (368) pp: pp rom version: e7ae62f
+I (368) net80211: net80211 rom version: e7ae62f
+I (388) wifi_init: rx ba win: 6
+I (388) wifi_init: accept mbox: 6
+I (388) wifi_init: tcpip mbox: 32
+I (388) wifi_init: udp mbox: 6
+I (388) wifi_init: tcp mbox: 6
+I (398) wifi_init: tcp tx win: 5760
+I (398) wifi_init: tcp rx win: 5760
+I (398) wifi_init: tcp mss: 1440
+I (408) wifi_init: WiFi IRAM OP enabled
+I (408) wifi_init: WiFi RX IRAM OP enabled
+I (408) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10
+I (908) ftm_responder: Starting SoftAP with FTM Responder support, SSID - FTM, Password - ftmftmftm, Primary Channel - 1, Bandwidth - 20MHz
+I (908) ftm_responder: FTM Responder is ready, waiting for FTM requests...
+I (918) ftm_responder: Counter = 1
+I (918) main_task: Returned from app_main()
+I (1008) csi_recv: ================ CSI RECV ================
+type,id,mac,rssi,rate,sig_mode,mcs,bandwidth,smoothing,not_sounding,aggregation,stbc,fec_coding,sgi,noise_floor,ampdu_cnt,channel,secondary_channel,local_timestamp,ant,sig_len,rx_state,len,first_word,data
+I (1918) ftm_responder: Counter = 2
+I (2918) ftm_responder: Counter = 3
+I (3918) ftm_responder: Counter = 4
+I (4918) ftm_responder: Counter = 5
+I (5918) ftm_responder: Counter = 6
+I (6918) ftm_responder: Counter = 7
+I (7918) ftm_responder: Counter = 8
+I (8918) ftm_responder: Counter = 9
+I (9918) ftm_responder: Counter = 10
+I (10918) ftm_responder: Counter = 11
+I (11918) ftm_responder: Counter = 12
+I (12918) ftm_responder: Counter = 13
+I (13918) ftm_responder: Counter = 14
+I (14918) ftm_responder: Counter = 15
+I (15928) ftm_responder: Counter = 16
+I (16928) ftm_responder: Counter = 17
+I (17928) ftm_responder: Counter = 18
+I (18928) ftm_responder: Counter = 19
+I (19928) ftm_responder: Counter = 20
+I (20928) ftm_responder: Counter = 21
+I (21928) ftm_responder: Counter = 22
+I (22928) ftm_responder: Counter = 23
+I (23938) ftm_responder: Counter = 24
+I (24938) ftm_responder: Counter = 25
+I (25938) ftm_responder: Counter = 26
+I (26938) ftm_responder: Counter = 27
+I (27938) ftm_responder: Counter = 28
+I (28938) ftm_responder: Counter = 29
+I (29938) ftm_responder: Counter = 30
+I (30938) ftm_responder: Counter = 31
+I (31938) ftm_responder: Counter = 32
+I (32938) ftm_responder: Counter = 33
+I (33938) ftm_responder: Counter = 34
+I (34938) ftm_responder: Counter = 35
+I (35938) ftm_responder: Counter = 36
+I (36938) ftm_responder: Counter = 37
+I (37938) ftm_responder: Counter = 38
+I (38938) ftm_responder: Counter = 39
+I (39938) ftm_responder: Counter = 40
+I (40938) ftm_responder: Counter = 41
+I (41938) ftm_responder: Counter = 42
+I (42938) ftm_responder: Counter = 43
+I (43938) ftm_responder: Counter = 44
+I (44938) ftm_responder: Counter = 45
+I (45938) ftm_responder: Counter = 46
+I (46938) ftm_responder: Counter = 47
+I (47938) ftm_responder: Counter = 48
+I (48948) ftm_responder: Counter = 49
+I (49948) ftm_responder: Counter = 50
+I (50948) ftm_responder: Counter = 51
+I (51948) ftm_responder: Counter = 52
+

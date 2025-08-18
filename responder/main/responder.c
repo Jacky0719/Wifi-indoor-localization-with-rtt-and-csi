@@ -1,8 +1,17 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
+
 #include "esp_log.h"
 #include "esp_wifi.h"
 #include "esp_system.h"
+#include "esp_mac.h"
+#include "esp_netif.h"
+#include "esp_now.h"
+
+#include "rom/ets_sys.h"
+
 #include "nvs_flash.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
@@ -16,6 +25,12 @@
 #define DEFAULT_AP_CHANNEL 1
 #define DEFAULT_AP_BANDWIDTH 20
 
+#define CONFIG_LESS_INTERFERENCE_CHANNEL    1
+#define CONFIG_SEND_FREQUENCY               100
+
+static const uint8_t CONFIG_CSI_SEND_MAC[] = {0x1a, 0x00, 0x00, 0x00, 0x00, 0x00};
+static const char *CSI_TAG = "csi_recv";
+
 wifi_config_t g_ap_config = {
         .ap.max_connection = 4,
         .ap.authmode = WIFI_AUTH_WPA2_PSK,
@@ -26,7 +41,7 @@ static bool s_reconnect = true;
 static bool s_ap_started = false;
 static EventGroupHandle_t s_ftm_event_group;
 static EventGroupHandle_t s_wifi_event_group;
-static const char *TAG = "responder";
+static const char *FTM_TAG = "responder";
 
 static void event_handler(void *arg, esp_event_base_t event_base,
                           int32_t event_id, void *event_data)
@@ -73,7 +88,7 @@ esp_err_t wifi_add_mode(wifi_mode_t mode)
     esp_err_t err = esp_wifi_get_mode(&cur_mode);
 
     if (err != ESP_OK) {
-        ESP_LOGW(TAG, "Failed to get current WiFi mode, proceeding with default");
+        ESP_LOGW(FTM_TAG, "Failed to get current WiFi mode, proceeding with default");
     }
 
     if (mode == WIFI_MODE_AP) {
@@ -111,7 +126,7 @@ static bool wifi_cmd_ap_set(const char* ssid, const char* pass, uint8_t channel,
         return false;
     }
 
-    if (ESP_OK != wifi_add_mode(WIFI_MODE_AP)) {
+    if (ESP_OK != wifi_add_mode(WIFI_MODE_APSTA)) {
         return false;
     }
     if (strlen(pass) == 0) {
@@ -124,10 +139,72 @@ static bool wifi_cmd_ap_set(const char* ssid, const char* pass, uint8_t channel,
     } else {
         esp_wifi_set_bandwidth(ESP_IF_WIFI_AP, WIFI_BW_HT20);
     }
+
     ESP_LOGI(TAG_AP, "Starting SoftAP with FTM Responder support, SSID - %s, Password - %s, Primary Channel - %d, Bandwidth - %dMHz",
              ssid, pass, channel, bw);
 
     return true;
+}
+
+static void wifi_csi_rx_cb(void *ctx, wifi_csi_info_t *info)
+{
+    if (!info || !info->buf) {
+        ESP_LOGW(CSI_TAG, "<%s> wifi_csi_cb", esp_err_to_name(ESP_ERR_INVALID_ARG));
+        return;
+    }
+
+    if (memcmp(info->mac, CONFIG_CSI_SEND_MAC, 6)) {
+        return;
+    }
+
+    static int s_count = 0;
+    const wifi_pkt_rx_ctrl_t *rx_ctrl = &info->rx_ctrl;
+
+    if (!s_count) {
+        ESP_LOGI(CSI_TAG, "================ CSI RECV ================");
+        ets_printf("type,id,mac,rssi,rate,sig_mode,mcs,bandwidth,smoothing,not_sounding,aggregation,stbc,fec_coding,sgi,noise_floor,ampdu_cnt,channel,secondary_channel,local_timestamp,ant,sig_len,rx_state,len,first_word,data\n");
+    }
+
+    ets_printf("CSI_DATA,%d," MACSTR ",%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d",
+            s_count++, MAC2STR(info->mac), rx_ctrl->rssi, rx_ctrl->rate, rx_ctrl->sig_mode,
+            rx_ctrl->mcs, rx_ctrl->cwb, rx_ctrl->smoothing, rx_ctrl->not_sounding,
+            rx_ctrl->aggregation, rx_ctrl->stbc, rx_ctrl->fec_coding, rx_ctrl->sgi,
+            rx_ctrl->noise_floor, rx_ctrl->ampdu_cnt, rx_ctrl->channel, rx_ctrl->secondary_channel,
+            rx_ctrl->timestamp, rx_ctrl->ant, rx_ctrl->sig_len, rx_ctrl->rx_state);
+
+    ets_printf(",%d,%d,\"[%d", info->len, info->first_word_invalid, info->buf[0]);
+
+    for (int i = 1; i < info->len; i++) {
+        ets_printf(",%d", info->buf[i]);
+    }
+
+    ets_printf("]\"\n");
+}
+
+static void wifi_csi_init()
+{
+    ESP_ERROR_CHECK(esp_wifi_config_espnow_rate(ESP_IF_WIFI_STA, WIFI_PHY_RATE_MCS0_SGI));
+    ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));
+
+    ESP_ERROR_CHECK(esp_wifi_set_channel(CONFIG_LESS_INTERFERENCE_CHANNEL, WIFI_SECOND_CHAN_NONE));
+    ESP_ERROR_CHECK(esp_wifi_set_mac(WIFI_IF_STA, CONFIG_CSI_SEND_MAC));
+
+    ESP_ERROR_CHECK(esp_wifi_set_promiscuous(true));
+    // ESP_ERROR_CHECK(esp_wifi_set_promiscuous_rx_cb(g_wifi_radar_config->wifi_sniffer_cb));
+
+    /**< default config */
+    wifi_csi_config_t csi_config = {
+            .lltf_en           = true,
+            .htltf_en          = true,
+            .stbc_htltf2_en    = true,
+            .ltf_merge_en      = true,
+            .channel_filter_en = true,
+            .manu_scale        = false,
+            .shift             = false,
+    };
+    ESP_ERROR_CHECK(esp_wifi_set_csi_config(&csi_config));
+    ESP_ERROR_CHECK(esp_wifi_set_csi_rx_cb(wifi_csi_rx_cb, NULL));
+    ESP_ERROR_CHECK(esp_wifi_set_csi(true));
 }
 
 void my_loop_task(void *arg)
@@ -135,7 +212,7 @@ void my_loop_task(void *arg)
     int counter = 0;
     while (true) {
         counter++;
-        ESP_LOGI(TAG, "Counter = %d", counter);
+        ESP_LOGI(TAG_AP, "Counter = %d", counter);
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
@@ -155,6 +232,8 @@ void app_main(void)
         ESP_LOGE(TAG_AP, "Failed to start SoftAP!");
         return;
     }
+
+    wifi_csi_init();
 
     ESP_LOGI(TAG_AP, "FTM Responder is ready, waiting for FTM requests...");
 

@@ -241,9 +241,10 @@ static int wifi_cmd_ftm_initiator(int argc, char **argv)
 static void ftm_measurement_task(void *pvParameter)
 {
     while (true) {
+        // FTM
         wifi_cmd_ftm_initiator(0, NULL);
-        vTaskDelay(pdMS_TO_TICKS(MIN_WAIT_TIME_MS));
 
+        // CSI
         ESP_ERROR_CHECK(esp_now_add_peer(&csi_peer));
         uint8_t payload[] = {0x01};
         esp_err_t ret = esp_now_send(csi_peer.peer_addr, payload, sizeof(payload));
@@ -251,8 +252,6 @@ static void ftm_measurement_task(void *pvParameter)
             ESP_LOGW("CSI sender", "<%s> ESP-NOW send error", esp_err_to_name(ret));
         }
         ESP_ERROR_CHECK(esp_now_del_peer(csi_peer.peer_addr));
-
-        vTaskDelay(pdMS_TO_TICKS(MIN_WAIT_TIME_MS));
     }
 }
 

@@ -3,9 +3,9 @@ import csv
 import re
 from datetime import datetime
 
-SERIAL_PORT = 'COM7'
+SERIAL_PORT = 'COM4'
 BAUD_RATE = 115200
-CSV_FILE = 'ftm_data.csv'
+CSV_FILE = '../../DL/data/ftm_data.csv'
 
 pattern = re.compile(
     r'FTM Data: Raw RTT = (\d+) nSec, Est RTT = (\d+) nSec, Distance = (\d+)\.(\d{2}) meters'
@@ -16,7 +16,7 @@ def main():
             open(CSV_FILE, 'w', newline='') as csvfile:
 
         writer = csv.writer(csvfile)
-        writer.writerow(['Timestamp', 'RTT_raw (nSec)', 'RTT_est', 'Distance (meters)'])
+        writer.writerow(['timestamp', 'RTT_raw (nSec)', 'RTT_est', 'Distance (meters)'])
 
         print("Listening...")
 
@@ -30,7 +30,7 @@ def main():
 
                 match = pattern.search(line)
                 if match:
-                    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
                     rtt_raw = int(match.group(1))
                     rtt_est = int(match.group(2))
                     distance = float(f"{match.group(3)}.{match.group(4)}")

@@ -1,0 +1,36 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4037abfa: esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40375be9: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c65d: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4037d4aa: vApplicationStackOverflowHook at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:563
+0x4037e953: vTaskSwitchContext at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3701 (discriminator 7)
+0x4037d570: _frxt_dispatch at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4037d566: _frxt_int_exit at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+[0m
+[0;33m--- 0x40375b28: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- Warning: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0;33m--- 0x4037abfa: esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Users\14731\esp\v5.4\esp-idf\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\subprocess.py", line 1201, in communicate
+    self.wait()
+  File "C:\Python312\Lib\subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\subprocess.py", line 1590, in _wait
+    result = _winapi.WaitForSingleObject(self._handle,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
