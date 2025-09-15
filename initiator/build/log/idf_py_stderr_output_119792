@@ -1,0 +1,30 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4037ac12: esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x4038258e: remove_free_block at C:/Users/14731/esp/v5.4/esp-idf/components/heap/tlsf/tlsf_control_functions.h:374
+ (inlined by) block_remove at C:/Users/14731/esp/v5.4/esp-idf/components/heap/tlsf/tlsf_control_functions.h:422
+ (inlined by) block_merge_next at C:/Users/14731/esp/v5.4/esp-idf/components/heap/tlsf/tlsf_control_functions.h:538
+ (inlined by) tlsf_free at C:/Users/14731/esp/v5.4/esp-idf/components/heap/tlsf/tlsf.c:632
+[0m
+[0;33m--- 0x40378dfc: task_ms_to_tick_wrapper at C:/Users/14731/esp/v5.4/esp-idf/components/esp_wifi/esp32s3/esp_adapter.c:341
+[0m
+[0;33m--- 0x40056f5c: memcpy in ROM
+0x40056f72: memcpy in ROM
+[0m
+[0;33m--- 0x4038258b: remove_free_block at C:/Users/14731/esp/v5.4/esp-idf/components/heap/tlsf/tlsf_control_functions.h:373 (discriminator 1)
+ (inlined by) block_remove at C:/Users/14731/esp/v5.4/esp-idf/components/heap/tlsf/tlsf_control_functions.h:422 (discriminator 1)
+ (inlined by) block_merge_next at C:/Users/14731/esp/v5.4/esp-idf/components/heap/tlsf/tlsf_control_functions.h:538 (discriminator 1)
+ (inlined by) tlsf_free at C:/Users/14731/esp/v5.4/esp-idf/components/heap/tlsf/tlsf.c:632 (discriminator 1)
+0x403821e0: multi_heap_free_impl at C:/Users/14731/esp/v5.4/esp-idf/components/heap/multi_heap.c:233
+0x403764c6: heap_caps_free at C:/Users/14731/esp/v5.4/esp-idf/components/heap/heap_caps_base.c:70
+0x40384881: free at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/heap.c:39
+0x4003ef21: ppProcessRxPktHdr in ROM
+0x403852c1: ppTask at ??:?
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0m

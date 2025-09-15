@@ -1,241 +1,156 @@
+// ===== ANCHOR / RESPONDER: SoftAP + FTM Responder + Periodic ESP-NOW TX =====
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
-
-
 #include "esp_log.h"
-#include "esp_wifi.h"
 #include "esp_system.h"
-#include "esp_mac.h"
+#include "esp_event.h"
 #include "esp_netif.h"
-#include "esp_now.h"
-
-#include "rom/ets_sys.h"
-
 #include "nvs_flash.h"
+
 #include "freertos/FreeRTOS.h"
-#include "freertos/event_groups.h"
 #include "freertos/task.h"
 
-#define TAG_AP "ftm_responder"
-#define MAX_SSID_LEN 32
-#define MAX_PASSPHRASE_LEN 64
-#define DEFAULT_AP_SSID "FTM"
-#define DEFAULT_AP_PASSWORD "ftmftmftm"
-#define DEFAULT_AP_CHANNEL 1
-#define DEFAULT_AP_BANDWIDTH 20
+#include "esp_wifi.h"
+#include "esp_now.h"
 
-#define CONFIG_LESS_INTERFERENCE_CHANNEL    1
-#define CONFIG_SEND_FREQUENCY               100
+#define TAG                "ANCHOR"
 
-static const uint8_t CONFIG_CSI_SEND_MAC[] = {0x1a, 0x00, 0x00, 0x00, 0x00, 0x00};
-static const char *CSI_TAG = "csi_recv";
+// -------- AP/FTM 参数（按现场修改） --------
+#define AP_SSID            "FTM"
+#define AP_PASS            "ftmftmftm"
+#define AP_CHANNEL         6              // 1..13/14，确保非 0
+#define AP_BW_20MHZ        1              // 20MHz
+#define MAX_STA_CONN       8
 
-wifi_config_t g_ap_config = {
-        .ap.max_connection = 4,
-        .ap.authmode = WIFI_AUTH_WPA2_PSK,
-        .ap.ftm_responder = true
-};
+// -------- ESP-NOW 周期发送设置 --------
+#define ESPNOW_HZ          10
+#define ESPNOW_PERIOD_MS   (1000 / ESPNOW_HZ)
+#define ESPNOW_PAYLOAD_LEN 10
 
-static bool s_reconnect = true;
-static bool s_ap_started = false;
-static EventGroupHandle_t s_ftm_event_group;
-static EventGroupHandle_t s_wifi_event_group;
-static const char *FTM_TAG = "responder";
+// 速率设置（11n 帧，便于 CSI）
+#define ESPNOW_RATE        WIFI_PHY_RATE_MCS0_SGI
 
-static void event_handler(void *arg, esp_event_base_t event_base,
-                          int32_t event_id, void *event_data)
+static const uint8_t ESPNOW_PEER_BROADCAST[6] = {0xff,0xff,0xff,0xff,0xff,0xff};
+
+// ---------- 事件回调 ----------
+static void wifi_event_handler(void *arg, esp_event_base_t base, int32_t id, void *data)
 {
-    if (event_id == WIFI_EVENT_AP_START) {
-        s_ap_started = true;
-    } else if (event_id == WIFI_EVENT_AP_STOP) {
-        s_ap_started = false;
+    if (base == WIFI_EVENT && id == WIFI_EVENT_AP_START) {
+        wifi_config_t cfg;
+        esp_wifi_get_config(WIFI_IF_AP, &cfg);
+
+        uint8_t mac[6];
+        esp_wifi_get_mac(WIFI_IF_AP, mac);
+
+        uint8_t pri = 0;
+        wifi_second_chan_t sec = WIFI_SECOND_CHAN_NONE;
+        esp_wifi_get_channel(&pri, &sec);
+
+        ESP_LOGI(TAG,
+                 "AP started. SSID:%s CH:%u BW:%s AP_MAC:%02X:%02X:%02X:%02X:%02X:%02X (sec=%d, FTM ON)",
+                 (char*)cfg.ap.ssid, pri, (AP_BW_20MHZ ? "20" : "40"),
+                 mac[0],mac[1],mac[2],mac[3],mac[4],mac[5], (int)sec);
     }
 }
 
-static void initialise_wifi(void)
+// ---------- 初始化 SoftAP + FTM Responder ----------
+static void wifi_ap_init(void)
 {
-    esp_log_level_set("wifi", ESP_LOG_WARN);
-    static bool initialized = false;
-
-    if (initialized) {
-        return;
-    }
+    esp_log_level_set("wifi", ESP_LOG_DEBUG); // 可选：便于排查
 
     ESP_ERROR_CHECK(esp_netif_init());
-    s_wifi_event_group = xEventGroupCreate();
-    s_ftm_event_group = xEventGroupCreate();
-    ESP_ERROR_CHECK( esp_event_loop_create_default() );
-    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
-    ESP_ERROR_CHECK(esp_wifi_init(&cfg));
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+    esp_netif_create_default_wifi_ap();
 
-    esp_event_handler_instance_t instance_any_id;
-    ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
-                                                        ESP_EVENT_ANY_ID,
-                                                        &event_handler,
-                                                        NULL,
-                                                        &instance_any_id));
+    wifi_init_config_t wcfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK(esp_wifi_init(&wcfg));
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(
+            WIFI_EVENT, ESP_EVENT_ANY_ID, &wifi_event_handler, NULL, NULL));
 
-    ESP_ERROR_CHECK(esp_wifi_set_storage(WIFI_STORAGE_RAM) );
-    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_NULL) );
-    ESP_ERROR_CHECK(esp_wifi_start() );
-    initialized = true;
-}
-
-esp_err_t wifi_add_mode(wifi_mode_t mode)
-{
-    wifi_mode_t cur_mode, new_mode = mode;
-    esp_err_t err = esp_wifi_get_mode(&cur_mode);
-
-    if (err != ESP_OK) {
-        ESP_LOGW(FTM_TAG, "Failed to get current WiFi mode, proceeding with default");
-    }
-
-    if (mode == WIFI_MODE_AP) {
-        if (cur_mode == WIFI_MODE_AP || cur_mode == WIFI_MODE_APSTA) {
-            return ESP_OK;
-        } else if (cur_mode == WIFI_MODE_STA) {
-            new_mode = WIFI_MODE_APSTA;
-        } else {
-            new_mode = WIFI_MODE_AP;
-        }
-    }
-
-    ESP_ERROR_CHECK( esp_wifi_set_mode(new_mode) );
-    return ESP_OK;
-}
-
-static bool wifi_cmd_ap_set(const char* ssid, const char* pass, uint8_t channel, uint8_t bw)
-{
-    s_reconnect = false;
-    strlcpy((char*) g_ap_config.ap.ssid, ssid, MAX_SSID_LEN);
-    if (pass) {
-        if (strlen(pass) != 0 && strlen(pass) < 8) {
-            s_reconnect = true;
-            ESP_LOGE(TAG_AP, "password cannot be less than 8 characters long");
-            return false;
-        }
-        strlcpy((char*) g_ap_config.ap.password, pass, MAX_PASSPHRASE_LEN);
-    }
-    if (!(channel >=1 && channel <= 14)) {
-        ESP_LOGE(TAG_AP, "Channel cannot be %d!", channel);
-        return false;
-    }
-    if (bw != 20 && bw != 40) {
-        ESP_LOGE(TAG_AP, "Cannot set %d MHz bandwidth!", bw);
-        return false;
-    }
-
-    if (ESP_OK != wifi_add_mode(WIFI_MODE_APSTA)) {
-        return false;
-    }
-    if (strlen(pass) == 0) {
-        g_ap_config.ap.authmode = WIFI_AUTH_OPEN;
-    }
-    g_ap_config.ap.channel = channel;
-    ESP_ERROR_CHECK(esp_wifi_set_config(ESP_IF_WIFI_AP, &g_ap_config));
-    if (bw == 40) {
-        esp_wifi_set_bandwidth(ESP_IF_WIFI_AP, WIFI_BW_HT40);
-    } else {
-        esp_wifi_set_bandwidth(ESP_IF_WIFI_AP, WIFI_BW_HT20);
-    }
-
-    ESP_LOGI(TAG_AP, "Starting SoftAP with FTM Responder support, SSID - %s, Password - %s, Primary Channel - %d, Bandwidth - %dMHz",
-             ssid, pass, channel, bw);
-
-    return true;
-}
-
-static void wifi_csi_rx_cb(void *ctx, wifi_csi_info_t *info)
-{
-    if (!info || !info->buf) {
-        ESP_LOGW(CSI_TAG, "<%s> wifi_csi_cb", esp_err_to_name(ESP_ERR_INVALID_ARG));
-        return;
-    }
-
-    if (memcmp(info->mac, CONFIG_CSI_SEND_MAC, 6)) {
-        return;
-    }
-
-    static int s_count = 0;
-    const wifi_pkt_rx_ctrl_t *rx_ctrl = &info->rx_ctrl;
-
-    if (!s_count) {
-        ESP_LOGI(CSI_TAG, "================ CSI RECV ================");
-        ets_printf("type,id,mac,rssi,rate,sig_mode,mcs,bandwidth,smoothing,not_sounding,aggregation,stbc,fec_coding,sgi,noise_floor,ampdu_cnt,channel,secondary_channel,local_timestamp,ant,sig_len,rx_state,len,first_word,data\n");
-    }
-
-    ets_printf("CSI_DATA,%d," MACSTR ",%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d",
-            s_count++, MAC2STR(info->mac), rx_ctrl->rssi, rx_ctrl->rate, rx_ctrl->sig_mode,
-            rx_ctrl->mcs, rx_ctrl->cwb, rx_ctrl->smoothing, rx_ctrl->not_sounding,
-            rx_ctrl->aggregation, rx_ctrl->stbc, rx_ctrl->fec_coding, rx_ctrl->sgi,
-            rx_ctrl->noise_floor, rx_ctrl->ampdu_cnt, rx_ctrl->channel, rx_ctrl->secondary_channel,
-            rx_ctrl->timestamp, rx_ctrl->ant, rx_ctrl->sig_len, rx_ctrl->rx_state);
-
-    ets_printf(",%d,%d,\"[%d", info->len, info->first_word_invalid, info->buf[0]);
-
-    for (int i = 1; i < info->len; i++) {
-        ets_printf(",%d", info->buf[i]);
-    }
-
-    ets_printf("]\"\n");
-}
-
-static void wifi_csi_init()
-{
-    ESP_ERROR_CHECK(esp_wifi_config_espnow_rate(ESP_IF_WIFI_STA, WIFI_PHY_RATE_MCS0_SGI));
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_AP));
     ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));
 
-    ESP_ERROR_CHECK(esp_wifi_set_channel(CONFIG_LESS_INTERFERENCE_CHANNEL, WIFI_SECOND_CHAN_NONE));
-    ESP_ERROR_CHECK(esp_wifi_set_mac(WIFI_IF_STA, CONFIG_CSI_SEND_MAC));
+    // 建议：设置国家码与 11n 协议
+    wifi_country_t ctry = { .cc = "CN", .schan = 1, .nchan = 13, .policy = WIFI_COUNTRY_POLICY_MANUAL };
+    ESP_ERROR_CHECK(esp_wifi_set_country(&ctry));
+    ESP_ERROR_CHECK(esp_wifi_set_protocol(WIFI_IF_AP,
+                                          WIFI_PROTOCOL_11B | WIFI_PROTOCOL_11G | WIFI_PROTOCOL_11N));
 
-    ESP_ERROR_CHECK(esp_wifi_set_promiscuous(true));
-    // ESP_ERROR_CHECK(esp_wifi_set_promiscuous_rx_cb(g_wifi_radar_config->wifi_sniffer_cb));
+    wifi_config_t ap_cfg = { 0 };
+    strncpy((char*)ap_cfg.ap.ssid, AP_SSID, sizeof(ap_cfg.ap.ssid)-1);
+    strncpy((char*)ap_cfg.ap.password, AP_PASS, sizeof(ap_cfg.ap.password)-1);
+    ap_cfg.ap.ssid_len        = 0;
+    ap_cfg.ap.channel         = AP_CHANNEL;                // 明确主信道（非 0）
+    ap_cfg.ap.max_connection  = MAX_STA_CONN;
+    ap_cfg.ap.authmode        = (strlen(AP_PASS) >= 8) ? WIFI_AUTH_WPA2_PSK : WIFI_AUTH_OPEN;
+    ap_cfg.ap.beacon_interval = 100;                       // ms
+    ap_cfg.ap.ftm_responder   = true;                      // 开启 FTM Responder
 
-    /**< default config */
-    wifi_csi_config_t csi_config = {
-            .lltf_en           = true,
-            .htltf_en          = true,
-            .stbc_htltf2_en    = true,
-            .ltf_merge_en      = true,
-            .channel_filter_en = true,
-            .manu_scale        = false,
-            .shift             = false,
-    };
-    ESP_ERROR_CHECK(esp_wifi_set_csi_config(&csi_config));
-    ESP_ERROR_CHECK(esp_wifi_set_csi_rx_cb(wifi_csi_rx_cb, NULL));
-    ESP_ERROR_CHECK(esp_wifi_set_csi(true));
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &ap_cfg));
+
+    if (AP_BW_20MHZ) ESP_ERROR_CHECK(esp_wifi_set_bandwidth(WIFI_IF_AP, WIFI_BW_HT20));
+    else             ESP_ERROR_CHECK(esp_wifi_set_bandwidth(WIFI_IF_AP, WIFI_BW_HT40));
+
+    ESP_ERROR_CHECK(esp_wifi_start());
+
+    // 启动后兜底：如果当前信道=0，强制设置为 AP_CHANNEL
+    uint8_t pri = 0;
+    wifi_second_chan_t sec = WIFI_SECOND_CHAN_NONE;
+    ESP_ERROR_CHECK(esp_wifi_get_channel(&pri, &sec));
+    if (pri == 0) {
+        ESP_LOGW(TAG, "current channel=0 ! Forcing AP_CHANNEL=%d", AP_CHANNEL);
+        ESP_ERROR_CHECK(esp_wifi_set_channel(AP_CHANNEL, WIFI_SECOND_CHAN_NONE));
+        ESP_ERROR_CHECK(esp_wifi_get_channel(&pri, &sec));
+    }
+    ESP_LOGI(TAG, "AP up on channel=%u (sec=%d)", pri, (int)sec);
 }
 
-void my_loop_task(void *arg)
+// ---------- 初始化 ESP-NOW 并添加广播 Peer ----------
+static void espnow_init(void)
 {
-    int counter = 0;
-    while (true) {
-        counter++;
-        ESP_LOGI(TAG_AP, "Counter = %d", counter);
-        vTaskDelay(pdMS_TO_TICKS(1000));
+    ESP_ERROR_CHECK(esp_now_init());
+
+    // 旧接口：在 AP 接口上统一设置 ESP-NOW 速率（v5.4 仍可用，可能会有弃用告警，但功能正常）
+    ESP_ERROR_CHECK(esp_wifi_config_espnow_rate(WIFI_IF_AP, ESPNOW_RATE));
+
+    esp_now_peer_info_t peer = {0};
+    memcpy(peer.peer_addr, ESPNOW_PEER_BROADCAST, 6);
+    peer.ifidx   = WIFI_IF_AP;
+    peer.channel = AP_CHANNEL;     // 关键：明确非 0
+    peer.encrypt = false;
+
+    esp_err_t err = esp_now_add_peer(&peer);
+    if (err != ESP_OK && err != ESP_ERR_ESPNOW_EXIST) {
+        ESP_ERROR_CHECK(err);
+    }
+}
+
+// ---------- 周期性发送 ESPNOW 小包（用于触发对端 CSI） ----------
+static void espnow_tx_task(void *arg)
+{
+    uint32_t seq = 0;
+    uint8_t  payload[ESPNOW_PAYLOAD_LEN];
+
+    for (;;) {
+        memcpy(payload, &seq, sizeof(seq));
+        for (int i = 4; i < ESPNOW_PAYLOAD_LEN; ++i) payload[i] = (uint8_t)i;
+
+        esp_err_t r = esp_now_send(ESPNOW_PEER_BROADCAST, payload, ESPNOW_PAYLOAD_LEN);
+        if (r != ESP_OK) ESP_LOGW(TAG, "esp_now_send err=%s", esp_err_to_name(r));
+        seq++;
+
+        vTaskDelay(pdMS_TO_TICKS(ESPNOW_PERIOD_MS)); // 10Hz
     }
 }
 
 void app_main(void)
 {
-    esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-        ESP_ERROR_CHECK(nvs_flash_erase());
-        ret = nvs_flash_init();
-    }
-    ESP_ERROR_CHECK(ret);
+    ESP_ERROR_CHECK(nvs_flash_init());
 
-    initialise_wifi();
+    wifi_ap_init();              // SoftAP + FTM Responder
+    espnow_init();               // ESP-NOW TX
+    xTaskCreate(espnow_tx_task, "espnow_tx", 2048, NULL, 5, NULL);
 
-    if (!wifi_cmd_ap_set(DEFAULT_AP_SSID, DEFAULT_AP_PASSWORD, DEFAULT_AP_CHANNEL, DEFAULT_AP_BANDWIDTH)) {
-        ESP_LOGE(TAG_AP, "Failed to start SoftAP!");
-        return;
-    }
-
-    wifi_csi_init();
-
-    ESP_LOGI(TAG_AP, "FTM Responder is ready, waiting for FTM requests...");
-
-    xTaskCreate(my_loop_task, "loop_task", 2048, NULL, 5, NULL);
+    ESP_LOGI(TAG, "Anchor ready: SoftAP+FTM Responder, ESPNOW %d Hz on CH%d, BW=%s",
+             ESPNOW_HZ, AP_CHANNEL, (AP_BW_20MHZ ? "20" : "40"));
 }

@@ -1,0 +1,3336 @@
+[0;32mI (107) esp_image: segment 1: paddr=00029c78 vaddr=3fc99a00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037ac0a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 10 2025 06:38:52[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=19c50h (105552) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=00029c78 vaddr=3fc99a00 size=04988h ( 18824) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=0002e608 vaddr=40374000 size=01a10h (  6672) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=84cdch (543964) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000b4d04 vaddr=40375a10 size=13f90h ( 81808) load[0m
+[0;32mI (233) esp_image: segment 5: paddr=000c8c9c vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (241) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (242) boot: Disabling RNG early entropy source...[0m
+[0;32mI (252) cpu_start: Multicore app[0m
+[0;32mI (261) cpu_start: Pro cpu start user code[0m
+[0;32mI (261) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (261) app_init: Application information:[0m
+[0;32mI (262) app_init: Project name:     initiator[0m
+[0;32mI (265) app_init: App version:      207a5d4-dirty[0m
+[0;32mI (270) app_init: Compile time:     Sep 10 2025 04:47:01[0m
+[0;32mI (275) app_init: ELF file SHA256:  86b57b219...[0m
+[0;32mI (279) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (283) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (287) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (291) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (295) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (301) heap_init: At 3FCA24A0 len 00047270 (284 KiB): RAM[0m
+[0;32mI (306) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (312) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (317) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (323) spi_flash: detected chip: gd[0m
+[0;32mI (325) spi_flash: flash io: dio[0m
+[0;33mW (328) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (341) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (347) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (354) main_task: Started on CPU0[0m
+[0;32mI (364) main_task: Calling app_main()[0m
+[0;32mI (384) pp: pp rom version: e7ae62f[0m
+[0;32mI (384) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (404) wifi_init: rx ba win: 6[0m
+[0;32mI (404) wifi_init: accept mbox: 6[0m
+[0;32mI (404) wifi_init: tcpip mbox: 32[0m
+[0;32mI (404) wifi_init: udp mbox: 6[0m
+[0;32mI (404) wifi_init: tcp mbox: 6[0m
+[0;32mI (404) wifi_init: tcp tx win: 5760[0m
+[0;32mI (404) wifi_init: tcp rx win: 5760[0m
+[0;32mI (404) wifi_init: tcp mss: 1440[0m
+[0;32mI (404) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (404) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (404) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (484) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (484) TAG: Ready (multi-anchor): FTM burst + CSI 1Hz, UART=921600.[0m
+[0;32mI (484) main_task: Returned from app_main()[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (1494) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (2174) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+[1;31mE (2744) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (3194) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (3344) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (4364) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (4954) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (5974) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (6104) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (6684) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (7124) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (7284) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (8304) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (8494) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,7,7,1.050
+[1;31mE (9054) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (9514) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (9654) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+csi_miss,A2
+[0;32mI (10674) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (10814) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (11824) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (11964) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+csi_miss,A1
+[0;32mI (12984) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (13114) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (13664) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (14134) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (14264) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (15284) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (15424) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (16444) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (16594) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (17144) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (17614) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (17744) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (18764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (18914) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (19934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (20064) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+csi_miss,A2
+[0;32mI (21084) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (21224) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (22234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (22374) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (23394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (23584) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (24134) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (24604) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (24734) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (25754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (25894) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (26914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (27054) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+csi_miss,A2
+[0;32mI (28074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (28214) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,17,17,2.550
+csi_miss,A3
+[0;32mI (29224) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (29364) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (30384) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (30524) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (31074) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (31544) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (31684) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (32694) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (32834) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (33854) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (33984) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+csi_miss,A2
+[0;32mI (35004) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (35144) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (36154) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (36294) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (37314) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (37464) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,2,2,0.300
+[1;31mE (38014) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (38474) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (38664) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (39684) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (39824) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (40844) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (40974) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+[1;31mE (41524) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (41994) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (42124) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (43144) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (43284) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+[1;31mE (43834) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (44304) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (44434) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+csi_miss,A2
+[0;32mI (45454) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (45604) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (46614) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (46764) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+[1;31mE (47314) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (47774) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (47934) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+csi_miss,A2
+[0;32mI (48954) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (49094) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (50104) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (50244) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,13,13,1.950
+csi_miss,A1
+[0;32mI (51264) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (51394) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (51954) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (52414) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (52604) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (53624) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (53764) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+[1;31mE (54324) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (54784) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (54934) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[1;31mE (55104) wifi:No FTM Measurements received from responder![0m
+[1;31mE (55504) uart: uart_write_bytes(1472): uart driver error[0m
+[0;33mW (55504) TAG: FTM to A2 failed (ESP_FAIL), streak=1[0m
+[0;32mI (55944) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (56104) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (57124) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (57274) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+[1;31mE (57824) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (58284) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (58434) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (59004) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (59444) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (59624) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,25,25,3.750
+csi_miss,A3
+[0;32mI (60634) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (60794) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (61814) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (61954) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,12,12,1.800
+[1;31mE (62524) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (62964) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (63124) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (64144) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (64274) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (65294) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (65424) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (66004) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (66444) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (66664) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,19,19,2.850
+csi_miss,A3
+[0;32mI (67674) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (67814) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (68834) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (68964) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (69544) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (69984) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (70154) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (71174) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (71324) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (72344) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (72484) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+csi_miss,A2
+[0;32mI (73504) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (73674) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (74684) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (74824) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (75844) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (75974) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,7,7,1.050
+[1;31mE (76554) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (76994) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (77154) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (78174) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (78314) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (79334) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (79464) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (80484) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,10,10,1.500
+[1;31mE (81044) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (81704) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,19,19,2.850
+csi_miss,A3
+[0;32mI (82714) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (82874) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (83884) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (84034) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (85044) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,318,318,47.700
+[1;31mE (85604) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (86204) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (87224) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (87364) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (88384) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (88554) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (89564) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,328,328,49.200
+[1;31mE (90124) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (90734) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (91744) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (91884) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (92904) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (93034) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+csi_miss,A2
+[0;32mI (94054) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (94194) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (95214) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (95354) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (96374) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (96524) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+csi_miss,A2
+[0;32mI (97544) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (97734) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (98754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (98894) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (99914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (100044) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+csi_miss,A2
+[0;32mI (101064) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (101204) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,19,19,2.850
+csi_miss,A3
+[0;32mI (102214) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (102354) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+[1;31mE (102904) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (103374) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (103504) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,4,4,0.600
+csi_miss,A2
+[0;32mI (104524) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (104714) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (105734) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (105864) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (106884) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (107024) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (107574) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (108044) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (108174) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (109194) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (109334) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (110354) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (110484) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (111034) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (111504) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (111684) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (112714) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (112844) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (113864) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (114014) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[0;32mI (115024) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[1;31mE (115084) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (115684) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (116704) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (116854) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (117864) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (118014) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (119024) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (119194) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (120204) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (120354) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,7,7,1.050
+csi_miss,A1
+[0;32mI (121364) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (121504) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (122524) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (122664) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,19,19,2.850
+csi_miss,A3
+[0;32mI (123684) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (123824) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+csi_miss,A1
+[0;32mI (124844) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (124974) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (125534) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (125994) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (126184) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (127204) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (127344) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+csi_miss,A1
+[0;32mI (128364) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (128504) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (129524) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (129684) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,19,19,2.850
+csi_miss,A3
+[0;32mI (130694) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (130834) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (131854) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (131984) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (133004) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (133164) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,19,19,2.850
+csi_miss,A3
+[0;32mI (134184) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (134324) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (135344) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (135494) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,12,12,1.800
+csi_miss,A2
+[0;32mI (136514) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (136664) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (137684) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (137814) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (138834) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (138964) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (139514) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (139984) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (140174) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (141184) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (141324) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (142344) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (142484) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (143504) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (143654) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (144664) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (144814) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (145824) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (145974) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,162,162,24.300
+[0;32mI (146994) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;32mI (147654) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,17,17,2.550
+csi_miss,A3
+[0;32mI (148664) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (148814) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (149824) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (149964) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+csi_miss,A2
+[0;32mI (150984) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (151114) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (152134) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (152274) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (153284) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (153424) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+[1;31mE (153974) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (154444) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (154634) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,17,17,2.550
+csi_miss,A3
+[0;32mI (155644) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (155794) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (156804) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (156954) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+csi_miss,A2
+[0;32mI (157964) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (158114) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (159124) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (159264) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+[1;31mE (159814) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (160284) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (160414) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (160974) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (161434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (161584) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (162594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (162744) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (163754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (163894) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (164454) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (164914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (165064) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (166074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (166214) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (167234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (167364) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+[1;31mE (167934) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (168384) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (168594) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (169604) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (169744) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+[1;31mE (170314) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (170764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (170924) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (171934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (172094) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (173114) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (173244) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (174264) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (174414) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,7,7,1.050
+csi_miss,A2
+[0;32mI (175424) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (175584) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (176604) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (176744) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (177764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (177894) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (178914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (179064) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (180084) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (180214) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (181234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (181374) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (182384) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (182604) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (183614) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (183754) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (184774) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (184924) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (185934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (186084) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (187104) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (187244) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (188264) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (188404) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (189424) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (189554) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,26,26,3.900
+csi_miss,A3
+[0;32mI (190574) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (190714) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (191734) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (191884) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (192894) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (193034) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (194054) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (194214) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (195234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (195384) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (196394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (196604) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (197624) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (197774) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (198784) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (198924) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (199484) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (199944) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (200094) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (201104) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (201244) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+[1;31mE (201804) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (202264) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (202424) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (203434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (203594) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (204604) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (204744) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+[1;31mE (205304) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (205764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (205914) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (206924) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (207064) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (208094) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (208224) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (209244) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (209424) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,12,12,1.800
+[1;31mE (209974) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (210434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (210634) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (211644) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (211784) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (212804) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (212934) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (213954) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (214104) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (215124) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (215254) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (216274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (216414) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (217424) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (217574) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (218594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (218734) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (219754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (219904) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (220914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (221084) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (222094) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (222234) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (223254) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (223384) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (224404) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (224604) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (225614) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (225754) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (226774) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (226904) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (227454) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (227934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (228054) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (229074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (229234) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (230244) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (230384) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (230944) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (231404) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (231554) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (232564) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (232704) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (233724) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (233864) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (234884) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (235044) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (236064) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (236204) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (237224) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (237354) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (237924) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (238374) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (238574) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (239594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (239734) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (240754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (240894) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (241464) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (241914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (242074) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (243084) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (243224) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (244244) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (244384) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[0;32mI (245394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;32mI (246064) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (247084) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (247224) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+[1;31mE (247774) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (248234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (248374) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (249394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (249534) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (250554) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (250704) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (251714) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (251864) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (252874) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (253084) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (254104) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (254244) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (255264) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (255394) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (256414) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (256564) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (257584) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (257714) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (258734) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (258874) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,12,12,1.800
+csi_miss,A2
+[0;32mI (259894) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (260054) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (261074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (261214) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (262234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (262364) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,20,20,3.000
+csi_miss,A2
+[0;32mI (263384) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (263544) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (264554) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (264694) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (265714) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (265844) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (266864) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (267054) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (268064) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (268204) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (269224) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (269354) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (270374) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (270504) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (271524) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (271674) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (272684) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (272824) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (273844) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (273974) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (274994) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (275134) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+[1;31mE (275684) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (276154) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (276284) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (277304) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (277434) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,26,26,3.900
+csi_miss,A3
+[0;32mI (278454) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (278594) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+csi_miss,A1
+[0;32mI (279614) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (279754) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (280304) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (280764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (280964) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,25,25,3.750
+csi_miss,A3
+[0;32mI (281974) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (282114) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,5,5,0.750
+[1;31mE (282664) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (283134) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (283264) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (284284) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (284414) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (285434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (285574) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+[1;31mE (286134) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (286594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (286744) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (287754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (287894) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (288914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (289054) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (290074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (290204) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (290754) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (291224) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (291354) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (292374) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (292514) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (293534) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (293684) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+[1;31mE (294234) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (294704) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (294894) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (295904) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (296064) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (297084) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (297214) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (298234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (298364) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (299384) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (299524) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (300544) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (300674) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (301694) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (301824) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (302844) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (302984) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (304004) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (304134) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (305164) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (305284) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (306304) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (306444) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,7,7,1.050
+[1;31mE (306994) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (307464) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (307604) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (308174) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (308614) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (308834) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (309844) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (309984) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (311004) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (311164) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (312174) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (312734) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (313344) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (314354) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (314514) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+csi_miss,A1
+[0;32mI (315524) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (315674) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (316244) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (316684) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (316844) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (317864) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (318014) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+[1;31mE (318574) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (319034) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (319214) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (320224) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (320394) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (321404) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (321544) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[1;31mE (322214) wifi:No valid FTM Measurements found out of 6 received measurements![0m
+[0;32mI (322564) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A1
+[0;33mW (322614) TAG: FTM to A1 failed (ESP_FAIL), streak=1[0m
+[0;32mI (323224) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (324234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (324454) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (325464) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (325604) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (326624) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (326764) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,11,11,1.650
+csi_miss,A2
+[0;32mI (327774) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (327924) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (328934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (329074) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (330094) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (330254) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,11,11,1.650
+csi_miss,A2
+[0;32mI (331264) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (331434) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (332444) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (332584) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,12,12,1.800
+[1;31mE (333134) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (333604) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (333744) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,11,11,1.650
+csi_miss,A2
+[0;32mI (334764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (334914) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (335934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (336104) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,12,12,1.800
+csi_miss,A1
+[0;32mI (337114) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (337274) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (338284) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (338484) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (339504) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (339634) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+[1;31mE (340184) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (340654) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (340794) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (341804) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (341954) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (342964) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (343104) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (344124) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (344264) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (345274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (345444) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (346454) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (346594) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+csi_miss,A1
+[0;32mI (347614) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (347774) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+[0;32mI (348794) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[1;31mE (348844) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (349444) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (350464) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (350604) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (351624) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (351774) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (352784) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (352974) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (353994) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (354144) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,14,14,2.100
+[1;31mE (354704) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (355154) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (355314) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[0;32mI (356324) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;32mI (356984) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (358004) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (358144) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+[1;31mE (358704) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (359164) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (359314) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (360324) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (360484) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (361504) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (361644) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (362664) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (362804) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+[1;31mE (363354) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (363824) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (363964) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (364974) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (365124) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+[1;31mE (365674) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (366134) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (366284) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (367294) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (367504) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (368514) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (368664) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (369674) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (369824) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+[1;31mE (370374) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (370834) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (370974) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (371994) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (372144) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (373154) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (373294) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (374314) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (374464) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (375474) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (375624) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (376634) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (376784) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (377804) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (377934) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (378954) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (379094) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (380114) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (380254) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (381264) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (381464) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (382474) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (382614) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (383634) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (383784) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (384794) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (384944) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (385954) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (386104) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (387124) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (387264) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (388294) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (388414) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (389434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (389584) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (390604) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (390744) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (391754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (391904) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (392914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (393054) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (394074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (394224) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (395234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (395424) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (396444) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (396584) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+[1;31mE (397134) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (397604) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (397744) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,553,553,82.950
+[0;32mI (398754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;32mI (399414) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (400434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (400574) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,12,12,1.800
+[1;31mE (401124) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (401594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (401734) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,11,11,1.650
+csi_miss,A2
+[0;32mI (402754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (402904) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (403924) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (404054) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,13,13,1.950
+[1;31mE (404614) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (405074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (405214) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+[1;31mE (405784) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (406234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (406384) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (407404) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (407534) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (408554) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (408684) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (409704) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (409904) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (410924) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (411104) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (412124) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (412264) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (413274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (413414) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (414434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (414584) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,12,12,1.800
+[1;31mE (415134) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (415594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (415744) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,16,16,2.400
+csi_miss,A2
+[0;32mI (416764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (416914) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (417934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (418064) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (419084) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (419224) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (420234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (420384) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (421394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (421534) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (422554) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (422694) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (423704) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (423894) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (424914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (425044) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,12,12,1.800
+csi_miss,A1
+[0;32mI (426064) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (426204) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,9,9,1.350
+csi_miss,A2
+[0;32mI (427224) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (427374) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (428394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (428534) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (429554) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (429774) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (430784) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (430934) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (431944) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (432094) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (433104) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (433254) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (434264) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (434404) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (435424) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (435584) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+csi_miss,A1
+[0;32mI (436604) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (436734) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (437754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (437954) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (438964) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (439114) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+csi_miss,A1
+[0;32mI (440124) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (440264) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (441284) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (441454) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (442474) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (442614) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,7,7,1.050
+csi_miss,A1
+[0;32mI (443634) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (443784) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (444334) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (444794) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (444934) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (445954) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (446104) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (447114) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (447264) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (448274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (448414) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (449434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (449574) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (450594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (450744) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (451754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (451954) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (452974) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (453114) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (454134) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (454274) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[0;32mI (455284) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;32mI (455944) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (456964) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (457114) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (458134) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (458264) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (459284) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (459454) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (460464) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (460604) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+[1;31mE (461154) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (461624) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (461764) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+[1;31mE (462314) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (462794) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (462924) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (463934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (464074) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,12,12,1.800
+csi_miss,A1
+[0;32mI (465104) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (465234) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (466254) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (466464) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (467474) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (467624) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+[1;31mE (468174) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (468634) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (468784) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (469794) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (469944) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (470954) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (471094) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (472114) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (472254) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (473274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (473424) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (474434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (474584) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (475604) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (475744) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (476764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (476894) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (477914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (478064) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (479074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (479224) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[0;32mI (480234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;32mI (480954) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (481964) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (482104) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+[1;31mE (482654) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (483124) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (483254) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (484274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (484404) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (485424) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (485564) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (486584) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (486724) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (487734) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (487894) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (488914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (489064) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (490074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (490214) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (491234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (491374) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (492394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (492534) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (493554) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (493684) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (494244) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (494704) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (494904) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,27,27,4.050
+csi_miss,A3
+[0;32mI (495914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (496054) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,13,13,1.950
+[1;31mE (496604) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (497074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (497214) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (498234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (498384) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (499394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (499534) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (500554) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (500694) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (501714) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (501864) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (502874) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (503014) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+[1;31mE (503564) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (504034) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (504164) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (504714) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (505184) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (505314) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (506334) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (506464) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (507484) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (507614) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (508634) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (508844) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (509854) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (509994) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+[1;31mE (510554) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (511014) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (511164) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (512174) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (512314) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (513334) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (513474) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (514494) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (514644) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (515654) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (515794) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (516814) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (516954) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (517974) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (518124) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (519134) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (519284) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (520304) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (520444) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (521454) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (521614) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (522624) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (522814) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (523834) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (523974) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (524994) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (525134) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (526154) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (526294) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (527314) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (527464) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (528474) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (528614) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (529634) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (529774) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (530794) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (530934) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,7,7,1.050
+csi_miss,A1
+[0;32mI (531954) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (532084) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (533104) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (533264) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (534274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (534414) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,14,14,2.100
+csi_miss,A1
+[0;32mI (535434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (535564) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (536584) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (536764) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (537784) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (537914) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (538934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (539074) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (540094) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (540224) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (541244) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (541374) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (542394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (542524) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (543544) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (543684) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (544704) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (544854) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (545874) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (546014) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (547034) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (547184) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (548204) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (548334) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+csi_miss,A1
+[0;32mI (549354) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (549484) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (550514) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (550694) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (551704) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (551854) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (552864) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (553004) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (554024) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (554174) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (555184) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (555344) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (556364) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (556494) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (557514) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (557664) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (558674) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (558814) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,13,13,1.950
+[1;31mE (559364) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (559834) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (559974) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (560984) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (561124) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (562144) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (562274) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (563294) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (563434) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (564454) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (564644) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+[1;31mE (565194) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (565654) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (565804) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,7,7,1.050
+csi_miss,A1
+[0;32mI (566814) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (566954) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (567974) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (568124) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (569134) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (569284) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,13,13,1.950
+csi_miss,A1
+[0;32mI (570294) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (570434) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (571454) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (571604) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (572614) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (572754) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (573774) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (573914) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (574934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (575104) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,27,27,4.050
+csi_miss,A3
+[0;32mI (576124) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (576274) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (577294) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (577434) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (578444) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (578634) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (579654) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (579804) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (580814) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (580954) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (581974) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (582144) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (583154) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (583294) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (584314) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (584464) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (585474) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (585624) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (586634) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (586784) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (587794) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (587934) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (588954) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (589094) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (590114) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (590264) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (591274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (591414) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (592434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (592624) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (593644) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (593774) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,13,13,1.950
+csi_miss,A1
+[0;32mI (594794) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (594944) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (595954) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (596094) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (597114) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (597254) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,7,7,1.050
+[1;31mE (597814) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (598274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (598414) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (599434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (599584) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (600594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (600744) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+[1;31mE (601294) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (601754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (601904) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (602914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (603064) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (604084) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (604214) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,11,11,1.650
+csi_miss,A1
+[0;32mI (605234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (605374) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (606384) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (606574) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (607594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (607724) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (608744) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (608874) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (609904) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (610044) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[1;31mE (610204) wifi:No FTM Measurements received from responder![0m
+csi_miss,A3
+[0;33mW (610604) TAG: FTM to A3 failed (ESP_FAIL), streak=1[0m
+[0;32mI (611064) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (611204) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (612224) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (612354) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (613374) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (613524) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (614544) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (614684) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (615704) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (615834) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (616854) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (616984) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (618004) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (618154) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (619164) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (619314) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (619884) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (620334) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (620554) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (621564) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (621714) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (622724) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (622874) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,18,18,2.700
+csi_miss,A2
+[0;32mI (623884) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (624034) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (625044) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (625194) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (626204) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (626344) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+[1;31mE (626904) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (627364) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (627514) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,30,30,4.500
+[0;32mI (628524) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A3
+[0;32mI (629184) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,7,7,1.050
+csi_miss,A1
+[0;32mI (630204) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (630354) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (631384) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[1;31mE (632394) uart: uart_write_bytes(1472): uart driver error[0m
+[0;33mW (632394) TAG: FTM to A2 failed (ESP_FAIL), streak=1[0m
+[0;32mI (632994) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,26,26,3.900
+csi_miss,A3
+[0;32mI (634014) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (634164) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (635174) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (635324) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (636334) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (636554) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (637564) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (637704) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,9,9,1.350
+csi_miss,A1
+[0;32mI (638724) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (638904) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (639914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (640074) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,33,33,4.950
+csi_miss,A3
+[0;32mI (641094) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (641244) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (642254) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (642394) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,13,13,1.950
+csi_miss,A2
+[0;32mI (643414) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (643554) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,31,31,4.650
+csi_miss,A3
+[0;32mI (644574) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (644714) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (645734) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (645864) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,12,12,1.800
+csi_miss,A2
+[0;32mI (646884) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (647024) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,30,30,4.500
+csi_miss,A3
+[0;32mI (648044) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (648204) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (649214) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (649354) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (650374) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,26,26,3.900
+csi_miss,A2
+[0;32mI (651574) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (652594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (652734) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (653754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (653894) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[0;32mI (654914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;32mI (655574) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (656584) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (656734) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (657744) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (657894) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,12,12,1.800
+csi_miss,A2
+[0;32mI (658914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (659064) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (660074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (660224) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (661244) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (661384) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (662404) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (662564) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,25,25,3.750
+[1;31mE (663124) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (663584) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (663724) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (664744) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (664884) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (665894) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (666094) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+[1;31mE (666654) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (667104) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (667264) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_miss,A1
+[0;32mI (668274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (668424) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (669434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (669574) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (670594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (670724) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (671744) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (671904) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (672454) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (672924) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (673094) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,25,25,3.750
+csi_miss,A3
+[0;32mI (674134) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (674244) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,12,12,1.800
+csi_miss,A1
+[0;32mI (675264) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (675424) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (676444) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (676584) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,26,26,3.900
+[1;31mE (677144) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (677594) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (677744) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (678764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (678904) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (679924) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (680114) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (681134) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (681274) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,7,7,1.050
+csi_miss,A1
+[0;32mI (682284) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (682454) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,561,561,84.150
+[0;32mI (683474) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;32mI (684144) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,24,24,3.600
+csi_miss,A3
+[0;32mI (685154) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (685304) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (686314) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (686464) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (687484) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (687644) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (688654) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (688804) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+csi_miss,A1
+[0;32mI (689814) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (689974) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (690544) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (690994) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (691164) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,22,22,3.300
+csi_miss,A3
+[0;32mI (692184) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (692344) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,4,4,0.600
+[1;31mE (692894) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (693384) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (693504) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (694524) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (694724) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,25,25,3.750
+csi_miss,A3
+[0;32mI (695744) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (695884) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,6,6,0.900
+csi_miss,A1
+[0;32mI (696914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (697054) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+[1;31mE (697624) uart: uart_write_bytes(1472): uart driver error[0m
+[0;32mI (698064) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (698224) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,23,23,3.450
+csi_miss,A3
+[0;32mI (699254) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (699374) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (700394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (700534) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,11,11,1.650
+csi_miss,A2
+[0;32mI (701554) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (701714) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+csi_miss,A3
+[0;32mI (702734) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (702864) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,8,8,1.200
+csi_miss,A1
+[0;32mI (703884) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (704014) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (705034) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (705174) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,21,21,3.150
+csi_miss,A3
+[0;32mI (706194) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (706354) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,21,21,3.150
+csi_miss,A1
+[0;32mI (707374) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (707534) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (708554) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (708764) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,18,18,2.700
+csi_miss,A3
+[0;32mI (709774) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (709924) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,21,21,3.150
+csi_miss,A1
+[0;32mI (710944) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (711104) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (712114) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;33mW (713144) TAG: FTM to A2 failed (ESP_FAIL), streak=1[0m
+[0;32mI (713744) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (714764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (714924) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,18,18,2.700
+csi_miss,A1
+[0;32mI (715934) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (716094) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (717114) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (717274) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (718294) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (718444) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,20,20,3.000
+csi_miss,A1
+[0;32mI (719464) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (719624) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (720644) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (720814) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (721824) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (721974) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (722984) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,151,151,22.650
+csi_miss,A1
+[0;32mI (724144) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (725164) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (725384) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (726394) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (726544) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,20,20,3.000
+csi_miss,A1
+[0;32mI (727564) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (727714) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (728754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (728904) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,16,16,2.400
+csi_miss,A3
+[0;32mI (729914) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (730074) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,18,18,2.700
+csi_miss,A1
+[0;32mI (731084) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (731254) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (732274) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;33mW (733294) TAG: FTM to A2 failed (ESP_FAIL), streak=1[0m
+[0;32mI (733904) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (734924) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (735064) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (736074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A1
+[0;33mW (737104) TAG: FTM to A1 failed (ESP_FAIL), streak=1[0m
+[0;32mI (737704) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,505,505,75.750
+[0;32mI (738724) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A2
+[0;32mI (739384) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (740404) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (740564) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,21,21,3.150
+csi_miss,A1
+[0;32mI (741584) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (741734) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (742754) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (742954) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,14,14,2.100
+csi_miss,A3
+[0;32mI (743974) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (744124) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,21,21,3.150
+csi_miss,A1
+[0;32mI (745144) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (745294) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (746324) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (746474) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (747494) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (747634) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (748644) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,21,21,3.150
+csi_miss,A1
+[0;32mI (749804) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,17,17,2.550
+csi_miss,A2
+[0;32mI (750824) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (750984) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,14,14,2.100
+csi_miss,A3
+[0;32mI (752004) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (752154) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,21,21,3.150
+csi_miss,A1
+[0;32mI (753174) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (753334) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (754354) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (754504) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (755524) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (755674) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,21,21,3.150
+csi_miss,A1
+[0;32mI (756694) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (756854) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (757874) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (758084) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,16,16,2.400
+csi_miss,A3
+[0;32mI (759094) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (759244) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[1;31mE (759414) wifi:No FTM Measurements received from responder![0m
+csi_miss,A1
+[0;33mW (759814) TAG: FTM to A1 failed (ESP_FAIL), streak=1[0m
+[0;32mI (760264) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (760414) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (761434) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (761594) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,16,16,2.400
+csi_miss,A3
+[0;32mI (762604) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (762754) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (763764) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A1
+[0;33mW (764794) TAG: FTM to A1 failed (ESP_FAIL), streak=1[0m
+[0;32mI (765394) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (766414) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (766574) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (767584) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (767734) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,21,21,3.150
+csi_miss,A1
+[0;32mI (768744) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (768904) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (769924) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (770064) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (771074) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (771214) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,18,18,2.700
+csi_miss,A1
+[0;32mI (772234) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (772404) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (773414) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (773604) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,15,15,2.250
+csi_miss,A3
+[0;32mI (774624) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (774784) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,20,20,3.000
+[0;32mI (775804) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A1
+[0;32mI (776464) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,14,14,2.100
+csi_miss,A2
+[0;32mI (777474) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (777614) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,17,17,2.550
+csi_miss,A3
+[0;32mI (778634) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (778774) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,21,21,3.150
+[0;32mI (779794) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_miss,A1
+[0;32mI (780464) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,15,15,2.250
+csi_miss,A2
+[0;32mI (781484) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (781624) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,17,17,2.550
+csi_miss,A3
+[0;32mI (782634) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (782784) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,21,21,3.150
+csi_miss,A1
+[0;32mI (783804) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (783974) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[1;31mE (784644) wifi:No valid FTM Measurements found out of 6 received measurements![0m
+[0;32mI (784984) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[1;31mE (785044) uart: uart_write_bytes(1472): uart driver error[0m
+[0;33mW (785044) TAG: FTM to A2 failed (ESP_FAIL), streak=1[0m
+[0;32mI (785644) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,17,17,2.550

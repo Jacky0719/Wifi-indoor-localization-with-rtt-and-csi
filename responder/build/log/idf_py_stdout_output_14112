@@ -1,0 +1,137 @@
+[0;32mI (107) esp_image: segment 1: paddr=00029f60 vaddr=3fc99a00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037ac06
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug 31 2025 16:28:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=19f38h (106296) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=00029f60 vaddr=3fc99a00 size=04958h ( 18776) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=0002e8c0 vaddr=40374000 size=01758h (  5976) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=84624h (542244) map[0m
+[0;32mI (214) esp_image: segment 4: paddr=000b464c vaddr=40375758 size=14228h ( 82472) load[0m
+[0;32mI (233) esp_image: segment 5: paddr=000c887c vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (241) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (242) boot: Disabling RNG early entropy source...[0m
+[0;32mI (252) cpu_start: Multicore app[0m
+[0;32mI (261) cpu_start: Pro cpu start user code[0m
+[0;32mI (261) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (261) app_init: Application information:[0m
+[0;32mI (261) app_init: Project name:     responder[0m
+[0;32mI (265) app_init: App version:      207a5d4-dirty[0m
+[0;32mI (269) app_init: Compile time:     Aug 31 2025 09:52:33[0m
+[0;32mI (274) app_init: ELF file SHA256:  b6c44112b...[0m
+[0;32mI (279) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (283) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (287) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (291) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (295) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (301) heap_init: At 3FCA1FD8 len 00047738 (285 KiB): RAM[0m
+[0;32mI (306) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (311) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (316) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (323) spi_flash: detected chip: gd[0m
+[0;32mI (325) spi_flash: flash io: dio[0m
+[0;33mW (328) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (340) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (383) pp: pp rom version: e7ae62f[0m
+[0;32mI (383) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (393) wifi:wifi driver task: 3fcac09c, prio:23, stack:6656, core=0[0m
+[0;32mI (393) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (393) wifi:wifi certification version: v7.0[0m
+[0;32mI (393) wifi:config NVS flash: enabled[0m
+[0;32mI (393) wifi:config nano formatting: disabled[0m
+[0;32mI (403) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (403) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (413) wifi:Init management short buffer num: 32[0m
+[0;32mI (413) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (423) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (423) wifi:Init static rx buffer size: 2212[0m
+[0;32mI (423) wifi:Init static rx buffer num: 10[0m
+[0;32mI (433) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (433) wifi_init: rx ba win: 6[0m
+[0;32mI (433) wifi_init: accept mbox: 6[0m
+[0;32mI (443) wifi_init: tcpip mbox: 32[0m
+[0;32mI (443) wifi_init: udp mbox: 6[0m
+[0;32mI (443) wifi_init: tcp mbox: 6[0m
+[0;32mI (453) wifi_init: tcp tx win: 5760[0m
+[0;32mI (453) wifi_init: tcp rx win: 5760[0m
+[0;32mI (453) wifi_init: tcp mss: 1440[0m
+[0;32mI (453) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (463) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (463) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (473) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (513) wifi:mode : softAP (24:ec:4a:03:58:5d)[0m
+[0;32mI (513) wifi:Total power save buffer number: 16[0m
+[0;32mI (513) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (513) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (523) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (523) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (523) ANCHOR: Anchor ready: SoftAP+FTM Responder, ESPNOW 10 Hz on CH1, BW=20[0m
+[0;32mI (533) ANCHOR: AP started. SSID:FTM CH:1 BW:20  AP_MAC:24:EC:4A:03:58:5D  (FTM Responder ON)[0m
+[0;32mI (543) main_task: Returned from app_main()[0m
+[0;32mI (873) wifi:new:<1,0>, old:<1,0>, ap:<1,0>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (873) wifi:station: 24:ec:4a:04:74:58 join, AID=1, bgn, 20[0m
+[0;32mI (903) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (291363) wifi:starting SA query procedure with STA(24:ec:4a:04:74:58)[0m
+[0;32mI (291363) wifi:Send SA Query req with transaction id 4f63[0m
+[0;32mI (291563) wifi:Send SA Query req with transaction id 4f64[0m
+[0;32mI (291763) wifi:Send SA Query req with transaction id 4f65[0m
+[0;32mI (291963) wifi:Send SA Query req with transaction id 4f66[0m
+[0;32mI (292163) wifi:Send SA Query req with transaction id 4f67[0m
+[0;32mI (292363) wifi:Send SA Query req with transaction id 4f68[0m
+[0;32mI (292393) wifi:STA not responded to 6 SA Query attempts, Reset connection sending disassoc[0m
+[0;32mI (292393) wifi:station: 24:ec:4a:04:74:58 leave, AID = 1, reason = 209, bss_flags is 691299, bss:0x3fca4c78[0m
+[0;32mI (292393) wifi:new:<1,0>, old:<1,0>, ap:<1,0>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (293003) wifi:new:<1,0>, old:<1,0>, ap:<1,0>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (293013) wifi:station: 24:ec:4a:04:74:58 join, AID=1, bgn, 20[0m
+[0;32mI (293043) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (634243) wifi:starting SA query procedure with STA(24:ec:4a:04:74:58)[0m
+[0;32mI (634243) wifi:Send SA Query req with transaction id 1389[0m
+[0;32mI (634443) wifi:Send SA Query req with transaction id 138a[0m
+[0;32mI (634643) wifi:Send SA Query req with transaction id 138b[0m
+[0;32mI (634843) wifi:Send SA Query req with transaction id 138c[0m
+[0;32mI (635043) wifi:Send SA Query req with transaction id 138d[0m
+[0;32mI (635243) wifi:Send SA Query req with transaction id 138e[0m
+[0;32mI (635263) wifi:STA not responded to 6 SA Query attempts, Reset connection sending disassoc[0m
+[0;32mI (635263) wifi:station: 24:ec:4a:04:74:58 leave, AID = 1, reason = 209, bss_flags is 691299, bss:0x3fca4c78[0m
+[0;32mI (635273) wifi:new:<1,0>, old:<1,0>, ap:<1,0>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (636283) wifi:new:<1,0>, old:<1,0>, ap:<1,0>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (636283) wifi:station: 24:ec:4a:04:74:58 join, AID=1, bgn, 20[0m
+[0;32mI (636323) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (963633) wifi:starting SA query procedure with STA(24:ec:4a:04:74:58)[0m
+[0;32mI (963633) wifi:Send SA Query req with transaction id d819[0m
+[0;32mI (963833) wifi:Send SA Query req with transaction id d81a[0m
+[0;32mI (964033) wifi:Send SA Query req with transaction id d81b[0m
+[0;32mI (964233) wifi:Send SA Query req with transaction id d81c[0m
+[0;32mI (964433) wifi:Send SA Query req with transaction id d81d[0m
+[0;32mI (964633) wifi:Send SA Query req with transaction id d81e[0m
+[0;32mI (964653) wifi:STA not responded to 6 SA Query attempts, Reset connection sending disassoc[0m
+[0;32mI (964673) wifi:station: 24:ec:4a:04:74:58 leave, AID = 1, reason = 209, bss_flags is 691299, bss:0x3fca4c78[0m
+[0;32mI (964673) wifi:new:<1,0>, old:<1,0>, ap:<1,0>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (965283) wifi:new:<1,0>, old:<1,0>, ap:<1,0>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (965283) wifi:station: 24:ec:4a:04:74:58 join, AID=1, bgn, 20[0m
+[0;32mI (965313) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m

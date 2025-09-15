@@ -1,0 +1,36 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4037ac12: esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4037d4f2: vApplicationStackOverflowHook at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:563
+0x4037e99b: vTaskSwitchContext at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3701 (discriminator 7)
+0x4037d5b8: _frxt_dispatch at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4037d5ae: _frxt_int_exit at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x4037d52e: _frxt_int_enter at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4037d4f2: vApplicationStackOverflowHook at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:563
+0x4037e99b: vTaskSwitchContext at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3701 (discriminator 7)
+0x4037d5b8: _frxt_dispatch at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4037d5ae: _frxt_int_exit at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x4037d52e: _frxt_int_enter at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x4037d4f2: vApplicationStackOverflowHook at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:563
+0x4037e99b: vTaskSwitchContext at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3701 (discriminator 7)
+0x4037d5b8: _frxt_dispatch at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4037d5ae: _frxt_int_exit at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0m

@@ -1,0 +1,21 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4037ac12: esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x4037fe64: xTaskIncrementTickOtherCores at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/esp_additions/freertos_tasks_c_additions.h:108
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x4037fe61: xTaskIncrementTickOtherCores at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/esp_additions/freertos_tasks_c_additions.h:108
+0x4037d9a9: xPortSysTickHandler at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/port_systick.c:226
+0x4037da21: SysTickIsrHandler at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/port_systick.c:148
+0x403776b5: _xt_lowint1 at C:/Users/14731/esp/v5.4/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40057064: memmove in ROM
+0x4206ee89: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:229
+[0m
+[0;33m--- 0x4037ac12: esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0m

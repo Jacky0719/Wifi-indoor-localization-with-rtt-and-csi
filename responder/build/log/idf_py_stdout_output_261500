@@ -1,0 +1,38 @@
+[1/223] Linking C static library esp-idf\esp_driver_gptimer\libesp_driver_gptimer.a
+[2/223] Linking C static library esp-idf\esp_timer\libesp_timer.a
+[3/223] Linking C static library esp-idf\cxx\libcxx.a
+[4/223] Linking C static library esp-idf\pthread\libpthread.a
+[5/223] Linking C static library esp-idf\newlib\libnewlib.a
+[6/223] Performing configure step for 'bootloader'
+-- Building ESP-IDF components for target esp32s3
+-- Project sdkconfig file C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/responder/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Bootloader project name: "bootloader" version: 1
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.bt_funcs.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.wdt.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/bootloader/subproject/main/ld/esp32s3/bootloader.ld
+-- Adding linker script C:/Users/14731/esp/v5.4/esp-idf/components/bootloader/subproject/main/ld/esp32s3/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_bootloader_format esp_common esp_hw_support esp_rom esp_security esp_system esptool_py freertos hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: C:/Users/14731/esp/v5.4/esp-idf/components/bootloader C:/Users/14731/esp/v5.4/esp-idf/components/bootloader_support C:/Users/14731/esp/v5.4/esp-idf/components/efuse C:/Users/14731/esp/v5.4/esp-idf/components/esp_app_format C:/Users/14731/esp/v5.4/esp-idf/components/esp_bootloader_format C:/Users/14731/esp/v5.4/esp-idf/components/esp_common C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support C:/Users/14731/esp/v5.4/esp-idf/components/esp_rom C:/Users/14731/esp/v5.4/esp-idf/components/esp_security C:/Users/14731/esp/v5.4/esp-idf/components/esp_system C:/Users/14731/esp/v5.4/esp-idf/components/esptool_py C:/Users/14731/esp/v5.4/esp-idf/components/freertos C:/Users/14731/esp/v5.4/esp-idf/components/hal C:/Users/14731/esp/v5.4/esp-idf/components/log C:/Users/14731/esp/v5.4/esp-idf/components/bootloader/subproject/main C:/Users/14731/esp/v5.4/esp-idf/components/bootloader/subproject/components/micro-ecc C:/Users/14731/esp/v5.4/esp-idf/components/newlib C:/Users/14731/esp/v5.4/esp-idf/components/partition_table C:/Users/14731/esp/v5.4/esp-idf/components/soc C:/Users/14731/esp/v5.4/esp-idf/components/spi_flash C:/Users/14731/esp/v5.4/esp-idf/components/xtensa
+-- Configuring done (908.7s)
+-- Generating done (81.6s)
+-- Build files have been written to: C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/responder/build/bootloader
+[7/223] Linking C static library esp-idf\freertos\libfreertos.a
+[8/223] Linking C static library esp-idf\esp_hw_support\libesp_hw_support.a
+[9/223] Linking C static library esp-idf\esp_security\libesp_security.a
+[10/223] Linking C static library esp-idf\soc\libsoc.a
+[11/223] Linking C static library esp-idf\heap\libheap.a
+[12/223] Linking C static library esp-idf\log\liblog.a
+[13/223] Linking C static library esp-idf\hal\libhal.a
+[14/223] Linking C static library esp-idf\esp_rom\libesp_rom.a
+[15/223] Linking C static library esp-idf\esp_common\libesp_common.a
+[16/223] Linking C static library esp-idf\esp_system\libesp_system.a
+[17/223] Linking C static library esp-idf\spi_flash\libspi_flash.a
+[18/223] Linking C static library esp-idf\esp_mm\libesp_mm.a
+[19/223] Linking C static library esp-idf\bootloader_support\libbootloader_support.a

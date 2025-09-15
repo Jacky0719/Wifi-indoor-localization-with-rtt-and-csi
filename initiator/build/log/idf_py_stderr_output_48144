@@ -1,0 +1,42 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4037ac12: esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40057071: memmove in ROM
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4005706e: memmove in ROM
+0x4206ee35: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:229
+0x4207606f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x42075a39: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1766 (discriminator 1)
+0x4206f329: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42083f5a: esp_log_writev at C:/Users/14731/esp/v5.4/esp-idf/components/log/src/os/log_write.c:34
+0x42025ef5: wifi_log at ??:?
+0x42031025: ftm_initiator_process_resp at ??:?
+0x420312c1: ftm_initiator_process_resp at ??:?
+0x42038970: ieee80211_recv_action at ??:?
+0x420361d5: sta_recv_mgmt at ??:?
+0x403843d6: sta_input at ??:?
+0x40384439: sta_rx_cb at ??:?
+0x403872b5: ppRxPkt at ??:?
+0x403852a7: ppTask at ??:?
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4037ac12: esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40375f80: ipc_task at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_ipc.c:53
+[0m
+[0;33m--- 0x4037ac0f: xt_utils_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/xtensa/include/xt_utils.h:82
+ (inlined by) esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:55
+0x4200314e: esp_vApplicationIdleHook at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/freertos_hooks.c:58
+0x4037e335: prvIdleTask at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4353 (discriminator 1)
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0m

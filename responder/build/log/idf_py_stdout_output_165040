@@ -1,0 +1,2 @@
+[1/936] Linking C static library esp-idf\tcp_transport\libtcp_transport.a
+[2/936] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_ttls.c.obj

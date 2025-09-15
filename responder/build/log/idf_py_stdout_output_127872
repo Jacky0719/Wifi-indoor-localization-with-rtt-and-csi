@@ -1,0 +1,18 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x0 (DOWNLOAD(USB/UART0))
+Saved PC:0x40041a7c
+waiting for download
+[0;32mI (950) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;33mW (950) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (980) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (990) wifi:mode : softAP (24:ec:4a:03:56:41)[0m
+[0;32mI (990) wifi:Total power save buffer number: 16[0m
+[0;32mI (990) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (990) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1000) ANCHOR: AP up on channel=11 (sec=0)[0m
+[0;32mI (1000) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1010) ANCHOR: AP started. SSID:FTM CH:11 BW:20 AP_MAC:24:EC:4A:03:56:41 (sec=0, FTM ON)[0m
+[0;32mI (1020) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (1020) ANCHOR: Anchor ready: SoftAP+FTM Responder, ESPNOW 10 Hz on CH11, BW=20[0m
+[0;32mI (1030) main_task: Returned from app_main()[0m

@@ -1,0 +1,839 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037ac12
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug 31 2025 02:08:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=19ba0h (105376) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=00029bc8 vaddr=3fc99b00 size=04988h ( 18824) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0002e558 vaddr=40374000 size=01ac0h (  6848) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=84564h (542052) map[0m
+[0;32mI (214) esp_image: segment 4: paddr=000b458c vaddr=40375ac0 size=13f6ch ( 81772) load[0m
+[0;32mI (232) esp_image: segment 5: paddr=000c8500 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (241) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (241) boot: Disabling RNG early entropy source...[0m
+[0;32mI (251) cpu_start: Multicore app[0m
+[0;32mI (261) cpu_start: Pro cpu start user code[0m
+[0;32mI (261) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (261) app_init: Application information:[0m
+[0;32mI (261) app_init: Project name:     initiator[0m
+[0;32mI (265) app_init: App version:      207a5d4-dirty[0m
+[0;32mI (269) app_init: Compile time:     Aug 30 2025 22:35:46[0m
+[0;32mI (274) app_init: ELF file SHA256:  7cdbcd42a...[0m
+[0;32mI (279) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (283) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (287) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (291) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (295) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (301) heap_init: At 3FCA20F0 len 00047620 (285 KiB): RAM[0m
+[0;32mI (306) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (311) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (316) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (323) spi_flash: detected chip: gd[0m
+[0;32mI (325) spi_flash: flash io: dio[0m
+[0;33mW (328) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (340) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (347) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (383) pp: pp rom version: e7ae62f[0m
+[0;32mI (383) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (393) wifi:wifi driver task: 3fcac39c, prio:23, stack:6656, core=0[0m
+[0;32mI (403) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (403) wifi:wifi certification version: v7.0[0m
+[0;32mI (403) wifi:config NVS flash: enabled[0m
+[0;32mI (403) wifi:config nano formatting: disabled[0m
+[0;32mI (403) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (403) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (403) wifi:Init management short buffer num: 32[0m
+[0;32mI (403) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (403) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (403) wifi:Init static rx buffer size: 2212[0m
+[0;32mI (403) wifi:Init static rx buffer num: 10[0m
+[0;32mI (403) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (403) wifi_init: rx ba win: 6[0m
+[0;32mI (403) wifi_init: accept mbox: 6[0m
+[0;32mI (403) wifi_init: tcpip mbox: 32[0m
+[0;32mI (403) wifi_init: udp mbox: 6[0m
+[0;32mI (403) wifi_init: tcp mbox: 6[0m
+[0;32mI (403) wifi_init: tcp tx win: 5760[0m
+[0;32mI (403) wifi_init: tcp rx win: 5760[0m
+[0;32mI (403) wifi_init: tcp mss: 1440[0m
+[0;32mI (403) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (413) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (413) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (413) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (443) wifi:mode : sta (24:ec:4a:04:74:58)[0m
+[0;32mI (443) wifi:enable tsf[0m
+[0;33mW (453) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (973) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (973) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (983) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (983) wifi:Association refused temporarily time 1500, comeback time 1600 (TUs)[0m
+[0;32mI (2623) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (2643) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2663) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (2663) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (2673) wifi:pm start, type: 0[0m
+
+[0;32mI (2673) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2673) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (2673) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (2673) wifi:ic_enable_sniffer[0m
+[0;33mW (2673) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (2693) TAG: Ready (multi-anchor): FTM burst + CSI 1Hz, UART=921600.[0m
+[0;32mI (2693) main_task: Returned from app_main()[0m
+[0;32mI (2713) wifi:state: run -> init (0x0)[0m
+[0;32mI (2713) wifi:pm stop, total sleep time: 0 us / 40520 us[0m
+
+[0;32mI (2713) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3183) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3183) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (3193) wifi:sta is connecting, return error[0m
+[0;32mI (3193) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3203) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3213) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (3213) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (3223) wifi:pm start, type: 0[0m
+
+[0;32mI (3223) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (3223) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (3253) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3363) wifi:ic_disable_sniffer[0m
+[0;33mW (3363) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (3363) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (3373) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 13.616 nSec, Avg RSSI: -8[0m
+[0;32mI (3473) wifi:ic_enable_sniffer[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,13,13,1.950
+csi_data,A1,[0,0,-15,3,-15,3,-14,2,-14,3,-13,3,-13,4,-12,4,-12,4,-11,4,-11,5,-11,5,-10,5,-11,6,-10,6,-10,6,-11,6,-11,6,-11,6,-11,6,-11,5,-11,5,-11,4,-11,3,-11,3,-11,2,-11,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,4,-12,3,-13,2,-13,1,-13,1,-13,0,-14,0,-14,0,-14,-1,-14,-2,-14,-2,-14,-2,-14,-2,-14,-1,-13,-1,-13,-1,-13,0,-13,0,-13,1,-14,1,-14,2,-14,2,-14,2,-14,2,-14,2,-14,3]
+[0;33mW (3973) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (4033) wifi:state: run -> init (0x0)[0m
+[0;32mI (4033) wifi:pm stop, total sleep time: 0 us / 815130 us[0m
+
+[0;32mI (4033) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4043) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4043) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4053) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4063) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4073) wifi:connected with FTM, aid = 1, channel 6, BW20, bssid = 24:ec:4a:04:39:15[0m
+[0;32mI (4073) wifi:security: WPA2-PSK, phy: bgn, rssi: 5[0m
+[0;32mI (4073) wifi:pm start, type: 0[0m
+
+[0;32mI (4073) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;33mW (4083) wifi:sta is connected, disconnect before connecting to new ap[0m
+[0;32mI (4083) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (4143) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4223) wifi:ic_disable_sniffer[0m
+[0;33mW (4223) wifi:Starting FTM session with 24:ec:4a:04:39:15[0m
+[0;33mW (4223) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (4243) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.670 nSec, Avg RSSI: 5[0m
+[0;32mI (4343) wifi:ic_enable_sniffer[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+csi_data,A2,[0,0,13,4,13,4,13,4,12,4,13,3,12,3,12,2,12,2,12,2,11,1,12,0,12,0,12,0,12,-1,12,0,13,0,12,0,13,0,13,1,12,1,12,1,11,2,11,2,11,2,10,3,10,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,2,10,3,10,4,10,4,10,5,11,6,10,6,10,6,10,7,10,7,10,7,10,7,10,7,10,7,10,6,9,6,10,6,10,5,11,5,11,5,11,4,12,4,12,4,13,4,13,4,13,4]
+[0;33mW (4843) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (4873) wifi:state: run -> init (0x0)[0m
+[0;32mI (4883) wifi:pm stop, total sleep time: 0 us / 801886 us[0m
+
+[0;32mI (4883) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4893) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4893) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4893) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4903) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (4933) wifi:sta is connecting, return error[0m
+[0;32mI (4933) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (4933) wifi:security: WPA2-PSK, phy: bgn, rssi: -24[0m
+[0;32mI (4933) wifi:pm start, type: 0[0m
+
+[0;32mI (4933) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (4943) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (4963) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (5083) wifi:ic_disable_sniffer[0m
+[0;32mI (5983) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (6683) wifi:ic_enable_sniffer[0m
+[0;33mW (6683) TAG: FTM to A3 failed (ESP_FAIL), streak=1[0m
+[0;33mW (7183) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (7203) wifi:state: run -> init (0x0)[0m
+[0;32mI (7203) wifi:pm stop, total sleep time: 0 us / 2268971 us[0m
+
+[0;32mI (7203) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (7243) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (7243) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (7253) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (7263) wifi:sta is connecting, return error[0m
+[0;32mI (7263) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (7283) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (7283) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (7283) wifi:pm start, type: 0[0m
+
+[0;32mI (7283) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (7283) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (7343) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (7423) wifi:ic_disable_sniffer[0m
+[0;33mW (7423) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (7423) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (7433) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 16.964 nSec, Avg RSSI: -8[0m
+[0;32mI (7543) wifi:ic_enable_sniffer[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,16,16,2.400
+csi_data,A1,[0,0,-6,13,-5,13,-5,13,-5,13,-5,12,-4,12,-3,12,-3,11,-3,12,-2,11,-1,12,-1,11,-1,12,0,12,0,12,-1,12,0,12,-1,12,-1,12,-2,12,-2,11,-3,11,-3,11,-3,10,-4,10,-4,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-4,11,-5,11,-5,11,-6,11,-7,11,-8,11,-8,11,-8,11,-9,11,-9,10,-10,10,-10,10,-9,10,-9,10,-8,10,-8,10,-8,10,-7,11,-7,11,-7,12,-6,11,-6,12,-6,12,-6,13,-6,13,-6,13]
+[0;33mW (8043) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (8063) wifi:state: run -> init (0x0)[0m
+[0;32mI (8063) wifi:pm stop, total sleep time: 0 us / 782247 us[0m
+
+[0;32mI (8063) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8073) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8073) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (8093) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (8103) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (8113) wifi:connected with FTM, aid = 1, channel 6, BW20, bssid = 24:ec:4a:04:39:15[0m
+[0;32mI (8113) wifi:security: WPA2-PSK, phy: bgn, rssi: 6[0m
+[0;32mI (8123) wifi:pm start, type: 0[0m
+
+[0;32mI (8123) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;33mW (8123) wifi:sta is connected, disconnect before connecting to new ap[0m
+[0;32mI (8123) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (8133) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (8263) wifi:ic_disable_sniffer[0m
+[0;33mW (8263) wifi:Starting FTM session with 24:ec:4a:04:39:15[0m
+[0;33mW (8263) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (8273) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.339 nSec, Avg RSSI: 5[0m
+[0;32mI (8373) wifi:ic_enable_sniffer[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+csi_data,A2,[0,0,-9,-12,-9,-12,-9,-11,-9,-11,-9,-11,-9,-10,-9,-9,-10,-9,-10,-9,-10,-9,-10,-9,-10,-8,-10,-8,-11,-7,-11,-7,-11,-8,-11,-8,-11,-8,-11,-8,-11,-8,-10,-9,-10,-9,-9,-9,-8,-10,-7,-10,-7,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-7,-9,-7,-9,-6,-10,-6,-10,-6,-11,-6,-12,-6,-12,-5,-12,-5,-12,-4,-13,-4,-13,-3,-13,-4,-12,-4,-12,-5,-12,-5,-12,-5,-12,-6,-11,-6,-12,-7,-11,-8,-11,-8,-11,-8,-12,-8,-12,-8,-12,-9,-12]
+[0;33mW (8873) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (8893) wifi:state: run -> init (0x0)[0m
+[0;32mI (8893) wifi:pm stop, total sleep time: 0 us / 776276 us[0m
+
+[0;32mI (8893) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8903) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8903) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (8913) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (8923) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (8943) wifi:sta is connecting, return error[0m
+[0;32mI (8943) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (8953) wifi:security: WPA2-PSK, phy: bgn, rssi: -17[0m
+[0;32mI (8953) wifi:pm start, type: 0[0m
+
+[0;32mI (8953) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (8953) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (9043) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (9093) wifi:ic_disable_sniffer[0m
+[0;33mW (9093) wifi:Starting FTM session with 24:ec:4a:03:56:41[0m
+[0;33mW (9093) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (9123) wifi:FTM session ends with 1 valid readings out of 1 readings received, Avg raw RTT: 4.688 nSec, Avg RSSI: -35[0m
+[0;32mI (9223) wifi:ic_enable_sniffer[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,4,4,0.600
+csi_data,A3,[0,0,17,3,14,5,15,1,15,3,16,1,16,2,16,2,16,0,15,1,16,0,14,-1,15,-2,15,-1,16,-3,14,-1,15,-4,15,-1,16,-4,17,-1,17,0,17,0,16,2,16,3,14,2,14,3,14,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,2,10,0,9,4,10,1,9,4,11,3,12,5,12,6,11,6,12,7,11,6,12,6,12,7,11,7,12,5,10,6,12,3,11,5,13,2,14,4,15,4,14,3,17,4,16,3,16,3,17,3]
+[0;33mW (9723) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (9743) wifi:state: run -> init (0x0)[0m
+[0;32mI (9743) wifi:pm stop, total sleep time: 0 us / 793822 us[0m
+
+[0;32mI (9743) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (9773) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (9773) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (9783) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (9793) wifi:sta is connecting, return error[0m
+[0;32mI (9793) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (9803) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (9803) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (9803) wifi:pm start, type: 0[0m
+
+[0;32mI (9803) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (9813) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (9903) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (9953) wifi:ic_disable_sniffer[0m
+[0;33mW (9953) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (9953) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (9963) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 13.616 nSec, Avg RSSI: -8[0m
+[0;32mI (10063) wifi:ic_enable_sniffer[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,13,13,1.950
+[0;33mW (10563) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (10583) wifi:state: run -> init (0x0)[0m
+[0;32mI (10583) wifi:pm stop, total sleep time: 0 us / 777844 us[0m
+
+[0;32mI (10583) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (10593) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (10593) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (10623) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (10623) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (10633) wifi:sta is connecting, return error[0m
+[0;32mI (10643) wifi:connected with FTM, aid = 1, channel 6, BW20, bssid = 24:ec:4a:04:39:15[0m
+[0;32mI (10643) wifi:security: WPA2-PSK, phy: bgn, rssi: 6[0m
+[0;32mI (10653) wifi:pm start, type: 0[0m
+
+[0;32mI (10653) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (10653) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+csi_data,A2,[0,0,-3,-15,-3,-15,-3,-14,-3,-14,-4,-14,-4,-13,-4,-13,-5,-13,-5,-12,-6,-12,-6,-12,-6,-11,-7,-12,-7,-12,-7,-12,-7,-12,-7,-12,-7,-12,-7,-13,-6,-13,-6,-13,-5,-12,-4,-12,-4,-12,-3,-12,-2,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-3,-11,-2,-12,-2,-12,-1,-12,-1,-13,0,-13,0,-13,1,-13,1,-14,1,-13,2,-13,2,-13,1,-13,1,-13,1,-13,0,-13,0,-13,-1,-13,-1,-13,-1,-13,-2,-14,-2,-14,-3,-14,-3,-14,-3,-14,-3,-15]
+[0;32mI (10693) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (10793) wifi:ic_disable_sniffer[0m
+[0;33mW (10803) wifi:Starting FTM session with 24:ec:4a:04:39:15[0m
+[0;33mW (10803) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (10813) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.339 nSec, Avg RSSI: 4[0m
+[0;32mI (10913) wifi:ic_enable_sniffer[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+[0;33mW (11413) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (11433) wifi:state: run -> init (0x0)[0m
+[0;32mI (11433) wifi:pm stop, total sleep time: 0 us / 786438 us[0m
+
+[0;32mI (11433) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11453) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11453) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (11463) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (11473) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (11493) wifi:sta is connecting, return error[0m
+[0;32mI (11503) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (11503) wifi:security: WPA2-PSK, phy: bgn, rssi: -24[0m
+[0;32mI (11503) wifi:pm start, type: 0[0m
+
+[0;32mI (11503) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (11503) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (11513) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (11653) wifi:ic_disable_sniffer[0m
+csi_data,A3,[0,0,-14,7,-14,6,-14,6,-13,6,-13,7,-13,7,-12,7,-12,7,-12,8,-11,8,-11,9,-10,9,-10,9,-11,10,-10,10,-11,10,-11,10,-12,10,-12,10,-12,9,-13,9,-13,7,-13,7,-13,6,-13,6,-13,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-9,3,-9,3,-9,3,-10,2,-10,2,-11,2,-11,1,-12,1,-12,1,-12,1,-12,0,-12,1,-12,1,-12,1,-12,1,-12,1,-13,2,-12,3,-13,3,-12,4,-13,4,-13,4,-13,5,-13,6,-13,6,-14,6]
+[0;33mW (12153) wifi:Starting FTM session with 24:ec:4a:03:56:41[0m
+[0;33mW (12153) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (12183) wifi:FTM session ends with 2 valid readings out of 3 readings received, Avg raw RTT: 17.188 nSec, Avg RSSI: -30[0m
+[0;32mI (12283) wifi:ic_enable_sniffer[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,17,17,2.550
+[0;32mI (12543) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+csi_data,A3,[0,0,-13,-8,-14,-7,-11,-9,-12,-6,-12,-9,-12,-7,-13,-7,-13,-7,-13,-5,-14,-4,-13,-4,-14,-4,-14,-3,-13,-4,-14,-1,-13,-4,-14,-2,-14,-5,-14,-4,-15,-5,-14,-6,-13,-5,-14,-6,-12,-6,-12,-7,-11,-8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-8,-5,-7,-7,-8,-5,-6,-8,-8,-6,-7,-9,-8,-9,-8,-10,-7,-9,-8,-10,-7,-10,-7,-10,-8,-10,-8,-9,-7,-10,-8,-8,-7,-9,-9,-7,-9,-9,-10,-8,-11,-9,-11,-8,-13,-8,-12,-8,-13,-8,-12,-9]
+[0;33mW (12783) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (12803) wifi:state: run -> init (0x0)[0m
+[0;32mI (12803) wifi:pm stop, total sleep time: 0 us / 1299750 us[0m
+
+[0;32mI (12803) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (12833) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (12833) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (12843) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (12853) wifi:sta is connecting, return error[0m
+[0;32mI (12853) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (12873) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (12873) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (12883) wifi:pm start, type: 0[0m
+
+[0;32mI (12883) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (12883) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (12973) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (13023) wifi:ic_disable_sniffer[0m
+[0;33mW (13023) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (13023) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (13033) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 13.393 nSec, Avg RSSI: -8[0m
+[0;32mI (13133) wifi:ic_enable_sniffer[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,13,13,1.950
+[0;33mW (13633) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (13653) wifi:state: run -> init (0x0)[0m
+[0;32mI (13653) wifi:pm stop, total sleep time: 0 us / 776912 us[0m
+
+[0;32mI (13653) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (13663) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (13663) wifi:state: init -> auth (0xb0)[0m
+csi_data,A1,[0,0,3,-14,3,-14,3,-14,3,-14,2,-13,2,-13,1,-13,1,-13,0,-12,0,-13,0,-13,-1,-12,-1,-12,-2,-12,-2,-13,-2,-13,-1,-13,-1,-13,-1,-13,-1,-13,0,-13,0,-12,1,-12,1,-11,2,-11,3,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,-12,3,-12,3,-12,4,-12,5,-12,5,-13,6,-12,6,-12,7,-12,7,-12,7,-12,7,-11,7,-11,7,-11,6,-11,6,-12,6,-12,5,-12,5,-12,4,-13,4,-13,4,-14,4,-14,4,-14,4,-14,4,-14]
+[0;32mI (13693) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (13693) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (13703) wifi:sta is connecting, return error[0m
+[0;32mI (13713) wifi:connected with FTM, aid = 1, channel 6, BW20, bssid = 24:ec:4a:04:39:15[0m
+[0;32mI (13713) wifi:security: WPA2-PSK, phy: bgn, rssi: 5[0m
+[0;32mI (13713) wifi:pm start, type: 0[0m
+
+[0;32mI (13713) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (13723) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (13763) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (13863) wifi:ic_disable_sniffer[0m
+[0;33mW (13873) wifi:Starting FTM session with 24:ec:4a:04:39:15[0m
+[0;33mW (13873) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (13883) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.563 nSec, Avg RSSI: 5[0m
+[0;32mI (13983) wifi:ic_enable_sniffer[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+[0;33mW (14483) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (14503) wifi:state: run -> init (0x0)[0m
+[0;32mI (14503) wifi:pm stop, total sleep time: 0 us / 789718 us[0m
+
+[0;32mI (14503) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (14523) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (14523) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (14533) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (14543) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (14553) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (14563) wifi:security: WPA2-PSK, phy: bgn, rssi: -25[0m
+[0;32mI (14563) wifi:pm start, type: 0[0m
+
+[0;32mI (14563) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;33mW (14563) wifi:sta is connected, disconnect before connecting to new ap[0m
+[0;32mI (14563) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (14583) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (14703) wifi:ic_disable_sniffer[0m
+[0;33mW (14703) wifi:Starting FTM session with 24:ec:4a:03:56:41[0m
+[0;33mW (14703) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (14733) wifi:FTM session ends with 1 valid readings out of 1 readings received, Avg raw RTT: 20.313 nSec, Avg RSSI: -27[0m
+[0;32mI (14833) wifi:ic_enable_sniffer[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,20,20,3.000
+[0;33mW (15333) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (15393) wifi:state: run -> init (0x0)[0m
+[0;32mI (15403) wifi:pm stop, total sleep time: 0 us / 838328 us[0m
+
+[0;32mI (15403) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (15443) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (15453) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (15463) wifi:sta is connecting, return error[0m
+[0;32mI (15463) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (15473) wifi:Association refused temporarily time 1500, comeback time 1600 (TUs)[0m
+[0;32mI (17113) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (17123) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (17133) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (17133) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (17143) wifi:pm start, type: 0[0m
+
+[0;32mI (17143) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (17143) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (17173) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (17283) wifi:ic_disable_sniffer[0m
+[0;33mW (17283) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (17283) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (17293) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 10.268 nSec, Avg RSSI: -8[0m
+[0;32mI (17393) wifi:ic_enable_sniffer[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,10,10,1.500
+csi_data,A1,[0,0,-13,-6,-13,-7,-13,-6,-13,-6,-13,-6,-13,-5,-12,-4,-12,-4,-12,-3,-12,-3,-12,-3,-12,-2,-12,-2,-12,-1,-13,-1,-13,-2,-13,-2,-13,-2,-13,-2,-12,-3,-12,-3,-12,-3,-11,-4,-10,-4,-10,-5,-9,-5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,-5,-11,-5,-11,-6,-11,-7,-11,-8,-11,-8,-11,-9,-11,-9,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-9,-10,-9,-10,-8,-11,-8,-11,-8,-12,-7,-12,-7,-13,-7,-13,-7,-13,-7,-13,-7,-13,-7]
+[0;33mW (17893) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (17913) wifi:state: run -> init (0x0)[0m
+[0;32mI (17913) wifi:pm stop, total sleep time: 0 us / 775954 us[0m
+
+[0;32mI (17913) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (17943) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (17943) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (17953) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (17963) wifi:sta is connecting, return error[0m
+[0;32mI (17963) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (17983) wifi:connected with FTM, aid = 1, channel 6, BW20, bssid = 24:ec:4a:04:39:15[0m
+[0;32mI (17983) wifi:security: WPA2-PSK, phy: bgn, rssi: 5[0m
+[0;32mI (17983) wifi:pm start, type: 0[0m
+
+[0;32mI (17983) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (17983) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (18063) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (18133) wifi:ic_disable_sniffer[0m
+[0;33mW (18133) wifi:Starting FTM session with 24:ec:4a:04:39:15[0m
+[0;33mW (18133) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (18143) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.339 nSec, Avg RSSI: 5[0m
+[0;32mI (18243) wifi:ic_enable_sniffer[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+csi_data,A2,[0,0,-14,4,-14,4,-14,4,-13,4,-13,5,-12,5,-12,5,-12,6,-11,6,-11,6,-11,6,-10,7,-10,7,-10,7,-10,8,-10,8,-11,8,-11,8,-11,7,-11,7,-11,7,-11,6,-11,5,-11,4,-11,4,-11,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,3,-11,3,-12,2,-12,2,-12,1,-13,1,-13,1,-13,0,-13,0,-13,-1,-13,-1,-13,-1,-13,-1,-13,-1,-12,0,-13,0,-12,1,-13,1,-13,2,-13,3,-13,3,-13,3,-14,4,-14,4,-14,4,-14,4]
+[0;33mW (18743) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (18763) wifi:state: run -> init (0x0)[0m
+[0;32mI (18763) wifi:pm stop, total sleep time: 0 us / 780846 us[0m
+
+[0;32mI (18763) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (18783) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (18783) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (18793) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (18803) wifi:Association refused temporarily time 1500, comeback time 1600 (TUs)[0m
+[1;31mE (18813) wifi:sta is connecting, return error[0m
+csi_data,A2,[0,0,-15,1,-15,1,-15,1,-15,1,-14,2,-14,2,-13,2,-13,2,-13,3,-12,3,-12,4,-12,4,-12,4,-12,5,-13,5,-12,5,-13,5,-13,4,-13,4,-13,3,-13,3,-13,2,-13,2,-12,1,-12,0,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,2,-12,1,-12,1,-12,0,-13,0,-13,-1,-13,-1,-13,-2,-13,-2,-14,-3,-13,-3,-13,-3,-13,-2,-13,-2,-13,-2,-13,-2,-13,-1,-13,-1,-13,-1,-13,0,-14,0,-14,0,-15,1,-15,1,-15,1,-15,1]
+[0;32mI (20443) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (20453) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (20483) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (20483) wifi:security: WPA2-PSK, phy: bgn, rssi: -24[0m
+[0;32mI (20493) wifi:pm start, type: 0[0m
+
+[0;32mI (20493) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (20493) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (20513) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (20633) wifi:ic_disable_sniffer[0m
+csi_data,A3,[0,0,10,-11,10,-11,10,-11,9,-11,9,-11,8,-11,8,-12,8,-11,7,-11,7,-12,6,-11,6,-11,6,-12,6,-13,6,-13,6,-13,6,-13,6,-13,6,-13,7,-12,7,-12,8,-11,8,-10,8,-9,8,-9,9,-8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,-8,6,-8,7,-7,7,-7,8,-7,9,-7,9,-7,10,-6,10,-6,10,-6,11,-6,11,-6,11,-6,10,-6,10,-6,10,-7,10,-7,9,-7,9,-8,9,-9,9,-9,10,-10,10,-10,10,-10,10,-11,10,-11]
+[0;32mI (21523) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (22233) wifi:ic_enable_sniffer[0m
+[0;33mW (22233) TAG: FTM to A3 failed (ESP_FAIL), streak=1[0m
+csi_data,A3,[0,0,3,-15,3,-14,2,-14,2,-14,2,-14,2,-14,1,-14,1,-13,1,-13,0,-13,-1,-14,-1,-13,-2,-14,-2,-14,-2,-14,-2,-15,-1,-15,-1,-15,0,-15,0,-15,1,-15,1,-14,2,-14,2,-13,3,-13,4,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,-9,1,-9,2,-9,2,-10,3,-10,3,-10,4,-10,4,-10,5,-10,5,-10,5,-10,5,-10,5,-10,5,-10,5,-10,4,-10,4,-11,4,-11,3,-12,3,-12,3,-12,3,-13,3,-13,2,-14,3,-14,2,-14]
+[0;33mW (22733) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (22753) wifi:state: run -> init (0x0)[0m
+[0;32mI (22753) wifi:pm stop, total sleep time: 0 us / 2266639 us[0m
+
+[0;32mI (22753) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (22763) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (22773) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (22783) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (22793) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (22803) wifi:sta is connecting, return error[0m
+[0;32mI (22803) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (22813) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (22813) wifi:pm start, type: 0[0m
+
+[0;32mI (22813) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (22813) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (22913) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (22953) wifi:ic_disable_sniffer[0m
+[0;33mW (22953) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (22953) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (22963) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 13.393 nSec, Avg RSSI: -8[0m
+[0;32mI (23063) wifi:ic_enable_sniffer[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,13,13,1.950
+[0;33mW (23563) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (23583) wifi:state: run -> init (0x0)[0m
+[0;32mI (23583) wifi:pm stop, total sleep time: 0 us / 774160 us[0m
+
+[0;32mI (23583) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (23593) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (23593) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (23603) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (23613) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (23623) wifi:connected with FTM, aid = 1, channel 6, BW20, bssid = 24:ec:4a:04:39:15[0m
+[0;32mI (23633) wifi:security: WPA2-PSK, phy: bgn, rssi: 6[0m
+[0;32mI (23633) wifi:pm start, type: 0[0m
+
+[0;32mI (23633) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;33mW (23633) wifi:sta is connected, disconnect before connecting to new ap[0m
+[0;32mI (23633) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+csi_data,A2,[0,0,11,-9,11,-9,11,-9,10,-9,10,-9,10,-9,9,-9,8,-9,8,-9,7,-10,7,-10,7,-10,7,-11,7,-11,7,-11,7,-11,7,-11,7,-11,8,-11,8,-10,8,-10,8,-9,8,-9,9,-8,9,-8,9,-7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,-7,9,-7,9,-6,10,-6,10,-6,11,-6,11,-5,11,-5,12,-5,12,-4,12,-4,12,-4,11,-4,11,-4,11,-4,11,-4,11,-5,11,-6,11,-6,11,-7,11,-7,11,-8,11,-8,11,-8,11,-9,11,-9]
+[0;32mI (23693) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (23773) wifi:ic_disable_sniffer[0m
+[0;33mW (23773) wifi:Starting FTM session with 24:ec:4a:04:39:15[0m
+[0;33mW (23773) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (23783) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.562 nSec, Avg RSSI: 5[0m
+[0;32mI (23883) wifi:ic_enable_sniffer[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+[0;33mW (24383) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (24403) wifi:state: run -> init (0x0)[0m
+[0;32mI (24403) wifi:pm stop, total sleep time: 0 us / 775007 us[0m
+
+[0;32mI (24403) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (24443) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (24443) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (24453) wifi:sta is connecting, return error[0m
+[0;32mI (24453) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (24463) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (24483) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (24483) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (24493) wifi:pm start, type: 0[0m
+
+[0;32mI (24493) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (24493) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (24513) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (24633) wifi:ic_disable_sniffer[0m
+[0;32mI (25533) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (26233) wifi:ic_enable_sniffer[0m
+[0;33mW (26233) TAG: FTM to A3 failed (ESP_FAIL), streak=1[0m
+[0;33mW (26733) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (26753) wifi:state: run -> init (0x0)[0m
+[0;32mI (26753) wifi:pm stop, total sleep time: 0 us / 2266344 us[0m
+
+[0;32mI (26753) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (26783) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (26793) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (26803) wifi:sta is connecting, return error[0m
+[0;32mI (26803) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (26813) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (26833) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (26833) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (26833) wifi:pm start, type: 0[0m
+
+[0;32mI (26833) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (26833) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (26903) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (26973) wifi:ic_disable_sniffer[0m
+[0;33mW (26973) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (26973) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (26993) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 14.509 nSec, Avg RSSI: -8[0m
+[0;32mI (27093) wifi:ic_enable_sniffer[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,14,14,2.100
+[0;33mW (27593) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (27613) wifi:state: run -> init (0x0)[0m
+[0;32mI (27613) wifi:pm stop, total sleep time: 0 us / 783709 us[0m
+
+[0;32mI (27613) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (27623) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (27623) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (27633) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (27633) wifi:Association refused temporarily time 1500, comeback time 1600 (TUs)[0m
+[1;31mE (27673) wifi:sta is connecting, return error[0m
+csi_data,A1,[0,0,-8,12,-8,12,-8,12,-7,12,-7,11,-6,12,-6,11,-5,11,-5,11,-4,11,-4,11,-3,11,-3,11,-3,12,-3,12,-3,12,-3,12,-3,12,-3,12,-4,11,-4,11,-5,10,-5,10,-5,9,-6,9,-6,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-6,11,-6,10,-7,10,-8,10,-8,10,-9,10,-10,10,-10,10,-11,9,-11,9,-11,9,-11,8,-10,8,-10,9,-10,8,-10,9,-10,9,-9,9,-9,10,-8,10,-8,11,-8,11,-8,12,-8,12,-8,12,-8,12]
+[0;32mI (29273) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (29283) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (29303) wifi:connected with FTM, aid = 1, channel 6, BW20, bssid = 24:ec:4a:04:39:15[0m
+[0;32mI (29303) wifi:security: WPA2-PSK, phy: bgn, rssi: 5[0m
+[0;32mI (29303) wifi:pm start, type: 0[0m
+
+[0;32mI (29303) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (29303) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (29323) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (29443) wifi:ic_disable_sniffer[0m
+[0;33mW (29443) wifi:Starting FTM session with 24:ec:4a:04:39:15[0m
+[0;33mW (29443) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (29453) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.563 nSec, Avg RSSI: 4[0m
+[0;32mI (29553) wifi:ic_enable_sniffer[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+csi_data,A2,[0,0,-12,-8,-12,-8,-12,-8,-12,-8,-12,-7,-12,-7,-12,-6,-12,-6,-12,-5,-12,-5,-12,-4,-12,-4,-12,-4,-13,-3,-13,-3,-13,-3,-13,-4,-13,-4,-13,-5,-13,-5,-12,-5,-12,-6,-11,-6,-11,-6,-10,-6,-9,-7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,-5,-10,-6,-10,-7,-10,-8,-10,-8,-10,-9,-9,-10,-9,-10,-9,-10,-8,-10,-8,-10,-8,-10,-8,-10,-8,-10,-8,-9,-9,-9,-9,-9,-9,-9,-10,-9,-10,-8,-11,-8,-11,-8,-12,-8,-12,-8,-12,-8,-12,-8]
+[0;33mW (30053) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (30073) wifi:state: run -> init (0x0)[0m
+[0;32mI (30073) wifi:pm stop, total sleep time: 0 us / 773608 us[0m
+
+[0;32mI (30073) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (30083) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (30083) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (30093) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (30103) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (30133) wifi:sta is connecting, return error[0m
+[0;32mI (30133) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (30133) wifi:security: WPA2-PSK, phy: bgn, rssi: -24[0m
+[0;32mI (30133) wifi:pm start, type: 0[0m
+
+[0;32mI (30133) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (30143) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (30143) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (30283) wifi:ic_disable_sniffer[0m
+[0;33mW (30783) wifi:Starting FTM session with 24:ec:4a:03:56:41[0m
+[0;33mW (30783) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (30813) wifi:FTM session ends with 3 valid readings out of 3 readings received, Avg raw RTT: 13.21 nSec, Avg RSSI: -28[0m
+[0;32mI (30913) wifi:ic_enable_sniffer[0m
+anchor,A3,24:ec:4a:03:56:41,ch=11
+ftm_report,A3,13,13,1.950
+[0;32mI (31183) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;33mW (31413) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (31433) wifi:state: run -> init (0x0)[0m
+[0;32mI (31433) wifi:pm stop, total sleep time: 0 us / 1298098 us[0m
+
+[0;32mI (31433) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (31443) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (31453) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (31463) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (31473) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (31483) wifi:sta is connecting, return error[0m
+[0;32mI (31483) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (31483) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (31493) wifi:pm start, type: 0[0m
+
+[0;32mI (31493) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (31493) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (31513) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (31633) wifi:ic_disable_sniffer[0m
+[0;33mW (31633) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (31633) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (31643) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 14.955 nSec, Avg RSSI: -8[0m
+csi_data,A1,[0,0,8,-13,8,-13,8,-12,7,-12,7,-11,6,-12,6,-12,5,-12,4,-12,4,-12,4,-12,3,-12,3,-12,3,-12,3,-13,3,-13,3,-13,3,-12,3,-13,3,-12,4,-12,4,-11,5,-10,5,-10,5,-9,6,-9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,-11,6,-11,7,-11,8,-10,8,-10,9,-10,10,-10,10,-10,10,-9,10,-9,11,-8,10,-8,10,-8,10,-8,10,-9,9,-9,9,-9,9,-10,9,-10,8,-10,8,-11,8,-12,8,-12,8,-12,8,-12,8,-13]
+[0;32mI (31743) wifi:ic_enable_sniffer[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,14,14,2.100
+[0;33mW (32243) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (32263) wifi:state: run -> init (0x0)[0m
+[0;32mI (32263) wifi:pm stop, total sleep time: 0 us / 774717 us[0m
+
+[0;32mI (32263) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (32283) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (32283) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (32303) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (32313) wifi:sta is connecting, return error[0m
+[0;32mI (32313) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (32323) wifi:connected with FTM, aid = 1, channel 6, BW20, bssid = 24:ec:4a:04:39:15[0m
+[0;32mI (32323) wifi:security: WPA2-PSK, phy: bgn, rssi: 5[0m
+[0;32mI (32333) wifi:pm start, type: 0[0m
+
+[0;32mI (32333) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (32333) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (32403) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (32473) wifi:ic_disable_sniffer[0m
+[0;33mW (32473) wifi:Starting FTM session with 24:ec:4a:04:39:15[0m
+[0;33mW (32473) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (32483) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: 5[0m
+[0;32mI (32583) wifi:ic_enable_sniffer[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,0,0,-1.000
+csi_data,A2,[0,0,-12,-8,-13,-8,-12,-8,-12,-8,-12,-7,-12,-7,-12,-6,-12,-6,-12,-5,-12,-5,-12,-5,-12,-4,-12,-4,-12,-3,-13,-3,-13,-3,-13,-4,-13,-4,-13,-4,-13,-5,-12,-5,-12,-5,-11,-6,-11,-6,-10,-7,-9,-7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-9,-6,-9,-7,-9,-8,-9,-8,-9,-9,-9,-9,-9,-10,-9,-10,-8,-10,-8,-11,-8,-11,-8,-11,-8,-10,-8,-10,-8,-10,-8,-10,-9,-9,-9,-9,-10,-9,-10,-8,-11,-8,-11,-8,-12,-9,-12,-8,-12,-8,-12,-9]
+[0;33mW (33083) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (33103) wifi:state: run -> init (0x0)[0m
+[0;32mI (33103) wifi:pm stop, total sleep time: 0 us / 775646 us[0m
+
+[0;32mI (33103) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (33133) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (33133) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (33153) wifi:sta is connecting, return error[0m
+[0;32mI (33153) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (33163) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (33193) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (33193) wifi:security: WPA2-PSK, phy: bgn, rssi: -26[0m
+[0;32mI (33193) wifi:pm start, type: 0[0m
+
+[0;32mI (33193) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (33193) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (33213) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (33333) wifi:ic_disable_sniffer[0m
+[0;32mI (34233) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (34933) wifi:ic_enable_sniffer[0m
+[0;33mW (34933) TAG: FTM to A3 failed (ESP_FAIL), streak=1[0m
+[0;33mW (35433) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (35453) wifi:state: run -> init (0x0)[0m
+[0;32mI (35453) wifi:pm stop, total sleep time: 0 us / 2261750 us[0m
+
+[0;32mI (35453) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (35493) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (35493) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (35503) wifi:sta is connecting, return error[0m
+[0;32mI (35503) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (35513) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (35523) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (35523) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (35533) wifi:pm start, type: 0[0m
+
+[0;32mI (35533) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (35533) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (35603) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (35673) wifi:ic_disable_sniffer[0m
+csi_data,A1,[0,0,12,8,11,8,11,8,11,8,12,7,11,6,11,6,11,5,10,5,10,4,11,4,11,3,11,3,12,3,12,3,12,3,12,4,12,3,12,4,11,4,11,5,10,5,9W (35673) wifi:Starting FTM session with 24:ec:4a:03:58:5d
+[0;33mW (35673) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+,5,9,6,8,6,8,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,5,10,6,10,7,10,8,9,9,10,9,9,10,9,10,8,10,8,11,8,11,8,11,8,11,8,10,8,10,8,10,8,9,8,9,10,9,10,8,10,8,10,8,11,8,12,9,12,9,12,8]
+[0;33mW (35683) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 12.500 nSec, Avg RSSI: -8[0m
+[0;32mI (35783) wifi:ic_enable_sniffer[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,12,12,1.800
+[0;33mW (36283) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (36343) wifi:state: run -> init (0x0)[0m
+[0;32mI (36353) wifi:pm stop, total sleep time: 0 us / 819991 us[0m
+
+[0;32mI (36353) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (36363) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (36363) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (36373) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (36373) wifi:Association refused temporarily time 1500, comeback time 1600 (TUs)[0m
+[1;31mE (36403) wifi:sta is connecting, return error[0m
+csi_data,A1,[0,0,14,0,14,0,14,0,13,-1,13,-1,13,-1,12,-1,12,-2,12,-3,11,-3,11,-4,11,-4,11,-4,11,-4,11,-5,11,-5,12,-4,11,-4,12,-4,12,-3,11,-3,11,-2,11,-1,11,-1,10,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,-1,12,-1,12,0,12,1,13,1,13,2,13,3,13,3,13,4,13,5,13,5,12,5,12,4,12,4,12,4,12,3,12,3,12,2,12,2,13,1,13,1,13,1,14,1,14,0,14,1,14,0]
+[0;32mI (38013) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (38023) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (38043) wifi:connected with FTM, aid = 1, channel 6, BW20, bssid = 24:ec:4a:04:39:15[0m
+[0;32mI (38043) wifi:security: WPA2-PSK, phy: bgn, rssi: 6[0m
+[0;32mI (38053) wifi:pm start, type: 0[0m
+
+[0;32mI (38053) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (38053) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (38133) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (38193) wifi:ic_disable_sniffer[0m
+[0;33mW (38193) wifi:Starting FTM session with 24:ec:4a:04:39:15[0m
+[0;33mW (38193) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (38203) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.116 nSec, Avg RSSI: 5[0m
+[0;32mI (38303) wifi:ic_enable_sniffer[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,1,1,0.150
+csi_data,A2,[0,0,14,-1,14,-1,13,-1,13,-1,13,-2,13,-2,13,-2,12,-3,12,-3,12,-4,11,-4,11,-4,11,-5,11,-5,12,-5,12,-5,12,-5,12,-5,12,-5,12,-4,12,-4,12,-3,12,-2,11,-2,11,-1,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,-2,10,-1,11,0,11,0,12,1,12,1,12,2,12,2,12,3,12,3,12,3,11,3,12,3,11,3,11,2,12,2,11,2,12,1,12,1,12,0,13,0,13,0,13,-1,14,-1,14,-1,14,-1]
+[0;33mW (38803) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (38823) wifi:state: run -> init (0x0)[0m
+[0;32mI (38823) wifi:pm stop, total sleep time: 0 us / 775683 us[0m
+
+[0;32mI (38823) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (38833) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (38833) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (38843) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (38853) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (38873) wifi:sta is connecting, return error[0m
+[0;32mI (38873) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (38873) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (38883) wifi:pm start, type: 0[0m
+
+[0;32mI (38883) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (38883) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (38943) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (39023) wifi:ic_disable_sniffer[0m
+csi_data,A3,[0,0,-11,11,-10,10,-10,10,-10,10,-10,10,-9,10,-8,11,-8,11,-7,11,-7,11,-7,11,-6,11,-6,11,-6,12,-6,12,-6,13,-7,12,-7,13,-7,13,-7,12,-8,12,-8,11,-9,10,-9,9,-10,9,-10,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-6,6,-7,6,-7,6,-8,6,-8,6,-9,6,-10,6,-10,5,-10,5,-11,5,-11,5,-11,5,-10,5,-11,5,-10,5,-10,6,-10,6,-10,7,-10,7,-10,8,-10,8,-10,9,-10,10,-10,10,-10,10,-10,10]
+[0;32mI (39913) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;32mI (40623) wifi:ic_enable_sniffer[0m
+[0;33mW (40623) TAG: FTM to A3 failed (ESP_FAIL), streak=1[0m
+[0;33mW (41123) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (41143) wifi:state: run -> init (0x0)[0m
+[0;32mI (41143) wifi:pm stop, total sleep time: 0 us / 2265584 us[0m
+
+[0;32mI (41143) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (41183) wifi:new:<1,0>, old:<11,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (41183) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (41193) wifi:sta is connecting, return error[0m
+[0;32mI (41193) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (41203) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (41223) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (41223) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (41223) wifi:pm start, type: 0[0m
+
+[0;32mI (41223) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (41223) TAG: STA connected to 24:ec:4a:03:58:5d, ch=1 (sec=0)[0m
+[0;32mI (41243) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (41363) wifi:ic_disable_sniffer[0m
+[0;33mW (41363) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (41363) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (41383) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 14.956 nSec, Avg RSSI: -8[0m
+[0;32mI (41483) wifi:ic_enable_sniffer[0m
+anchor,A1,24:ec:4a:03:58:5d,ch=1
+ftm_report,A1,14,14,2.100
+csi_data,A1,[0,0,2,14,3,14,2,13,3,13,3,12,3,12,3,12,4,11,4,11,5,11,5,11,5,10,5,10,6,10,7,10,6,10,6,11,6,11,5,11,5,11,4,11,4,10,3,11,2,10,2,10,1,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,11,2,11,2,12,0,12,1,13,-1,13,-1,14,-2,13,-2,14,-3,14,-3,14,-3,13,-3,13,-2,13,-2,12,-1,13,-1,12,0,13,0,13,0,13,1,13,1,13,2,14,2,14,2,14,2,14]
+[0;33mW (41983) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (42003) wifi:state: run -> init (0x0)[0m
+[0;32mI (42003) wifi:pm stop, total sleep time: 0 us / 783748 us[0m
+
+[0;32mI (42003) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (42033) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (42033) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (42053) wifi:sta is connecting, return error[0m
+[0;32mI (42053) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (42063) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (42073) wifi:connected with FTM, aid = 1, channel 6, BW20, bssid = 24:ec:4a:04:39:15[0m
+[0;32mI (42073) wifi:security: WPA2-PSK, phy: bgn, rssi: 6[0m
+[0;32mI (42083) wifi:pm start, type: 0[0m
+
+[0;32mI (42083) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (42083) TAG: STA connected to 24:ec:4a:04:39:15, ch=6 (sec=0)[0m
+[0;32mI (42163) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (42223) wifi:ic_disable_sniffer[0m
+[0;33mW (42223) wifi:Starting FTM session with 24:ec:4a:04:39:15[0m
+[0;33mW (42223) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 300mSec, Burst Duration: 32000uSec[0m
+[0;33mW (42233) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 4.687 nSec, Avg RSSI: 4[0m
+[0;32mI (42333) wifi:ic_enable_sniffer[0m
+anchor,A2,24:ec:4a:04:39:15,ch=6
+ftm_report,A2,4,4,0.600
+csi_data,A2,[0,0,-12,8,-12,8,-12,8,-12,8,-11,8,-11,8,-10,8,-10,8,-9,8,-9,9,-8,9,-8,9,-8,9,-8,10,-8,10,-8,10,-9,10,-9,10,-9,10,-9,9,-9,9,-10,8,-10,8,-10,7,-10,6,-10,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-9,7,-9,6,-10,6,-11,5,-11,5,-12,5,-12,5,-12,4,-12,4,-13,4,-13,3,-13,3,-12,3,-12,3,-12,4,-12,4,-12,5,-12,5,-12,5,-12,6,-12,7,-12,7,-12,8,-12,8,-12,8,-12,8]
+[0;33mW (42833) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (42853) wifi:state: run -> init (0x0)[0m
+[0;32mI (42853) wifi:pm stop, total sleep time: 0 us / 777508 us[0m
+
+[0;32mI (42853) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (42863) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (42863) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (42873) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (42883) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (42913) wifi:sta is connecting, return error[0m
+[0;32mI (42913) wifi:connected with FTM, aid = 1, channel 11, BW20, bssid = 24:ec:4a:03:56:41[0m
+[0;32mI (42913) wifi:security: WPA2-PSK, phy: bgn, rssi: -25[0m
+[0;32mI (42913) wifi:pm start, type: 0[0m
+
+[0;32mI (42913) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (42913) TAG: STA connected to 24:ec:4a:03:56:41, ch=11 (sec=0)[0m
+[0;32mI (42943) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (43053) wifi:ic_disable_sniffer[0m

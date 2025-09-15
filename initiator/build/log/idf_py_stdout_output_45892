@@ -1,0 +1,828 @@
+csi_data,[0,0,-15,-2,-15,-1,-15,-1,-15,-1,-15,0,-15,0,-14,0,-14,ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037ac12
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug 31 2025 02:08:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=19ac0h (105152) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=00029ae8 vaddr=3fc99b00 size=04948h ( 18760) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0002e438 vaddr=40374000 size=01be0h (  7136) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=83fbch (540604) map[0m
+[0;32mI (214) esp_image: segment 4: paddr=000b3fe4 vaddr=40375be0 size=13e4ch ( 81484) load[0m
+[0;32mI (232) esp_image: segment 5: paddr=000c7e38 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (241) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (241) boot: Disabling RNG early entropy source...[0m
+[0;32mI (251) cpu_start: Multicore app[0m
+[0;32mI (260) cpu_start: Pro cpu start user code[0m
+[0;32mI (260) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (261) app_init: Application information:[0m
+[0;32mI (261) app_init: Project name:     initiator[0m
+[0;32mI (265) app_init: App version:      207a5d4-dirty[0m
+[0;32mI (269) app_init: Compile time:     Aug 30 2025 22:35:46[0m
+[0;32mI (274) app_init: ELF file SHA256:  6ed8b636a...[0m
+[0;32mI (278) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (283) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (286) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (290) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (294) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (301) heap_init: At 3FCA20A0 len 00047670 (285 KiB): RAM[0m
+[0;32mI (306) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (311) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (316) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (322) spi_flash: detected chip: gd[0m
+[0;32mI (325) spi_flash: flash io: dio[0m
+[0;33mW (328) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (340) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (383) pp: pp rom version: e7ae62f[0m
+[0;32mI (383) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (393) wifi:wifi driver task: 3fcae2f0, prio:23, stack:6656, core=0[0m
+[0;32mI (403) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (403) wifi:wifi certification version: v7.0[0m
+[0;32mI (403) wifi:config NVS flash: enabled[0m
+[0;32mI (403) wifi:config nano formatting: disabled[0m
+[0;32mI (403) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (403) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (403) wifi:Init management short buffer num: 32[0m
+[0;32mI (403) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (403) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (403) wifi:Init static rx buffer size: 2212[0m
+[0;32mI (403) wifi:Init static rx buffer num: 10[0m
+[0;32mI (403) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (403) wifi_init: rx ba win: 6[0m
+[0;32mI (403) wifi_init: accept mbox: 6[0m
+[0;32mI (403) wifi_init: tcpip mbox: 32[0m
+[0;32mI (403) wifi_init: udp mbox: 6[0m
+[0;32mI (403) wifi_init: tcp mbox: 6[0m
+[0;32mI (403) wifi_init: tcp tx win: 5760[0m
+[0;32mI (403) wifi_init: tcp rx win: 5760[0m
+[0;32mI (403) wifi_init: tcp mss: 1440[0m
+[0;32mI (403) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (403) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (413) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (413) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (443) wifi:mode : sta (24:ec:4a:04:74:58)[0m
+[0;32mI (443) wifi:enable tsf[0m
+[0;33mW (443) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (453) wifi:ic_enable_sniffer[0m
+[0;32mI (453) TAG: Ready: FTM 8 frames/session, CSI ~1Hz, UART=921600.[0m
+[0;32mI (453) main_task: Returned from app_main()[0m
+[0;32mI (453) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (453) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (453) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (463) wifi:Association refused temporarily time 1500, comeback time 1600 (TUs)[0m
+csi_data,[0,0,-5,-14,-5,-15,-5,-14,-5,-14,-5,-14,-6,-13,-6,-13,-6,-12,-7,-12,-7,-12,-8,-12,-8,-11,-8,-12,-9,-11,-9,-12,-9,-12,-9,-13,-9,-12,-9,-13,-8,-13,-8,-13,-6,-13,-6,-13,-5,-13,-5,-12,-4,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-4,-10,-3,-11,-3,-12,-2,-12,-2,-13,-1,-13,-1,-13,0,-13,0,-13,1,-13,1,-13,0,-13,0,-13,0,-13,0,-12,0,-13,-1,-13,-2,-13,-2,-13,-3,-13,-3,-13,-3,-14,-4,-14,-4,-14,-4,-14,-5,-14]
+[0;32mI (2103) wifi:state: assoc -> assoc (0x0)[0m
+[0;32mI (2113) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2123) wifi:connected with FTM, aid = 1, channel 1, BW20, bssid = 24:ec:4a:03:58:5d[0m
+[0;32mI (2133) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (2133) wifi:pm start, type: 0[0m
+
+[0;32mI (2133) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2133) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (2133) TAG: STA connected. BSSID=24:EC:4A:03:58:5D CH=1[0m
+[0;33mW (2143) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (2143) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (2153) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 2.9 nSec, Avg RSSI: -62[0m
+ftm_frame,0,9375,1405.277
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,9376,1405.427
+ftm_frame,4,9375,1405.277
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,2,0.300
+[0;32mI (2203) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+csi_data,[0,0,-15,2,-14,2,-15,2,-14,2,-14,2,-14,3,-14,4,-13,4,-13,4,-12,4,-13,4,-12,5,-12,6,-13,6,-13,6,-13,6,-13,6,-14,6,-14,6,-14,5,-14,5,-14,4,-13,4,-13,3,-13,2,-13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,2,-11,1,-12,1,-12,0,-12,0,-13,-1,-13,-2,-13,-2,-13,-3,-13,-3,-13,-3,-13,-3,-13,-3,-12,-3,-12,-2,-12,-2,-12,-2,-13,-1,-13,0,-13,0,-13,1,-14,1,-14,1,-14,2,-15,2,-15,2]
+[0;32mI (3153) esp_netif_handlers: sta ip: 192.168.4.2, mask: 255.255.255.0, gw: 192.168.4.1[0m
+[0;33mW (3163) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (3163) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (3183) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-4,14,-4,13,-4,14,-3,13,-3,14,-2,14,-2,13,-1,13,-1,13,0,13,0,13,0,13,0,13,1,14,1,13,1,14,1,14,1,15,0,14,0,14,0,14,-2,14,-2,13,-3,13,-4,12,-4,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-3,9,-3,10,-4,10,-5,11,-5,10,-6,11,-6,11,-7,10,-7,10,-7,10,-8,10,-8,9,-8,10,-7,10,-7,10,-6,9,-6,10,-5,10,-6,11,-4,11,-4,12,-4,12,-4,12,-4,13,-5,14,-4,14]
+[0;33mW (4183) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (4183) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (4203) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,9376,1405.427
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-14,-6,-14,-6,-14,-6,-14,-5,-14,-5,-14,-4,-14,-4,-13,-3,-14,-3,-14,-2,-14,-2,-14,-1,-14,-1,-14,-1,-15,-1,-15,0,-15,-1,-15,-1,-15,-1,-15,-2,-15,-2,-14,-3,-14,-3,-13,-4,-13,-5,-12,-5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,-4,-11,-5,-11,-5,-11,-6,-11,-7,-11,-8,-11,-8,-11,-8,-10,-8,-10,-9,-10,-9,-10,-9,-10,-9,-10,-8,-10,-8,-10,-8,-11,-7,-11,-7,-11,-7,-12,-6,-12,-6,-13,-6,-13,-5,-13,-5,-14,-5,-14,-5]
+[0;33mW (5203) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (5203) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (5223) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-9,-12,-10,-12,-9,-12,-10,-11,-10,-11,-9,-11,-10,-10,-10,-10,-10,-10,-10,-8,-12,-9,-11,-8,-12,-8,-12,-8,-12,-8,-12,-8,-12,-8,-12,-9,-12,-9,-12,-9,-12,-10,-10,-11,-10,-10,-9,-10,-9,-10,-8,-11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-7,-8,-7,-9,-6,-10,-6,-11,-6,-11,-6,-12,-5,-12,-5,-13,-4,-12,-4,-13,-4,-13,-4,-12,-4,-12,-4,-12,-4,-12,-5,-11,-5,-11,-6,-11,-6,-11,-7,-12,-7,-11,-8,-12,-8,-11,-9,-12,-9,-11,-9,-12]
+[0;33mW (6223) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (6223) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (6243) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-8,-12,-8,-13,-8,-12,-8,-13,-8,-12,-9,-12,-9,-11,-9,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-11,-9,-12,-10,-11,-9,-12,-10,-11,-10,-11,-10,-11,-10,-11,-11,-10,-11,-9,-11,-8,-12,-7,-11,-6,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-7,-10,-6,-10,-6,-11,-5,-11,-5,-12,-5,-12,-4,-12,-4,-13,-3,-13,-2,-13,-3,-13,-3,-13,-3,-13,-3,-12,-3,-12,-4,-12,-4,-11,-5,-12,-5,-12,-6,-12,-6,-12,-7,-12,-7,-12,-7,-13,-7,-13,-8,-12]
+[0;33mW (7243) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (7243) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (7263) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,9376,1405.427
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,7,-13,7,-13,6,-13,6,-13,6,-13,5,-13,5,-13,5,-13,4,-13,4,-13,3,-13,3,-14,3,-13,3,-14,3,-14,3,-15,3,-15,3,-15,4,-15,4,-14,5,-14,5,-13,6,-13,6,-12,6,-12,7,-11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,-10,5,-10,6,-10,7,-10,7,-10,8,-10,8,-10,9,-9,9,-9,9,-9,9,-8,9,-8,9,-9,9,-9,8,-9,8,-9,7,-9,7,-9,7,-10,7,-11,7,-11,7,-11,7,-12,7,-12,7,-13,7,-13]
+[0;33mW (8263) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (8263) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (8283) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,14,0,14,0,14,0,14,0,14,-1,13,-1,13,-2,13,-2,13,-2,13,-3,13,-3,13,-4,13,-4,13,-5,13,-5,14,-5,14,-4,14,-4,14,-4,14,-3,14,-3,14,-2,14,-1,13,-1,13,0,12,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,-1,10,0,11,1,11,1,11,2,12,3,12,4,11,4,11,5,11,4,11,5,11,5,11,4,10,4,11,4,11,4,11,3,11,2,12,2,12,2,12,1,13,1,13,1,13,1,14,0,14,0]
+[0;33mW (9283) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (9283) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (9303) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,5,13,6,13,5,13,6,12,6,12,6,11,6,11,7,11,7,11,8,10,8,10,8,10,9,10,10,9,9,9,9,10,9,10,9,10,9,11,9,11,8,11,7,11,6,11,6,11,5,11,5,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,9,3,10,3,11,2,11,2,12,1,12,1,12,0,12,0,12,0,12,-1,12,-1,12,0,12,0,12,0,11,1,11,1,11,2,11,2,11,3,12,3,12,4,12,5,12,4,12,5,13,5,12]
+[0;33mW (10303) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (10303) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (10323) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-15,-1,-15,-1,-16,-1,-15,-1,-15,-1,-15,0,-15,0,-14,0,-14,1,-13,2,-14,2,-14,3,-14,3,-14,4,-14,3,-15,3,-14,3,-15,3,-15,2,-15,1,-15,1,-15,0,-14,0,-14,0,-14,-1,-14,-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,-1,-12,-1,-12,-2,-13,-3,-13,-3,-13,-4,-12,-5,-12,-5,-12,-6,-12,-5,-12,-6,-12,-5,-12,-5,-12,-5,-12,-5,-12,-5,-12,-4,-12,-4,-13,-3,-13,-3,-13,-3,-14,-2,-14,-2,-14,-1,-15,-1,-15,-1]
+[0;33mW (11333) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (11333) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (11343) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -63[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-16,-2,-15,-2,-15,-1,-15,-1,-15,-1,-15,0,-14,0,-14,0,-14,1,-14,1,-14,2,-14,2,-14,2,-14,3,-14,3,-15,3,-15,2,-15,2,-15,2,-15,1,-16,0,-15,0,-14,0,-14,-1,-14,-2,-13,-3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,0,-12,-1,-12,-2,-12,-3,-12,-3,-13,-4,-13,-5,-13,-5,-13,-6,-12,-5,-13,-6,-12,-6,-12,-5,-12,-5,-12,-5,-12,-4,-13,-4,-12,-3,-13,-3,-13,-3,-13,-3,-14,-2,-14,-2,-15,-2,-15,-1,-15,-1]
+[0;33mW (12343) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (12343) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (12363) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,14,1,14,1,14,1,14,0,14,0,13,0,13,-1,13,-1,13,-2,13,-2,13,-3,13,-3,13,-3,13,-4,13,-4,13,-4,14,-4,14,-4,14,-4,14,-3,14,-2,13,-2,13,-1,13,0,13,1,12,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,10,1,10,2,11,2,11,3,11,4,11,4,11,5,11,5,10,5,10,6,10,6,10,5,10,5,10,4,10,4,11,4,11,3,11,3,12,2,12,2,13,1,13,2,13,1,14,1,14,1]
+[0;33mW (13363) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (13363) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (13383) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,9376,1405.427
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-14,-4,-15,-3,-14,-4,-15,-4,-14,-3,-14,-2,-14,-2,-14,-1,-14,-1,-14,0,-14,-1,-14,0,-14,1,-14,1,-14,1,-14,1,-15,1,-15,1,-15,1,-15,0,-15,0,-14,-1,-14,-2,-13,-3,-13,-3,-13,-4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,-2,-11,-3,-12,-4,-11,-5,-12,-5,-12,-6,-12,-6,-12,-7,-12,-7,-11,-7,-11,-8,-11,-8,-10,-7,-10,-7,-11,-7,-11,-7,-11,-6,-11,-6,-12,-5,-13,-4,-13,-4,-13,-4,-13,-4,-14,-4,-14,-4,-14,-4]
+[0;33mW (14383) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (14383) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (14403) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.447 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,7813,1171.139
+ftm_frame,3,10938,1639.565
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-15,0,-15,0,-15,0,-14,0,-15,0,-14,1,-14,1,-13,1,-14,2,-13,2,-14,3,-13,3,-13,3,-14,4,-13,4,-14,4,-14,4,-15,4,-15,3,-14,3,-15,2,-14,1,-13,1,-13,0,-13,0,-13,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,0,-12,-1,-12,-1,-13,-2,-12,-3,-13,-4,-13,-4,-13,-4,-12,-5,-12,-5,-12,-5,-12,-5,-12,-4,-12,-5,-12,-4,-12,-4,-13,-3,-12,-3,-13,-3,-13,-2,-13,-2,-14,-1,-14,-1,-15,-1,-14,0,-15,0]
+[0;33mW (15403) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (15403) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (15423) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,3,-15,2,-15,2,-15,2,-14,2,-15,1,-14,1,-14,0,-14,0,-14,-1,-13,-1,-14,-1,-14,-2,-14,-2,-14,-2,-14,-2,-14,-2,-15,-2,-15,-1,-15,-1,-15,0,-15,0,-15,1,-14,1,-14,2,-13,3,-13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,-11,2,-11,3,-11,4,-12,4,-12,5,-12,6,-12,6,-11,6,-11,7,-11,7,-11,6,-11,6,-11,6,-11,6,-11,5,-11,5,-11,4,-11,4,-12,4,-13,3,-13,3,-13,3,-13,3,-14,3,-15,3,-15]
+[0;33mW (16423) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (16423) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (16443) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-12,-11,-11,-10,-11,-10,-11,-10,-11,-10,-11,-9,-11,-9,-11,-8,-12,-8,-12,-7,-12,-7,-12,-7,-13,-7,-13,-6,-13,-6,-14,-7,-13,-7,-14,-7,-14,-7,-13,-8,-13,-8,-11,-8,-11,-9,-10,-9,-10,-9,-10,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-8,-7,-9,-8,-8,-9,-8,-10,-7,-10,-7,-11,-7,-12,-7,-12,-6,-12,-6,-12,-6,-12,-6,-12,-6,-11,-6,-11,-6,-11,-7,-11,-7,-11,-8,-10,-8,-11,-9,-10,-9,-10,-10,-10,-10,-10,-10,-10,-11,-11,-11,-10]
+[0;33mW (17443) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (17443) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+csi_data,[0,0,-11,10,-11,10,-11,10,-10,10,-10,10,-10,10,-9,10,-8,10,-8,10,-7,10,-7,11,-7,11,-7,12,-7,13,-7,12,-7,13,-7,12,-7,12,-8,12,-8,11,-9,11,-9,10,-9,10,-9,9,-9,9,-10,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-8,8,-8,8,-9,7,-10,7,-11,7,-12,6,-12,6,-12,6,-12,5,-12,5,-12,5,-12,5,-12,5,-12,5,-11,6,-10,5,-11,6,-10,6,-11,7,-10,8,-10,8,-10,9,-11,9,-10,10,-11,10,-11,10]
+[0;33mW (17463) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-10,10,-10,11,-10,10,-10,10,-9,10,-9,10,-8,11,-8,11,-8,11,-7,11,-7,11,-7,11,-6,12,-6,11,-6,13,-6,12,-7,13,-7,13,-7,12,-8,12,-8,11,-8,11,-9,11,-9,10,-9,9,-9,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-8,8,-8,7,-9,7,-10,7,-11,7,-11,6,-11,6,-12,5,-12,5,-12,5,-12,4,-12,4,-11,5,-11,5,-11,5,-11,6,-10,6,-11,6,-10,7,-10,8,-10,8,-10,8,-11,9,-10,9,-10,9,-10,10]
+[0;33mW (18463) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (18463) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (18483) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-5,13,-5,13,-5,13,-5,13,-4,13,-4,13,-3,13,-3,13,-2,13,-2,13,-1,13,-1,13,-1,13,0,14,0,14,0,14,-1,14,0,15,-1,14,-2,14,-2,14,-3,14,-3,13,-4,13,-4,12,-5,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-4,9,-5,9,-5,9,-6,10,-7,10,-7,10,-8,9,-8,9,-9,9,-9,9,-9,9,-9,9,-9,8,-8,8,-8,9,-8,9,-7,9,-7,9,-7,10,-6,11,-6,11,-6,11,-6,12,-5,13,-5,13,-5,13]
+[0;33mW (19483) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (19483) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (19503) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-12,9,-12,10,-12,9,-11,9,-11,10,-11,10,-10,10,-9,10,-9,10,-9,11,-8,11,-8,11,-8,11,-8,12,-8,12,-8,12,-8,12,-8,12,-9,12,-9,12,-10,11,-10,11,-10,10,-10,9,-10,8,-10,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-8,6,-9,6,-9,6,-10,6,-11,5,-11,5,-12,4,-12,4,-12,4,-12,4,-13,4,-12,3,-12,4,-12,4,-11,4,-11,5,-12,5,-11,5,-11,6,-11,7,-11,7,-11,8,-11,8,-12,9,-11,9,-12,9]
+[0;33mW (20503) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (20503) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (20523) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-7,-14,-8,-13,-8,-13,-8,-13,-8,-13,-8,-12,-8,-12,-8,-12,-9,-11,-9,-11,-10,-10,-10,-10,-10,-10,-11,-11,-11,-10,-11,-11,-11,-11,-11,-11,-11,-12,-10,-12,-10,-12,-9,-13,-8,-12,-8,-12,-7,-12,-6,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-6,-9,-6,-10,-5,-10,-5,-11,-4,-12,-4,-12,-3,-12,-3,-13,-3,-13,-2,-12,-2,-13,-2,-13,-2,-12,-2,-12,-3,-12,-3,-12,-4,-12,-4,-12,-4,-12,-5,-12,-6,-12,-6,-13,-7,-12,-7,-13,-7,-13,-8,-13]
+[0;33mW (21523) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (21523) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (21543) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 3.125 nSec, Avg RSSI: -61[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,12501,1873.853
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,12500,1873.703
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,3,0.450
+csi_data,[0,0,-10,11,-11,10,-10,10,-10,10,-9,10,-9,10,-8,10,-8,10,-7,11,-7,11,-6,11,-6,11,-6,11,-6,12,-6,12,-6,12,-6,12,-6,12,-6,12,-7,11,-7,11,-7,10,-7,10,-8,9,-8,9,-8,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-7,8,-8,8,-9,8,-9,8,-10,8,-10,7,-11,7,-11,7,-11,6,-12,7,-12,6,-11,6,-12,6,-12,6,-11,6,-11,6,-11,6,-11,7,-10,8,-10,8,-10,9,-11,9,-10,9,-10,10,-11,10,-10,10]
+[0;33mW (22543) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (22543) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (22563) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -62[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,11,6,11,5,11,5,11,5,11,4,11,4,11,3,11,3,11,2,11,1,12,1,12,0,12,0,13,0,13,0,14,-1,14,0,14,0,15,0,14,1,15,2,14,2,14,3,13,4,13,4,13,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,5,9,6,9,7,9,8,9,8,9,9,8,10,8,10,8,10,7,10,7,10,7,10,7,10,7,9,7,9,7,8,7,8,8,8,8,7,9,7,9,7,10,7,10,7,10,6,11,6,11,6]
+[0;33mW (23563) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (23563) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (23583) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -66[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,13,-1,12,-2,12,-2,12,-2,12,-3,11,-3,10,-3,10,-4,9,-4,9,-4,9,-5,8,-6,8,-6,9,-6,8,-6,8,-7,8,-6,8,-6,9,-6,8,-6,9,-5,8,-5,8,-5,8,-5,8,-4,8,-3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,-4,13,-3,12,-3,13,-2,14,-1,15,0,15,1,15,1,14,2,14,2,14,2,13,2,14,2,13,2,13,2,12,1,13,1,12,0,13,0,13,0,13,-1,13,-1,13,-1,13,-2,13,-2,14,-2]
+[0;33mW (24583) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (24583) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (24603) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 7.812 nSec, Avg RSSI: -62[0m
+ftm_frame,0,6250,936.851
+ftm_frame,1,6250,936.851
+ftm_frame,2,7813,1171.139
+ftm_frame,3,4688,702.714
+ftm_frame,4,4688,702.714
+ftm_frame,5,18750,2810.554
+ftm_frame,6,6251,937.001
+ftm_data,7,1.050
+csi_data,[0,0,13,-5,12,-6,12,-5,11,-5,11,-6,10,-5,9,-6,8,-5,8,-6,7,-6,7,-6,6,-7,6,-7,6,-7,6,-7,5,-7,5,-7,5,-6,5,-7,5,-6,5,-6,5,-6,4,-5,4,-5,4,-5,4,-4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,-8,12,-7,13,-7,14,-7,14,-5,15,-5,15,-4,16,-4,16,-3,15,-2,16,-2,15,-2,15,-2,14,-2,14,-2,14,-3,14,-3,13,-4,13,-4,13,-5,13,-5,13,-5,14,-5,13,-6,13,-6,13,-6]
+[0;33mW (25613) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (25613) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (25623) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 13.393 nSec, Avg RSSI: -64[0m
+ftm_frame,0,9375,1405.277
+ftm_frame,1,9375,1405.277
+ftm_frame,2,9375,1405.277
+ftm_frame,3,23438,3513.268
+ftm_frame,4,9376,1405.427
+ftm_frame,5,21876,3279.130
+ftm_frame,6,10938,1639.565
+ftm_data,13,1.950
+csi_data,[0,0,13,-4,13,-4,12,-5,11,-5,11,-5,10,-5,9,-5,9,-6,8,-5,7,-6,7,-6,6,-7,6,-7,6,-7,6,-7,5,-8,5,-7,5,-7,5,-8,5,-7,5,-7,5,-7,4,-7,5,-6,4,-6,5,-6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,-7,14,-7,15,-5,15,-5,16,-4,17,-3,17,-2,16,-2,17,-1,16,0,16,0,16,0,15,0,15,-1,15,-1,14,-1,15,-2,14,-2,14,-3,14,-3,14,-3,14,-4,14,-4,14,-4,14,-4,14,-5]
+[0;33mW (26623) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (26623) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (26643) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 8.705 nSec, Avg RSSI: -64[0m
+ftm_frame,0,7813,1171.139
+ftm_frame,1,6250,936.851
+ftm_frame,2,6251,937.001
+ftm_frame,3,6250,936.851
+ftm_frame,4,20313,3044.842
+ftm_frame,5,7813,1171.139
+ftm_frame,6,6251,937.001
+ftm_data,8,1.200
+csi_data,[0,0,-15,-3,-14,-4,-13,-3,-13,-3,-12,-3,-12,-3,-11,-2,-11,-1,-11,-1,-10,-1,-10,0,-9,1,-9,1,-9,1,-10,1,-9,1,-9,1,-9,2,-9,1,-8,1,-8,1,-8,1,-7,1,-7,1,-7,1,-7,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-14,-1,-15,-2,-15,-3,-15,-4,-15,-5,-15,-6,-15,-7,-15,-7,-15,-8,-15,-8,-14,-7,-14,-7,-14,-7,-13,-7,-13,-7,-13,-7,-13,-6,-13,-6,-14,-5,-14,-5,-14,-4,-14,-4,-15,-4,-15,-3,-15,-3,-15,-4]
+[0;33mW (27643) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (27643) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (27663) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 9.822 nSec, Avg RSSI: -64[0m
+ftm_frame,0,10938,1639.565
+ftm_frame,1,10938,1639.565
+ftm_frame,2,9375,1405.277
+ftm_frame,3,9376,1405.427
+ftm_frame,4,9376,1405.427
+ftm_frame,5,9375,1405.277
+ftm_frame,6,9376,1405.427
+ftm_data,9,1.350
+csi_data,[0,0,-8,-13,-8,-12,-7,-12,-7,-11,-7,-11,-7,-10,-7,-9,-7,-9,-7,-8,-7,-8,-7,-7,-7,-7,-8,-7,-8,-6,-8,-6,-8,-6,-8,-6,-8,-5,-8,-5,-7,-5,-7,-5,-7,-5,-6,-5,-6,-5,-5,-5,-6,-5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-9,-10,-9,-12,-8,-12,-8,-13,-8,-14,-7,-14,-7,-15,-6,-15,-6,-15,-5,-15,-5,-15,-4,-15,-5,-15,-4,-14,-5,-14,-5,-14,-6,-13,-6,-13,-7,-13,-7,-13,-7,-13,-8,-13,-8,-13,-8,-13,-8,-13,-8,-13]
+[0;33mW (28663) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (28663) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (28683) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 10.938 nSec, Avg RSSI: -63[0m
+ftm_frame,0,10938,1639.565
+ftm_frame,1,10938,1639.565
+ftm_frame,2,10938,1639.565
+ftm_frame,3,9376,1405.427
+ftm_frame,4,10938,1639.565
+ftm_frame,5,10938,1639.565
+ftm_frame,6,12501,1873.853
+ftm_data,10,1.500
+csi_data,[0,0,2,-14,2,-14,2,-14,2,-13,2,-13,1,-12,1,-12,0,-12,0,-11,-1,-11,-1,-11,-1,-10,-2,-10,-2,-10,-2,-10,-3,-10,-3,-10,-3,-10,-3,-10,-3,-10,-2,-9,-2,-9,-2,-9,-1,-9,-1,-8,-1,-8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-13,0,-14,1,-14,2,-15,3,-15,4,-15,4,-15,5,-15,5,-15,6,-14,6,-14,6,-14,6,-14,6,-13,5,-13,5,-13,4,-13,4,-14,4,-14,3,-14,3,-14,3,-15,3,-14,3,-15,3,-15,3,-15]
+[0;33mW (29683) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (29683) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (29703) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 4.911 nSec, Avg RSSI: -65[0m
+ftm_frame,0,4688,702.714
+ftm_frame,1,3125,468.426
+ftm_frame,2,6250,936.851
+ftm_frame,3,4688,702.714
+ftm_frame,4,4688,702.714
+ftm_frame,5,4688,702.714
+ftm_frame,6,6250,936.851
+ftm_data,4,0.600
+csi_data,[0,0,-13,3,-12,3,-12,3,-11,3,-11,4,-10,4,-9,4,-9,4,-8,4,-7,5,-7,6,-6,6,-6,6,-6,7,-6,7,-6,7,-5,7,-5,7,-6,7,-6,7,-6,7,-6,7,-6,7,-6,7,-6,6,-6,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-15,5,-16,4,-16,3,-17,3,-17,2,-18,1,-17,0,-18,-1,-17,-1,-17,-1,-17,-2,-16,-1,-16,-1,-15,-1,-15,-1,-14,0,-15,0,-14,1,-14,1,-14,1,-14,1,-14,2,-14,3,-14,3,-13,3,-13,3]
+[0;33mW (30703) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (30703) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (30723) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -64[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-2,-15,-2,-16,-1,-15,-2,-15,-2,-15,-2,-15,-3,-14,-3,-14,-3,-14,-4,-13,-4,-13,-5,-13,-5,-13,-5,-13,-5,-13,-5,-13,-5,-14,-5,-14,-4,-14,-4,-14,-3,-14,-2,-14,-2,-14,-1,-13,0,-13,0,-12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-2,-11,-1,-11,-1,-12,0,-12,0,-12,1,-12,1,-12,1,-12,2,-13,2,-13,2,-13,2,-13,2,-13,2,-12,2,-12,1,-13,1,-12,0,-13,0,-13,0,-14,-1,-14,-1,-15,-2,-15,-2,-15,-1,-15,-2,-15]
+[0;33mW (31723) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (31723) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (31743) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.116 nSec, Avg RSSI: -62[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,1563,234.288
+ftm_frame,2,1563,234.288
+ftm_frame,3,1563,234.288
+ftm_frame,4,1563,234.288
+ftm_frame,5,0,0.000
+ftm_frame,6,1,0.150
+ftm_data,1,0.150
+csi_data,[0,0,-14,4,-14,4,-14,4,-13,4,-13,5,-13,5,-13,5,-12,5,-12,5,-11,6,-11,6,-10,7,-10,7,-10,7,-10,7,-11,7,-11,7,-11,7,-11,7,-11,6,-11,5,-11,5,-11,5,-11,4,-11,3,-11,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,4,-12,4,-13,3,-13,3,-13,2,-14,1,-14,0,-14,0,-14,0,-14,0,-14,0,-14,0,-13,0,-14,0,-13,0,-13,0,-13,1,-13,1,-13,2,-13,2,-13,3,-14,3,-14,4,-14,4,-14,5,-15,4]
+[0;33mW (32743) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (32743) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (32763) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 13.616 nSec, Avg RSSI: -67[0m
+ftm_frame,0,14063,2107.990
+ftm_frame,1,12501,1873.853
+ftm_frame,2,14063,2107.990
+ftm_frame,3,14063,2107.990
+ftm_frame,4,12501,1873.853
+ftm_frame,5,14063,2107.990
+ftm_frame,6,14063,2107.990
+ftm_data,13,1.950
+csi_data,[0,0,0,14,0,14,0,14,0,14,1,13,1,13,1,13,2,12,2,12,3,12,3,12,4,11,4,12,4,11,4,11,4,12,4,12,4,12,4,12,3,12,3,12,2,12,1,11,1,11,0,10,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,10,0,10,-1,11,-1,12,-2,12,-2,12,-3,12,-3,12,-4,12,-4,12,-4,12,-4,12,-4,12,-4,12,-3,11,-3,12,-3,12,-2,12,-2,12,-1,13,-1,13,-1,13,0,14,0,14,0,14,0,14]
+[0;33mW (33763) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (33763) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (33783) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 3.125 nSec, Avg RSSI: -52[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,1563,234.288
+ftm_frame,2,14063,2107.990
+ftm_frame,3,0,0.000
+ftm_frame,4,1563,234.288
+ftm_frame,5,1563,234.288
+ftm_frame,6,1563,234.288
+ftm_data,3,0.450
+csi_data,[0,0,12,7,12,7,11,6,12,7,11,6,11,6,11,5,11,5,11,4,11,3,11,3,11,3,11,2,11,2,12,2,11,2,12,3,11,2,11,3,11,4,10,4,10,4,10,4,9,5,8,5,8,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,4,10,5,10,6,10,6,10,7,10,8,10,9,9,9,9,9,9,9,9,10,9,9,8,9,8,9,9,8,9,8,9,8,10,8,10,7,10,7,11,7,11,7,12,7,12,7,12,7,12,7]
+[0;33mW (34783) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (34783) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (34803) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 3.795 nSec, Avg RSSI: -57[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,3126,468.576
+ftm_frame,2,1563,234.288
+ftm_frame,3,1563,234.288
+ftm_frame,4,3125,468.426
+ftm_frame,5,1563,234.288
+ftm_frame,6,14063,2107.990
+ftm_data,3,0.450
+csi_data,[0,0,14,2,14,1,13,1,14,1,13,1,12,0,12,0,12,0,12,-1,12,-1,12,-2,11,-2,11,-2,11,-3,12,-2,12,-2,11,-2,12,-2,11,-2,11,-1,11,-1,11,0,10,0,10,0,9,1,9,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,11,0,11,1,12,2,12,2,12,3,12,4,12,4,12,5,12,5,12,5,11,5,11,5,11,5,11,4,12,4,12,3,12,3,12,3,12,2,13,2,13,2,13,2,14,2,14,1,14,2]
+[0;33mW (35803) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (35803) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (35823) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.893 nSec, Avg RSSI: -57[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,1563,234.288
+ftm_frame,3,1563,234.288
+ftm_frame,4,1,0.150
+ftm_frame,5,1563,234.288
+ftm_frame,6,1563,234.288
+ftm_data,0,-1.000
+csi_data,[0,0,-16,1,-15,1,-15,1,-14,1,-15,1,-14,1,-14,2,-13,2,-13,2,-12,3,-12,3,-12,4,-12,4,-12,4,-12,4,-12,4,-12,4,-12,4,-12,3,-12,3,-12,2,-12,2,-11,1,-11,1,-10,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-12,2,-12,1,-13,1,-13,0,-14,0,-15,-1,-15,-2,-14,-2,-14,-3,-14,-3,-14,-3,-14,-3,-14,-3,-14,-3,-14,-2,-14,-2,-14,-2,-14,-1,-14,-1,-14,0,-14,0,-15,0,-15,1,-15,1,-16,1,-16,1]
+[0;33mW (36823) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (36823) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (36843) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 4.464 nSec, Avg RSSI: -57[0m
+ftm_frame,0,3126,468.576
+ftm_frame,1,3125,468.426
+ftm_frame,2,1563,234.288
+ftm_frame,3,15626,2342.278
+ftm_frame,4,1563,234.288
+ftm_frame,5,3126,468.576
+ftm_frame,6,3125,468.426
+ftm_data,4,0.600
+csi_data,[0,0,9,-12,9,-12,9,-12,8,-11,8,-12,7,-11,7,-11,6,-11,6,-11,5,-11,5,-11,5,-12,4,-11,4,-12,4,-11,4,-12,4,-12,5,-11,5,-11,5,-11,5,-10,6,-10,5,-9,5,-8,6,-8,6,-7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,-11,6,-11,7,-11,8,-11,8,-11,9,-11,10,-10,10,-10,11,-9,11,-9,11,-9,11,-9,11,-9,10,-9,10,-9,10,-9,9,-9,9,-10,9,-10,9,-11,9,-11,9,-12,9,-12,9,-12,9,-12,9,-12]
+[0;33mW (37843) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (37843) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (37863) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 2.9 nSec, Avg RSSI: -57[0m
+ftm_frame,0,3126,468.576
+ftm_frame,1,3125,468.426
+ftm_frame,2,1563,234.288
+ftm_frame,3,1563,234.288
+ftm_frame,4,1563,234.288
+ftm_frame,5,1563,234.288
+ftm_frame,6,1563,234.288
+ftm_data,2,0.300
+csi_data,[0,0,-14,-7,-13,-6,-14,-6,-13,-6,-13,-6,-13,-5,-13,-5,-12,-4,-12,-4,-12,-3,-13,-3,-12,-2,-12,-2,-12,-2,-12,-2,-12,-2,-12,-2,-12,-2,-12,-2,-12,-3,-12,-3,-11,-4,-10,-3,-10,-4,-9,-4,-9,-4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-12,-4,-12,-5,-12,-5,-12,-6,-12,-7,-12,-8,-12,-8,-12,-9,-12,-9,-11,-9,-11,-10,-11,-9,-11,-9,-11,-9,-11,-8,-11,-8,-11,-8,-12,-7,-12,-7,-12,-7,-13,-7,-13,-7,-14,-6,-14,-6,-14,-6,-14,-6]
+[0;33mW (38863) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (38863) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (38883) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.223 nSec, Avg RSSI: -58[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,1563,234.288
+ftm_frame,4,0,0.000
+ftm_frame,5,1,0.150
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,5,-14,5,-14,5,-14,5,-13,4,-14,4,-13,3,-13,3,-13,2,-12,2,-12,2,-12,1,-12,1,-13,1,-13,0,-12,0,-13,0,-13,1,-13,1,-12,1,-12,1,-12,2,-11,2,-11,3,-10,3,-10,3,-9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,-12,4,-13,5,-12,6,-12,6,-12,7,-12,8,-12,8,-12,8,-11,9,-11,9,-11,9,-10,9,-11,8,-11,8,-11,7,-11,7,-11,6,-12,7,-12,6,-12,6,-13,6,-13,6,-13,6,-14,6,-14,5,-14]
+[0;33mW (39883) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (39883) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (39913) wifi:FTM session ends with 6 valid readings out of 6 readings received, Avg raw RTT: 2.83 nSec, Avg RSSI: -58[0m
+ftm_frame,0,1,0.150
+ftm_frame,1,0,0.000
+ftm_frame,2,12501,1873.853
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,1,0.150
+ftm_data,2,0.300
+csi_data,[0,0,-1,14,-1,14,-1,13,-1,13,-1,13,0,12,0,12,1,12,1,11,1,11,2,11,2,11,2,11,3,11,3,11,3,11,3,11,3,11,2,11,2,11,2,11,1,11,0,10,0,10,-1,9,-1,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,12,-1,12,-2,12,-2,13,-3,13,-4,13,-4,13,-4,13,-5,12,-5,12,-5,12,-5,12,-5,12,-4,12,-4,12,-3,12,-2,12,-3,12,-2,13,-2,13,-2,13,-1,14,-1,14,-1,14,-1,14]
+[0;33mW (40923) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (40923) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (40943) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.563 nSec, Avg RSSI: -58[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,1,0.150
+ftm_frame,2,10938,1639.565
+ftm_frame,3,1,0.150
+ftm_frame,4,1,0.150
+ftm_frame,5,0,0.000
+ftm_frame,6,1,0.150
+ftm_data,1,0.150
+csi_data,[0,0,0,-15,-1,-15,-1,-15,-1,-14,-1,-14,-1,-14,-2,-13,-2,-13,-3,-12,-3,-12,-4,-12,-4,-12,-4,-11,-5,-12,-4,-12,-5,-12,-4,-12,-4,-12,-4,-12,-3,-12,-3,-12,-2,-11,-2,-11,-2,-11,-1,-10,-1,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-2,-12,-1,-13,-1,-13,0,-14,1,-14,1,-14,2,-14,3,-14,3,-14,3,-14,3,-14,3,-14,3,-13,3,-13,3,-13,2,-13,2,-13,1,-13,1,-14,1,-14,1,-14,0,-15,0,-14,-1,-15,-1,-15,-1,-15]
+[0;33mW (41943) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (41943) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (41963) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.223 nSec, Avg RSSI: -58[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,1,0.150
+ftm_frame,2,0,0.000
+ftm_frame,3,0,0.000
+ftm_frame,4,1563,234.288
+ftm_frame,5,0,0.000
+ftm_frame,6,1563,234.288
+ftm_data,0,-1.000
+csi_data,[0,0,-5,13,-5,14,-5,13,-4,13,-4,13,-4,12,-3,12,-3,12,-2,11,-1,11,-1,11,0,11,0,11,0,11,0,11,0,11,0,12,0,11,-1,11,-1,11,-2,11,-2,11,-2,10,-2,10,-3,9,-3,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-3,11,-4,11,-5,12,-5,11,-6,12,-7,12,-7,12,-8,11,-8,11,-9,11,-8,11,-8,11,-8,11,-8,11,-7,11,-7,11,-7,11,-6,11,-6,12,-6,12,-5,12,-5,13,-5,13,-5,13,-5,14,-5,13]
+[0;33mW (42963) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (42963) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (42983) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.0 nSec, Avg RSSI: -58[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,0,0.000
+ftm_frame,2,1,0.150
+ftm_frame,3,1563,234.288
+ftm_frame,4,0,0.000
+ftm_frame,5,1,0.150
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-6,13,-5,13,-6,13,-5,13,-4,13,-4,12,-4,12,-3,12,-3,11,-2,11,-2,11,-2,11,-2,11,-1,12,-1,11,-1,12,-1,11,-1,12,-2,11,-2,11,-2,11,-3,10,-3,10,-4,9,-4,9,-4,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-3,11,-3,12,-4,11,-5,12,-6,12,-7,12,-7,12,-8,11,-8,11,-8,11,-9,11,-9,10,-8,10,-8,10,-8,11,-7,10,-7,11,-6,11,-6,12,-6,12,-6,12,-6,13,-6,13,-6,13,-6,13,-5,13]
+[0;33mW (43983) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (43983) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (44003) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 2.9 nSec, Avg RSSI: -58[0m
+ftm_frame,0,1,0.150
+ftm_frame,1,12500,1873.703
+ftm_frame,2,1563,234.288
+ftm_frame,3,0,0.000
+ftm_frame,4,0,0.000
+ftm_frame,5,1,0.150
+ftm_frame,6,0,0.000
+ftm_data,2,0.300
+csi_data,[0,0,-15,-2,-15,-2,-15,-1,-15,-1,-14,-1,-14,-1,-13,0,-13,0,-13,0,-12,1,-12,1,-12,2,-12,2,-12,3,-12,2,-12,3,-12,2,-12,2,-12,2,-12,2,-12,1,-12,1,-11,0,-11,0,-10,-1,-10,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-13,0,-13,-1,-13,-2,-13,-2,-14,-3,-14,-4,-14,-5,-14,-5,-14,-5,-13,-5,-14,-6,-13,-6,-13,-6,-13,-5,-13,-5,-13,-4,-14,-4,-13,-3,-14,-3,-14,-3,-14,-2,-14,-2,-15,-2,-15,-1,-15,-2,-15,-2]
+[0;33mW (45003) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (45003) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (45023) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 3.348 nSec, Avg RSSI: -58[0m
+ftm_frame,0,1,0.150
+ftm_frame,1,1,0.150
+ftm_frame,2,12500,1873.703
+ftm_frame,3,10938,1639.565
+ftm_frame,4,0,0.000
+ftm_frame,5,0,0.000
+ftm_frame,6,0,0.000
+ftm_data,3,0.450
+csi_data,[0,0,12,-9,11,-9,11,-9,11,-9,10,-9,10,-9,9,-9,9,-9,8,-9,8,-9,8,-10,7,-10,6,-10,6,-10,6,-10,6,-10,6,-10,7,-10,7,-11,7,-10,7,-9,7,-9,7,-8,7,-7,7,-6,7,-6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,-8,9,-8,10,-8,11,-7,11,-7,12,-6,13,-6,13,-5,13,-5,13,-5,13,-4,13,-4,13,-4,12,-5,12,-5,12,-5,12,-6,11,-6,12,-7,11,-7,11,-8,11,-8,12,-9,11,-9,12,-9,12,-9]
+[0;33mW (46023) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (46023) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (46043) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.786 nSec, Avg RSSI: -58[0m
+ftm_frame,0,1,0.150
+ftm_frame,1,0,0.000
+ftm_frame,2,1,0.150
+ftm_frame,3,12500,1873.703
+ftm_frame,4,1,0.150
+ftm_frame,5,1,0.150
+ftm_frame,6,0,0.000
+ftm_data,1,0.150
+csi_data,[0,0,1,-15,1,-15,1,-15,1,-14,0,-14,0,-14,0,-13,-1,-13,-1,-13,-2,-12,-3,-12,-3,-12,-3,-12,-3,-12,-3,-12,-3,-12,-3,-12,-3,-12,-3,-12,-2,-12,-2,-12,-1,-12,-1,-11,-1,-11,0,-10,0,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-13,1,-13,2,-13,2,-13,3,-14,4,-14,4,-14,5,-13,5,-13,6,-13,5,-13,6,-13,5,-13,5,-13,4,-13,4,-13,4,-13,3,-13,3,-13,3,-14,2,-14,2,-15,2,-14,2,-15,1,-15,1,-15]
+[0;33mW (47043) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (47043) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (47063) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 3.795 nSec, Avg RSSI: -58[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,0,0.000
+ftm_frame,2,0,0.000
+ftm_frame,3,1,0.150
+ftm_frame,4,0,0.000
+ftm_frame,5,25001,3747.555
+ftm_frame,6,0,0.000
+ftm_data,3,0.450
+csi_data,[0,0,-13,-10,-12,-9,-12,-9,-12,-9,-12,-8,-11,-8,-11,-7,-11,-7,-11,-6,-11,-6,-11,-5,-11,-5,-12,-5,-12,-5,-12,-4,-12,-4,-12,-4,-12,-4,-12,-5,-11,-5,-11,-5,-10,-6,-10,-6,-9,-6,-9,-6,-8,-6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,-6,-11,-8,-10,-8,-10,-9,-10,-10,-10,-11,-10,-11,-9,-11,-9,-12,-8,-12,-8,-12,-8,-12,-8,-11,-8,-11,-9,-11,-9,-11,-9,-10,-10,-10,-10,-10,-10,-10,-11,-10,-11,-10,-12,-9,-12,-9,-12,-10,-12,-9]
+[0;33mW (48063) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (48063) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (48083) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 0.223 nSec, Avg RSSI: -58[0m
+ftm_frame,0,0,0.000
+ftm_frame,1,1563,234.288
+ftm_frame,2,1,0.150
+ftm_frame,3,1563,234.288
+ftm_frame,4,1563,234.288
+ftm_frame,5,1,0.150
+ftm_frame,6,0,0.000
+ftm_data,0,-1.000
+csi_data,[0,0,-2,-15,-2,-15,-2,-15,-2,-14,-2,-14,-3,-14,-3,-13,-3,-13,-4,-12,-4,-12,-5,-12,-5,-12,-5,-11,-6,-11,-5,-11,-6,-11,-5,-11,-5,-12,-5,-12,-5,-11,-4,-11,-4,-11,-3,-11,-3,-11,-2,-10,-1,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-3,-12,-2,-13,-1,-13,-1,-14,0,-14,1,-14,1,-14,1,-14,2,-14,3,-14,3,-14,3,-14,3,-14,2,-13,2,-14,2,-13,1,-14,0,-13,0,-14,0,-14,-1,-14,-1,-15,-1,-15,-1,-15,-1,-15,-2,-15]
+[0;33mW (49083) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (49083) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (49103) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 2.9 nSec, Avg RSSI: -58[0m
+ftm_frame,0,1,0.150
+ftm_frame,1,12500,1873.703
+ftm_frame,2,1,0.150
+ftm_frame,3,1563,234.288
+ftm_frame,4,1,0.150
+ftm_frame,5,1,0.150
+ftm_frame,6,1,0.150
+ftm_data,2,0.300
+csi_data,[0,0,-15,3,-14,3,-14,3,-14,3,-14,3,-13,3,-12,3,-12,4,-12,4,-11,4,-11,5,-11,5,-11,5,-10,6,-11,6,-11,6,-11,6,-11,6,-11,5,-11,5,-11,4,-10,4,-10,3,-10,3,-10,2,-10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-12,3,-12,3,-13,2,-14,2,-14,1,-15,0,-15,0,-14,-1,-14,-1,-14,-1,-14,-2,-14,-2,-14,-2,-14,-1,-13,-1,-13,-1,-14,0,-13,0,-14,1,-14,1,-14,2,-14,2,-14,2,-14,2,-15,3,-15,2]
+[0;33mW (50103) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (50103) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (50123) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.786 nSec, Avg RSSI: -57[0m
+ftm_frame,0,3125,468.426
+ftm_frame,1,1,0.150
+ftm_frame,2,1563,234.288
+ftm_frame,3,1563,234.288
+ftm_frame,4,3126,468.576
+ftm_frame,5,1563,234.288
+ftm_frame,6,1563,234.288
+ftm_data,1,0.150
+csi_data,[0,0,12,7,12,7,12,7,12,6,11,6,11,6,11,5,11,4,11,4,11,3,11,3,11,3,11,2,11,2,11,2,11,2,11,2,11,3,11,3,11,3,10,4,10,4,9,4,8,4,8,5,7,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,4,10,5,10,6,10,6,10,7,10,8,10,8,10,9,9,9,9,9,9,9,9,9,8,9,8,9,9,8,9,8,9,8,10,7,10,7,10,7,11,7,11,7,12,7,12,7,12,7,12,7]
+[0;33mW (51123) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (51123) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (51143) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 6.27 nSec, Avg RSSI: -61[0m
+ftm_frame,0,4688,702.714
+ftm_frame,1,6250,936.851
+ftm_frame,2,6250,936.851
+ftm_frame,3,6251,937.001
+ftm_frame,4,6250,936.851
+ftm_frame,5,7813,1171.139
+ftm_frame,6,4688,702.714
+ftm_data,6,0.900
+csi_data,[0,0,-6,-15,-6,-14,-5,-14,-5,-13,-6,-14,-6,-13,-6,-12,-6,-12,-7,-11,-7,-10,-7,-10,-7,-10,-7,-10,-7,-10,-7,-9,-7,-10,-7,-10,-7,-9,-7,-9,-6,-9,-5,-9,-4,-9,-4,-8,-4,-8,-3,-8,-2,-8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-5,-12,-5,-13,-4,-13,-3,-14,-3,-14,-2,-15,-2,-15,-2,-16,-1,-15,-1,-15,-1,-15,-1,-15,-1,-15,-1,-14,-1,-14,-2,-14,-2,-14,-3,-14,-3,-14,-4,-14,-5,-14,-5,-14,-5,-15,-5,-15,-5,-15,-6,-15]
+[0;33mW (52143) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (52143) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (52163) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 8.482 nSec, Avg RSSI: -63[0m
+ftm_frame,0,7813,1171.139
+ftm_frame,1,7813,1171.139
+ftm_frame,2,9376,1405.427
+ftm_frame,3,7813,1171.139
+ftm_frame,4,7813,1171.139
+ftm_frame,5,9375,1405.277
+ftm_frame,6,9375,1405.277
+ftm_data,8,1.200
+csi_data,[0,0,9,11,9,11,9,11,9,11,9,10,9,10,9,9,9,9,9,8,10,8,10,8,10,7,10,7,10,7,10,7,10,7,10,8,10,7,10,8,9,8,9,8,8,9,8,9,7,8,6,9,5,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,7,8,7,9,6,9,6,10,6,10,6,11,5,11,5,12,5,12,5,12,5,11,5,11,5,11,5,11,5,11,5,11,7,11,6,11,7,11,7,11,8,11,9,11,9,11,9,11,10,11]
+[0;33mW (53163) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (53163) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (53183) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 4.464 nSec, Avg RSSI: -57[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,1563,234.288
+ftm_frame,2,12501,1873.853
+ftm_frame,3,1563,234.288
+ftm_frame,4,14063,2107.990
+ftm_frame,5,1,0.150
+ftm_frame,6,0,0.000
+ftm_data,4,0.600
+csi_data,[0,0,-3,-15,-4,-15,-3,-14,-4,-14,-4,-14,-4,-13,-4,-13,-5,-12,-5,-12,-5,-12,-6,-12,-6,-11,-6,-11,-6,-11,-7,-11,-7,-11,-6,-12,-6,-11,-6,-11,-5,-11,-5,-11,-4,-11,-4,-11,-3,-11,-3,-10,-2,-10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-4,-11,-3,-12,-2,-12,-2,-13,-1,-13,-1,-13,0,-14,0,-14,0,-14,1,-14,1,-14,1,-14,1,-13,1,-13,1,-13,0,-13,0,-13,-1,-13,-2,-14,-2,-14,-2,-14,-3,-14,-3,-15,-3,-15,-3,-15,-3,-15]
+[0;33mW (54183) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (54183) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (54203) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.339 nSec, Avg RSSI: -58[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,1563,234.288
+ftm_frame,2,1,0.150
+ftm_frame,3,1563,234.288
+ftm_frame,4,1563,234.288
+ftm_frame,5,3125,468.426
+ftm_frame,6,1,0.150
+ftm_data,1,0.150
+csi_data,[0,0,14,3,13,3,13,3,13,3,13,3,12,2,12,2,12,1,11,1,11,0,11,0,11,-1,11,-1,11,-1,11,-1,11,-1,11,-1,11,-1,11,-1,11,0,10,0,10,0,9,1,9,1,9,2,8,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,1,12,2,11,2,12,3,12,4,13,5,12,5,12,6,12,7,12,6,11,7,11,7,11,6,11,6,11,6,11,6,12,5,12,5,12,5,13,4,12,4,13,4,14,4,14,3,14,4,14,3]
+[0;33mW (55203) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (55203) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (55223) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.116 nSec, Avg RSSI: -58[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,1563,234.288
+ftm_frame,2,1563,234.288
+ftm_frame,3,1,0.150
+ftm_frame,4,0,0.000
+ftm_frame,5,1563,234.288
+ftm_frame,6,1563,234.288
+ftm_data,1,0.150
+csi_data,[0,0,10,11,9,10,9,10,9,10,9,9,9,9,9,8,9,8,9,7,9,6,10,6,9,6,10,6,10,5,10,5,10,5,10,5,10,5,10,5,9,6,9,6,8,6,7,6,7,6,6,6,6,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,7,9,7,8,8,8,9,8,10,8,10,7,11,7,11,7,12,6,12,6,12,6,12,6,11,6,11,6,11,6,11,7,11,7,10,7,10,8,10,8,10,9,10,10,10,9,11,10,11,10,10]
+[0;33mW (56223) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (56223) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (56243) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 3.125 nSec, Avg RSSI: -57[0m
+ftm_frame,0,14063,2107.990
+ftm_frame,1,1563,234.288
+ftm_frame,2,1563,234.288
+ftm_frame,3,1563,234.288
+ftm_frame,4,0,0.000
+ftm_frame,5,1563,234.288
+ftm_frame,6,1563,234.288
+ftm_data,3,0.450
+csi_data,[0,0,15,-2,13,-2,14,-2,13,-2,13,-2,13,-3,12,-3,12,-3,11,-3,11,-4,11,-4,10,-5,10,-5,11,-5,10,-5,11,-5,10,-5,10,-5,10,-5,10,-4,10,-4,10,-3,9,-3,9,-2,9,-2,9,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,-4,11,-3,11,-2,12,-2,12,-1,13,-1,13,0,13,0,13,1,13,1,13,2,13,2,13,1,13,1,13,1,12,1,13,0,13,0,13,-1,13,-1,13,-1,14,-2,14,-2,14,-2,14,-2,15,-2]
+[0;33mW (57243) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (57243) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (57263) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 4.687 nSec, Avg RSSI: -57[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,1,0.150
+ftm_frame,2,12500,1873.703
+ftm_frame,3,1563,234.288
+ftm_frame,4,14063,2107.990
+ftm_frame,5,0,0.000
+ftm_frame,6,3125,468.426
+ftm_data,4,0.600
+csi_data,[0,0,10,11,9,10,9,11,9,10,9,10,9,9,9,8,9,8,9,7,9,7,9,7,9,6,9,6,9,6,10,6,10,6,9,6,9,6,9,6,9,6,8,6,7,6,7,7,6,6,6,6,5,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,7,9,7,8,8,8,9,8,10,8,10,7,11,7,11,7,12,6,12,6,12,6,12,6,12,6,12,6,11,6,11,7,11,7,10,8,11,8,10,9,10,9,10,9,11,10,11,10,11,10,11]
+[0;33mW (58263) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (58263) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (58283) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 3.348 nSec, Avg RSSI: -58[0m
+ftm_frame,0,3125,468.426
+ftm_frame,1,14063,2107.990
+ftm_frame,2,0,0.000
+ftm_frame,3,1563,234.288
+ftm_frame,4,3126,468.576
+ftm_frame,5,1563,234.288
+ftm_frame,6,1,0.150
+ftm_data,3,0.450
+csi_data,[0,0,-8,12,-8,12,-8,12,-8,11,-7,11,-7,11,-6,11,-5,11,-5,11,-5,10,-4,11,-4,11,-4,10,-3,11,-3,11,-3,11,-3,11,-3,11,-3,10,-4,10,-4,10,-4,9,-4,9,-5,8,-5,7,-5,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-5,10,-6,10,-7,10,-8,10,-8,10,-9,10,-10,10,-10,10,-10,9,-11,9,-11,9,-11,9,-11,9,-10,9,-10,9,-10,9,-9,9,-9,10,-9,10,-8,11,-9,11,-8,11,-8,12,-8,12,-9,12,-8,12]
+[0;33mW (59283) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (59283) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (59303) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.563 nSec, Avg RSSI: -57[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,1563,234.288
+ftm_frame,2,1563,234.288
+ftm_frame,3,1563,234.288
+ftm_frame,4,1563,234.288
+ftm_frame,5,1563,234.288
+ftm_frame,6,1563,234.288
+ftm_data,1,0.150
+csi_data,[0,0,12,-8,12,-8,11,-8,11,-8,11,-8,10,-8,10,-8,9,-8,9,-8,8,-8,8,-9,7,-9,7,-9,7,-9,7,-9,7,-9,7,-9,7,-9,7,-9,7,-8,7,-8,7,-7,7,-7,7,-6,7,-5,7,-5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,-8,9,-8,10,-7,10,-7,11,-7,12,-6,12,-6,12,-5,13,-5,13,-4,13,-4,13,-4,12,-4,12,-4,12,-5,12,-5,12,-5,11,-6,12,-6,11,-7,11,-7,12,-8,12,-8,12,-8,12,-8,12,-8]
+[0;33mW (60303) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (60303) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (60323) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 5.580 nSec, Avg RSSI: -57[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,3126,468.576
+ftm_frame,2,14063,2107.990
+ftm_frame,3,3125,468.426
+ftm_frame,4,1563,234.288
+ftm_frame,5,14063,2107.990
+ftm_frame,6,1563,234.288
+ftm_data,5,0.750
+csi_data,[0,0,-14,5,-14,5,-14,5,-13,5,-13,5,-12,5,-12,5,-11,6,-11,5,-10,6,-10,6,-9,6,-9,7,-9,7,-9,7,-9,7,-10,7,-9,7,-9,7,-9,6,-10,6,-9,5,-9,5,-9,4,-9,3,-9,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-11,5,-11,5,-12,4,-13,4,-13,3,-14,3,-14,3,-14,2,-14,2,-14,1,-14,1,-14,1,-14,1,-14,1,-14,2,-13,2,-14,2,-13,3,-14,3,-13,4,-14,4,-14,5,-14,5,-14,5,-14,5,-14,5]
+[0;33mW (61323) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (61323) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (61343) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 2.9 nSec, Avg RSSI: -57[0m
+ftm_frame,0,1,0.150
+ftm_frame,1,1563,234.288
+ftm_frame,2,1563,234.288
+ftm_frame,3,3125,468.426
+ftm_frame,4,3126,468.576
+ftm_frame,5,3126,468.576
+ftm_frame,6,1563,234.288
+ftm_data,2,0.300
+csi_data,[0,0,-12,-10,-11,-11,-11,-10,-11,-10,-11,-9,-11,-9,-10,-8,-11,-8,-10,-7,-11,-6,-11,-6,-10,-6,-11,-6,-11,-5,-11,-5,-11,-5,-11,-5,-11,-6,-11,-6,-10,-6,-10,-6,-9,-6,-9,-6,-8,-6,-7,-6,-7,-6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-10,-6,-10,-7,-10,-8,-10,-9,-10,-10,-10,-11,-9,-11,-9,-11,-9,-12,-8,-12,-8,-12,-8,-12,-8,-12,-8,-12,-8,-11,-8,-11,-9,-11,-9,-11,-10,-11,-10,-10,-10,-10,-11,-11,-11,-10,-11,-10,-11,-10,-11,-10]
+[0;33mW (62343) wifi:Starting FTM session with 24:ec:4a:03:58:5d[0m
+[0;33mW (62343) wifi:Mode: ASAP, Bursts: 1, FTM's per burst: 8, Burst Period: 200mSec, Burst Duration: 32000uSec[0m
+[0;33mW (62363) wifi:FTM session ends with 7 valid readings out of 7 readings received, Avg raw RTT: 1.786 nSec, Avg RSSI: -57[0m
+ftm_frame,0,1563,234.288
+ftm_frame,1,1563,234.288
+ftm_frame,2,1563,234.288
+ftm_frame,3,3125,468.426
+ftm_frame,4,1563,234.288
+ftm_frame,5,1563,234.288
+ftm_frame,6,1563,234.288
+ftm_data,1,0.150
+csi_data,[0,0,14,-1,13,-2,14,-2,13,-1,13,-2,13,-2,12,-2,12,-3,11,-3,11,-3,11,-4,10,-4,10,-5,11,-5,10,-5,10,-5,10,-4,10,-5,10,-4,10,-4,10,-3,9,-3,9,-2,9,-2,8,-1,8,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,-3,11,-3,12,-2,12,-1,12,-1,14,0,13,1,13,1,13,2,13,2,13,2,13,2,13,2,13,2,13,1,12,1,13,1,12,0,13,0,13,0,13,-1,14,-1,14,-1,14,-2,14,-2,15,-2]

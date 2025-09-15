@@ -1,0 +1,64 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4200805c: uart_write at C:/Users/14731/esp/v5.4/esp-idf/components/esp_driver_uart/src/uart_vfs.c:214
+[0m
+[0;33m--- 0x40057071: memmove in ROM
+[0m
+[0;33m--- 0x400556d5: strlen in ROM
+0x400556e5: strlen in ROM
+[0m
+[0;33m--- 0x4005706e: memmove in ROM
+0x4206f25d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:229
+0x420765df: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x42075fa9: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1766 (discriminator 1)
+0x4206f899: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42084502: esp_log_writev at C:/Users/14731/esp/v5.4/esp-idf/components/log/src/os/log_write.c:34
+0x42026255: wifi_log at ??:?
+0x4203cfe8: pm_start at ??:?
+0x420280da: cnx_sta_pm at ??:?
+0x420291be: cnx_auth_done at ??:?
+0x4202c353: esp_wifi_auth_done_internal at ??:?
+0x42059c6b: wpa_neg_complete at C:/Users/14731/esp/v5.4/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa_main.c:133
+0x4206351d: wpa_supplicant_key_neg_complete at C:/Users/14731/esp/v5.4/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c:841
+0x420641e5: wpa_supplicant_send_4_of_4_txcallback at C:/Users/14731/esp/v5.4/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c:1417
+0x4206435b: eapol_txcb at C:/Users/14731/esp/v5.4/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c:2668
+0x42033cab: sta_eapol_txdone_cb at ??:?
+0x4003f58a: ppProcTxCallback in ROM
+0x4003b1ff: lmacTxDone in ROM
+0x4003b0d5: lmacRecycleMPDU in ROM
+0x40385855: lmacEndFrameExchangeSequence at ??:?
+0x4207fcbe: lmacProcessTxSuccess at ??:?
+0x4207fd8e: lmacProcessTxComplete at ??:?
+0x403852d5: ppTask at ??:?
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x403743c0: _DoubleExceptionVector at C:/Users/14731/esp/v5.4/esp-idf/components/xtensa/xtensa_vectors.S:564
+[0m
+[0;33m--- 0x403743bd: _UserExceptionVector at ??:?
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x403743c0: _DoubleExceptionVector at C:/Users/14731/esp/v5.4/esp-idf/components/xtensa/xtensa_vectors.S:564
+[0m
+[0;33m--- 0x403743bd: _UserExceptionVector at ??:?
+[0m
+[0;33m--- 0x40057065: memmove in ROM
+[0m
+[0;33m--- 0x4037fe64: xTaskIncrementTickOtherCores at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/esp_additions/freertos_tasks_c_additions.h:108
+[0m
+[0;33m--- 0x4037fe61: xTaskIncrementTickOtherCores at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/esp_additions/freertos_tasks_c_additions.h:108
+0x4037d9a9: xPortSysTickHandler at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/port_systick.c:226
+0x4037da21: SysTickIsrHandler at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/port_systick.c:148
+0x403776b5: _xt_lowint1 at C:/Users/14731/esp/v5.4/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4037ac0f: xt_utils_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/xtensa/include/xt_utils.h:82
+ (inlined by) esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:55
+0x42003192: esp_vApplicationIdleHook at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/freertos_hooks.c:58
+0x4037e335: prvIdleTask at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4353 (discriminator 1)
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40057071: memmove in ROM
+[0m
+[0m

@@ -5,7 +5,7 @@ from datetime import datetime
 
 SERIAL_PORT = 'COM4'
 BAUD_RATE = 115200
-CSV_FILE = '../../DL/data/ftm_data.csv'
+CSV_FILE = 'ftm_data_5.0m.csv'
 
 pattern = re.compile(
     r'FTM Data: Raw RTT = (\d+) nSec, Est RTT = (\d+) nSec, Distance = (\d+)\.(\d{2}) meters'

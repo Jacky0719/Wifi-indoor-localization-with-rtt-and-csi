@@ -1,0 +1,5 @@
+[1/8] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\14731\Desktop\Capstone\Wifi-indoor-localization-with-rtt-and-csi\initiator\build\bootloader\esp-idf\esptool_py && C:\Users\14731\.espressif\python_env\idf5.4_py3.12_env\Scripts\python.exe C:/Users/14731/esp/v5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5210 bytes. 0x2df0 bytes (36%) free.
+[2/8] No install step for 'bootloader'
+[3/8] Completed 'bootloader'

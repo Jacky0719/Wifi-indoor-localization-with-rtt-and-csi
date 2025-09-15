@@ -1,0 +1,525 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4037ac12: esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375c01: panic_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/panic.c:454
+0x4037c675: esp_system_abort at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40384739: abort at C:/Users/14731/esp/v5.4/esp-idf/components/newlib/abort.c:38
+0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+0x4200aa25: measure_task at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:357
+0x4037d10d: vPortTaskWrapper at C:/Users/14731/esp/v5.4/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200a708: assoc_to_anchor at C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/main/initiator.c:152 (discriminator 1)
+[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- 0x40375b40: esp_restart_noos at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0;33m--- Warning: Writing to serial is timing out. Please make sure that your application supports an interactive console and that you have picked the correct console for serial communication.[0m
+[0;33m--- 0x4037c66b: _esp_error_check_failed at C:/Users/14731/esp/v5.4/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "C:\Users\14731\esp\v5.4\esp-idf\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\subprocess.py", line 1201, in communicate
+    self.wait()
+  File "C:\Python312\Lib\subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\subprocess.py", line 1590, in _wait
+    result = _winapi.WaitForSingleObject(self._handle,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
