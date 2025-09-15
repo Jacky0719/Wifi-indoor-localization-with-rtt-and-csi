@@ -1,0 +1,80 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\14731\Desktop\Capstone\Wifi-indoor-localization-with-rtt-and-csi\initiator\build\bootloader\esp-idf\esptool_py && C:\Users\14731\.espressif\python_env\idf5.4_py3.12_env\Scripts\python.exe C:/Users/14731/esp/v5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5210 bytes. 0x2df0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/initiator.c.obj
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable initiator.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/initiator.bin
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\14731\Desktop\Capstone\Wifi-indoor-localization-with-rtt-and-csi\initiator\build\esp-idf\esptool_py && C:\Users\14731\.espressif\python_env\idf5.4_py3.12_env\Scripts\python.exe C:/Users/14731/esp/v5.4/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/partition_table/partition-table.bin C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/build/initiator.bin"
+initiator.bin binary size 0xbaac0 bytes. Smallest app partition is 0x100000 bytes. 0x45540 bytes (27%) free.
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\14731\esp\v5.4\esp-idf\components\esptool_py && C:\Users\14731\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/14731/esp/v5.4/esp-idf -D SERIAL_TOOL=C:/Users/14731/.espressif/python_env/idf5.4_py3.12_env/Scripts/python.exe;;C:/Users/14731/esp/v5.4/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/build -P C:/Users/14731/esp/v5.4/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 initiator.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM4
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 24:ec:4a:04:74:58
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000cafff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21008 bytes to 13378...
+Writing at 0x00000000... (100 %)
+Wrote 21008 bytes (13378 compressed) at 0x00000000 in 0.3 seconds (effective 489.3 kbit/s)...
+Hash of data verified.
+Compressed 764608 bytes to 480004...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c761... (6 %)
+Writing at 0x00025885... (10 %)
+Writing at 0x000309f5... (13 %)
+Writing at 0x00036e30... (16 %)
+Writing at 0x0003d1e3... (20 %)
+Writing at 0x00042f48... (23 %)
+Writing at 0x000488a0... (26 %)
+Writing at 0x0004e42f... (30 %)
+Writing at 0x0005420a... (33 %)
+Writing at 0x0005a1d5... (36 %)
+Writing at 0x0005fdf9... (40 %)
+Writing at 0x00065877... (43 %)
+Writing at 0x0006a746... (46 %)
+Writing at 0x0006f9be... (50 %)
+Writing at 0x00074c80... (53 %)
+Writing at 0x0007a00a... (56 %)
+Writing at 0x0007f0b3... (60 %)
+Writing at 0x0008431f... (63 %)
+Writing at 0x0008a03a... (66 %)
+Writing at 0x0008f7df... (70 %)
+Writing at 0x00095585... (73 %)
+Writing at 0x0009b223... (76 %)
+Writing at 0x000a049c... (80 %)
+Writing at 0x000aa3c5... (83 %)
+Writing at 0x000b14ad... (86 %)
+Writing at 0x000b7235... (90 %)
+Writing at 0x000bd2eb... (93 %)
+Writing at 0x000c399d... (96 %)
+Writing at 0x000c899b... (100 %)
+Wrote 764608 bytes (480004 compressed) at 0x00010000 in 5.6 seconds (effective 1099.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 550.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -1,0 +1,10 @@
+Note: C:/Users/14731/.espressif/python_env/idf5.4_py3.12_env/Scripts/python.exe;-m;esp_idf_monitor will search for a serial port. To specify a port, set the ESPPORT environment variable.
+Note: C:/Users/14731/.espressif/python_env/idf5.4_py3.12_env/Scripts/python.exe;-m;esp_idf_monitor will attempt to set baud rate automatically. To specify a baud rate, set the ESPBAUD environment variable.
+--- Using autodetected port COM4
+--- Warning: GDB cannot open serial ports accessed as COMx
+--- Using \\.\COM4 instead...
+--- esp-idf-monitor 1.5.0 on \\.\COM4 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x4037ac12: esp_cpu_wait_for_intr at C:/Users/14731/esp/v5.4/esp-idf/components/esp_hw_support/cpu.c:64
+
+
