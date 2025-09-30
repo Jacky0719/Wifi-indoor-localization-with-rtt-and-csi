@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "initiator",
-    "project_version":    "75e1e0a9-dirty",
+    "project_version":    "c92a423b-dirty",
     "project_path":       "C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator",
     "idf_path":           "C:/Users/14731/esp/v5.4/esp-idf",
     "build_dir":          "C:/Users/14731/Desktop/Capstone/Wifi-indoor-localization-with-rtt-and-csi/initiator/build",

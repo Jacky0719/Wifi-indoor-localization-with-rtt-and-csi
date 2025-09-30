@@ -54,8 +54,8 @@ typedef struct {
 } anchor_t;
 
 static anchor_t g_anchors[] = {
-        { "A1", {0x24,0xEC,0x4A,0x03,0x58,0x5D}, 1, -1.0f },
-        { "A2", {0x24,0xEC,0x4A,0x04,0x39,0x15}, 6, -1.0f },
+        //{ "A1", {0x24,0xEC,0x4A,0x03,0x58,0x5D}, 1, -1.0f },
+        //{ "A2", {0x24,0xEC,0x4A,0x04,0x39,0x15}, 6, -1.0f },
         { "A3", {0x24,0xEC,0x4A,0x03,0x56,0x41}, 11, -1.0f }
         // TODO: 若有真值距离，改成正数（例如 3.60f）
         // 后续你可以在这里继续追加：{ "A2", {..}, ch, gt }
@@ -94,9 +94,99 @@ static volatile int     s_curr_anchor_idx = 0;
 typedef struct {
     uint16_t len;
     int8_t   data[128];
-    uint8_t  anchor_idx;   // 该帧归属的锚点（由 ISR 按快照写入）
+    uint8_t  anchor_idx;
+    int8_t   rssi;
 } csi_item_t;
+
+static inline bool keep_sc(int k){
+    // 20 MHz, HT-LTF: keep ±1..±28；若想用 LLTF 改成 ±1..±26
+    if (k >= -28 && k <= -1) return true;
+    if (k >=  +1 && k <= +28) return true;
+    return false;
+}
+
+static inline bool is_pilot_k(int k) {
+    // 802.11n HT-LTF pilots (20 MHz): k = ±7, ±21
+    return (k == -21 || k == -7 || k == 7 || k == 21);
+}
+
+static void detrend_phase(float *y, const float *x, int n){
+    double Sx=0,Sy=0,Sxx=0,Sxy=0;
+    for(int i=0;i<n;++i){ double xi=x[i], yi=y[i]; Sx+=xi; Sy+=yi; Sxx+=xi*xi; Sxy+=xi*yi; }
+    double den = n*Sxx - Sx*Sx;
+    double a = (den!=0) ? (n*Sxy - Sx*Sy)/den : 0.0;
+    double b = (Sy - a*Sx)/n;
+    double m=0;
+    for(int i=0;i<n;++i){ y[i] = (float)(y[i] - (a*x[i] + b)); m += y[i]; }
+    m /= n;
+    for(int i=0;i<n;++i) y[i] -= (float)m;
+}
+
 static QueueHandle_t s_csi_q;
+
+static void print_csi_features_from_iq(const int8_t *iq, int nbytes,
+                                       int rssi_dbm, const char *aname)
+{
+    if (!iq || nbytes < 4) return;
+    const int nbin = nbytes / 2; // 期望 64 (I,Q 交错)
+    float mag[64], ph[64], xk[64];
+    int   keep = 0;
+
+    // 先构建所有“保留子载波”的幅度/相位/索引
+    // 同时收集导频相位用于估计 phi0（圆均值）
+    double csum = 0.0, ssum = 0.0;
+    int pilot_cnt = 0;
+
+    for (int i = 0; i < nbin; ++i) {
+        int k = i - 32;                 // map to [-32..+31], 0 为 DC
+        if (k == 0) continue;
+        if (!keep_sc(k)) continue;
+
+        float I = (float)iq[2*i + 0];
+        float Q = (float)iq[2*i + 1];
+
+        mag[keep] = sqrtf(I*I + Q*Q);
+        ph[keep]  = atan2f(Q, I);       // 原始相位（未展开）
+        xk[keep]  = (float)k;
+
+        if (is_pilot_k(k)) {
+            csum += cos((double)ph[keep]);
+            ssum += sin((double)ph[keep]);
+            pilot_cnt++;
+        }
+        keep++;
+    }
+    if (keep <= 0) return;
+
+    // 用导频做“全局相位补偿” (公共相位偏移)
+    if (pilot_cnt >= 2) {
+        float phi0 = (float)atan2(ssum, csum);   // 圆均值相位
+        for (int i = 0; i < keep; ++i) {
+            ph[i] -= phi0;
+            // 规约到 [-pi, pi]
+            if (ph[i] >  (float)M_PI)  ph[i] -= 2.0f*(float)M_PI;
+            if (ph[i] < -(float)M_PI)  ph[i] += 2.0f*(float)M_PI;
+        }
+    }
+
+    // 对补偿后的相位做 unwrap（保持与子载波顺序一致）
+    for (int i = 1; i < keep; ++i) {
+        float d = ph[i] - ph[i-1];
+        if (d >  (float)M_PI)  ph[i] -= 2.0f*(float)M_PI;
+        if (d < -(float)M_PI)  ph[i] += 2.0f*(float)M_PI;
+    }
+
+    // 去趋势 + 去均值（消除线性斜率与整体偏置）
+    detrend_phase(ph, xk, keep);
+
+    // 只打印一次“分析行”
+    printf("csi_feat,%s,rssi=%d,mag=[", aname, rssi_dbm);
+    for (int i = 0; i < keep; ++i) { if (i) putchar(','); printf("%.3f", mag[i]); }
+    fputs("],phi=[", stdout);
+    for (int i = 0; i < keep; ++i) { if (i) putchar(','); printf("%.4f", ph[i]); }
+    fputs("]\n", stdout);
+}
+
 
 // —— CSI 一次性打印门控 ——
 static volatile bool     g_csi_print_armed   = false;   // 是否武装“下一次只打一次”
@@ -423,6 +513,7 @@ static void csi_rx_cb(void *ctx, wifi_csi_info_t *info) {
     it.len = (info->len > 128) ? 128 : info->len;
     for (int i = 0; i < it.len; ++i) it.data[i] = ((const int8_t*)info->buf)[i];
     it.anchor_idx = (uint8_t)s_curr_anchor_idx;
+    it.rssi = (int8_t)info->rx_ctrl.rssi;
 
     (void)xQueueOverwriteFromISR(s_csi_q, &it, NULL);  // ★ 只保留最新
 }
@@ -568,35 +659,30 @@ static esp_err_t do_ftm_once_and_print_frames(void) {
 
 // ===== CSI logger task: print ~1Hz (take latest only) =====
 static void csi_logger_task(void *arg) {
-    const TickType_t poll = pdMS_TO_TICKS(20); // 快速轮询即可；不固定1Hz了
+    const TickType_t poll = pdMS_TO_TICKS(20); // 快速轮询即可
     csi_item_t it;
 
     for (;;) {
-        // 只在已武装时关心队列；否则清空丢弃，避免积压
         if (g_csi_print_armed) {
-            // 拿到“最新一帧”（把旧帧都读掉）
-            bool have = false; csi_item_t last;
+            bool have = false;
+            csi_item_t last;
             while (xQueueReceive(s_csi_q, &it, 0) == pdTRUE) { last = it; have = true; }
 
             if (have) {
                 uint64_t now = esp_timer_get_time();
                 if (now >= g_csi_earliest_us && last.anchor_idx == g_csi_expected_idx) {
-                    // 满足窗口与锚点匹配 → 打印一次并解除武装
-                    fputs("csi_data,", stdout);
-                    fputs(g_anchors[last.anchor_idx].name, stdout);
-                    putchar_unlocked(','); putchar_unlocked('[');
-                    for (int i = 0; i < last.len; ++i) {
-                        if (i) putchar_unlocked(',');
-                        printf("%d", (int)last.data[i]);
-                    }
-                    putchar_unlocked(']'); putchar_unlocked('\n');
-                    fflush(stdout);
-
-                    g_csi_print_armed = false; // 只打一次
+                    // 只打印“特征行”，不再打印原始 csi_data
+                    print_csi_features_from_iq(
+                            last.data,
+                            last.len,
+                            last.rssi,
+                            g_anchors[last.anchor_idx].name
+                    );
+                    g_csi_print_armed = false; // 打一次就解除武装
                 }
             }
         } else {
-            // 未武装：把可能残留的旧帧都读掉丢弃
+            // 未武装：清空队列，避免积压
             while (xQueueReceive(s_csi_q, &it, 0) == pdTRUE) { /* drop */ }
         }
 

@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Read FTM/CSI from serial (or stdin), pair each FTM with the first following CSI,
-and write one-row-per-pair into CSV.
-
-Outputs:
-  - dist_est_m
-  - rssi_mean_dbm, rssi_min_dbm
-  - RTT robust features: min, k2, median, p10, p25, p75, iqr, mad, mean_trim, std, valid_ratio
-  - csi_data_json
-"""
 
 import re
 import csv
@@ -17,69 +7,38 @@ import json
 import sys
 import time
 import argparse
-import numpy as np
+import os
 
 try:
-    import serial  # pyserial
+    import serial
 except ImportError:
     serial = None
 
-# ------------------ parsing patterns ------------------
-RE_FTM_REPORT = re.compile(r'^ftm_report,([^,]+),(\d+),(\d+),([0-9.]+)\s*$', re.I)
-RE_FTM_FRAME  = re.compile(r'^ftm_frame,([^,]+),idx=(\d+),dtoken=(\d+),rssi=(-?\d+),rtt_ps=(\d+)\s*$', re.I)
-RE_CSI        = re.compile(r'^csi_data,([^,]+),\[(.*)\]\s*$', re.I)
-RE_ANCHOR     = re.compile(r'^anchor,([^,]+),([0-9a-f:]+),ch=(\d+)\s*$', re.I)  # 可忽略，不写 CSV
+# ---------- Regex ----------
+RE_ANCHOR      = re.compile(r'^anchor,([^,]+),([0-9a-f:]+),ch=(\d+)\s*$', re.I)
+RE_FTM_REPORT  = re.compile(r'^ftm_report,([^,]+),(\d+),(\d+),([0-9.]+)\s*$', re.I)
 
-def parse_csi_payload(payload: str):
-    """payload like '0,0,11,-10,...' -> list[int]"""
-    if not payload:
+RE_FTM_FEATS   = re.compile(
+    r'^ftm_feats,([^,]+),'
+    r'rtt_ps_min=([0-9.]+),k2=([0-9.]+),median=([0-9.]+),p10=([0-9.]+),p25=([0-9.]+),p75=([0-9.]+),'
+    r'iqr=([0-9.]+),mad=([0-9.]+),mean_trim=([0-9.]+),std=([0-9.]+),valid_ratio=([0-9.]+),'
+    r'rssi_mean=([-0-9.]+),rssi_min=([-0-9.]+)(?:,rssi_std=([-0-9.]+))?(?:,\[(.*)\])?\s*$',
+    re.I
+)
+
+RE_CSI_FEAT    = re.compile(
+    r'^csi_feat,([^,]+),rssi=(-?\d+),mag=\[(.*)\],phi=\[(.*)\]\s*$',
+    re.I
+)
+
+RE_META_FROM_OUT = re.compile(r'.*_(?P<dist>[0-9]+(?:\.[0-9]+)?)m_(?P<cond>LOS|NLOS)\.csv$', re.I)
+
+# ---------- Helpers ----------
+def parse_float_list(s: str):
+    s = s.strip()
+    if not s:
         return []
-    vals = []
-    for t in payload.split(','):
-        t = t.strip()
-        if not t:
-            continue
-        try:
-            vals.append(int(t))
-        except ValueError:
-            pass
-    return vals
-
-# ------------------ robust RTT features ------------------
-def robust_feats_from_rtts(rtts):
-    # rtts: list[float] (length m, variable)
-    x = np.sort(np.array(rtts, dtype=np.float64))
-    m = len(x)
-    if m == 0:
-        # 全 NaN 行，仍给定长度一致的输出（用 NaN/0）
-        return {
-            "rtt_min": np.nan, "rtt_k2": np.nan, "rtt_median": np.nan,
-            "rtt_p10": np.nan, "rtt_p25": np.nan, "rtt_p75": np.nan,
-            "rtt_iqr": np.nan, "rtt_mad": np.nan,
-            "rtt_mean_trim": np.nan, "rtt_std": np.nan,
-            "rtt_valid_ratio": 0.0
-        }
-
-    def q(p):  # linear interpolated quantile
-        idx = p * (m - 1)
-        lo, hi = int(np.floor(idx)), int(np.ceil(idx))
-        w = idx - lo
-        return (1 - w) * x[lo] + w * x[hi]
-
-    feats = {
-        "rtt_min": x[0],
-        "rtt_k2": x[1] if m >= 2 else x[0],
-        "rtt_median": q(0.5),
-        "rtt_p10": q(0.1),
-        "rtt_p25": q(0.25),
-        "rtt_p75": q(0.75),
-        "rtt_iqr": q(0.75) - q(0.25),
-        "rtt_mad": np.median(np.abs(x - q(0.5))),
-        "rtt_mean_trim": x[int(0.1 * m): int(0.9 * m)].mean() if m >= 10 else x.mean(),
-        "rtt_std": x.std(ddof=0),  # population std
-        "rtt_valid_ratio": float(m) / 15.0,  # 期望 burst=15 时
-    }
-    return feats
+    return [float(p) for p in s.split(',') if p.strip()]
 
 def open_serial(port, baud):
     if serial is None:
@@ -97,31 +56,47 @@ def write_header_if_needed(csv_path, fieldnames):
     with open(csv_path, 'w', newline='', encoding='utf-8') as f:
         csv.DictWriter(f, fieldnames=fieldnames).writeheader()
 
+def parse_meta_from_out_path(out_path):
+    base = os.path.basename(out_path)
+    m = RE_META_FROM_OUT.match(base)
+    if not m:
+        return None, None
+    return float(m.group('dist')), m.group('cond').upper()
+
+# ---------- Main ----------
 def main():
-    ap = argparse.ArgumentParser(description="FTM+CSI -> CSV (robust RTT feats, RSSI mean/min)")
-    ap.add_argument("--port", default="COM4", help="Serial port, e.g. COM5 or /dev/ttyUSB0")
+    ap = argparse.ArgumentParser(description="Pair FTM feats + CSI feats into CSV rows")
+    ap.add_argument("--port", default="COM4", help="Serial port")
     ap.add_argument("--baud", type=int, default=921600, help="Baud rate")
-    ap.add_argument("--out",  default="ftm_csi_feats.csv", help="Output CSV path")
-    ap.add_argument("--echo", action="store_true", help="Echo raw lines")
-    ap.add_argument("--stdin", action="store_true", help="Read from stdin (testing)")
-    ap.add_argument("--limit-frames", type=int, default=0,
-                    help="If >0, only use the first N frames per FTM for features (e.g., 16)")
+    ap.add_argument("--out",  default="ftm_csi_feats_0.0m_LOS.csv", help="Output CSV path")
+    ap.add_argument("--echo", action="store_true")
+    ap.add_argument("--stdin", action="store_true")
+    ap.add_argument("--max", type=int, default=None, help="Maximum number of rows to write before exit")
     args = ap.parse_args()
+
+    gt_dist_m, cond = parse_meta_from_out_path(args.out)
+    if gt_dist_m is None:
+        print(f"[WARN] Output filename does not match '<dist>m_<LOS|NLOS>': {args.out}", file=sys.stderr)
 
     fieldnames = [
         "dist_est_m",
-        "rssi_mean_dbm", "rssi_min_dbm",
-        "rtt_min", "rtt_k2", "rtt_median",
-        "rtt_p10", "rtt_p25", "rtt_p75", "rtt_iqr",
-        "rtt_mad", "rtt_mean_trim", "rtt_std", "rtt_valid_ratio",
-        "csi_data_json",
+        "gt_dist_m", "cond",
+        "rtt_min","rtt_k2","rtt_median",
+        "rtt_p10","rtt_p25","rtt_p75","rtt_iqr",
+        "rtt_mad","rtt_mean_trim","rtt_std","rtt_valid_ratio",
+        "ftm_rssi_mean_dbm","ftm_rssi_min_dbm","ftm_rssi_std_dbm",
+        "csi_rssi_dbm",
+        "csi_mag_json","csi_phi_json",
+        "ftm_rtt_list_json",
     ]
     write_header_if_needed(args.out, fieldnames)
 
-    # 当前等待 CSI 配对的 FTM 块
-    current = None  # {anchor, dist_est_m, frames_rtt_ps[], frames_rssi[]}
+    rows = {}
+    written_count = 0
+    dropped_count = 0
+    parsed_line_count = 0
+    last_progress_print = time.monotonic()
 
-    # IO
     if args.stdin:
         f_in = sys.stdin
         ser = None
@@ -132,12 +107,66 @@ def main():
     out_f = open(args.out, 'a', newline='', encoding='utf-8')
     writer = csv.DictWriter(out_f, fieldnames=fieldnames)
 
+    def new_state():
+        return {"dist": None, "ftm": None, "csi": None, "t": time.monotonic()}
+
+    def ensure_row(key):
+        if key not in rows:
+            rows[key] = new_state()
+        return rows[key]
+
+    def try_flush(key):
+        nonlocal written_count
+        st = rows.get(key)
+        if not st or st["dist"] is None or st["ftm"] is None or st["csi"] is None:
+            return
+        writer.writerow({
+            "dist_est_m": st["dist"],
+            "gt_dist_m": gt_dist_m,
+            "cond": cond,
+            "rtt_min": st["ftm"]["rtt_min"],
+            "rtt_k2": st["ftm"]["rtt_k2"],
+            "rtt_median": st["ftm"]["rtt_median"],
+            "rtt_p10": st["ftm"]["rtt_p10"],
+            "rtt_p25": st["ftm"]["rtt_p25"],
+            "rtt_p75": st["ftm"]["rtt_p75"],
+            "rtt_iqr": st["ftm"]["rtt_iqr"],
+            "rtt_mad": st["ftm"]["rtt_mad"],
+            "rtt_mean_trim": st["ftm"]["rtt_mean_trim"],
+            "rtt_std": st["ftm"]["rtt_std"],
+            "rtt_valid_ratio": st["ftm"]["rtt_valid_ratio"],
+            "ftm_rssi_mean_dbm": st["ftm"]["rssi_mean"],
+            "ftm_rssi_min_dbm": st["ftm"]["rssi_min"],
+            "ftm_rssi_std_dbm": st["ftm"].get("rssi_std"),
+            "csi_rssi_dbm": st["csi"]["rssi"],
+            "csi_mag_json": json.dumps(st["csi"]["mag"], ensure_ascii=False),
+            "csi_phi_json": json.dumps(st["csi"]["phi"], ensure_ascii=False),
+            "ftm_rtt_list_json": json.dumps(st["ftm"].get("rtt_list", []), ensure_ascii=False),
+        })
+        out_f.flush()
+        written_count += 1
+        print(written_count)
+        rows[key] = new_state()
+        if args.max is not None and written_count >= args.max:
+            print(f"[INFO] Reached max rows ({args.max}), exiting...", file=sys.stderr)
+            raise KeyboardInterrupt
+
+    TIMEOUT_S = 1.0
+    def drop_stale():
+        nonlocal dropped_count
+        now = time.monotonic()
+        for k, st in list(rows.items()):
+            has_any = (st["dist"] is not None) or (st["ftm"] is not None) or (st["csi"] is not None)
+            if has_any and (now - st["t"]) > TIMEOUT_S:
+                dropped_count += 1
+                rows[k] = new_state()
+
     try:
         while True:
-            # 读一行
             if ser:
                 bs = ser.readline()
                 if not bs:
+                    drop_stale()
                     time.sleep(0.01)
                     continue
                 line = bs.decode('utf-8', errors='ignore').strip()
@@ -147,86 +176,67 @@ def main():
                     break
                 line = line.strip()
 
+            parsed_line_count += 1
             if args.echo:
                 print(line)
 
-            # 解析
+            drop_stale()
+
             if RE_ANCHOR.match(line):
-                # 忽略 anchor；不写 CSV
                 continue
 
             m = RE_FTM_REPORT.match(line)
             if m:
-                # 新 FTM；如果上一条还没等到 CSI，按你的规则丢弃
-                current = {
-                    "anchor": m.group(1),  # 只用于匹配，不写 CSV
-                    "dist_est_m": float(m.group(4)),
-                    "frames_rtt_ps": [],
-                    "frames_rssi": [],
+                key = m.group(1)
+                st = ensure_row(key)
+                st["dist"] = float(m.group(4))
+                st["t"] = time.monotonic()
+                try_flush(key)
+                continue
+
+            m = RE_FTM_FEATS.match(line)
+            if m:
+                key = m.group(1)
+                st = ensure_row(key)
+                vals = {
+                    "rtt_min": float(m.group(2)), "rtt_k2": float(m.group(3)),
+                    "rtt_median": float(m.group(4)), "rtt_p10": float(m.group(5)),
+                    "rtt_p25": float(m.group(6)), "rtt_p75": float(m.group(7)),
+                    "rtt_iqr": float(m.group(8)), "rtt_mad": float(m.group(9)),
+                    "rtt_mean_trim": float(m.group(10)), "rtt_std": float(m.group(11)),
+                    "rtt_valid_ratio": float(m.group(12)),
+                    "rssi_mean": float(m.group(13)), "rssi_min": float(m.group(14)),
                 }
+                rssi_std = m.group(15)
+                if rssi_std:
+                    vals["rssi_std"] = float(rssi_std)
+                rtt_list_raw = m.group(16)
+                if rtt_list_raw:
+                    vals["rtt_list"] = [int(x) for x in rtt_list_raw.split(',') if x.strip()]
+                st["ftm"] = vals
+                st["t"] = time.monotonic()
+                try_flush(key)
                 continue
 
-            m = RE_FTM_FRAME.match(line)
-            if m and current and m.group(1) == current["anchor"]:
-                # 收集逐帧 RTT/RSSI
-                rtt_ps = int(m.group(5))
-                rssi   = int(m.group(4))
-                current["frames_rtt_ps"].append(float(rtt_ps))
-                current["frames_rssi"].append(float(rssi))
-                continue
-
-            m = RE_CSI.match(line)
-            if m and current and m.group(1) == current["anchor"]:
-                # 配对成功：生成一行
-                if args.limit_frames:
-                    current["frames_rtt_ps"] = current["frames_rtt_ps"][:args.limit_frames]
-                    current["frames_rssi"]   = current["frames_rssi"][:args.limit_frames]
-
-
-                # RSSI 聚合（只要 mean/min）
-                rssi_vals = current["frames_rssi"]
-                rssi_mean = float(np.mean(rssi_vals)) if rssi_vals else np.nan
-                rssi_min  = float(np.min(rssi_vals))  if rssi_vals else np.nan
-
-                # RTT 鲁棒特征
-                feats = robust_feats_from_rtts(current["frames_rtt_ps"])
-
-                # CSI
-                csi_vals = parse_csi_payload(m.group(2))
-                row = {
-                    "dist_est_m": current["dist_est_m"],
-                    "rssi_mean_dbm": rssi_mean,
-                    "rssi_min_dbm": rssi_min,
-                    **feats,
-                    "csi_data_json": json.dumps(csi_vals, ensure_ascii=False),
+            m = RE_CSI_FEAT.match(line)
+            if m:
+                key = m.group(1)
+                st = ensure_row(key)
+                st["csi"] = {
+                    "rssi": int(m.group(2)),
+                    "mag": parse_float_list(m.group(3)),
+                    "phi": parse_float_list(m.group(4)),
                 }
-                writer.writerow(row)
-                out_f.flush()
-
-                # 清空，等待下一条 FTM
-                current = None
+                st["t"] = time.monotonic()
+                try_flush(key)
                 continue
-
-            # 其他行忽略
     except KeyboardInterrupt:
         pass
     finally:
+        print(f"[SUMMARY] parsed_lines={parsed_line_count}, written_rows={written_count}, dropped_incomplete={dropped_count}", file=sys.stderr)
         out_f.close()
         if not args.stdin and ser:
             ser.close()
 
 if __name__ == "__main__":
-    """
-    示例：
-      # 串口实时采集：
-      python ftm_csi_to_csv.py --port COM5 --baud 921600 --out train.csv
-
-      # 用历史日志（stdin）测试：
-      type sample.log | python ftm_csi_to_csv.py --stdin --out train.csv
-      # Linux/macOS:
-      cat sample.log | python3 ftm_csi_to_csv.py --stdin --out train.csv
-
-      # 只用前 16 帧做特征
-      python ftm_csi_to_csv.py --port COM5 --limit-frames 16
-    """
     main()
