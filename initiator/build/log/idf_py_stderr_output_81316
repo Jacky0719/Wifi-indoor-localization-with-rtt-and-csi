@@ -1,0 +1,7 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM4 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x42032bd9: esp_crypto_shared_gdma_start_axi_ahb at C:/Users/14731/esp/v5.4/esp-idf/components/mbedtls/port/crypto_shared_gdma/esp_crypto_shared_gdma.c:191
+[0m
+[0m
